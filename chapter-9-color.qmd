@@ -484,7 +484,7 @@ In the hue cancellation experiment, the observer is asked to judge whether a tes
 
 To what extent can we generalize from red-green measurements using monochromatic lights to other lights? The answer to this question we must evaluate the linearity of the hue cancellation experiment. If the experiment is linear, we can use the data in @fig-hue-cancellation to predict whether any test light will appear red or green (blue-yellow) since all lights are the sum of monochromatic lights. If the experiment is not linear, then the data represent only an interesting collection of observations.
 
-To evaluate the linearity of the hue cancellation experiment, one can perform the following experiment: Suppose the test light $ \testi{1} $ appears neither red nor green, and the test light $ \testi{2} $ appears neither red nor green. Does the superposition of these two test lights, $ \testi{1} + \testi{2} $, also appear neither red nor green? In general, the hue cancellation experiment fails this test of linearity. If we superimpose two lights, neither of which appears red or green, the result can appear red. If we add two lights neither of which appears blue or yellow, the result can appear yellow. Hence, the hue cancellation studies are a useful benchmark. But, we need a more complete (nonlinear) model before we can apply the hue cancellation data in @fig-lg-opponent-signals to predict the opponent-colors appearance of polychromatic test lights (@larimer1975-opponentprocessadditivity; @burns1984-abneyeffect; @ayama1989; @chichilnisky1995).
+To evaluate the linearity of the hue cancellation experiment, one can perform the following experiment: Suppose the test light $t_{1}$ appears neither red nor green, and the test light $t_{2}$ appears neither red nor green. Does the superposition of these two test lights, $t_{1} + t_{2}$, also appear neither red nor green? In general, the hue cancellation experiment fails this test of linearity. If we superimpose two lights, neither of which appears red or green, the result can appear red. If we add two lights neither of which appears blue or yellow, the result can appear yellow. Hence, the hue cancellation studies are a useful benchmark. But, we need a more complete (nonlinear) model before we can apply the hue cancellation data in @fig-lg-opponent-signals to predict the opponent-colors appearance of polychromatic test lights (@larimer1975-opponentprocessadditivity; @burns1984-abneyeffect; @ayama1989; @chichilnisky1995).
 
 ### Opponent-colors measurements at threshold
 
@@ -540,11 +540,11 @@ As described in @sec-multiresolution, we decorrelate the signals derived from th
 % This is the matrix u in the decor sensor analysis in decorrelate.m
 
 $$
-\begin{eqnarray*}
+\begin{aligned}
 O_1(\lambda) & = & 1.0L(\lambda) + 0.0M(\lambda) + 0.0S(\lambda) \\
 O_2(\lambda) & = & -0.59L(\lambda) + 0.80M(\lambda) + -0.12S(\lambda) \\
 O_3(\lambda) & = & -0.34L(\lambda) + -0.11M(\lambda) + 0.93S(\lambda)
-\end{eqnarray*}
+\end{aligned}
 $$ {#eq-decor-opponent-signals}
 
 or, written in matrix form,
@@ -581,25 +581,22 @@ The new signals, $O_i(\lambda)$, are related to the cone absorptions by a linear
 <a name="id1335888271"></a>
 
 $$
-\begin{eqnarray*}
+\begin{aligned}
 O_1(\lambda) & = & 1.0L(\lambda) + 0.0M(\lambda) + 0.0S(\lambda) \\
 O_2(\lambda) & = & -0.59L(\lambda) + 0.80M(\lambda) + -0.12S(\lambda) \\
 O_3(\lambda) & = & -0.34L(\lambda) + -0.11M(\lambda) + 0.93S(\lambda)
-\end{eqnarray*}
+\end{aligned}
 $$
 {#eq-decor-opponent-signals}
 
 or, written in matrix form,
 
-<a name="id3809662214"></a>
-
 $$
-\begin{equation*}
 \left (
-    \begin{array}{ccc}
-        & O_1(\lambda) & \\
-        & O_2(\lambda) & \\
-        & O_3(\lambda) & \\
+    \begin{array}{c}
+        O_1(\lambda) \\
+        O_2(\lambda) \\
+        O_3(\lambda) \\
     \end{array}
 \right )
 =
@@ -611,15 +608,13 @@ $$
     \end{array}
 \right )
 \left (
-    \begin{array}{ccc}
-        & L(\lambda) & \\
-        & M(\lambda) & \\
-        & S(\lambda) & \\
+    \begin{array}{c}
+        L(\lambda) \\
+        M(\lambda) \\
+        S(\lambda) \\
     \end{array}
 \right )
-\end{equation*}
-$$
-{#eq-decor-opponent-matrix}
+$$ {#eq-decor-opponent-matrix}
 
 The new signals, $O_i(\lambda)$, are related to the cone absorptions by a linear transformation. These three signals are decorrelated with respect to this particular collection of surfaces and illuminant.
 
