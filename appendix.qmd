@@ -101,7 +101,7 @@ $$ {#eq-sin-angle-sum}
 Substitute @eq-sin-angle-sum into @eq-convolution-shift, remembering that $\sin (-k) = - \sin (k)$ and $\cos (-k) = \cos (k)$.
 
 $$
-\end{aligned}
+\begin{aligned}
 \hat{r}_{i} & = \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f i}{N}) \cos(\frac{2 \pi f k}{N}) + \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f k}{N}) \cos(\frac{2 \pi f i}{N})  \\
 & = \sin(\frac{2 \pi f i}{N}) \sum_{k=<N>} \hat{l}_{k} \cos(\frac{2 \pi f k}{N}) - \cos(\frac{2 \pi f i}{N}) \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f k}{N})
 \end{aligned}
@@ -116,7 +116,7 @@ $$ {#eq-sinusoid-output}
 where
 
 $$
-\end{aligned}
+\begin{aligned}
 a & = \sum_{k=<N>} \hat{l}_{k} \cos(\frac{2 \pi f k}{N})  \\
 b & = \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f k}{N})
 \end{aligned}
@@ -180,8 +180,8 @@ Second, the columns of the matrices $\mathbf{C}$ and $\mathbf{S}$ are perpendicu
 We can use these two observations to derive @eq-dfs-coefficients as follows. Express the fact that $\mathbf{H}$ and $\frac{1}{N} \mathbf{H}^{T}$ are inverses as follows:
 
 $$
-\end{aligned}
-{{\bf I}_{N \times N}} & = \mathbf{H} \left(\frac{1}{N} \mathbf{H}^T \right) \\ 
+\begin{aligned}
+{{\mathbf{I}}_{N \times N}} & = \mathbf{H} \left(\frac{1}{N} \mathbf{H}^T \right) \\ 
 & = \frac{1}{N} (\mathbf{C} + \mathbf{S}) (\mathbf{C} + \mathbf{S})^T \\
 & = \frac{1}{N} (\mathbf{C} \mathbf{C}^T + \mathbf{S} \mathbf{S}^T)
 \end{aligned}
@@ -323,7 +323,7 @@ Suppose the red phosphor stimulated only the $L$ cones, the green the $M$ cones,
 
 Now, we consider two ways we might use the calibration matrix. First, we might wish to calculate the receptor absorptions to a particular light from the CRT. Second, we might wish to know how to adjust the relative intensities of the CRT in order to achieve a particular pattern of cone absorptions.
 
-Using the methods described so far, you can calculate the relative cone absorption rates for any triplet of frame-buffer entries. Suppose the frame-buffer values are set to $ (128,128,0) $. The pattern will look yellow since only the red and green phosphors are excited. Assuming that the curves relating relative intensity to frame-buffer level are the same for all three phosphors (@fig-display-gamma), we find that the relative intensities will be $ \mathbf{e} = (0.1524,0.1524,0.0)^T $. The product $ \mathbf{H} \mathbf{e} $ yields the relative cone absorption rates $ \mathbf{r} =(0.1929, 0.1677, 0.0177)^T $. If we set the frame-buffer to $ (128,128,128) $, which appears gray, the relative intensities are $ (0.1524,0.1524,0.1524) $ and the relative cone absorption rates are $ \mathbf{r} = (0.2152,0.2001,0.1702)^T $.
+Using the methods described so far, you can calculate the relative cone absorption rates for any triplet of frame-buffer entries. Suppose the frame-buffer values are set to $ (128,128,0) $. The pattern will look yellow since only the red and green phosphors are excited. Assuming that the curves relating relative intensity to frame-buffer level are the same for all three phosphors (@fig-display-gamma), we find that the relative intensities will be $\mathbf{e} = (0.1524,0.1524,0.0)^T$. The product $\mathbf{H} \mathbf{e}$ yields the relative cone absorption rates $\mathbf{r} =(0.1929, 0.1677, 0.0177)^T$. If we set the frame-buffer to $(128,128,128)$, which appears gray, the relative intensities are $(0.1524,0.1524,0.1524)$ and the relative cone absorption rates are $\mathbf{r} = (0.2152,0.2001,0.1702)^T$.
 
 A second common type of calculation is used in behavioral experiments in which the experimenter wants to create a particular pattern of cone absorptions. To infer the relative display intensities necessary to achieve a desired effect on the cone absorptions, we must use the inverse of the calibration matrix, since
 
@@ -337,9 +337,9 @@ $$
 \mathbf{H}^{-1} = \left ( \begin{array}{ccc} 5.8677 & -5.8795 & 0.3876 \\ -0.6074 & 1.6344 & -0.2579 \\ -0.0049 & -0.1025 & 1.0225 \end{array} \right )
 $$ {#eq-calibration-inverse}
 
-Suppose we wish to display a pair of stimuli that differ only in their effects on the $ S $ cones. Let’s begin with a stimulus whose relative intensities are $ \mathbf{e} = (0.5,0.5,0.5)^T $. Using the calibration matrix, we calculate that the relative cone absorption rates from this stimulus: they are $ (.706, .656, .558) $. Now, let’s create a second stimulus with a slightly higher rate of $ S $ cone absorptions: say, $ \mathbf{r} = (.706, .656, .700) $. Using the inverse calibration matrix, we can calculate the relative display intensities needed to produce the second stimulus: they are $ (0.555, 0.4634, 0.645) $.
+Suppose we wish to display a pair of stimuli that differ only in their effects on the $ S $ cones. Let’s begin with a stimulus whose relative intensities are $\mathbf{e} = (0.5,0.5,0.5)^T$. Using the calibration matrix, we calculate that the relative cone absorption rates from this stimulus: they are $(.706, .656, .558)$. Now, let’s create a second stimulus with a slightly higher rate of $ S $ cone absorptions: say, $\mathbf{r} = (.706, .656, .700)$. Using the inverse calibration matrix, we can calculate the relative display intensities needed to produce the second stimulus: they are $(0.555, 0.4634, 0.645)$.
 
-Notice that to create a stimulus difference seen only by the $ S $ cones, we needed to adjust the intensities of all three phosphor emissions. For example, to increase the $ S $ cone absorptions we need to increase the intensity of the blue phosphor emissions. This will also cause some increases in the $ L $ and $ M $ cone absorptions, and we must compensate for this by decreasing the emissions from the red and green phosphors.
+Notice that to create a stimulus difference seen only by the $S$ cones, we needed to adjust the intensities of all three phosphor emissions. For example, to increase the $S$ cone absorptions we need to increase the intensity of the blue phosphor emissions. This will also cause some increases in the $L$ and $M$ cone absorptions, and we must compensate for this by decreasing the emissions from the red and green phosphors.
 
 
 #### Color Calibration Tips
@@ -724,7 +724,7 @@ These formulae apply when the rotation and translation are small quantities, mea
 
 
 ### Motion Flow
-Finally, we compute motion flow by using @eq-coordinate-change to specify how the change in position in space maps into a change in image position. The original point $\mathbf{p}$ mapped into an image position $(u,v)$; after the observer moves, the new coordinate, $\mathbf{p} + {\bf \Delta} \mathbf{p}$, maps into a new image position, $(u',v')$. The resulting motion flow is the difference in the two image positions, $\mathbf{m}(u,v) = (u-u',v-v')^T$.
+Finally, we compute motion flow by using @eq-coordinate-change to specify how the change in position in space maps into a change in image position. The original point $\mathbf{p}$ mapped into an image position $(u,v)$; after the observer moves, the new coordinate, $\mathbf{p} + {\mathbf{\Delta}} \mathbf{p}$, maps into a new image position, $(u',v')$. The resulting motion flow is the difference in the two image positions, $\mathbf{m}(u,v) = (u-u',v-v')^T$.
 
 @eq-motion-flow defines how the motion of the pinhole camera and the depth map combine to create the motion flow field (@heeger1992-subspacealgorithm).
 

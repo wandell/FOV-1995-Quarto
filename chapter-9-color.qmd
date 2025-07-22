@@ -550,7 +550,6 @@ $$ {#eq-decor-opponent-signals}
 or, written in matrix form,
 
 $$
-\begin{equation*}
 \left (
     \begin{array}{ccc}
         & O_1(\lambda) & \\
@@ -573,7 +572,6 @@ $$
         & S(\lambda) & \\
     \end{array}
 \right )
-\end{equation*}
 $$ {#eq-decor-opponent-matrix}
 
 The new signals, $O_i(\lambda)$, are related to the cone absorptions by a linear transformation. These three signals are decorrelated with respect to this particular collection of surfaces and illuminant.
