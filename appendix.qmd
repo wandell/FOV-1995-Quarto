@@ -684,7 +684,7 @@ A full discussion of the problems involved in signal estimation and matrix algeb
 
 The motion flow field describes how an image point changes position from one moment in time to the next, say, as an observer changes viewpoint. I reviewed several properties of the motion flow field in @sec-motion-depth, and I also reviewed how to use the information in a motion flow field to estimate scene properties, including observer motion and depth maps.
 
-In this appendix I describe how to compute a motion flow field. There are various reasons one might need to calculate a motion flow field. For example, motion flow fields are used as experimental stimuli to analyze human performance (e.g., Royden et al., 1992; Warren and Hannon, 1990). Also, algorithms designed to estimate depth maps from motion flow fields must be tested using artificial motion flow fields (e.g., Tomasi and Kanade, 1992, @heeger1992-subspacealgorithm).
+In this appendix I describe how to compute a motion flow field. There are various reasons one might need to calculate a motion flow field. For example, motion flow fields are used as experimental stimuli to analyze human performance (e.g., @royden1992; @warren-hannon1990). Also, algorithms designed to estimate depth maps from motion flow fields must be tested using artificial motion flow fields (e.g., @tomasi-kanade1992, @heeger1992-subspacealgorithm).
 
 To calculate the motion flow field, we will treat the eye as a pinhole camera and we will define the position of the points in space relative to the pinhole. Based on this framework, we will derive two formulae. First, we will derive the *perspective projection* formula. This formula describes how points in space project onto locations in the image plane of the pinhole camera. Second, we will derive how translating and rotating the pinhole camera position, i.e., the *viewpoint*, changes the point coordinates in space. Finally, we combine these two formulae to predict how changing the viewpoint changes the point locations in the image plane, thus creating the motion flow field.
 
@@ -725,7 +725,7 @@ These formulae apply when the rotation and translation are small quantities, mea
 ### Motion Flow
 Finally, we compute motion flow by using @eq-coordinate-change to specify how the change in position in space maps into a change in image position. The original point $\mathbf{p}$ mapped into an image position $(u,v)$; after the observer moves, the new coordinate, $\mathbf{p} + {\bf \Delta} \mathbf{p}$, maps into a new image position, $(u',v')$. The resulting motion flow is the difference in the two image positions, $\mathbf{m}(u,v) = (u-u',v-v')^T$.
 
-@eq-motion-flow defines how the motion of the pinhole camera and the depth map combine to create the motion flow field (Heeger and Jepson, 1992).
+@eq-motion-flow defines how the motion of the pinhole camera and the depth map combine to create the motion flow field (@heeger1992-subspacealgorithm).
 
 $$
 \mathbf{m}(u,v) = \frac{1}{{p}_{3}(u,v)} \mathbf{A}(u,v) \mathbf{t} + \mathbf{B}(u,v) \mathbf{r} .
