@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; Appendix – Foundations of Vision (1995)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./numbers.html" rel="next">
+<link href="./references.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix.html">Appendix</a></li><li class="breadcrumb-item"><a href="./appendix.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Foundations of Vision (1995)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">How to study vision</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Encoding</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-1-image-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Encoding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-2-image-formation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Image Formation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-3-the-photoreceptor-mosaic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Photoreceptor Mosaic</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-4-wavelength-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wavelength Encoding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Representation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-2-image-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Representation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-5-the-retinal-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Retina</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-6-the-cortical-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cortical Representation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-7-pattern-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pattern Vision</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-8-multiresolution-image-representations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiresolution Representations</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Interpretation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-3-image-interpretation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Interepretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-9-color.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Color</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-10-motion-and-depth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Motion and Depth</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11-seeing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seeing</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful numbers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./online-teaching-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Online Teaching Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-appendix" id="toc-sec-appendix" class="nav-link active" data-scroll-target="#sec-appendix">Appendix</a>
+  <ul class="collapse">
+  <li><a href="#sec-appendix-shift-invariant" id="toc-sec-appendix-shift-invariant" class="nav-link" data-scroll-target="#sec-appendix-shift-invariant"><span class="header-section-number">12.1</span> Shift-Invariant Linear Systems</a>
+  <ul class="collapse">
+  <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
+  <li><a href="#convolution" id="toc-convolution" class="nav-link" data-scroll-target="#convolution">Convolution</a></li>
+  <li><a href="#convolution-and-harmonic-functions" id="toc-convolution-and-harmonic-functions" class="nav-link" data-scroll-target="#convolution-and-harmonic-functions">Convolution and Harmonic Functions</a></li>
+  <li><a href="#the-discrete-fourier-series-defined" id="toc-the-discrete-fourier-series-defined" class="nav-link" data-scroll-target="#the-discrete-fourier-series-defined">The Discrete Fourier Series: Defined</a></li>
+  <li><a href="#the-discrete-fourier-series-properties" id="toc-the-discrete-fourier-series-properties" class="nav-link" data-scroll-target="#the-discrete-fourier-series-properties">The Discrete Fourier Series: Properties</a></li>
+  <li><a href="#measuring-a-convolution-system-using-harmonic-functions" id="toc-measuring-a-convolution-system-using-harmonic-functions" class="nav-link" data-scroll-target="#measuring-a-convolution-system-using-harmonic-functions">Measuring a Convolution System using Harmonic Functions</a></li>
+  </ul></li>
+  <li><a href="#sec-appendix-display-calibration" id="toc-sec-appendix-display-calibration" class="nav-link" data-scroll-target="#sec-appendix-display-calibration"><span class="header-section-number">12.2</span> Display Calibration</a>
+  <ul class="collapse">
+  <li><a href="#an-overview-of-a-crt-display" id="toc-an-overview-of-a-crt-display" class="nav-link" data-scroll-target="#an-overview-of-a-crt-display">An Overview of a CRT Display</a></li>
+  <li><a href="#the-frame-buffer" id="toc-the-frame-buffer" class="nav-link" data-scroll-target="#the-frame-buffer">The frame-buffer</a></li>
+  <li><a href="#display-intensity" id="toc-display-intensity" class="nav-link" data-scroll-target="#display-intensity">Display Intensity</a></li>
+  <li><a href="#display-spectral-power-distribution" id="toc-display-spectral-power-distribution" class="nav-link" data-scroll-target="#display-spectral-power-distribution">Display Spectral Power Distribution</a></li>
+  <li><a href="#color-calibration-matrix" id="toc-color-calibration-matrix" class="nav-link" data-scroll-target="#color-calibration-matrix">Color Calibration Matrix</a></li>
+  <li><a href="#example-calculations" id="toc-example-calculations" class="nav-link" data-scroll-target="#example-calculations">Example Calculations</a></li>
+  </ul></li>
+  <li><a href="#sec-appendix-classification" id="toc-sec-appendix-classification" class="nav-link" data-scroll-target="#sec-appendix-classification"><span class="header-section-number">12.3</span> Classification</a>
+  <ul class="collapse">
+  <li><a href="#a-bayes-classifier-for-an-intensity-discrimination-task" id="toc-a-bayes-classifier-for-an-intensity-discrimination-task" class="nav-link" data-scroll-target="#a-bayes-classifier-for-an-intensity-discrimination-task">A Bayes classifier for an Intensity Discrimination Task</a></li>
+  <li><a href="#a-bayes-classifier-for-a-pattern-discrimination-task" id="toc-a-bayes-classifier-for-a-pattern-discrimination-task" class="nav-link" data-scroll-target="#a-bayes-classifier-for-a-pattern-discrimination-task">A Bayes classifier for a Pattern Discrimination Task</a></li>
+  </ul></li>
+  <li><a href="#sec-appendix-signal-estimation" id="toc-sec-appendix-signal-estimation" class="nav-link" data-scroll-target="#sec-appendix-signal-estimation"><span class="header-section-number">12.4</span> Signal Estimation: A Geometric View</a>
+  <ul class="collapse">
+  <li><a href="#matrix-equations" id="toc-matrix-equations" class="nav-link" data-scroll-target="#matrix-equations">Matrix equations</a></li>
+  </ul></li>
+  <li><a href="#sec-appendix-flow-field" id="toc-sec-appendix-flow-field" class="nav-link" data-scroll-target="#sec-appendix-flow-field"><span class="header-section-number">12.5</span> Motion Flow Field Calculation</a>
+  <ul class="collapse">
+  <li><a href="#imaging-geometry-and-perspective-projection" id="toc-imaging-geometry-and-perspective-projection" class="nav-link" data-scroll-target="#imaging-geometry-and-perspective-projection">Imaging Geometry and Perspective Projection</a></li>
+  <li><a href="#imaging-geometry-camera-translation-and-rotation" id="toc-imaging-geometry-camera-translation-and-rotation" class="nav-link" data-scroll-target="#imaging-geometry-camera-translation-and-rotation">Imaging Geometry, Camera Translation and Rotation</a></li>
+  <li><a href="#motion-flow" id="toc-motion-flow" class="nav-link" data-scroll-target="#motion-flow">Motion Flow</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix.html">Appendix</a></li><li class="breadcrumb-item"><a href="./appendix.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-appendix" class="level1 unnumbered">
+<h1 class="unnumbered">Appendix</h1>
+<p>The appendix consists of five sections. In <a href="#sec-appendix-shift-invariant" class="quarto-xref"><span>Section 12.1</span></a> I review several properties of shift-invariant linear systems and outline proofs of these properties. This appendix also includes a brief discussion of the Discrete Fourier Series, a method for representing functions as the weighted sum of harmonic functions. <a href="#sec-appendix-display-calibration" class="quarto-xref"><span>Section 12.2</span></a> contains a review of the main aspects of visual display calibration for psychophysical experiments. <a href="#sec-appendix-classification" class="quarto-xref"><span>Section 12.3</span></a> contains a description of the basic results in classification theory, Bayes Rule and linear discriminant functions. <a href="#sec-appendix-signal-estimation" class="quarto-xref"><span>Section 12.4</span></a> provides a geometric interpretation of vector and matrix multiplication as well as a brief introduction to signal estimation. <a href="#sec-appendix-flow-field" class="quarto-xref"><span>Section 12.5</span></a> outlines how to compute a motion flow field that arises when an observer moves through a fixed environment.</p>
+<section id="sec-appendix-shift-invariant" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="sec-appendix-shift-invariant"><span class="header-section-number">12.1</span> Shift-Invariant Linear Systems</h2>
+<p>Many of the ideas in this book rely on properties of shift-invariant linear systems. In the text, I introduced these properties without any indication of how to prove that they are true. I have two goals for this section. First, I will sketch proofs of several important properties of shift-invariant linear systems. Second, I will describe <em>convolution</em> and the <em>Discrete Fourier Series</em>, two tools that help us take advantage of these properties.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="definitions" class="level3">
+<h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
+<p>Shift-invariance is a system property that can be verified by experimental measurement. For example, in <a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a> I described how to check whether the optics of the eye is shift-invariant by the following measurements. Image a line through the optics onto the retina, and measure the linespread function. Then, shift the line to a new position, forming a new retinal image. Compare the new image with the original. If the images have the same shape, differing only by a shift in position, then the optics is shift-invariant over the measured range.</p>
+<p>We can express the empirical property of shift-invariance using the following mathematical notation. Choose a stimulus, <span class="math inline">\(\mathbf{p}_{i}\)</span> and measure the system response, <span class="math inline">\(\mathbf{r}_{i}\)</span>. Now, shift the stimulus by an amount <span class="math inline">\(j\)</span> and measure again. If the response is shifted by <span class="math inline">\(j\)</span> as well, then the system may be shift-invariant. Try this experiment for many values of the shift parameter, <span class="math inline">\(j\)</span>. If the experiment succeeds for all shifts, then the system is shift-invariant.</p>
+<p>If you think about this definition as an experimentalist, you can see that there are some technical problems in making the measurements needed to verify shift-invariance. Suppose that the original stimulus and response are represented at <span class="math inline">\(N\)</span> distinct points, <span class="math inline">\(i = 1, \ldots, N\)</span>. If we shift the stimulus three locations so that now the fourth location contains the first entry, the fifth the second, and so forth, how do we fill in the first three locations in the new stimulus? And, what do we do with the last three values, <span class="math inline">\(N-2, N-1, N\)</span>, which have nowhere to go?</p>
+<p>Theorists avoid this problem by treating the real observations as if they are part of an infinite, periodic set of observations. They assume that the stimuli and data are part of an infinite periodic series with a period of <span class="math inline">\(N\)</span>, equal to the number of original observations. If the data are infinite, the first three entries of the shifted vector are the three values at locations <span class="math inline">\(-3, -2, \mbox{and} -1\)</span>. If the data are periodic with period <span class="math inline">\(N\)</span>, these three values are the same as the values at <span class="math inline">\(N-3, N-2, \mbox{and} N-1\)</span>.</p>
+<p>The assumption that the measurements are part of an infinite and periodic sequence permits the theorist to avoid the experimentalist’s practical problem. The assumption is also essential for obtaining several of the simple closed-form results concerning the properties of shift-invariant systems. The assumption is not consistent with real measurements since real measurements cannot be made using infinite stimuli: there is always a beginning and an end to any real experiment. As an experimentalist you must always be aware that many theoretical calculations using shift-invariant methods are not valid near the boundaries of data sets, such as near the edge of an image.</p>
+<p>Suppose we refer to the finite input as, <span class="math inline">\(\mathbf{p}\)</span>, and the measured output, <span class="math inline">\(\mathbf{l}\)</span>, is finite. In the theoretical analysis we extend both of these functions to be infinite and periodic. We will use a hat symbol to denote the extended functions,</p>
+<p><span id="eq-periodic-extensions"><span class="math display">\[
+\hat{l}_{i+N} = {l}_{i} ~~~\mbox{and}~~~ \hat{p}_{i+N}={p}_{i} .
+\tag{12.1}\]</span></span></p>
+<p>The extended functions <span class="math inline">\(\hat{\mathbf{l}}\)</span> and <span class="math inline">\(\hat{\mathbf{p}}\)</span> agree with our measurements over the measurement range from <span class="math inline">\(1, \ldots, N\)</span>. By the periodicity assumption, the values outside of the measurement range are filled in by looking at the values within the measurement range. For example,</p>
+<p><span class="math display">\[
+(\ldots, \hat{l}_{-1} = \hat{l}_{N-1}, ~\hat{l}_{0} = \hat{l}_{N}, ~\hat{l}_{1}, \ldots, \hat{l}_{N},~ \hat{l}_{N+1} = \hat{l}_{1}, \ldots ) .
+\]</span></p>
+</section>
+<section id="convolution" class="level3">
+<h3 class="anchored" data-anchor-id="convolution">Convolution</h3>
+<p>Next, we derive some of the properties of linear shift-invariant systems. We begin by describing these properties in terms of the <em>system matrix</em> (see <a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a>). Then, we will show how the simple structure of the shift-invariant system matrix permits us to relate the input and output by a summation formula called <em>cyclic convolution</em>. The convolution formula is so important that shift-invariant systems are sometimes called <em>convolution systems</em>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>In <a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a> I reviewed how to measure the system matrix of an optical system for one-dimensional input stimuli. We measure the image resulting from a single line at a series of uniformly spaced input locations. If the system is shift-invariant, then the columns of the system matrix are shifted copies of one another (except for edge artifacts). To create the system matrix, we extend the inputs and outputs to be periodic functions (<a href="#eq-periodic-extensions" class="quarto-xref">Equation&nbsp;<span>12.1</span></a>). Then, we select a central block of size <span class="math inline">\(N \times N\)</span> to be the system matrix and we use the corresponding entries of the extended stimulus. For example, if the input stimulus consists of six values, <span class="math inline">\(\mathbf{p} = (0,0,0,1,0,0)\)</span>, and the response to this stimulus is the vector, <span class="math inline">\(\mathbf{l} = (0.0,0.3,0.6,0.2,0.1,0.0)\)</span>, then the <span class="math inline">\(6 \times 6\)</span> system matrix is</p>
+<p><span id="eq-cyclic-matrix"><span class="math display">\[
+\hat{\mathbf{C}} = \left ( \begin{array}{cccccc} 0.2 &amp; 0.6 &amp; 0.3 &amp; 0.0 &amp; 0.0 &amp; 0.1 \\ 0.1 &amp; 0.2 &amp; 0.6 &amp; 0.3 &amp; 0.0 &amp; 0.0 \\ 0.0 &amp; 0.1 &amp; 0.2 &amp; 0.6 &amp; 0.3 &amp; 0.0 \\ 0.0 &amp; 0.0 &amp; 0.1 &amp; 0.2 &amp; 0.6 &amp; 0.3 \\ 0.3 &amp; 0.0 &amp; 0.0 &amp; 0.1 &amp; 0.2 &amp; 0.6 \\ 0.6 &amp; 0.3 &amp; 0.0 &amp; 0.0 &amp; 0.1 &amp; 0.2 \end{array} \right) .
+\tag{12.2}\]</span></span></p>
+<p>For a general linear system, we calculate the output using the summation formula for matrix multiplication in <a href="chapter-2-image-formation.html#eq-weighted-sum" class="quarto-xref">Equation&nbsp;<span>2.4</span></a>,</p>
+<p><span id="eq-matrix-mult"><span class="math display">\[
+\hat{r}_{i} = \sum_{j=1}^N \hat{\mathbf{C}}_{ij} \hat{p}_{j} ~~.
+\tag{12.3}\]</span></span></p>
+<p>When the linear system is shift-invariant system, this summation formula simplifies for two reasons. First, because of the assumed periodicity, the summation is precisely the same when we sum over any <span class="math inline">\(N\)</span> consecutive integers. It is useful to incorporate this generalization into the summation formula as</p>
+<p><span id="eq-cyclic-sum"><span class="math display">\[
+\hat{r}_{i} = \sum_{j=&lt;N&gt;} \hat{\mathbf{C}}_{ij} \hat{p}_{j} ~~~,
+\tag{12.4}\]</span></span></p>
+<p>where the notation <span class="math inline">\(j = \langle N \rangle\)</span> means that summation can take place over any <span class="math inline">\(N\)</span> consecutive integers. Second, notice that for whichever <span class="math inline">\(N \times N\)</span> block of values we choose, the typical entry of the system matrix will be</p>
+<p><span id="eq-cyclic-entry"><span class="math display">\[
+\hat{\mathbf{C}}_{ij} = \hat{l}_{i-j} .
+\tag{12.5}\]</span></span></p>
+<p>We can use this relationship to simplify the summation further,</p>
+<p><span id="eq-cyclic-convolution"><span class="math display">\[
+\hat{r}_{i} = \sum_{j=&lt;N&gt;} \hat{l}_{i-j} \hat{p}_{j} ~~.
+\tag{12.6}\]</span></span></p>
+<p>In this form, we see that the response depends only on the input and the linespread. The summation formula in <a href="#eq-cyclic-convolution" class="quarto-xref">Equation&nbsp;<span>12.6</span></a>) is called <em>cyclic convolution</em>. Hence, we have shown that to compute the response of a shift-invariant linear system to any stimulus, we need measure only the linespread function.</p>
+</section>
+<section id="convolution-and-harmonic-functions" class="level3">
+<h3 class="anchored" data-anchor-id="convolution-and-harmonic-functions">Convolution and Harmonic Functions</h3>
+<p>Next, we study some of the properties of the convolution formula. Most important, we will see why harmonic functions have a special role in the analysis of convolution systems.</p>
+<p>Beginning with our analysis of optics in <a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a>, we have relied on the fact that the response of a shift-invariant system to a harmonic function at frequency <span class="math inline">\(f\)</span> is also a harmonic function at <span class="math inline">\(f\)</span>. In that chapter, the result was stated in two equivalent ways.</p>
+<ol type="1">
+<li>If the input is a harmonic at frequency <span class="math inline">\(f\)</span>, the output is a shifted and scaled copy of the harmonic.</li>
+<li>The response to a harmonic at frequency <span class="math inline">\(f\)</span> will be the weighted sum of a sinusoid and cosinusoid at the same frequency (<a href="#eq-sinusoid-output" class="quarto-xref">Equation&nbsp;<span>12.10</span></a>).</li>
+</ol>
+<p>We can derive this result from the convolution formula. Define a new variable, <span class="math inline">\(k=i-j\)</span>, and substitute <span class="math inline">\(k\)</span> into <a href="#eq-cyclic-convolution" class="quarto-xref">Equation&nbsp;<span>12.6</span></a>. Remember that the summation can take place over any adjacent <span class="math inline">\(N\)</span> values. Hence, the substitution yields a modified convolution formula,</p>
+<p><span id="eq-convolution-shift"><span class="math display">\[
+\hat{r}_{i} = \sum_{k=&lt;N&gt;} \hat{l}_{k} \hat{p}_{ {i - k} }
+\tag{12.7}\]</span></span></p>
+<p>Next, we use the convolution formula in <a href="#eq-convolution-shift" class="quarto-xref">Equation&nbsp;<span>12.7</span></a>) to compute the response to a sinusoidal input <span class="math inline">\(\sin(\frac{2 \pi f j}{N})\)</span>. From trigonometry we have that</p>
+<p><span id="eq-sin-angle-sum"><span class="math display">\[
+\sin(\frac{2 \pi f (i+j)}{N}) = \sin(\frac{2 \pi f i}{N}) \cos(\frac{2 \pi f j}{N}) + \sin(\frac{2 \pi f j}{N}) \cos(\frac{2 \pi f i}{N}) ~ .
+\tag{12.8}\]</span></span></p>
+<p>Substitute <a href="#eq-sin-angle-sum" class="quarto-xref">Equation&nbsp;<span>12.8</span></a> into <a href="#eq-convolution-shift" class="quarto-xref">Equation&nbsp;<span>12.7</span></a>, remembering that <span class="math inline">\(\sin (-k) = - \sin (k)\)</span> and <span class="math inline">\(\cos (-k) = \cos (k)\)</span>.</p>
+<p><span id="eq-sinusoid-response"><span class="math display">\[
+\begin{aligned}
+\hat{r}_{i} &amp; = \sum_{k=&lt;N&gt;} \hat{l}_{k} \sin(\frac{2 \pi f i}{N}) \cos(\frac{2 \pi f k}{N}) + \sum_{k=&lt;N&gt;} \hat{l}_{k} \sin(\frac{2 \pi f k}{N}) \cos(\frac{2 \pi f i}{N})  \\
+&amp; = \sin(\frac{2 \pi f i}{N}) \sum_{k=&lt;N&gt;} \hat{l}_{k} \cos(\frac{2 \pi f k}{N}) - \cos(\frac{2 \pi f i}{N}) \sum_{k=&lt;N&gt;} \hat{l}_{k} \sin(\frac{2 \pi f k}{N})
+\end{aligned}
+\tag{12.9}\]</span></span></p>
+<p>We can simplify this expression to the form</p>
+<p><span id="eq-sinusoid-output"><span class="math display">\[
+\hat{r}_{i} = a~\sin(\frac{2 \pi f i}{N}) - b~\cos(\frac{2 \pi f i}{N})
+\tag{12.10}\]</span></span></p>
+<p>where</p>
+<p><span id="eq-sinusoid-coeffs"><span class="math display">\[
+\begin{aligned}
+a &amp; = \sum_{k=&lt;N&gt;} \hat{l}_{k} \cos(\frac{2 \pi f k}{N})  \\
+b &amp; = \sum_{k=&lt;N&gt;} \hat{l}_{k} \sin(\frac{2 \pi f k}{N})
+\end{aligned}
+\tag{12.11}\]</span></span></p>
+<p>We have shown that when the input to the system is a sinusoidal function at frequency <span class="math inline">\(f\)</span>, the output of the system is the weighted sum of a sinusoid and a cosinusoid, both at frequency <span class="math inline">\(f\)</span>. This is equivalent to showing that when the input is a sinusoid at frequency <span class="math inline">\(f\)</span>, the output will be a scaled and shifted copy of the input, <span class="math inline">\(s_f \sin (\frac{\pi f i}{N} + \phi_f )\)</span> (see <a href="chapter-2-image-formation.html#eq-sinusoid-expansion" class="quarto-xref">Equation&nbsp;<span>2.8</span></a>). As we shall see below, it is easy to generalize this result to all harmonic functions.</p>
+</section>
+<section id="the-discrete-fourier-series-defined" class="level3">
+<h3 class="anchored" data-anchor-id="the-discrete-fourier-series-defined">The Discrete Fourier Series: Defined</h3>
+<p>In general, when we measure the response of a shift-invariant linear system we measure <span class="math inline">\(N\)</span> output values. When the input is a sinusoid, or more generally a harmonic, we can specify the response using only the two numbers, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, in <a href="#eq-sinusoid-coeffs" class="quarto-xref">Equation&nbsp;<span>12.11</span></a>. We would like to take advantage of this special property of shift-invariant systems. To do so, we need a method of representing input stimuli as the weighted sum of harmonic functions.</p>
+<p>The method used to transform a stimulus into the weighted sum of harmonic functions is called the <em>Discrete Fourier Transform</em> (DFT). The representation of the stimulus as the weighted sum of harmonic functions is called the <em>Discrete Fourier Series</em> (DFS). We use the DFS to represent an extended stimulus, <span class="math inline">\(\hat{\mathbf{p}}\)</span>.</p>
+<p><span id="eq-dfs-representation"><span class="math display">\[
+\hat{{p}}_i = \sum_{f=0}^{N-1} a_f \cos(\frac{2 \pi f i}{N}) + b_f \sin(\frac{2 \pi f i}{N}) ~~.
+\tag{12.12}\]</span></span></p>
+<p>We are interested in that part of the extended stimulus that coincides with our measurements. We can express the relationship between the harmonic functions and the original stimulus, <span class="math inline">\(\mathbf{p}\)</span>, using a matrix equation</p>
+<p><span id="eq-dfs-matrix"><span class="math display">\[
+\mathbf{p} = \mathbf{C} \mathbf{a} + \mathbf{S} \mathbf{b}
+\tag{12.13}\]</span></span></p>
+<p>which has the matrix tableau form</p>
+<p><span id="eq-dfs-tableau"><span class="math display">\[
+\left ( \begin{array}{c} ~ \\ \mathbf{p} \\ ~ \end{array} \right ) =
+\left ( \begin{array}{ccc} ~ &amp; ~ &amp; ~ \\ ~ &amp; \mathbf{C} &amp; ~\\ ~ &amp; ~ &amp; ~ \end{array} \right )
+\left ( \begin{array}{c} ~ \\ \mathbf{a} \\ ~ \end{array} \right ) +
+\left ( \begin{array}{ccc} ~ &amp; ~ &amp; ~ \\ ~ &amp; \mathbf{S} &amp; ~\\ ~ &amp; ~ &amp; ~ \end{array} \right )
+\left( \begin{array}{c} ~ \\ \mathbf{b} \\ ~ \end{array} \right )
+\tag{12.14}\]</span></span></p>
+<p>The vectors <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span> contain the coefficients <span class="math inline">\(a_f\)</span> and <span class="math inline">\(b_f\)</span>, respectively. The columns of the matrices <span class="math inline">\(\mathbf{C}\)</span> and <span class="math inline">\(\mathbf{S}\)</span> contain the relevant portions of the cosinusoidal and sinusoidal terms, <span class="math inline">\(\cos(\frac{2 \pi f i}{N})\)</span> and <span class="math inline">\(\sin(\frac{2 \pi f i}{N})\)</span>, that are used in the DFS representation.</p>
+<p>The DFS represents the original stimulus as the weighted sum of a set of harmonic functions (i.e., sampled sine and cosine functions). We call these sampled harmonic functions the <em>basis functions</em> of the DFS representation. The vectors <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span> contain basis functions <em>weights</em> or <em>coefficients</em> that specify how much of each basis function must be added in to recreate the original stimulus, <span class="math inline">\(\mathbf{p}\)</span>.</p>
+</section>
+<section id="the-discrete-fourier-series-properties" class="level3">
+<h3 class="anchored" data-anchor-id="the-discrete-fourier-series-properties">The Discrete Fourier Series: Properties</h3>
+<div id="fig-dfs-basis" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dfs-basis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/sincos.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dfs-basis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: The basis functions of the Discrete Fourier Series. The cosinusoidal (a) and sinusoidal (b) basis functions of the discrete Fourier series representation when N=8 are shown. Notice the redundancy between the functions at symmetrically placed frequencies.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-dfs-basis" class="quarto-xref">Figure&nbsp;<span>12.1</span></a> shows the sampled sine and cosine functions for a period of <span class="math inline">\(N = 8\)</span>. The functions are arrayed in a circle to show how they relate to one another. There are a total of 16 basis functions. But, as you can see from <a href="#fig-dfs-basis" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>, they are redundant. The sampled cosinusoids in the columns of <span class="math inline">\(\mathbf{C}\)</span> repeat themselves (in reverse order); for example, when <span class="math inline">\(N=8\)</span> the cosinusoids for <span class="math inline">\(f = 1,2,3\)</span> are the same as the cosinusoids for <span class="math inline">\(f= 7,6,5\)</span>. The sampled sinusoids in the columns of <span class="math inline">\(\mathbf{S}\)</span> also repeat themselves except for a sign reversal (multiplication by negative one). There are only four independent sampled cosinusoids, and four independent sampled sinusoids. As a result of this redundancy, neither the <span class="math inline">\(\mathbf{S}\)</span> nor the matrix <span class="math inline">\(\mathbf{C}\)</span> is invertible.</p>
+<p>Nevertheless, the properties of these harmonic basis functions make it simple to calculate the vectors containing the weights of the harmonic functions from the original stimulus, <span class="math inline">\(\mathbf{p}\)</span>. To compute <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span>, we multiply the input by the basis functions, as in</p>
+<p><span id="eq-dfs-coefficients"><span class="math display">\[
+\mathbf{a} = \frac{1}{N} \mathbf{C}^T \mathbf{p} ~~~\mbox{and}~~~ \mathbf{b} = \frac{1}{N} \mathbf{S}^T \mathbf{p} .
+\tag{12.15}\]</span></span></p>
+<p>We can derive the relationship in <a href="#eq-dfs-coefficients" class="quarto-xref">Equation&nbsp;<span>12.15</span></a> from two observations. First, the matrix sum, <span class="math inline">\(\mathbf{H} = \mathbf{S} + \mathbf{C}\)</span> has a simple inverse. The columns of <span class="math inline">\(\mathbf{H}\)</span> are orthogonal to one another, so that the inverse of <span class="math inline">\(\mathbf{H}\)</span> is simply <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<p><span id="eq-dfs-inverse"><span class="math display">\[
+\mathbf{H}^{-1} = \frac{1}{N} \mathbf{H}^{T} = \frac{1}{N} (\mathbf{S} + \mathbf{C})^T .
+\tag{12.16}\]</span></span></p>
+<p>Second, the columns of the matrices <span class="math inline">\(\mathbf{C}\)</span> and <span class="math inline">\(\mathbf{S}\)</span> are perpendicular to one another: <span class="math inline">\(\mathbf{0} = \mathbf{C} \mathbf{S}^{T}\)</span>. This observation should not be surprising since continuous sinusoids and cosinusoids are also orthogonal to one another.</p>
+<p>We can use these two observations to derive <a href="#eq-dfs-coefficients" class="quarto-xref">Equation&nbsp;<span>12.15</span></a> as follows. Express the fact that <span class="math inline">\(\mathbf{H}\)</span> and <span class="math inline">\(\frac{1}{N} \mathbf{H}^{T}\)</span> are inverses as follows:</p>
+<p><span id="eq-dfs-inverse-proof"><span class="math display">\[
+\begin{aligned}
+{{\mathbf{I}}_{N \times N}} &amp; = \mathbf{H} \left(\frac{1}{N} \mathbf{H}^T \right) \\
+&amp; = \frac{1}{N} (\mathbf{C} + \mathbf{S}) (\mathbf{C} + \mathbf{S})^T \\
+&amp; = \frac{1}{N} (\mathbf{C} \mathbf{C}^T + \mathbf{S} \mathbf{S}^T)
+\end{aligned}
+\tag{12.17}\]</span></span></p>
+<p>where <span class="math inline">\({\mathbf{I}_{N \times N}}\)</span> is the identity matrix. Then, multiply both sides of <a href="#eq-dfs-inverse-proof" class="quarto-xref">Equation&nbsp;<span>12.17</span></a> by <span class="math inline">\(\mathbf{p}\)</span>,</p>
+<p>%cn cn’ stim + sn sn’ stim = stim.</p>
+<p><span id="eq-dfs-reconstruction"><span class="math display">\[
+\mathbf{p} = \frac{1}{N} (\mathbf{C} \mathbf{C}^T \mathbf{p} + \mathbf{S} \mathbf{S}^T \mathbf{p} )
+\tag{12.18}\]</span></span></p>
+<p>Compare <a href="#eq-dfs-reconstruction" class="quarto-xref">Equation&nbsp;<span>12.18</span></a> and <a href="#eq-dfs-tableau" class="quarto-xref">Equation&nbsp;<span>12.14</span></a>. Notice that the Equations become identical if we make the assignments in <a href="#eq-dfs-coefficients" class="quarto-xref">Equation&nbsp;<span>12.15</span></a>. This completes the sketch of the proof.</p>
+</section>
+<section id="measuring-a-convolution-system-using-harmonic-functions" class="level3">
+<h3 class="anchored" data-anchor-id="measuring-a-convolution-system-using-harmonic-functions">Measuring a Convolution System using Harmonic Functions</h3>
+<p>Finally, we show how to predict the response of a shift-invariant linear system to any stimulus using only the responses to unit amplitude cosinusoidal inputs. This result is the logical basis for describing system performance from measurements of the response to harmonic functions. When the system is linear and shift-invariant, its responses to harmonic functions is a complete description of the system; but, this is not true for arbitrary linear systems.</p>
+<p>Because cosinusoids and sinusoids are shifted copies of one another, the response of a shift-invariant linear system to these functions is the same except for a shift. From a calculation like the one in <a href="#eq-sin-angle-sum" class="quarto-xref">Equation&nbsp;<span>12.8</span></a>, except using a cosinusoidal input, we can calculate the following result: If the response to a cosinusoid at frequency <span class="math inline">\(f\)</span> is a sum of cosinusoid and sinusoid with weights, <span class="math inline">\((a_f, b_f)\)</span>, then, the response to a sinusoid at frequency <span class="math inline">\(f\)</span> will have weights <span class="math inline">\((b_f, -a_f)\)</span>. Hence, if we know the response to a cosinusoid at <span class="math inline">\(f\)</span>, we also know the response to a sinusoid at <span class="math inline">\(f\)</span>.</p>
+<p>Next, we can use our knowledge of the response to sinusoids and cosinusoids at <span class="math inline">\(f\)</span> to predict the response to any harmonic function at <span class="math inline">\(f\)</span>. Suppose that the input is a harmonic function <span class="math inline">\(a \cos(\frac{2 \pi f i}{N}) + b \sin(\frac{2 \pi f i}{N})\)</span>, and the output is, say <span class="math inline">\(a^\prime \cos(\frac{2 \pi f i}{N}) + b^\prime \sin(\frac{2 \pi f i}{N})\)</span>. If the response to a unit amplitude cosinusoid is <span class="math inline">\(u_f \cos(\frac{2 \pi f i}{N}) + v_f \sin(\frac{2 \pi f i}{N})\)</span>, then the response to a unit amplitude sinusoid is <span class="math inline">\(v_f \cos(\frac{2 \pi f i}{N}) - u_f \sin(\frac{2 \pi f i}{N})\)</span>. Using these two facts and linearity we calculate the coefficients of the response,</p>
+<p><span id="eq-dfs-output-coeffs"><span class="math display">\[
+\begin{aligned}
+a^\prime &amp; = &amp; a u_f + b v_f \nonumber \\
+b^\prime &amp; = &amp; a v_f - b u_f .
+\end{aligned}
+\tag{12.19}\]</span></span></p>
+<p>We have shown that if we measure the system response to unit amplitude cosinusoidal inputs, we can compute the system response to an arbitrary input stimulus as follows.</p>
+<ul>
+<li>Compute the DFS coefficients of the input stimulus using <a href="#eq-dfs-coefficients" class="quarto-xref">Equation&nbsp;<span>12.15</span></a>.</li>
+<li>Calculate the DFS coefficients of the output using <a href="#eq-dfs-output-coeffs" class="quarto-xref">Equation&nbsp;<span>12.19</span></a>.</li>
+<li>Reconstruct the output from the coefficients using <a href="#eq-dfs-representation" class="quarto-xref">Equation&nbsp;<span>12.12</span></a>.</li>
+</ul>
+<p>You will find this series of calculations used implicitly at several points in the text. For example, we followed this organization when I described measurements of the optical quality of the lens (<a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a>) and when I described measurements of behavioral sensitivity to spatiotemporal patterns (<a href="chapter-7-pattern-sensitivity.html" class="quarto-xref"><span>Chapter 7</span></a>).</p>
+</section>
+</section>
+<section id="sec-appendix-display-calibration" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="sec-appendix-display-calibration"><span class="header-section-number">12.2</span> Display Calibration</h2>
+<p>Visual displays based on a <em>cathode ray tube</em> (CRT) are used widely in business, education and entertainment. The CRT reproduces color images using the principles embodied in the color-matching experiment (<a href="chapter-4-wavelength-encoding.html" class="quarto-xref"><span>Chapter 4</span></a>).</p>
+<p>The design of the color CRT is one of the most important applications of vision science; thus, it is worth understanding the design as an engineering achievement. Also, because the CRT is used widely in experimental vision science, understanding how to control the CRT display is an essential skill for all vision scientists. This appendix reviews several of the principles of monitor calibration.</p>
+<section id="an-overview-of-a-crt-display" class="level3">
+<h3 class="anchored" data-anchor-id="an-overview-of-a-crt-display">An Overview of a CRT Display</h3>
+<div id="fig-crt-shadow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-crt-shadow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/crtShadow.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-crt-shadow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.2: Overview of a cathode ray tube display. (a) A side view of the display showing the cathode, which is the source of electrons, and a method of focusing the electrons into a beam that is deflected in a raster pattern across the faceplate of the display. (b) The geometrical arrangement of the electron beams, shadow-mask, and phosphor allows each electron beam to stimulate only one of the three phosphors.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-crt-shadow" class="quarto-xref">Figure&nbsp;<span>12.2</span></a> (a) shows the main components of a color CRT display. The display contains a <em>cathode</em>, or <em>electron gun</em>, that provides a source of electrons. The electrons are focused into a beam whose direction is deflected back and forth in a raster pattern so that it scans the faceplate of the display.</p>
+<p>Light is emitted by a process of absorption and emission that occurs at the faceplate of the display. The faceplate consists of a phosphor painted onto a glass substrate. The phosphor absorbs electrons from the scanning beam and emits light. A signal, generally controlled from a computer, modulates the intensity of the electron beam as it scans across the faceplate. The intensity of the light emitted by the phosphor at each point on the faceplate depends on the intensity of the electrons beam as it scans past that point.</p>
+<p>Monochrome CRTs have a single electron beam and a single type of phosphor. In monochrome systems the control signal only influences the intensity of the phosphor emissions. Color CRTs use three electron beams; each stimulates one of three phosphors. Each of the phosphors emits light of a different spectral power distribution. By separately controlling the emissions of the three types of phosphors, the user can vary the spectral composition of the emitted light. The light emitted from the CRT is always the mixture of three primary lights from the three phosphors, usually called the red, green and blue phosphors.</p>
+<p>In order that each electron beam stimulate emissions from only one of the three types of phosphors, a metal plate, called a <em>shadow-mask</em>, is interposed between the three electron guns and the faceplate. A conventional shadow-mask is a metal plate with a series of finely spaced holes. The relative positions of the holes and the electron guns are arranged, as shown in <a href="#fig-crt-shadow" class="quarto-xref">Figure&nbsp;<span>12.2</span></a> (b), so that as the beam sweeps across the faceplate the electrons from a single gun that pass through a hole are absorbed by only one of the three types of phosphors; electrons from that gun that would have stimulated the other phosphors are absorbed or scattered by the shadow-mask.</p>
+</section>
+<section id="the-frame-buffer" class="level3">
+<h3 class="anchored" data-anchor-id="the-frame-buffer">The frame-buffer</h3>
+<p>In experiments, the control signal sent to the CRT display is usually created using computer software. There are two principal methods for creating these control signals. In one method, the user controls the three electron beam intensities by writing out the values of three matrices into three separate <em>video frame-buffers</em>. Each matrix specifies the control signal for one of the electron guns. Each matrix entry specifies the desired voltage level of the control signal at a single point on the faceplate. Usually, the intensity levels within each matrix are quantized to 8 bits, so this computer display architecture is called <em>24 bit color</em>, or <em>RGB color</em>.</p>
+<p>In a second method, the user writes a single matrix into a single frame-buffer. The value at each location in this matrix is converted into three control signals sent to the display according to a code contained in in a <em>color look-up table</em>. This architecture is called <em>indexed color</em>. This method is cost-effective because it does away with two of the three frame-buffers. When using this method, the user can only select among 256 (8 bits) colors when displaying a single image.</p>
+</section>
+<section id="display-intensity" class="level3">
+<h3 class="anchored" data-anchor-id="display-intensity">Display Intensity</h3>
+<p>Calibrating a visual display means measuring the relationship between the frame-buffer values and the light emitted by the display. In this section we will discuss the relationship between the frame-buffer values and the intensity of the emitted light. In the next section we will discuss the relationship between the frame-buffer values and the spectral composition of the emitted light.</p>
+<p>We can measure the relationship between the value of a frame-buffer entry and the intensity of the light emitted from the display as follows: Set the frame buffer entries controlling one of the three hosphor display intensities, say within a rectangular region, to a single value. Measure the intensity of the light emitted from the displayed rectangle. Repeat this measurement at many different frame-buffer values for this phosphor, and then for the other two phosphors.</p>
+<div id="fig-display-gamma" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-display-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/displayGamma.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-display-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.3: Frame-buffer value and display intensity. (a) The dashed curve measures the intensity of the emitted light relative to the maximum intensity. The data shown are for the green phosphor. The insets in the graph show the complete spectral power distribution of the light at two different frame-buffer levels. (b) The dashed curve describing the relative intensities is replotted, using Stevens’ Power Law, to show the linear relationship between the frame-buffer value and perceived brightness.
+</figcaption>
+</figure>
+</div>
+<p>The dashed curve in <a href="#fig-display-gamma" class="quarto-xref">Figure&nbsp;<span>12.3</span></a> measures the ratio of the intensity at the highest frame-buffer level to the intensity at each of the other frame-buffer levels for the green phosphor. We can summarize the difference using this single ratio, the <em>relative intensity</em> because for over most of the range the spectral power distribution of the light emitted at one frame-buffer level is the same as the spectral power distribution of the light emitted from the monitor at maximum except for a scale factor. The insets in the graph show two examples of the spectral power distribution, measured when the frame-buffer was set to 255 and 190. These two curves have the same overall shape; they differ by a scale factor of one half.</p>
+<p>We can approximate the curve relating the relative intensity of the light emitted from this CRT display, <span class="math inline">\(I\)</span>, and the frame-buffer value, <span class="math inline">\(v\)</span>, by a function of the form</p>
+<p><span id="eq-crt-intensity"><span class="math display">\[
+I = \alpha v^\gamma + \beta
+\tag{12.20}\]</span></span></p>
+<p>where <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are two fitting parameters. For most CRTs, the exponent of the power function, <span class="math inline">\(\gamma\)</span>, has a value near <span class="math inline">\(2.2\)</span> (see <span class="citation" data-cites="brainard1989-calibration">Brainard (<a href="references.html#ref-brainard1989-calibration" role="doc-biblioref">1989</a>)</span>; <span class="citation" data-cites="berns1993-theory">Berns et al. (<a href="references.html#ref-berns1993-theory" role="doc-biblioref">1993b</a>)</span>, <span class="citation" data-cites="berns1993-metrology">Berns et al. (<a href="references.html#ref-berns1993-metrology" role="doc-biblioref">1993a</a>)</span>).</p>
+<p>The nonlinear function relating the frame-buffer values and the relative intensity is due to the physics of the CRT display. While nonlinear functions are usually viewed with some dread, this particular nonlinear relationship is desirable because most users want the frame-buffer values to be linear with the brightness; they don’t care how the frame-buffer values relate to intensity. As it turns out, perceived brightness, <span class="math inline">\(B\)</span>, is related to intensity through a power law relationship called <em>Stevens’ Power Law</em> (<span class="citation" data-cites="stevens1962-powerlaw">Stevens (<a href="references.html#ref-stevens1962-powerlaw" role="doc-biblioref">1962</a>)</span>; <span class="citation" data-cites="goldstein1989-sensationperception">Goldstein (<a href="references.html#ref-goldstein1989-sensationperception" role="doc-biblioref">1989</a>)</span>; <span class="citation" data-cites="sekuler1985-perception">Sekuler and Blake (<a href="references.html#ref-sekuler1985-perception" role="doc-biblioref">1985</a>)</span>), namely,</p>
+<p><span id="eq-stevens-law"><span class="math display">\[
+B = a I^{0.4}
+\tag{12.21}\]</span></span></p>
+<p>where <span class="math inline">\(a\)</span> is a fitting parameter. Somewhat fortuitously, the nonlinear relationship between frame-buffer values and intensity compensates for the nonlinear relationship between intensity and brightness. To show this, I have replotted <a href="#fig-display-gamma" class="quarto-xref">Figure&nbsp;<span>12.3</span></a> (a) on a graph whose vertical scale is brightness, that is relative intensity raised to the <span class="math inline">\(0.4\)</span> power. This graph shows that the relationship between the frame-buffer value and brightness is nearly linear. This has the effect of equalizing the perceptual steps between different levels of the frame-buffer and simplifying certain aspects of controlling the appearance of the display.</p>
+</section>
+<section id="display-spectral-power-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="display-spectral-power-distribution">Display Spectral Power Distribution</h3>
+<p>The spectral power distribution of the light emitted in each small region of a CRT display is the mixture of the light emitted by the three phosphors. Since the mixture of lights obeys superposition, we can characterize the spectral power distributions emitted by a CRT using simple linear methods.</p>
+<p>Suppose we measure the spectral power distribution of the red, green and blue phosphors at their maximum intensity levels. We record these measurements in three column vectors, <span class="math inline">\(\mathbf{m}_{i}, ~ i = 1,2,3\)</span>.</p>
+<p>By superposition, we know that light from the monitor screen is always the weighted sum of light from the three phosphors. For example, if all three of the phosphors are set to their maximum levels, the light emitted from the screen, call it <span class="math inline">\(\mathbf{t}\)</span>, will have a spectral power distribution of</p>
+<p><span id="eq-monitor-max-sum"><span class="math display">\[
+\mathbf{m}_{1} + \mathbf{m}_{2} + \mathbf{m}_{3} .
+\tag{12.22}\]</span></span></p>
+<p>More generally, if we set the phosphors to the three relative intensities <span class="math inline">\(\mathbf{e} = ( {e_r} , {e_g} , {e_b} )\)</span>, the light emitted by the CRT will be the weighted sum</p>
+<p><span id="eq-monitor-weighted-sum"><span class="math display">\[
+\mathbf{t} = {e_r} \mathbf{m}_{1} + {e_g} \mathbf{m}_{2} + {e_b} \mathbf{m}_{3}
+\tag{12.23}\]</span></span></p>
+<p><a href="#fig-monitor-matrix" class="quarto-xref">Figure&nbsp;<span>12.4</span></a> is a matrix tableau that illustrates how to compute the spectral power distribution of light emitted from a CRT display. The vector <span class="math inline">\(\mathbf{e}\)</span> contains the relative intensity of each of the three phosphors. The three columns of a matrix, call it <span class="math inline">\(\mathbf{M}\)</span>, contain the spectral power distributions of the light emitted by the red, green and blue phosphors at maximum intensity. The spectral power distribution of light emitted from the monitor is the product <span class="math inline">\(\mathbf{M} \mathbf{e}\)</span>.</p>
+<div id="fig-monitor-matrix" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-monitor-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/monitor.mat_.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-monitor-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.4: The spectral power distribution of light emitted from a CRT. The entries e = (er, eg, eb) are the relative intensity of the three phosphors. The columns of M contain the spectral power distributions at maximum intensity. The vector calculated by Me is the spectral power distribution of the light emitted by the CRT. The output shown in the figure was calculated for e = (0.5, 0.6,0.7)T.
+</figcaption>
+</figure>
+</div>
+<p>The light emitted from a CRT is different from lights we encounter in natural scenes. For example, the spectral power distribution of the red phosphor, with its sharp and narrow peaks, is unlike the light we see in natural images. Nonetheless, we can adjust the three intensities of the three phosphors on a color CRT to match the appearance of most spectral power distributions, just as we can match appearance in the color-matching experiment by adjusting the intensity of three primary lights (see <a href="chapter-4-wavelength-encoding.html" class="quarto-xref"><span>Chapter 4</span></a>).</p>
+</section>
+<section id="color-calibration-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="color-calibration-matrix">Color Calibration Matrix</h3>
+<p>In many types of psychophysical experiments, we must be able to specify and control the relative absorption rates in the three types of cones. In this section, I show how to measure and control the relative cone absorptions when the phosphor spectral power distributions and the relative cone photopigment spectral sensitivities are known.</p>
+<p>We use two basic matrices in these calculations. We have already created the matrix <span class="math inline">\(\mathbf{M}\)</span> whose three columns contain the spectral power distributions of the phosphors at maximum intensity. We also create a matrix, <span class="math inline">\(\mathbf{B}\)</span>, whose three columns contain the cone absorption sensitivities (<span class="math inline">\(L\)</span>, <span class="math inline">\(M\)</span>, and <span class="math inline">\(S\)</span>), measured through the cornea and lens (see Table~??.) Given a set of relative intensities, <span class="math inline">\(\mathbf{e}\)</span>, we calculate the relative cone photopigment absorption rates, <span class="math inline">\(\mathbf{r}\)</span> by the matrix product<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p><span id="eq-calibration-matrix"><span class="math display">\[
+\mathbf{r} = \mathbf{B}^T \mathbf{M} \mathbf{e} = \mathbf{H} \mathbf{e} .
+\tag{12.24}\]</span></span></p>
+<p>We call the matrix <span class="math inline">\(\mathbf{H} = \mathbf{B}^T \mathbf{M}\)</span>, the monitor’s <em>calibration matrix.</em> This matrix relates the linear phosphor intensities to the relative cone absorption rates.</p>
+<p>As an example, I have calculated the calibration matrix for the monitor whose phosphor spectral power distributions are shown in <a href="#fig-monitor-matrix" class="quarto-xref">Figure&nbsp;<span>12.4</span></a>, and for the cone absorption spectra listed in Table~??. The resulting calibration matrix is</p>
+<p><span id="eq-calibration-matrix-example"><span class="math display">\[
+\left ( \begin{array}{ccc} 0.2732 &amp; 0.9922 &amp; 0.1466 \\ 0.1034 &amp; 0.9971 &amp; 0.2123 \\ 0.0117 &amp; 0.1047 &amp; 1.0000 \end{array} \right )
+\tag{12.25}\]</span></span></p>
+<p>Each column of the calibration matrix describes the relative cone absorptions caused by emissions from one of the phosphors: The absorptions from the red phosphor are in the first column, and absorptions due to the green and blue phosphors are in the second and third columns, respectively.</p>
+<p>Suppose the red phosphor stimulated only the <span class="math inline">\(L\)</span> cones, the green the <span class="math inline">\(M\)</span> cones, and the blue the <span class="math inline">\(S\)</span> cones. In that case, the calibration matrix would be diagonal, and we could control the absorptions in a single cone class by adjusting only one of the phosphor emissions. In practice, the light from each of the CRT phosphors is absorbed in all three cone types and the calibration matrix is never diagonal. As a result, to control the cone absorptions we must take into account the effect each phosphor has on each of the three cone types. This complexity is unavoidable because of the overlap of the cone absorption curves and the need to use phosphors with broadband emissions to create a bright display. Consequently, the calibration matrix is never diagonal.</p>
+</section>
+<section id="example-calculations" class="level3">
+<h3 class="anchored" data-anchor-id="example-calculations">Example Calculations</h3>
+<p>Now, we consider two ways we might use the calibration matrix. First, we might wish to calculate the receptor absorptions to a particular light from the CRT. Second, we might wish to know how to adjust the relative intensities of the CRT in order to achieve a particular pattern of cone absorptions.</p>
+<p>Using the methods described so far, you can calculate the relative cone absorption rates for any triplet of frame-buffer entries. Suppose the frame-buffer values are set to $ (128,128,0) $. The pattern will look yellow since only the red and green phosphors are excited. Assuming that the curves relating relative intensity to frame-buffer level are the same for all three phosphors (<a href="#fig-display-gamma" class="quarto-xref">Figure&nbsp;<span>12.3</span></a>), we find that the relative intensities will be <span class="math inline">\(\mathbf{e} = (0.1524,0.1524,0.0)^T\)</span>. The product <span class="math inline">\(\mathbf{H} \mathbf{e}\)</span> yields the relative cone absorption rates <span class="math inline">\(\mathbf{r} =(0.1929, 0.1677, 0.0177)^T\)</span>. If we set the frame-buffer to <span class="math inline">\((128,128,128)\)</span>, which appears gray, the relative intensities are <span class="math inline">\((0.1524,0.1524,0.1524)\)</span> and the relative cone absorption rates are <span class="math inline">\(\mathbf{r} = (0.2152,0.2001,0.1702)^T\)</span>.</p>
+<p>A second common type of calculation is used in behavioral experiments in which the experimenter wants to create a particular pattern of cone absorptions. To infer the relative display intensities necessary to achieve a desired effect on the cone absorptions, we must use the inverse of the calibration matrix, since</p>
+<p><span id="eq-inverse-calibration"><span class="math display">\[
+\mathbf{e} = \mathbf{H}^{-1} \mathbf{r} .
+\tag{12.26}\]</span></span></p>
+<p>To continue our example, the inverse of the calibration matrix is</p>
+<p><span id="eq-calibration-inverse"><span class="math display">\[
+\mathbf{H}^{-1} = \left ( \begin{array}{ccc} 5.8677 &amp; -5.8795 &amp; 0.3876 \\ -0.6074 &amp; 1.6344 &amp; -0.2579 \\ -0.0049 &amp; -0.1025 &amp; 1.0225 \end{array} \right )
+\tag{12.27}\]</span></span></p>
+<p>Suppose we wish to display a pair of stimuli that differ only in their effects on the $ S $ cones. Let’s begin with a stimulus whose relative intensities are <span class="math inline">\(\mathbf{e} = (0.5,0.5,0.5)^T\)</span>. Using the calibration matrix, we calculate that the relative cone absorption rates from this stimulus: they are <span class="math inline">\((.706, .656, .558)\)</span>. Now, let’s create a second stimulus with a slightly higher rate of $ S $ cone absorptions: say, <span class="math inline">\(\mathbf{r} = (.706, .656, .700)\)</span>. Using the inverse calibration matrix, we can calculate the relative display intensities needed to produce the second stimulus: they are <span class="math inline">\((0.555, 0.4634, 0.645)\)</span>.</p>
+<p>Notice that to create a stimulus difference seen only by the <span class="math inline">\(S\)</span> cones, we needed to adjust the intensities of all three phosphor emissions. For example, to increase the <span class="math inline">\(S\)</span> cone absorptions we need to increase the intensity of the blue phosphor emissions. This will also cause some increases in the <span class="math inline">\(L\)</span> and <span class="math inline">\(M\)</span> cone absorptions, and we must compensate for this by decreasing the emissions from the red and green phosphors.</p>
+<section id="color-calibration-tips" class="level4">
+<h4 class="anchored" data-anchor-id="color-calibration-tips">Color Calibration Tips</h4>
+<p>For most of us calibration is not, in itself, the point. Rather, we calibrate displays to describe and control experimental stimuli. If your experiments only involve a small number of stimuli, then it is best to calibrate those stimuli exhaustively. This strategy avoids making a lot of unnecessary assumptions, and your accuracy will be limited only by the quality of your calibration instrument.</p>
+<p>In some experiments, and in most commercial applications, the number of stimuli is too large for exhaustive calibration. <span class="citation" data-cites="brainard1989-calibration">Brainard (<a href="references.html#ref-brainard1989-calibration" role="doc-biblioref">1989</a>)</span> calculates that for the most extreme case, in which one has a <span class="math inline">\(512 \times 512\)</span> spatial array with RGB buffers at <span class="math inline">\(8\)</span> bits of resolution there are <span class="math inline">\(10 ^{1,893,917}\)</span> different stimulus patterns. So many patterns, so little time.</p>
+<p>Because of the large number of potential stimuli, we need to build a model of the relationship between the frame-buffer entries and the monitor output. The discussion of calibration in this appendix is based on an implicit model of the display. To perform a high quality calibration, you should check some of these assumptions. What are these implicit assumptions, and how close will they be to real performance?</p>
+</section>
+<section id="spatial-independence" class="level4">
+<h4 class="anchored" data-anchor-id="spatial-independence">Spatial Independence</h4>
+<p>First, we have assumed that the transfer function from the frame buffer values to the monitor output is independent of the spatial pattern in the frame buffer. Specifically, we have assumed that the light measurements we obtain from a region are the same if the surrounding area were set to zero or set to any other intensity level.</p>
+<p>In fact, the intensity in a region is not always independent of the spatial pattern in nearby regions (see e.g. <span class="citation" data-cites="lyons-farrell1989">Lyons and Farrell</span>, <span class="citation" data-cites="naiman-makous1992">Naiman and Makous (<a href="references.html#ref-naiman-makous1992" role="doc-biblioref">1992</a>)</span>). It can be very difficult and impractical to calibrate this aspect of the display. As an experimenter, you should choose your calibration conditions to match the conditions of your experiment as closely as possible so you don’t need to model the variations with spatial pattern. For example, if your experiments will use rectangular patches on a gray background, then calibrate the display properties for rectangular patches on a gray background, not on a black or white background.</p>
+<p>If you are interested in a harsh test to evaluate spatial independence of a display, try displaying a square pattern consisting of alternating pixels with <span class="math inline">\(0\)</span> and <span class="math inline">\(255\)</span>. When you step away from the monitor, the pattern will blur; in principle, the brightness of this pattern should match the brightness of a uniform square of the same size all of whose values are set to the frame-buffer value whose relative intensity is <span class="math inline">\(0.5\)</span>. You can try the test using alternating horizontal lines, or alternating vertical lines, or random dot arrays.</p>
+</section>
+<section id="phosphor-independence" class="level4">
+<h4 class="anchored" data-anchor-id="phosphor-independence">Phosphor Independence</h4>
+<p><span class="citation" data-cites="brainard1989-calibration">Brainard (<a href="references.html#ref-brainard1989-calibration" role="doc-biblioref">1989</a>)</span> points out that the spatial independence assumption reduces the number of measurements to approximately <span class="math inline">\(1.6 \times 10^{7}\)</span>. Still too many measurements to make; but, at least we have reduced the problem so that there are fewer measurements than the number of atoms in the universe.</p>
+<p>It is our second assumption, <em>phosphor independence</em>, that makes calibration practical. We have assumed that the signals emitted from three phosphors can be measured independently of one another. For example, we measured the relative intensities for the red phosphor and assumed that this curve is the same no matter what the state of the green and blue phosphor emissions. The phosphor independence assumption implies that we need to make only <span class="math inline">\(3 \times 256\)</span> measurements, the relative intensities of each of the three phosphors, to calibrate the display. (Once the spectral power distributions of the phosphors are known; or equivalently, the entries of the calibration matrix).</p>
+<p>Before performing your experiments, it is important to verify phosphor independence. Measure the intensity of the monitor output to a range of, say, red phosphor values when green frame-buffer is set to zero. Then measure again when the green frame-buffer is set to its maximum value. The relative intensities of the red phosphor you measure should be the same after you correct for the additive constant from the green phosphor. In my experience, this property does fail on some CRT displays; when it fails your calibration measurements are in real trouble. I suspect that phosphor independence fails when the power supply of the monitor is inadequate to supply the needs of the three electron guns. Thus, when all three electron guns are being driven at high levels, the load on the power supply exceeds the compliance range and produces a dependence between the output levels of the different phosphors. This dependence violates the assumptions of our calibration procedure and makes calibration of such a monitor very unpleasant. Get a new monitor.</p>
+<p>For further discussion of calibration, consult some papers in which authors have described their experience with specific display calibration projects (e.g. <span class="citation" data-cites="brainard1989-calibration">Brainard (<a href="references.html#ref-brainard1989-calibration" role="doc-biblioref">1989</a>)</span>; <span class="citation" data-cites="cowan-rowell1986">Cowan and Rowell (<a href="references.html#ref-cowan-rowell1986" role="doc-biblioref">1986</a>)</span>; <span class="citation" data-cites="post-calhoun1989">Post and Calhoun (<a href="references.html#ref-post-calhoun1989" role="doc-biblioref">1989</a>)</span>; <span class="citation" data-cites="berns1993-theory">Berns et al. (<a href="references.html#ref-berns1993-theory" role="doc-biblioref">1993b</a>)</span>, <span class="citation" data-cites="berns1993-metrology">Berns et al. (<a href="references.html#ref-berns1993-metrology" role="doc-biblioref">1993a</a>)</span>).</p>
+</section>
+</section>
+</section>
+<section id="sec-appendix-classification" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="sec-appendix-classification"><span class="header-section-number">12.3</span> Classification</h2>
+<p>Many visual judgments are classifications: an edge is present, or not; a part is defective, or not; a tumor is present, or not. The threshold and discrimination performances reviewed in <a href="chapter-7-pattern-sensitivity.html" class="quarto-xref"><span>Chapter 7</span></a> are classifications as well: I saw it, or not; the stimulus was this one, or that. This appendix explains some of the basic concepts in classification theory and their application to understanding vision.</p>
+<p>We will explore the issues in classification by analyzing some simple behavioral decisions, the kind that take place in many vision experiments. Suppose that during an experimental trial, the observer must decide which of two visual stimuli, <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>, is present. Part of the observer’s decision will be based on the pattern of cone absorptions during the experimental trial. We can list the cone absorptions in a vector, <span class="math inline">\(\mathbf{d}\)</span>, whose values represent the number of absorptions in each of the cones. Because there are statistical fluctuations in the light source, and variability in the image formation process, the pattern of cone absorptions created by the same stimulus varies from trial to trial. As a result, the pattern of cone absorptions from the two different stimuli may sometimes be the same, and perfect classification may be impossible.</p>
+<p>What response strategy should the subject use to classify the stimuli correctly as often as possible? A good way to lead your life is this: <em>When you are uncertain and must decide, choose the more likely alternative.</em></p>
+<p>We can translate this simple principle into a statistical procedure by the following set of calculations. Suppose that we know the probability of the signal being <span class="math inline">\(A\)</span> when we observe <span class="math inline">\(\mathbf{d}\)</span>. This is called the <em>conditional probability</em>, <span class="math inline">\(P(A \mid \mathbf{d})\)</span>, which is read as “the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(\mathbf{d}\)</span>.” Suppose we also know the conditional probability that the signal is <span class="math inline">\(B\)</span> is <span class="math inline">\(P(B \mid \mathbf{d})\)</span>. The observer should decide that the signal is the one that is more likely given the data, namely</p>
+<p><span id="eq-decision-rule"><span class="math display">\[
+\mbox{If}~ P(A \mid \mathbf{d}) ~ &gt; ~ P(B \mid \mathbf{d} ) \mbox{~~choose $A$, else $B$}.
+\tag{12.28}\]</span></span></p>
+<p>We call the expression in <a href="#eq-decision-rule" class="quarto-xref">Equation&nbsp;<span>12.28</span></a> a <em>decision rule</em>. The decision rule <a href="#eq-decision-rule" class="quarto-xref">Equation&nbsp;<span>12.28</span></a> is framed in terms of the likelihood of the stimuli (<span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>) given the data (<span class="math inline">\(\mathbf{d}\)</span>). This formulation of the probabilities runs counter to our normal learning experience. During training, we know that stimulus <span class="math inline">\(A\)</span> has been presented, and we experience a collection of cone absorptions. Experience informs us about probability of the data given the stimulus, <span class="math inline">\(P(\mathbf{d} \mid A)\)</span>, not the probability of the stimulus given the data, <span class="math inline">\(P(A \mid \mathbf{d})\)</span>. Hence, we would like to reformulate <a href="#eq-decision-rule" class="quarto-xref">Equation&nbsp;<span>12.28</span></a> in terms of the way we acquire our experience.</p>
+<p><em>Bayes Rule</em> is a formula that converts probabilities derived from experience, <span class="math inline">\(P(\mathbf{d} \mid A)\)</span>, into the form we need for the decision-rule, <span class="math inline">\(P(A \mid \mathbf{d})\)</span>. The expression for Bayes Rule is</p>
+<p><a name="id2208315637"></a></p>
+<p><span class="ql-right-eqno"> (21) </span><span class="ql-left-eqno"> </span> <span id="eq-bayes-rule"><span class="math display">\[
+P(A \mid \mathbf{d} ) = P ( \mathbf{d} \mid A ) \frac{ P ( A ) }{ P ( \mathbf{d} ) }
+\tag{12.29}\]</span></span></p>
+<p>where <span class="math inline">\(P(A)\)</span> is the probability the experimenter presents signal <span class="math inline">\(A\)</span> (in this case one-half) and <span class="math inline">\(P(\mathbf{d})\)</span> is the probability of observing <span class="math inline">\(\mathbf{d}\)</span> quanta. As we shall see, this second probability turns out to be irrelevant to our decision.</p>
+<p>The probabilities on the right hand side of Bayes Rule are either estimated from our experience, <span class="math inline">\(P(\mathbf{d} \mid A)\)</span>, or they are a structural part of the experimental design <span class="math inline">\(P(A)\)</span>. The probability that stimulus <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> is presented is called the <em>a priori</em> probability, or <em>base rate</em>. The probability <span class="math inline">\(P(\mathbf{d} \mid A)\)</span> is called the <em>likelihood</em> of the observation given the hypothesis. The probability, <span class="math inline">\(P(A \mid \mathbf{d})\)</span> is called the <em>a posteriori</em> probability. Bayes Rule combines the base rate and the likelihood of the observation to form the a posteriori probability of the hypothesis.</p>
+<p>We can use Bayes Rule to express the decision criterion in <a href="#eq-decision-rule" class="quarto-xref">Equation&nbsp;<span>12.28</span></a> in this more convenient form. <a name="id1391374113"></a></p>
+<p><span id="eq-bayes-decision-1"><span class="math display">\[(\mbox{If}~~ P(\mathbf{d} \mid A) \frac { P(A)}{ P(\mathbf{d}) } &gt; P(\mathbf{d} \mid B) \frac{ P(B) }{ P(\mathbf{d}) } ~~\mbox{choose $A$,~else~$B$}.)
+\tag{12.30}\]</span></span></p>
+<p>Since the probability of observing the data, <span class="math inline">\(P(\mathbf{d})\)</span>, divides both sides of this inequality, this probability is irrelevant to the decision. Therefore, we can re-write <a href="#eq-bayes-decision-1" class="quarto-xref">Equation&nbsp;<span>12.30</span></a> as</p>
+<p><span id="eq-bayes-decision-2"><span class="math display">\[
+\frac{ P(\mathbf{d} \mid A) }{ P(\mathbf{d} \mid B) } &gt; \frac{ P(B) } { P(A) }.
+\tag{12.31}\]</span></span></p>
+<p>The term on the left hand side of <a href="#eq-bayes-decision-2" class="quarto-xref">Equation&nbsp;<span>12.31</span></a> is called the <em>likelihood ratio</em>. The quantity on the right is called the <em>odds ratio</em>. The formula tells us that we should select <span class="math inline">\(A\)</span> when the likelihood ratio, which depends on the data, exceeds the odds ratio, which depends on the a priori knowledge. A system that uses this formula to classify the stimuli is called a <em>Bayes classifier</em>.</p>
+<section id="a-bayes-classifier-for-an-intensity-discrimination-task" class="level3">
+<h3 class="anchored" data-anchor-id="a-bayes-classifier-for-an-intensity-discrimination-task">A Bayes classifier for an Intensity Discrimination Task</h3>
+<p>In this section we will devise a Bayes classifier for a simple experimental decision. Suppose that we ask an observer to decide whether we have presented one of two brief visual stimuli; the two stimuli are identical in all ways but their intensity. We suppose that the observer decides which stimulus was presented based on the total number of cone absorptions during the trial, <span class="math inline">\(\sum_{i=1}^{N} d_i = d\)</span>, and without paying attention to the spatial distribution of the cone absorptions.</p>
+<p>Across experimental trials, the number of absorptions from <span class="math inline">\(A\)</span> will vary. There are two sources of this variability. One source of variability is in the stimulus itself. Photons emitted by a light source are the result of a change in the energy level of an electron within the source material. Each electron within the material has some probability of changing states and yielding some energy in the form of a photon. This change in excitation level is a purely statistical event and cannot be precisely controlled. The variability in the number of emitted photons, then, is inherent in the physics of light emission and cannot be eliminated.</p>
+<p>A second source of variability is in the observer. On different experimental trials, the position of the eye, accommodative state of the lens, and other optical factors will vary. As these image formation parameters vary, the chance that photons are absorbed within the photopigment will vary. These statistic fluctuations are unavoidable as well.</p>
+<p>The physical variability is easy to model, while the biological variability is quite subtle. For this illustrative calculation, we ignore the effects of biological variability and consider only the stimulus variability. In this case, the number of absorptions will follow the <em>Poisson distribution</em>. The formula for the Poisson probability distribution describes the probability of emitting <span class="math inline">\(d\)</span> quanta given a mean level of <span class="math inline">\(\mu\)</span>,</p>
+<p><span id="eq-poisson-prob"><span class="math display">\[
+P(d \mid {\mu}) = ( {\mu}^{d} / d ! ) e^{- \mu} .
+\tag{12.32}\]</span></span></p>
+<p><a name="id3350674891"></a></p>
+<p><span class="ql-right-eqno"> (24) </span><span class="ql-left-eqno"> </span> <span id="eq-poisson-prob"><span class="math display">\[
+P(d \mid {\mu}) = ( {\mu}^{d} / d ! ) e^{- \mu} .
+\tag{12.33}\]</span></span></p>
+<p>The value <span class="math inline">\(\mu\)</span> is called the <em>rate-parameter</em> of the Poisson distribution. The variance of the Poisson distribution is also <span class="math inline">\(\mu\)</span>.</p>
+<p><a href="#fig-bayes-intensity" class="quarto-xref">Figure&nbsp;<span>12.5</span></a> shows the probability distributions of the number of cone absorptions from the two stimuli, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. For this illustration, I have assumed that the mean absorptions from the two stimuli are <span class="math inline">\(\mu_{A} = 8\)</span> and <span class="math inline">\(\mu_{B} = 12\)</span>, respectively. Since the a priori stimulus probabilities are equal, the observer will select stimulus <span class="math inline">\(A\)</span> whenever <span class="math inline">\(P(d \mid A)\)</span> exceeds <span class="math inline">\(P(d \mid B)\)</span>. For this pair of distributions, this occurs whenever the observation is less than 9.</p>
+<div id="fig-bayes-intensity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bayes-intensity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/sdt.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bayes-intensity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.5: Bayes classifier for an intensity discrimination. The Poisson distributions of stimulus A with rate parameter muA = 8 (x’s) and B with rate parameter muB = 12 (o’s) are shown. When the a priori probabilities of seeing the stimuli are equal, the Bayes classifier selects B when the absorptions exceed the dashed line drawn through the graph. When the a priori probabilities are P(A) = 0.75 and P(B) = 0.25, the Bayes classifier selects B when the absorptions exceed the solid line drawn through the graph.
+</figcaption>
+</figure>
+</div>
+<p>Now, suppose the experimenter presents <span class="math inline">\(A\)</span> with probability <span class="math inline">\(0.75\)</span> and <span class="math inline">\(B\)</span> with probability <span class="math inline">\(0.25\)</span>. In this case, the subject can be right three quarters of the time simply by always guessing <span class="math inline">\(A\)</span>. Given the strong a priori odds for <span class="math inline">\(A\)</span>, the Bayes classifier will only choose <span class="math inline">\(B\)</span> if the likelihood exceeds three to one. From the distributions in <a href="#fig-bayes-intensity" class="quarto-xref">Figure&nbsp;<span>12.5</span></a> we find this occurs when there are at least 13 absorptions. The Bayes classifier uses the data and the a priori probabilities to make a decision.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>To find further support for their observation, Hecht et al.&nbsp;analyzed how the subject’s responses varied across trials. They assumed that all of the observed variability was due to the stimulus, and none was due to the observer. Their account is repeated in a wonderful didactic style in Cornsweet’s book. I don’t think this assumption is justified; a complete treatment of the data must take into account variability intrinsic to the human observer (e.g., <span class="citation" data-cites="nachmias-kocher1970">Nachmias and Kocher (<a href="references.html#ref-nachmias-kocher1970" role="doc-biblioref">1970</a>)</span>).</p>
+</section>
+<section id="a-bayes-classifier-for-a-pattern-discrimination-task" class="level3">
+<h3 class="anchored" data-anchor-id="a-bayes-classifier-for-a-pattern-discrimination-task">A Bayes classifier for a Pattern Discrimination Task</h3>
+<p>To discriminate between different spatial patterns, or stimuli located at different spatial positions, the observer must use the spatial pattern of cone absorptions. Consequently, pattern discrimination must depend on comparisons of a vector of measurements, <span class="math inline">\(\mathbf{d}\)</span>, not just a single value. In this section, we develop a Bayes classifier that can be applied to a pattern discrimination task.</p>
+<p>Again, for illustrative purposes we assume that the variability is due entirely to the stimulus. Moreover, we will assume that the variability in light absorption at neighboring receptors is statistically independent. Independence means that the probability of <span class="math inline">\(d_i\)</span> absorptions at the <span class="math inline">\(i^{th}\)</span> receptor and <span class="math inline">\(d_j\)</span> at the <span class="math inline">\(j^{th}\)</span> is</p>
+<p><span id="eq-independence"><span class="math display">\[
+P(d_i ~\&amp;~ d_j \mid A) = P(d_i \mid A)~P(d_j \mid A) .
+\tag{12.34}\]</span></span></p>
+<p>We can extend this principle across all of the receptors to write the probability of observing <span class="math inline">\(\mathbf{d}\)</span> given signal <span class="math inline">\(A\)</span>, namely</p>
+<p><span id="eq-likelihood"><span class="math display">\[
+L_A = \prod_{i=1}^{N} P(d_i \mid A) ,
+\tag{12.35}\]</span></span></p>
+<p>where <span class="math inline">\(L_A\)</span> is the likelihood of observing <span class="math inline">\(\mathbf{d}\)</span> given the stimulus <span class="math inline">\(A\)</span>.</p>
+<p>Finally, we must specify the spatial pattern of two stimuli. The expected number of absorptions at the <span class="math inline">\(i^{th}\)</span> cone will depend on the spatial pattern of the stimulus. We call the mean intensity of the stimulus at location <span class="math inline">\(i\)</span>, <span class="math inline">\(\mu_{A}i\)</span> and <span class="math inline">\(\mu_{B,i}\)</span>, respectively.</p>
+<p>We are ready to compute the proper Bayes classifier. The general form of the decision criterion is</p>
+<p><span id="eq-bayes-classifier-general"><span class="math display">\[
+\mbox{If}~~\frac{P(\mathbf{d} \mid A)}{P(\mathbf{d} \mid B)} &gt; \frac{P( B )}{P( A )}~~ \mbox{choose A, else B}.
+\tag{12.36}\]</span></span></p>
+<p>If the two stimuli are presented in the experiment equally often, we can re-write this equation as</p>
+<p><span id="eq-bayes-classifier-equal-prior"><span class="math display">\[
+\mbox{If}~~P( \mathbf{d} \mid A ) &gt; P( \mathbf{d} \mid B )~~ \mbox{choose $A$, else $B$}.
+\tag{12.37}\]</span></span></p>
+<p>Next, we can use independence to write</p>
+<p><span id="eq-bayes-classifier-independence"><span class="math display">\[
+\mbox{If}~~\prod_{i=1}^N P(d_i \mid A) &gt; \prod_{i=1}^N P(d_i \mid B)~~\mbox{choose A, else B}.
+\tag{12.38}\]</span></span></p>
+<p>Now, we substitute the Poisson formula, take the logarithm of both sides, and regroup terms to obtain</p>
+<p><span id="eq-bayes-classifier-poisson"><span class="math display">\[
+\mbox{If}~ \sum_{i=1}^{N} d_i \ln \left(\frac{\mu_{A,i}}{\mu_{B,i}}\right) &gt; \sum_{i=1}^{N} \mu_{A,i} - \sum_{i=1}^{N} \mu_{B,i}~ \\
+\mbox{choose A, else B}.
+\tag{12.39}\]</span></span></p>
+<p><a href="#eq-bayes-classifier-poisson" class="quarto-xref">Equation&nbsp;<span>12.39</span></a> can be interpreted as a very simple computational procedure. First, notice that the Equation contains two terms. The first term is the weighted sum of the photopigment absorptions,</p>
+<p><span id="eq-bayes-classifier-weighted-sum"><span class="math display">\[
+\sum_{i=1}^{N} d_i w_i ,
+\tag{12.40}\]</span></span></p>
+<p>where <span class="math inline">\(w_i= \ln \left( \frac{\mu_{A,i}}{\mu_{B,i}} \right)\)</span>. This is a very familiar computation; it is directly analogous to the calculation implemented by a linear neuron whose receptive field sensitivity at position <span class="math inline">\(i\)</span> is <span class="math inline">\(w_i\)</span> (see <a href="chapter-5-the-retinal-representation.html" class="quarto-xref"><span>Chapter 5</span></a>).</p>
+<p>The second term is the difference between the total number of photopigment absorptions expected from each stimulus.</p>
+<p><span id="eq-bayes-classifier-diff"><span class="math display">\[
+\sum_{i=1}^{N} \mu_{A,i} - \sum_{i=1}^{N} \mu_{B,i} .
+\tag{12.41}\]</span></span></p>
+<p>This term acts as a normalizing criterion to correct for the overall response to the two stimuli. The decision rule in <a href="#eq-bayes-classifier-poisson" class="quarto-xref">Equation&nbsp;<span>12.39</span></a>) compares a weighted sum of cone absorptions to the normalizing criterion. If the first term exceeds the second, then choose response <span class="math inline">\(A\)</span>, else <span class="math inline">\(B\)</span>.</p>
+<p>We have learned that a Bayes classifier for pattern discrimination can be implemented using the results of simple linear calculations, like the calculations represented in the outputs of some peripheral neurons. In fact, making a decision like a Bayes classifier is equivalent to comparing the response of a linear neuron with a criterion value. If response of the linear neuron with receptive field defined by <span class="math inline">\(w_i\)</span> exceeds the criterion value, then choose stimulus <span class="math inline">\(A\)</span>, otherwise choose <span class="math inline">\(B\)</span>.</p>
+<div id="fig-bayes-classifier" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bayes-classifier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/geisler.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bayes-classifier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.6: Bayes classifier for a spatial discrimination task. (a) The mean retinal image of a line. The grid lines are separated by 30 sec of arc, approximately the spacing of the cone inner segments in the fovea. (b) The mean retinal image of an image formed by a pair of lines separated by 30 sec of arc. The intensity of each line is one half the intensity of the line in panel (a). (c) The weights of the Bayes classifier that should be used to discriminate the stimuli in (a) and (b), given the assumptions of independent Poisson noise. (After: <span class="citation" data-cites="geisler1989-sequentialidealobserveranalysis">Geisler (<a href="references.html#ref-geisler1989-sequentialidealobserveranalysis" role="doc-biblioref">1989</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-bayes-classifier" class="quarto-xref">Figure&nbsp;<span>12.6</span></a> shows an example of a Bayes classifier computed for a simple pattern discrimination task. The two spatial patterns to be discriminated are shown in panels (a) and (b). The image in (a) is the retinal image of a line segment. <a href="#fig-bayes-classifier" class="quarto-xref">Figure&nbsp;<span>12.6</span></a> (b) shows the retinal image of a pair of line segments, separated by 30 sec of arc. The grid marks on the image are spaced by 30 sec of arc, essentially the same spacing as the cone inner segments. The curves below the images measure the intensity of the stimuli across a horizontal section.</p>
+<p><a href="#fig-bayes-classifier" class="quarto-xref">Figure&nbsp;<span>12.6</span></a> (c) shows the weights of the Bayes classifier for discriminating the two images; the weights were computing using <a href="#eq-bayes-classifier-weighted-sum" class="quarto-xref">Equation&nbsp;<span>12.40</span></a>. In this image the gray level represents the value of the weight that should be applied to the individual cone absorptions: a medium gray intensity corresponds to a zero weight, lighter values are positive weights, and darker values are negative weights. The spatial pattern of weights bears an obvious resemblance to the spatial patterns of receptive fields in the visual cortex.</p>
+<p>The Bayes classifier specifies how to obtain the optimal discrimination performance when we know the signal and the noise. Apart from the optimality of the Bayes classifier itself, observers in behavioral experiments can never know the true signal and noise perfectly. The performance of the Bayes classifier, therefore, must be equal or superior to human performance. In nearly all cases where a Bayes classifier analysis has been carried out, the Bayesian classifier performance is vastly better than human observer performance. Human observers usually fail to extract a great deal of information available in the stimulus. In general, then, the Bayes classifier does not model human performance (<span class="citation" data-cites="banks1987-physicallimitsgrating">Banks et al. (<a href="references.html#ref-banks1987-physicallimitsgrating" role="doc-biblioref">1987</a>)</span>).</p>
+<p>Why, then, is the Bayes classifier analysis important? The Bayes classifier analysis defines what information is available to the observer. Defining the stimulus is an essential part of a good experimental design. The Bayes classifier defines what the observer can potentially do, and this serves as a good standard to use in evaluating performance. The Bayes classifier helps us to understand the task; only if we understand the task, can we understand the observer’s performance.</p>
+<blockquote class="blockquote">
+<p>The real power of this approach is that the ideal discriminator [Bayes classifier] measures all the information available to the later stages of the visual system. I would like to suggest that measuring the information available in discrimination stimuli with a model of the sort I have described here should be done as routinely as measuring the luminances of the stimuli with a photometer. In other words, we should not only use a light meter but we should also use the appropriate information meter. It is simply a matter of following the first commandment of psychophysics: “know thy stimulus.” (<span class="citation" data-cites="geisler1987-idealobserveranalysis">Geisler (<a href="references.html#ref-geisler1987-idealobserveranalysis" role="doc-biblioref">1987</a>)</span>, p.&nbsp;30)</p>
+</blockquote>
+</section>
+</section>
+<section id="sec-appendix-signal-estimation" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="sec-appendix-signal-estimation"><span class="header-section-number">12.4</span> Signal Estimation: A Geometric View</h2>
+<p>This book is filled with calculations of the general form</p>
+<p><span id="eq-dot-product"><span class="math display">\[
+\mathbf{a}^T \mathbf{x} = \sum_{i=1}^{N} a_i x_i ~~~.
+\tag{12.42}\]</span></span></p>
+<p>This formula is called the <em>dot product</em> of the vectors <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{x}\)</span>. It is so important that it is often given a special notation, such as <span class="math inline">\(\mathbf{a} \cdot \mathbf{x}\)</span>. Every time we multiply a matrix by a vector, <span class="math inline">\(\mathbf{A} \mathbf{x}\)</span>, we compute the dot product <span class="math inline">\(\mathbf{x}\)</span> with the rows of <span class="math inline">\(\mathbf{A}\)</span>. In this section, I want to discuss some geometric intuitions connected with the dot product operation.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>Although we used the dot product calculation many times, I decided not to use the dot product notation in the main portion of the book because the notation treats the two vectors symmetrically; but, in most applications the vectors <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{x}\)</span> had an asymmetrical role. The vector <span class="math inline">\(\mathbf{x}\)</span> was usually a stimulus, say the wavelength composition of a light or a one-dimensional spatial pattern, and the vector <span class="math inline">\(\mathbf{a}\)</span> was part of the sensory apparatus, say a photopigment wavelength sensitivity or a ganglion cell receptive field. Because the physical entities we described were not symmetric, I felt that the asymmetric notation, <span class="math inline">\(\mathbf{a}^T \mathbf{x}\)</span>, was more appropriate.</p>
+<p>The scalar value of the dot product between two vectors is equal to The inline mathematics should use the Quarto format, which is <code>$...$</code>. For equations on separate lines, use the <code>$$ ... $$</code> format and add a tag like <code>{#eq-dot-product}</code> at the end.</p>
+<p>Here is the modified code:</p>
+<p><span class="ql-right-eqno"> </span><span class="ql-left-eqno"> </span> <span id="eq-dot-product"><span class="math display">\[
+\mathbf{a} \cdot \mathbf{x} = \| \mathbf{a} \| \| \mathbf{x} \| \cos( \theta )
+\tag{12.43}\]</span></span></p>
+<p>where <span class="math inline">\(\| \cdot \|\)</span> is the vector length and <span class="math inline">\(\theta\)</span> is the angle between the vectors. To simplify the discussion in the remainder of this section, we will assume that the vector <span class="math inline">\(\mathbf{a}\)</span> has unit length.</p>
+<div id="fig-dot-product" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dot-product-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/dotProduct.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dot-product-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.7: A geometric interpretation of the two-dimensional dot product. (a) A geometrical view of the dot product of two vectors is shown. The dashed line is a perpendicular from the tip of vector <span class="math inline">\(\mathbf{x}\)</span> to the unit-length vector <span class="math inline">\(\mathbf{a}\)</span>. (b) Any vector whose endpoint falls along the dashed line yields the same scalar value when we compute the vector’s dot product with <span class="math inline">\(\mathbf{a}\)</span>.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-dot-product" class="quarto-xref">Figure&nbsp;<span>12.7</span></a> (a) is a geometric representation of the dot product operation. The unit vector <span class="math inline">\(\mathbf{a}\)</span> and the signal vector <span class="math inline">\(\mathbf{x}\)</span> are drawn as arrows extending from the origin. A dashed line is drawn from the tip of <span class="math inline">\(\mathbf{x}\)</span> (the signal) at right angles to the vector <span class="math inline">\(\mathbf{a}\)</span> (the sensor). The length of the vector from the origin to point of intersection between the perpendicular dashed line and <span class="math inline">\(\mathbf{a}\)</span> is called the <em>projection</em> of <span class="math inline">\(\mathbf{x}\)</span> onto <span class="math inline">\(\mathbf{a}\)</span>. Because we have assumed <span class="math inline">\(\mathbf{a}\)</span> has unit length, the length of the projection, <span class="math inline">\(\| \mathbf{x} \| \cos ( \theta )\)</span>, is equal to the dot product, <span class="math inline">\(\mathbf{a} \cdot \mathbf{x} = \| \mathbf{a} \| \| \mathbf{x} \| \cos (\theta)\)</span>.</p>
+<p>By inspecting <a href="#fig-dot-product" class="quarto-xref">Figure&nbsp;<span>12.7</span></a> (b), you can see that there are many signal vectors, <span class="math inline">\(\mathbf{x}\)</span>, that have the same dot product with <span class="math inline">\(\mathbf{a}\)</span>. Specifically, all of the vectors whose endpoints fall along a line that is perpendicular to <span class="math inline">\(\mathbf{a}\)</span>, have the same dot product with <span class="math inline">\(\mathbf{a}\)</span>. Hence, any signal represented by a vector whose endpoint is on this line will cause the same response in the sensor represented by the vector <span class="math inline">\(\mathbf{a}\)</span>.</p>
+<div id="fig-dot-product-3d" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dot-product-3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/dotProduct3.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dot-product-3d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.8: A geometric representation of the three-dimensional dot product. (a) The perpendicular from x to a is indicated by the dashed line. When a is a unit vector, the distance from the origin to the intersection of the dashed line with a is the scalar value of the dot product. (b) Any vector whose endpoint falls within the indicated plane yields the same scalar value when we compute the vector’s dot with a.
+</figcaption>
+</figure>
+</div>
+<p>The geometric intuition extends smoothly to vectors with more than two dimensions. <a href="#fig-dot-product-3d" class="quarto-xref">Figure&nbsp;<span>12.8</span></a> (a) shows the dot product between a pair of three-dimensional vectors. In three-dimensions, all of the vectors whose endpoints fall on a plane perpendicular to the unit-length vector <span class="math inline">\(\mathbf{a}\)</span> have the same dot product with that vector (<a href="#fig-dot-product-3d" class="quarto-xref">Figure&nbsp;<span>12.8</span></a> (b)). In four or more dimensions the set of signals with a common dot product value fall on a <em>hyperplane</em>.</p>
+<p><a href="#fig-dot-product" class="quarto-xref">Figure&nbsp;<span>12.7</span></a> (b) and <a href="#fig-dot-product-3d" class="quarto-xref">Figure&nbsp;<span>12.8</span></a> (b) illustrate the information that is preserved and that is lost in a dot product calculation. When we measure the dot product of a pair of two-dimensional vectors, we learn that the signal must have fallen along a particular line; when we measure a three-dimensional dot-product, we learn that the signal must have fallen within a certain plane. Hence, each dot product helps to define the set of possible input signals.</p>
+<p>By combining the results from several dot products, we can estimate the input signal. We can use the geometric representation of the dot product in <a href="#fig-dot-product" class="quarto-xref">Figure&nbsp;<span>12.7</span></a> to develop some intuitions about how to estimate the signal from a collection of sensor responses. This is a <em>signal estimation</em> problem.</p>
+<div id="fig-signal-estimation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-signal-estimation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/estimation.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-signal-estimation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.9: Signal estimation from multiple linear sensors. (a) We can infer the location of a two-dimensional signal vector from the responses of two linear sensors. (b) When the vectors representing the sensors are orthogonal, the estimation error is small. (c) When the vectors representing the sensors are nearly aligned, the estimation error tends to be quite large in the direction perpendicular to the sensor vectors.
+</figcaption>
+</figure>
+</div>
+<p>First, imagine that the response of each linear neuron is equal to the dot product of a vector describing the spatial contrast pattern of a stimulus with a vector describing the neuron’s receptive field. Further, suppose that the input stimuli are drawn from a set of simple spatial patterns, namely the weighted sums of two cosinusoidal gratings,</p>
+<p><span id="eq-cosine-sum"><span class="math display">\[
+{w}_{1} \cos(2 \pi f_1 x) + {w}_{2} \cos(2 \pi f_2 x)
+\tag{12.44}\]</span></span></p>
+<p>We can represent each of these spatial contrast patterns using a two-dimensional vector, <span class="math inline">\(\mathbf{x} = (w_1, w_2)\)</span>, whose entries are the weights of the cosinusoids. We can represent the sensitivity of each linear neuron to these spatial patterns using a two-dimensional vector, <span class="math inline">\(\mathbf{a}_i\)</span>, whose two entries define the neuron’s sensitivity to each of the cosinusoidal terms. Because the neurons are linear, we can compute the <span class="math inline">\(i^{th}\)</span> neuron’s response to any pattern in the set from the linear calculation in the dot product, namely, <span class="math inline">\({\mathbf{a}_i}^T \mathbf{x}\)</span>.</p>
+<p><a href="#fig-signal-estimation" class="quarto-xref">Figure&nbsp;<span>12.9</span></a> (a) shows geometrically how to use two responses to identify uniquely the two-dimensional input stimulus. Suppose that the response of the neuron with receptive field <span class="math inline">\(\mathbf{a}_1\)</span> is <span class="math inline">\(r_1\)</span>. Then, we can infer that the stimulus must fall along a line perpendicular to the vector <span class="math inline">\(\mathbf{a}_1\)</span> and intersecting <span class="math inline">\(\mathbf{a}_1\)</span> at a distance <span class="math inline">\(r_1 = \| \mathbf{x} \| \cos ( \theta_1 )\)</span> from the origin.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> If the response to the second neuron is <span class="math inline">\(r_2\)</span>, we can draw a second line that describes a second set of possible stimulus locations. The true stimulus must be on both lines, so it is located at the intersection of the two dashed lines.</p>
+<p>When the sensor responses have some added noise, which is always the case in real measurements, some sensor combinations provide more precise estimates than others. <a href="#fig-signal-estimation" class="quarto-xref">Figure&nbsp;<span>12.9</span></a> (b) shows a pair of sensors whose vectors are nearly orthogonal to one another. Because of the sensor noise, the true identity of the signal is uncertain. The lightly shaded bands drawn around the perpendicular dashed lines show the effect of sensor noise on the estimated region from the individual measurements. The darkly shaded region is the intersection of the bands, showing the likely region containing the signal. For these orthogonal sensors, the dark band that is likely to contain the signal is fairly small.</p>
+<p><a href="#fig-signal-estimation" class="quarto-xref">Figure&nbsp;<span>12.9</span></a> (c) shows the same representation but for a pair of sensors represented nearly parallel vectors. Such a pair of sensors is said to be <em>correlated</em>. When the sensors are correlated in this way, the shaded region can be quite large in the direction perpendicular to the sensor vectors. In the presence of noise, correlated sensors provide a poor estimate of the signal.</p>
+<blockquote class="blockquote">
+
+</blockquote>
+<section id="matrix-equations" class="level3">
+<h3 class="anchored" data-anchor-id="matrix-equations">Matrix equations</h3>
+<p>Ordinarily, we use matrix multiplication to represent a collection of dot products. Many aspects of the signal estimation problem can be expressed and solved using methods developed for matrix algebra.</p>
+<p>To see the connection between matrix multiplication and the signal estimation problem, consider the following example. Write the dot product of a two-dimensional signal and a sensor in the tableau format,</p>
+<p><span id="eq-dot-product-tableau"><span class="math display">\[
+r_1 = \left ( x_1 ~~~ x_2 \right )
+\left ( \begin{array}{c} a_1 \\ a_2 \\ \end{array} \right ) .
+\tag{12.45}\]</span></span></p>
+<p>Now, suppose we have two sensors and two responses. Then, we can expand the tableau by adding more rows to represent the new measurements, as in</p>
+<p><span id="eq-matrix-tableau"><span class="math display">\[
+\left ( \begin{array}{c} r_1 \\ r_2 \end{array} \right ) =
+\left ( \begin{array}{cc} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{array} \right )
+\left ( \begin{array}{c} x_1 \\ x_2 \\ \end{array} \right ) ,
+\tag{12.46}\]</span></span></p>
+<p>where <span class="math inline">\(a_{i\cdot}\)</span> is a vector that represents the sensitivity of the <span class="math inline">\(i^{th}\)</span> sensor. In the usual signal estimation problem, we know the properties of the sensors represented in the rows of the matrix and we know the responses in <span class="math inline">\(\mathbf{r}\)</span>. We wish to estimate the signal in <span class="math inline">\(\mathbf{x}\)</span>. The pair of sensor vectors represented in the rows of the matrix, call it <span class="math inline">\(\mathbf{A}\)</span>, are the counterpart of the vectors shown in <a href="#fig-signal-estimation" class="quarto-xref">Figure&nbsp;<span>12.9</span></a> (a). Our ability to estimate the signal from the responses depends on the correlation between the rows of the matrix.</p>
+<p>The matrix tableau in <a href="#eq-matrix-tableau" class="quarto-xref">Equation&nbsp;<span>12.46</span></a> shows a special case in which there are two sensors and two unknown values of the signal. In general, we might have more sensors or more unknowns in the signal. Having more sensors would force us to add more rows to the matrix; having more unknowns in the signal would force us to change the lengths of the sensor and signal vectors. Each of these changes might change the general shape of the matrix tableau. We can write the general case, without specifying the number of sensors or unknowns, using the concise representation</p>
+<p><span id="eq-matrix-equation"><span class="math display">\[
+\mathbf{r} = \mathbf{A} \mathbf{x}
+\tag{12.47}\]</span></span></p>
+<p>Again, in the (linear) signal estimation problem we know the responses (<span class="math inline">\(\mathbf{r}\)</span>) and the sensors in the rows of <span class="math inline">\(\mathbf{A}\)</span> and we wish to estimate the signal (<span class="math inline">\(\mathbf{x}\)</span>).</p>
+<p>Many topics we have reviewed in the text can be framed as linear estimation problems within the matrix <a href="#eq-matrix-equation" class="quarto-xref">Equation&nbsp;<span>12.47</span></a>. For example, you might imagine that the rows of the matrix are retinal ganglion receptive fields, the responses are neural firing rates, and the input is a spatial contrast pattern (<a href="chapter-5-the-retinal-representation.html" class="quarto-xref"><span>Chapter 5</span></a>). The brain may then need to estimate various properties of the contrast pattern from the neural firing patterns. Or, you might imagine that the rows of the matrix represent the spectral responsivities of the three cone types, the responses are the cone signals, and the signal is a spectral power distribution (<a href="chapter-4-wavelength-encoding.html" class="quarto-xref"><span>Chapter 4</span></a> and <a href="chapter-9-color.html" class="quarto-xref"><span>Chapter 9</span></a>). Or, you might imagine that each row of the matrix represents the receptive field of a space-time oriented neuron, the output is the neuron’s response, and the signal are the two velocity components of the local motion flow field (<a href="chapter-10-motion-and-depth.html" class="quarto-xref"><span>Chapter 10</span></a>).</p>
+<p>There are many matrix algebra tools that are useful for solving matrix equations like <a href="#eq-matrix-equation" class="quarto-xref">Equation&nbsp;<span>12.47</span></a>. To choose the proper tool for a problem, one must take into account a variety of specific properties of the measurement conditions. For example, in some cases there are more sensors than there are unknown entries in the vector <span class="math inline">\(\mathbf{x}\)</span>. We can represent this estimation problem using matrix tableau as</p>
+<p><span id="eq-overconstrained-tableau"><span class="math display">\[
+\left(
+    \begin{array}{c}
+        ~ \\
+        ~ \\
+        \mathbf{r} \\
+        ~ \\
+        ~ \\
+    \end{array}
+\right)
+=
+\left(
+    \begin{array}{ccc}
+        ~ &amp; ~ &amp; ~ \\
+        ~ &amp; ~ &amp; ~ \\
+        ~ &amp; \mathbf{A} &amp; ~ \\
+        ~ &amp; ~ &amp; ~ \\
+        ~ &amp; ~ &amp; ~
+    \end{array}
+\right)
+\left(
+    \begin{array}{c}
+        ~ \\
+        \mathbf{x} \\
+        ~ \\
+    \end{array}
+\right)
+.
+\tag{12.48}\]</span></span></p>
+<p><a name="id3608234494"></a> <span id="eq-overconstrained-tableau"><span class="math display">\[
+\left(
+    \begin{array}{c}
+        ~ \\
+        ~ \\
+        \mathbf{r} \\
+        ~ \\
+        ~ \\
+    \end{array}
+\right)
+=
+\left(
+    \begin{array}{ccc}
+        ~ &amp; ~ &amp; ~ \\
+        ~ &amp; ~ &amp; ~ \\
+        ~ &amp; \mathbf{A} &amp; ~ \\
+        ~ &amp; ~ &amp; ~ \\
+        ~ &amp; ~ &amp; ~
+    \end{array}
+\right)
+\left(
+    \begin{array}{c}
+        ~ \\
+        \mathbf{x} \\
+        ~ \\
+    \end{array}
+\right)
+.
+\tag{12.49}\]</span></span></p>
+<p>The shape of the tableau makes it plain that there are more responses in the vector <span class="math inline">\(\mathbf{r}\)</span> than there are unknowns in the vector <span class="math inline">\(\mathbf{x}\)</span>. This type of estimation problem is called <em>over-constrained</em>. When there is noise in the measurements, no exact solution to the over-constrained problem may exist; that is, there may be no vector <span class="math inline">\(\mathbf{x}\)</span> such that the equality in <a href="#eq-overconstrained-tableau" class="quarto-xref">Equation&nbsp;<span>12.49</span></a> is perfectly satisfied. Instead, we must define an error criterion and try to find a “best” solution, that is a solution that minimizes the error criterion.</p>
+<p>In general, the best solution will depend on the noise properties and the error criterion. In some cases, say when the noise is Gaussian and the error is the sum of the squared difference between the observed and predicted responses, there are good closed form solutions to the linear estimation problem. That is, one can find an estimate of the signal without using any search algorithms, but by direct computation. If one has other error criteria or noise, a search may be necessary.</p>
+<p>A full discussion of the problems involved in signal estimation and matrix algebra would take us far beyond the scope of this book, but there are several excellent textbooks that explain these ideas (<span class="citation" data-cites="strang1993-introlinearalgebra">Strang (<a href="references.html#ref-strang1993-introlinearalgebra" role="doc-biblioref">1993</a>)</span>; <span class="citation" data-cites="lawson-hanson1974-leastsquares">Strang (<a href="references.html#ref-lawson-hanson1974-leastsquares" role="doc-biblioref">1974</a>)</span>, <span class="citation" data-cites="vetterli1992-multires">Vetterli and Metin UZ (<a href="references.html#ref-vetterli1992-multires" role="doc-biblioref">1992</a>)</span>). Also, the manuals for several computer packages, such as <em>Matlab</em> and <em>Mathematica</em>, contain useful information about using these methods and further references. To see how some of these tools have been applied to vision science, you might consult some of the following references (<span class="citation" data-cites="brainard1994-bayesian">Brainard and Freeman (<a href="references.html#ref-brainard1994-bayesian" role="doc-biblioref">1994</a>)</span>, <span class="citation" data-cites="heeger1992-subspacealgorithm">Heeger and Jepson (<a href="references.html#ref-heeger1992-subspacealgorithm" role="doc-biblioref">1992</a>)</span>; <span class="citation" data-cites="marimont1992-linearmodelssurface">Marimont and Wandell (<a href="references.html#ref-marimont1992-linearmodelssurface" role="doc-biblioref">1992</a>)</span>; <span class="citation" data-cites="nielsenwandell1988-discreteanalysis">Nielsen and Wandell (<a href="references.html#ref-nielsenwandell1988-discreteanalysis" role="doc-biblioref">1988</a>)</span>; <span class="citation" data-cites="thomas1994">Thomas et al. (<a href="references.html#ref-thomas1994" role="doc-biblioref">1994</a>)</span>; <span class="citation" data-cites="tomasi-kanade1992">Tomasi and Kanade (<a href="references.html#ref-tomasi-kanade1992" role="doc-biblioref">1992</a>)</span>, <span class="citation" data-cites="wandell1987-synthesisanalysis">Wandell (<a href="references.html#ref-wandell1987-synthesisanalysis" role="doc-biblioref">1987</a>)</span>)</p>
+</section>
+</section>
+<section id="sec-appendix-flow-field" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="sec-appendix-flow-field"><span class="header-section-number">12.5</span> Motion Flow Field Calculation</h2>
+<p>The motion flow field describes how an image point changes position from one moment in time to the next, say, as an observer changes viewpoint. I reviewed several properties of the motion flow field in <a href="chapter-10-motion-and-depth.html" class="quarto-xref"><span>Chapter 10</span></a>, and I also reviewed how to use the information in a motion flow field to estimate scene properties, including observer motion and depth maps.</p>
+<p>In this appendix I describe how to compute a motion flow field. There are various reasons one might need to calculate a motion flow field. For example, motion flow fields are used as experimental stimuli to analyze human performance (e.g., <span class="citation" data-cites="royden1992">Royden et al. (<a href="references.html#ref-royden1992" role="doc-biblioref">1992</a>)</span>; <span class="citation" data-cites="warren-hannon1990">Warren and Hannon (<a href="references.html#ref-warren-hannon1990" role="doc-biblioref">1990</a>)</span>). Also, algorithms designed to estimate depth maps from motion flow fields must be tested using artificial motion flow fields (e.g., <span class="citation" data-cites="tomasi-kanade1992">Tomasi and Kanade (<a href="references.html#ref-tomasi-kanade1992" role="doc-biblioref">1992</a>)</span>, <span class="citation" data-cites="heeger1992-subspacealgorithm">Heeger and Jepson (<a href="references.html#ref-heeger1992-subspacealgorithm" role="doc-biblioref">1992</a>)</span>).</p>
+<p>To calculate the motion flow field, we will treat the eye as a pinhole camera and we will define the position of the points in space relative to the pinhole. Based on this framework, we will derive two formulae. First, we will derive the <em>perspective projection</em> formula. This formula describes how points in space project onto locations in the image plane of the pinhole camera. Second, we will derive how translating and rotating the pinhole camera position, i.e., the <em>viewpoint</em>, changes the point coordinates in space. Finally, we combine these two formulae to predict how changing the viewpoint changes the point locations in the image plane, thus creating the motion flow field.</p>
+<section id="imaging-geometry-and-perspective-projection" class="level3">
+<h3 class="anchored" data-anchor-id="imaging-geometry-and-perspective-projection">Imaging Geometry and Perspective Projection</h3>
+<p>We base our calculations on ray-tracing from points in the world onto an image plane in a pinhole camera (see <a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a>). To simplify some of the graphics calculations, it is conventional to place the pinhole at the origin of the coordinate frame and the imaging plane in the positive quadrant of the coordinate frame. <a href="#fig-perspective" class="quarto-xref">Figure&nbsp;<span>12.10</span></a> (a) shows the geometric relationship between a point in space, the pinhole, and the image plane.</p>
+<p>We define the pinhole to be the origin of the imaging coordinate frame. The image plane is parallel to the X-Y plane at a distance <span class="math inline">\(f\)</span> along the Z axis. A ray from <span class="math inline">\(\mathbf{p} = ({p}_{1},{p}_{2},{p}_{3})\)</span> passes towards the pinhole and intersects the image plane location <span class="math inline">\((u,v,f)\)</span>. Since the third coordinate, <span class="math inline">\(f\)</span>, is the same for all points in the image plane, we can describe the image plane location using only the first two coordinates, <span class="math inline">\((u,v)\)</span>.</p>
+<p><a href="#fig-perspective" class="quarto-xref">Figure&nbsp;<span>12.10</span></a> (b,c) show the geometric relationship between a point in space and its location in the image plane from two different views: looking down the Y axis and X axis, respectively. From both views, we can identify a pair of similar triangles that relate the position of the point in three space and the image point position. There are two equations that relate the point coordinates, <span class="math inline">\(\mathbf{p} = ({p}_{1},{p}_{2},{p}_{3})\)</span>, the distance from the pinhole to the image plane <span class="math inline">\(f\)</span>, and the image plane coordinates <span class="math inline">\((u,v)\)</span>,</p>
+<p><span id="eq-perspective-projection"><span class="math display">\[
+u = ( {p}_{1} / {p}_{3}) f ~~~\mbox{and}~~~ v = ({p}_{2} / {p}_{3} ) f .
+\tag{12.50}\]</span></span></p>
+<div id="fig-perspective" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-perspective-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/perspective.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-perspective-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.10: Perspective calculations of a pinhole camera. The coordinate frame is centered at the pinhole, and the image plane is located at a distance <span class="math inline">\(f\)</span> in front of the pinhole parallel to the X-Y plane. (a) A ray from a point <span class="math inline">\((p_1, p_2, p_3)\)</span> that passes through the pinhole will intersect the image plane at location <span class="math inline">\((u,v)\)</span>. (b) From a view along the Y axis we find a pair of similar triangles. These triangles define an equation that relates the image plane coordinate, <span class="math inline">\(u\)</span>, the point coordinates, and the distance from the pinhole to the image plane, <span class="math inline">\(f\)</span>. (c) From a view along the X axis, we find an analogous pair of similar triangles and an analogous equation for <span class="math inline">\(v\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="imaging-geometry-camera-translation-and-rotation" class="level3">
+<h3 class="anchored" data-anchor-id="imaging-geometry-camera-translation-and-rotation">Imaging Geometry, Camera Translation and Rotation</h3>
+<p>The coordinate frame is centered at the pinhole. Hence, when the pinhole camera moves, each point in the world is assigned a new position vector. Here, we calculate the change in coordinates of the points for each motion of the pinhole optics. We will use the new coordinate to calculate the change in the point’s image position, and then the motion flow field vectors.</p>
+<p>At each moment in time we can describe the motion of the camera using two different terms. First, there is a translational component that describes the direction of the pinhole motion. Second, there is a rotational component, that describes how the camera rotates around the pinhole. We use two vectors to represent the camera’s velocity. The vector <span class="math inline">\(\mathbf{t} = ({t}_{1}, {t}_{2}, {t}_{3})^T\)</span> represents the translational velocity. Each term in this vector describes the velocity of the camera in one of the three spatial dimensions. The vector <span class="math inline">\(\mathbf{r} = ({r}_{x}, {r}_{y}, {r}_{z})^T\)</span> represents the angular velocity. Each term in this vector describes the rotation of the camera with respect to one of the three spatial dimensions. The six values in these vectors completely describe the rigid motion of the camera.</p>
+<p>We can compute the change in the coordinate, <span class="math inline">\(\Delta \mathbf{p} = (\Delta {p}_{1}, \Delta {p}_{2}, \Delta {p}_{3})^T\)</span>, given the translation, rotation, and point coordinates as follows.</p>
+<p><span id="eq-coordinate-change"><span class="math display">\[
+\begin{aligned}
+\Delta {p}_{1} &amp; = {r}_{z} {p}_{2} - {r}_{y} {p}_{3} - {t}_{1} \\
+\Delta {p}_{2} &amp; = {r}_{x} {p}_{3} - {r}_{z} {p}_{1} - {t}_{2} \\
+\Delta {p}_{3} &amp; = {r}_{y} {p}_{1} - {r}_{x} {p}_{2} - {t}_{3}
+\end{aligned}
+\tag{12.51}\]</span></span></p>
+<p>These formulae apply when the rotation and translation are small quantities, measuring the instantaneous change in position.</p>
+</section>
+<section id="motion-flow" class="level3">
+<h3 class="anchored" data-anchor-id="motion-flow">Motion Flow</h3>
+<p>Finally, we compute motion flow by using <a href="#eq-coordinate-change" class="quarto-xref">Equation&nbsp;<span>12.51</span></a> to specify how the change in position in space maps into a change in image position. The original point <span class="math inline">\(\mathbf{p}\)</span> mapped into an image position <span class="math inline">\((u,v)\)</span>; after the observer moves, the new coordinate, <span class="math inline">\(\mathbf{p} + {\mathbf{\Delta}} \mathbf{p}\)</span>, maps into a new image position, <span class="math inline">\((u',v')\)</span>. The resulting motion flow is the difference in the two image positions, <span class="math inline">\(\mathbf{m}(u,v) = (u-u',v-v')^T\)</span>.</p>
+<p><a href="#eq-motion-flow" class="quarto-xref">Equation&nbsp;<span>12.52</span></a> defines how the motion of the pinhole camera and the depth map combine to create the motion flow field (<span class="citation" data-cites="heeger1992-subspacealgorithm">Heeger and Jepson (<a href="references.html#ref-heeger1992-subspacealgorithm" role="doc-biblioref">1992</a>)</span>).</p>
+<p><span id="eq-motion-flow"><span class="math display">\[
+\mathbf{m}(u,v) = \frac{1}{{p}_{3}(u,v)} \mathbf{A}(u,v) \mathbf{t} + \mathbf{B}(u,v) \mathbf{r} .
+\tag{12.52}\]</span></span></p>
+<p>The term <span class="math inline">\({p}_{3}(u,v)\)</span> is the value of <span class="math inline">\({p}_{3}\)</span> for the point in three space with image position <span class="math inline">\((u,v)\)</span>. The entries of the <span class="math inline">\(2 \times 3\)</span> matrices <span class="math inline">\(\mathbf{A}(u,v)\)</span> and <span class="math inline">\(\mathbf{B}(u,v)\)</span> depend only on known quantities, namely the distance from the pinhole to the image plane and the image position, <span class="math inline">\((u,v)\)</span>.</p>
+<p><span id="eq-matrix-A"><span class="math display">\[
+\mathbf{A}(u,v) = \left( \begin{array}{ccc} -f &amp; 0 &amp; u \\ 0 &amp; -f &amp; v \end{array} \right)
+\tag{12.53}\]</span></span></p>
+<p><span id="eq-matrix-B"><span class="math display">\[
+\mathbf{B}(u,v) = \left( \begin{array}{ccc} -(uv)/f &amp; -(f + u^2/f) &amp; v \\ (f + v^2/f) &amp; -(uv)/f &amp; -u \end{array} \right)
+\tag{12.54}\]</span></span></p>
+<p><a href="#eq-motion-flow" class="quarto-xref">Equation&nbsp;<span>12.52</span></a> expresses a relationship we have seen already: The local motion flow field is the sum of two vectors (see <a href="chapter-10-motion-and-depth.html#fig-motion-flow-field" class="quarto-xref">Figure&nbsp;<span>10.10</span></a>). One vector describes a component of the motion flow field caused by viewpoint translation, <span class="math inline">\(\mathbf{t}\)</span>. The second vector describes a component of the motion flow field caused by viewpoint rotation, <span class="math inline">\(\mathbf{r}\)</span>. Only the first component, caused by translation, depends on the distance to the point, <span class="math inline">\({p}_{3}(u,v)\)</span>. The rotational component is the same for points at any distance from the viewpoint. Hence, all of the information concerning the depth map is contained in the motion flow field component that is caused by viewpoint translation.</p>
+
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-banks1987-physicallimitsgrating" class="csl-entry" role="listitem">
+Banks MS, Geisler WS, Bennett PJ (1987) The physical limits of grating visibility. Vision Research 27:1915–1924
+</div>
+<div id="ref-berns1993-metrology" class="csl-entry" role="listitem">
+Berns RS, Gorzynski ME, Motta RJ (1993a) CRT colorimetry. Part II: metrology. Color Research &amp; Application 18:315–325
+</div>
+<div id="ref-berns1993-theory" class="csl-entry" role="listitem">
+Berns RS, Motta RJ, Gorzynski ME (1993b) <span>CRT</span> colorimetry. Part <span>I</span>: Theory and practice. Color Res Appl 18:299–314
+</div>
+<div id="ref-bracewell1986-hartleytransform" class="csl-entry" role="listitem">
+Bracewell RN (1986) The <span>Hartley Transform</span>. Clarendon Press, Oxford
+</div>
+<div id="ref-brainard1989-calibration" class="csl-entry" role="listitem">
+Brainard DH (1989) Calibration of a computer controlled color monitor. Col Res Appl 14:23–34
+</div>
+<div id="ref-brainard1994-bayesian" class="csl-entry" role="listitem">
+Brainard DH, Freeman WT (1994) Bayesian method for recovering surface and illuminant properties from photosensor responses. In: Rogowitz BE, Allebach JP (eds) Human vision, visual processing, and digital display v. SPIE
+</div>
+<div id="ref-cowan-rowell1986" class="csl-entry" role="listitem">
+Cowan WB, Rowell ML (1986) Phosphor constancy in color video monitors. Color Res Appl
+</div>
+<div id="ref-geisler1987-idealobserveranalysis" class="csl-entry" role="listitem">
+Geisler WS (1987) Ideal-observer analysis of visual discrimination. Frontiers of visual science
+</div>
+<div id="ref-geisler1989-sequentialidealobserveranalysis" class="csl-entry" role="listitem">
+Geisler WS (1989) Sequential ideal-observer analysis of visual discriminations. Psychological Review 96:267–314
+</div>
+<div id="ref-goldstein1989-sensationperception" class="csl-entry" role="listitem">
+Goldstein E (1989) Sensation and perception. Belmont, CA, US: Wadsworth/Thomson Learning Sensation and perception 3:598
+</div>
+<div id="ref-hechtenergyquantavision1942" class="csl-entry" role="listitem">
+Hecht S, Schlaer S, Pirenne MH (1942) Energy, quanta and vision. Journal of the Optical Society of America 38:196–208
+</div>
+<div id="ref-heeger1992-subspacealgorithm" class="csl-entry" role="listitem">
+Heeger DJ, Jepson AD (1992) Subspace methods for recovering rigid motion <span>I</span>: Algorithm and implementation. Int J Comput Vis 7:95–117
+</div>
+<div id="ref-lyons-farrell1989" class="csl-entry" role="listitem">
+Lyons NP, Farrell JE Linear systems analysis of CRT displays. SID Digest 220–222
+</div>
+<div id="ref-marimont1992-linearmodelssurface" class="csl-entry" role="listitem">
+Marimont DH, Wandell BA (1992) <a href="https://www.ncbi.nlm.nih.gov/pubmed/1432341">Linear models of surface and illuminant spectra</a>. Journal of the Optical Society of America A, Optics and Image Science 9:1905–1913
+</div>
+<div id="ref-marimont1993-matchingcolorimages" class="csl-entry" role="listitem">
+Marimont D, Wandell B (1993) Matching color images: <span>The</span> effects of axial chromatic aberration. Journal of the Optical Society of America A, Optics and Image Science 12:
+</div>
+<div id="ref-nachmias-kocher1970" class="csl-entry" role="listitem">
+Nachmias J, Kocher EC (1970) Visual detection and discrimination of luminance increments. J Opt Soc Am 60:382–389
+</div>
+<div id="ref-naiman-makous1992" class="csl-entry" role="listitem">
+Naiman AC, Makous W (1992) Spatial nonlinearities of gray-scale <span>CRT</span> pixels. In: Rogowitz BE (ed) Human vision, visual processing, and digital display III. SPIE
+</div>
+<div id="ref-nielsenwandell1988-discreteanalysis" class="csl-entry" role="listitem">
+Nielsen KR, Wandell BA (1988) <a href="http://dx.doi.org/10.1364/JOSAA.5.000743">Discrete analysis of spatial-sensitivity models</a>. J Opt Soc Am A 5:743–755
+</div>
+<div id="ref-post-calhoun1989" class="csl-entry" role="listitem">
+Post DL, Calhoun CS (1989) An evaluation of methods for producing desired colors on <span>CRT</span> monitors. Color Res Appl 14:172–186
+</div>
+<div id="ref-royden1992" class="csl-entry" role="listitem">
+Royden CS, Banks M, Crowell J (1992) The perception of heading during eye movements. Nature 360:583–585
+</div>
+<div id="ref-sekuler1985-perception" class="csl-entry" role="listitem">
+Sekuler R, Blake R (1985) Perception. A.A. Knopf
+</div>
+<div id="ref-stevens1962-powerlaw" class="csl-entry" role="listitem">
+Stevens SS (1962) The surprising simplicity of sensory metrics. American Psychologist 17:29–39
+</div>
+<div id="ref-strang1993-introlinearalgebra" class="csl-entry" role="listitem">
+Strang G (1993) Introduction to linear algebra. Wellesley-Cambridge Press
+</div>
+<div id="ref-lawson-hanson1974-leastsquares" class="csl-entry" role="listitem">
+Strang G (1974) Solving least squares problems. Prentice-Hall, New York
+</div>
+<div id="ref-thomas1994" class="csl-entry" role="listitem">
+Thomas I, Simoncelli E, Bajcsy R (1994) Spherical retinal flow for a fixating observer. PENNSYLVANIA UNIV PHILADELPHIA DEPT OF COMPUTER AND INFORMATION SCIENCE
+</div>
+<div id="ref-tomasi-kanade1992" class="csl-entry" role="listitem">
+Tomasi C, Kanade T (1992) Shape and motion from image streams under orthography: A factorization method. Int J Comput Vis 9:137–154
+</div>
+<div id="ref-vetterli1992-multires" class="csl-entry" role="listitem">
+Vetterli M, Metin UZ K (1992) Multiresolution coding techniques for digital television: <span>A</span> review. Multidimens Syst Signal Process 3:161–187
+</div>
+<div id="ref-wandell1987-synthesisanalysis" class="csl-entry" role="listitem">
+Wandell BA (1987) <a href="https://www.ncbi.nlm.nih.gov/pubmed/21869373">The synthesis and analysis of color images</a>. IEEE Transactions on Pattern Analysis and Machine Intelligence 9:2–13
+</div>
+<div id="ref-warren-hannon1990" class="csl-entry" role="listitem">
+Warren WH Jr, Hannon DJ (1990) Eye movements and optical flow. J Opt Soc Am A 7:160–169
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>The results in this appendix are expressed using real harmonic functions. This is in contrast to the common practice of using complex notation, specifically Euler’s complex exponential, as a shorthand to represent sums of harmonic functions. The exposition using complex exponentials is brief and elegant, but I believe it obscures the connection with experimental measurements. For this reason, I have avoided the development based on complex notation.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Since we use only cyclic convolution here, I will drop the word “cyclic” and refer to the formula simply as convolution. This is slightly abusive, but conforms to common practice in many fields.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>This observation is the basis of another useful linear transform method called the <em>Hartley Transform</em> (<span class="citation" data-cites="bracewell1986-hartleytransform">Bracewell (<a href="references.html#ref-bracewell1986-hartleytransform" role="doc-biblioref">1986</a>)</span>).<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>This calculation applies to spatially uniform regions of a display, in which we can ignore the complications of chromatic aberration. <span class="citation" data-cites="marimont1993-matchingcolorimages">Marimont and Wandell (<a href="references.html#ref-marimont1993-matchingcolorimages" role="doc-biblioref">1993</a>)</span> describe how to include the effects of chromatic aberration.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>In a classic paper, <span class="citation" data-cites="hechtenergyquantavision1942">Hecht et al. (<a href="references.html#ref-hechtenergyquantavision1942" role="doc-biblioref">1942</a>)</span> measured the smallest number of quanta necessary to reliably detect a signal. In the most sensitive region of the retina, under the optimized viewing conditions, they found that 100 quanta at the cornea, which corresponds to about 10 absorptions, are sufficient. The quanta are absorbed in an area covered by several hundred rods; hence, it is quite unlikely that two quanta will be absorbed by the same rod. They concluded, quite correctly, that a single photon of light can produce a measurable response in a single rod.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Physicists often refer to <a href="#eq-dot-product" class="quarto-xref">Equation&nbsp;<span>12.43</span></a> as the scalar product because the result is a scalar; mathematicians often refer to the dot product as an inner product and write it using angle brackets <span class="math inline">\(\langle \mathbf{a}, \mathbf{x} \rangle\)</span>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>In general, we would place the perpendicular line at a distance of <span class="math inline">\(\| \mathbf{x} \| \cos ( \theta_i ) / \| \mathbf{a}_i\|\)</span>, but we have assumed that <span class="math inline">\(\mathbf{a}_i\)</span> has unit length.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">References</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./numbers.html" class="pagination-link" aria-label="Useful numbers">
+        <span class="nav-page-text">Useful numbers</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

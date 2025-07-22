@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>11&nbsp; Seeing – Foundations of Vision (1995)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./chapter-10-motion-and-depth.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-3-image-interpretation.html">Image Interpretation</a></li><li class="breadcrumb-item"><a href="./chapter-11-seeing.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seeing</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Foundations of Vision (1995)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">How to study vision</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Encoding</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-1-image-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Encoding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-2-image-formation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Image Formation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-3-the-photoreceptor-mosaic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Photoreceptor Mosaic</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-4-wavelength-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wavelength Encoding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Representation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-2-image-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Representation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-5-the-retinal-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Retina</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-6-the-cortical-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cortical Representation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-7-pattern-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pattern Vision</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-8-multiresolution-image-representations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiresolution Representations</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Interpretation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-3-image-interpretation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Interepretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-9-color.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Color</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-10-motion-and-depth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Motion and Depth</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11-seeing.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seeing</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful numbers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./online-teaching-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Online Teaching Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#seeing-overview" id="toc-seeing-overview" class="nav-link active" data-scroll-target="#seeing-overview"><span class="header-section-number">11.1</span> Seeing overview</a></li>
+  <li><a href="#miracle-cures" id="toc-miracle-cures" class="nav-link" data-scroll-target="#miracle-cures"><span class="header-section-number">11.2</span> Miracle Cures</a></li>
+  <li><a href="#illusions" id="toc-illusions" class="nav-link" data-scroll-target="#illusions"><span class="header-section-number">11.3</span> Illusions</a>
+  <ul class="collapse">
+  <li><a href="#seeing-the-three-dimensional-world" id="toc-seeing-the-three-dimensional-world" class="nav-link" data-scroll-target="#seeing-the-three-dimensional-world">Seeing the Three-Dimensional World</a></li>
+  <li><a href="#shadows-and-edges" id="toc-shadows-and-edges" class="nav-link" data-scroll-target="#shadows-and-edges">Shadows and Edges</a></li>
+  <li><a href="#shapes" id="toc-shapes" class="nav-link" data-scroll-target="#shapes">Shapes</a></li>
+  <li><a href="#integrating-cues" id="toc-integrating-cues" class="nav-link" data-scroll-target="#integrating-cues">Integrating cues</a></li>
+  <li><a href="#geometric-illusions" id="toc-geometric-illusions" class="nav-link" data-scroll-target="#geometric-illusions">Geometric Illusions</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">11.4</span> Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-3-image-interpretation.html">Image Interpretation</a></li><li class="breadcrumb-item"><a href="./chapter-11-seeing.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seeing</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-seeing" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seeing</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="seeing-overview" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="seeing-overview"><span class="header-section-number">11.1</span> Seeing overview</h2>
+<p>Seeing is a collection of inferences about the world. Motion, color and depth are important individual judgments. To see, however, we must connect these inferences into a unified explanation of the image. Until we integrate the separate inferences of pattern, color, motion and depth into a description of objects and surfaces, the world remains a disconcerting jumble of unconnected events.</p>
+<p>It is easy to recognize the importance of integrating our visual inferences into a coherent view of the scene, but it is much harder to understand the process by which we perceive objects and surfaces. Because there is no current consensus on a theoretical approach to this topic, I have chosen to spend this chapter reviewing phenomena that I believe will be important in defining a computational theory of seeing.</p>
+<p>In the first section of this chapter I will discuss clinical cases that illustrate the importance of being able to integrate information from different locations within an image and images acquired at different times. To those who are sighted from birth, the ability to integrate image information acquired from different viewpoints at different points in time is easy and automatic. As we walk about, we see a single object and not a collection of independent images. The computational complexity of the visual inference that integrates the different information is made quite plain, however, when we read about the difficulties of patients who were blind as infants but “cured” later in life. The tragic stories of these individuals, as they struggle to learn to see, provide us with some understanding of the complexity of object perception.</p>
+<p>In the second section of this chapter, I will review a set of visual illusions. Visual illusions help us understand how the visual pathways organize images into objects. I have selected a series of illusions that show how the visual system uses integrates image information concerning occlusion, transparency, and boundaries to integrate judgments of brightness and shape. While I have mentioned the significance of many of these aspects of vision in earlier chapters, the illusions we will review here provide some clues about the rules for combining visual inferences into a complete description of the scene. And, there is a second reason for devoting this time to studying illusions: they are fun.</p>
+</section>
+<section id="miracle-cures" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="miracle-cures"><span class="header-section-number">11.2</span> Miracle Cures</h2>
+<p>In 1963, Gregory and Wallace wrote a monograph describing a miracle cure. As an infant, the patient SB had lost effective sight in both eyes from a corneal disease. At the age of 52, he received a corneal graft that restored his optics. After living most of his life without sight, SB looked upon his wife for the first time (<span class="citation" data-cites="gregory-wallace1963-miraclecure">Gregory and Wallace (<a href="references.html#ref-gregory-wallace1963-miraclecure" role="doc-biblioref">1963</a>)</span>).</p>
+<p>While the case of SB is one of the best studied, there have been a few similar cases described over the last few centuries. There is considerable uniformity, and some real surprises, concerning several aspects of these “miracle cures” (<span class="citation" data-cites="vonsenden1960-spaceandsight">Senden (<a href="references.html#ref-vonsenden1960-spaceandsight" role="doc-biblioref">1960</a>)</span>; <span class="citation" data-cites="valvo1971-visualrehab">Valvo (<a href="references.html#ref-valvo1971-visualrehab" role="doc-biblioref">1971</a>)</span>; <span class="citation" data-cites="sacks1993">Sacks (<a href="references.html#ref-sacks1993" role="doc-biblioref">1993</a>)</span>).</p>
+<p>First, patients who have been blind most of their lives do not see well after their optics have been repaired. Even after months or years, they continue to struggle at tasks those blessed with sight at birth find effortless. Some visual measures, such as acuity and color vision, can be within the normal range. But patients do not perceive depth, motion, or the relationship among features effortlessly. They have difficulty recognizing a face, or judging the movement of traffic. Their visual world is a jumble from which they can occasionally glean a useful pattern or bit of information. The description of these cases suggests that many patients never acquire a good facility at grouping together features from different positions within the image, or features scene at different points in time from different perspectives. They have great difficulty integrating information from different visual perspectives, over time, into a coherent description of the scene.</p>
+<p>The difficulty in integrating information is not a small thing. The restoration of the elements of sight without this integrative ability is a disconcerting emotional experience. Most of the patients experience severe depression, and even those patients who overcome the depression, wonder whether the returned sight was worth the effort. In summarizing the cases he studied, <span class="citation" data-cites="valvo1971-visualrehab">Valvo (<a href="references.html#ref-valvo1971-visualrehab" role="doc-biblioref">1971</a>)</span> wrote,</p>
+<blockquote class="blockquote">
+<p>“The congenitally blind person especially, has to face the prospect of a difficult struggle before reaching a stage at which his vision permits him to understand the world around him. For a period of time varying with each patient, these people experience a confusing proliferation of perceptions, and they must learn to see as a child learns to walk. Moreover, personalities and character armors built up as a blind person have to be shed, and they often find it difficult to change their ways of living. As one of our patients put it, “I had to die as a blind person to be reborn as a seeing person.”” [page 4]</p>
+</blockquote>
+<p>Gregory and Wallace heard about SB’s restoration of sight from a story in a London newspaper. They managed to get to the hospital after the first operation, in which the optics of one eye were repaired, but before the operation on the second eye (the original monograph is difficult to obtain. But, it is reprinted, along with additional material in a collection of Gregory’s writings “Concepts and Mechanisms of Preception” (<span class="citation" data-cites="gregory1974-conceptsandmechanismsbook">Gregory (<a href="references.html#ref-gregory1974-conceptsandmechanismsbook" role="doc-biblioref">1974</a>)</span>). They continued to visit with SB and examine his vision, when his health and mood permitted. Fairly quickly, SB managed to recognize various forms including upper case letters and the face of a clock. His ability to recognize such patterns quickly was apparently due to his ability to transfer his understanding of these shapes based on touch into a corresponding visual sensation. This happened automatically and quickly, at a rate that astonished Gregory and Wallace. It suggested to them that he had a good facility for integrating information into objects and patterns when the information corresponded to his tactile experience.</p>
+<p>Equally surprisingly, SB could recognize the shapes in the Ishihara color plates quite easily. He learned to identify color names, and in fact some colors were already known to him because, even though when blind he could not see pattern, he could detect the difference between light and dark. Also, during opthalmological exams during his blindness the strong light gives yields a red appearance that was probability familiar to him as well.</p>
+<p>Many of our most important perceptual abilities, however, were beyond SB’s reach. We take for granted our ability to judge the shape of objects as we change our viewpoint. As we walk around a house, or a tree, or a person, each image that we see is different. Yet, we integrate the information we acquire into a single unified description of an object or a person. But, SB seemed to experience a different world as he moved around an object.</p>
+<blockquote class="blockquote">
+<p>“Quite recently he had been struck by how objects changed their shape when he walked round them. He would look at a lamp post, walk round it, stand studying it from a different aspect, and wonder why it looked different and yet the same.” [(<span class="citation" data-cites="gregory1974-conceptsandmechanismsbook">Gregory (<a href="references.html#ref-gregory1974-conceptsandmechanismsbook" role="doc-biblioref">1974</a>)</span>, pg. 111)]</p>
+</blockquote>
+<p>To see a moving object, we must also see the connection between the object at different moments in time. As the object moves further and further, we often see it from different perspectives and we must be able to integrate the different retinal images of the object into a single coherent description. Patients with restored sight have a difficult time learning to perceive motion and depth. Saks quotes from a patient with restored sight, Virgil, who wrote in his journal,</p>
+<blockquote class="blockquote">
+<p>“During these first weeks [after surgery] I had no appreciation of depth or distance; street lights were luminous stains stuck to the window panes and corridors of the hospital were black holes. When I crossed the road the traffic terrified me, even when I was accompanied. I am very insecure while walking; indeed I am more afraid now than before the operation.”</p>
+</blockquote>
+<p>Gregory’s description of SB is striking in its similarity.</p>
+<blockquote class="blockquote">
+<p>“He [SB] found the traffic frightening, and would not attempt to cross even a comparatively small street by himself. This was in marked contrast to his former behaviour, as described to us by his wife, when he would cross any street in his own town by himself. In London, and later in his home town, he would show evident fear, even when led by a companion whom he trusted, and it was many months before he would venture alone. We heard that before the operation he would sometimes injure himself by walking briskly into a parked vehicle, or other unexpected obstruction, and he generally did not carry a white stick. As a blind man he was unusually active and aggressive. We began to see that this assurance had at least temporarily left him; he seemed to lack confidence and interest in his surroundings.”</p>
+</blockquote>
+<p>To perceive motion, the visual system must be able to integrate information over space and time. To perform this integration, then, requires a means of short term visual storage that can be used to represent recent information and visual inferences. If this visual storage fails, perhaps because it did not develop normally during early blindness, motion perception will be particularly vulnerable; more so, say, than color perception. One of Valvo’s patients, HS, describes his difficulties with short term visual visual memories as he learned to read. He wrote in his journal,</p>
+<blockquote class="blockquote">
+<p>“My first attempts at reading were painful. I could make out single letters, but it was impossible for me to make out whole words; I managed to do so only after weeks of exhausting attempts. In fact, it was impossible for me to remember all the letters together, after having read them one by one. Nor was it possible for me, during the first weeks to count my own five fingers: I had the feeling that they were all there, but … it was not possible for me to pass from one to the other while counting.”</p>
+</blockquote>
+<p>These clinical cases are important for the qualitative information they provide us. We learn that patients can identify colors, or even individual letters. Yet, they have difficulty integrating their visual experiences into a single whole. As they walk around an object, it appears to be a series of different shapes, not a single unitary thing. Moving objects do not have any continuity of existence. Distance, which also requires a relative judgment, is impossible to judge accurately. The experience of these patients shows us how important the processes that integrate information over space and time are to seeing. To understand seeing, we must understand the processes that link our inferences of pattern, color, motion and depth into a unified description of the world.</p>
+</section>
+<section id="illusions" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="illusions"><span class="header-section-number">11.3</span> Illusions</h2>
+<p>Illusions are fun. They draw people into our discipline, they inspire new algorithms, they fill us with wonder. They are the children of our professional lives. And like children, illusions are a bit unruly. They do unpredictable things and defy a simple organization. You can try to insist that an illusion clean up its room, but a few minutes later you will discover another idea thrown haphazardly on the floor, or a theory turned upside down.</p>
+<p>Of the many illusions known to vision scientists, only a fraction are suitable for the printed page. Of that portion, I have included mainly illusions to make some points about how we see objects. To understand seeing we must understand how we integrate all of the different inferences concerning pattern, color, motion and depth into a single description of the world.</p>
+<section id="seeing-the-three-dimensional-world" class="level3">
+<h3 class="anchored" data-anchor-id="seeing-the-three-dimensional-world">Seeing the Three-Dimensional World</h3>
+<div id="fig-shepard-tables" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-shepard-tables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/tables1.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shepard-tables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.1: We assume two-dimensional shapes describe three dimensional objects. Drawn on the two-dimensional page, the table tops are the same except for a rotation. Convince yourself that the shapes are the same on the page by making a cut-out equal in size to one of the tables. Then, rotate the cut-out and place it on the other table. (Source: <span class="citation" data-cites="shepard1990-mingsightsbook">Shepard (<a href="references.html#ref-shepard1990-mingsightsbook" role="doc-biblioref">1990</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>A central premise of object perception is that we see objects in a three-dimensional world. If there is an opportunity to interpret a drawing or an image as a three-dimensional object, we do. This principle is illustrated by the drawing created by <span class="citation" data-cites="shepard1990-mingsightsbook">Shepard (<a href="references.html#ref-shepard1990-mingsightsbook" role="doc-biblioref">1990</a>)</span> shown in <a href="#fig-shepard-tables" class="quarto-xref">Figure&nbsp;<span>11.1</span></a>. The two table tops have precisely the same two-dimensional shape on the page, except for a rigid rotation. Nobody believes this when they first look at the illusion. To convince yourself that the shapes of the table tops are are truly the same, trace one of them on an overhead transparency or tracing paper, and then rotate the tracing around. Or, make a cutout that covers one table-top and then rotate it and place it on the other. The illusion shows that we don’t see the two-dimensional shape drawn on the page, but instead we see the three-dimensional shape of the object in space. This experience, which is inescapable for us, appears to be unattainable for individuals like patient SB whose case was described in the previous section.</p>
+<div id="fig-boring-size" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boring-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/boringSize-1024x953.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boring-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.2: Judging size. Seen in its proper context, we can use the image to infer the man’s height accurately and we are unaware of the size of the man’s image on the page. We are made aware that the man’s image is small when we translate the image to a new position with improper depth cues (After <span class="citation" data-cites="boring1964-sizeconstancy">Boring (<a href="references.html#ref-boring1964-sizeconstancy" role="doc-biblioref">1964</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="boring1964-sizeconstancy">Boring (<a href="references.html#ref-boring1964-sizeconstancy" role="doc-biblioref">1964</a>)</span> illustrated the way we automatically interpret size and depth using an image like the one shown in <a href="#fig-boring-size" class="quarto-xref">Figure&nbsp;<span>11.2</span></a>. When we copy the image of the distant figure and place it next to the closer figure, we are surprised to see the size of the distant figure on the page. Boring and Shepard’s illusions show that we interpret the size of the distant figure in terms of the three-dimensional cues in the image. It is hard for us to see the image on the page because, in most cases, we infer the size of things as if they were projections of three-dimensional objects.</p>
+</section>
+<section id="shadows-and-edges" class="level3">
+<h3 class="anchored" data-anchor-id="shadows-and-edges">Shadows and Edges</h3>
+<p>Not just size, but most visual inferences are based on the interpretation of image data as arising from objects in a three-dimensional world. Even judgments that seem simple, such as brightness, may depend on interpreting the scene as consisting of objects in a three-dimensional world.</p>
+<div id="fig-brightness-shadows" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-brightness-shadows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/transparency-1024x304.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brightness-shadows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.3: Brightness and shadows. (a) The intensity of the light reflected by the diamond regions in the middle and right columns is the same. Yet, the diamonds in the middle column appear darker than the diamonds in the right column. (b) When we displace the columns and destroy the interpretation of the image as containing shadows, the brightness illusion is decreased greatly. (c) When we displace the columns but maintain the perceived shadows, the brightness illusion remains strong. (After: <span class="citation" data-cites="adelson1993-brightness">Adelson (<a href="references.html#ref-adelson1993-brightness" role="doc-biblioref">1993</a>)</span>)
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-brightness-shadows" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> is an example of a brightness judgment that depends on our interpretation of the objects in the image (<span class="citation" data-cites="adelson1993-brightness">Adelson (<a href="references.html#ref-adelson1993-brightness" role="doc-biblioref">1993</a>)</span>). Consider the middle and right columns of diamond shapes in <a href="#fig-brightness-shadows" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> (a). The physical intensity of the light reflected these two sets of diamonds is the same. But, the diamonds in the middle column appear darker than the diamonds in the right column.</p>
+<p><span class="citation" data-cites="adelson1993-brightness">Adelson (<a href="references.html#ref-adelson1993-brightness" role="doc-biblioref">1993</a>)</span> suggests the brightness difference between the columns arises because of a transparency, that is some columns appear to be seen through light and dark strips overlayed on the image. Another interpretation of the differences between the columns is that some columns are seen under a cast shadow (Marimont, personal communication). In either event, the brightness of the local regions appears to depend on the global interpretation of the image. This is shown by the images in <a href="#fig-brightness-shadows" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> (b,c), which are variations of the image in (a). The image in (b) has no shadow edge, (b) while the image in (c) changes the image without destroying the perception of a shadow (c). The brightness difference is diminished when the shadow is destroyed, but the difference is maintained in when the shadow is present (c).</p>
+<p>As I described in <a href="chapter-9-color.html" class="quarto-xref"><span>Chapter 9</span></a>, brightness and color appearance are better predicted by reflectance than the light incident at the eye. If the visual system’s objective is to associate brightness with reflectance, then the visual system should take transparency into account when judging an object’s brightness. If the physical intensity of the light from a surface seen through the semi-transparent object has the same intensity as light from a surface seen directly, then the surface behind the transparency (right column) must be more reflective and hence judged brighter. The example in <a href="#fig-brightness-shadows" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> (a) shows that even image interpretations as complex as shadows or transparency can influence the brightness of a target.</p>
+<div id="fig-edge-illusion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-edge-illusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/edgeIllusion.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-edge-illusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.4: Edges can influence the brightness of a large region. The relative physical intensities of the inset region is shown by the trace. The intensities of the regions are equal but they are separated by a transient that defines an edge. Even though the intensities are equal, the region on the right appears darker. To confirm that the physical intensities of the areas are equal, cover the edge transient.
+</figcaption>
+</figure>
+</div>
+<p>The illusion in <a href="#fig-edge-illusion" class="quarto-xref">Figure&nbsp;<span>11.4</span></a> is named for three individuals who discovered it separately: <em>Craik, O’Brien, and Cornsweet</em>. The illusion shows that surface boundaries influence brightness. The two areas on opposite sides of the border have the same physical intensity. Yet, the region on the right appears darker. The reason for this is that the intensity pattern at the border, shown at the bottom of the figure, suggests a spatial transition from a light to dark edge. This transition only occupies a small part of the image, and the intensity within the two regions away from the edge is the same. But, the visual system extends the inference from the boundary to a brightness judgment of the two large regions. It is quite surprising that the inference made using the boundary transition overrides the intensity levels within the individual regions. The inference from the boundary spreads across a large region and influences our perception of the entire object (<span class="citation" data-cites="craik1966">Craik (<a href="references.html#ref-craik1966" role="doc-biblioref">1966</a>)</span>; <span class="citation" data-cites="obrien1958">O’Brien (<a href="references.html#ref-obrien1958" role="doc-biblioref">1958</a>)</span>; <span class="citation" data-cites="cornsweet1970-visual-perception">Cornsweet (<a href="references.html#ref-cornsweet1970-visual-perception" role="doc-biblioref">1970</a>)</span>; <span class="citation" data-cites="burr1987-illusion">Burr (<a href="references.html#ref-burr1987-illusion" role="doc-biblioref">1987</a>)</span>).</p>
+<div id="fig-shading-shape" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-shading-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/volcanoes-1024x402.png" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shading-shape-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.5: Shading influences shape. The image in (a) has the appearance of mound of dirt with a small indentation. The image in (b) appears to contain a crater with a mound at the top. Yet, the two images are the same except for an up-down flip. If you rotate the book 180 deg, the image containing the mound will now appear to contain a crater, and conversely the image with a crater will appear to contain a mound. The spatial relationship between the light and dark regions of the mound/crater is the main source of information defining it as convex or concave. Rotating the image rotates the shading cue and thus changes the shape we infer (After: <span class="citation" data-cites="rittenhouse1786">Rittenhouse (<a href="references.html#ref-rittenhouse1786" role="doc-biblioref">1786</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-brightness-shadows" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> and <a href="#fig-edge-illusion" class="quarto-xref">Figure&nbsp;<span>11.4</span></a> show that judgments of transparency and boundaries can influence judgments of brightness. <a href="#fig-shading-shape" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> shows that brightness judgments can influence the perception of shape. Panel (a) shows an image containing a mound of dirt with a small dimple at the top. Panel (b) shows a second image containing a small crater with a mound at the bottom. The images in <a href="#fig-shading-shape" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> a &amp; b are the same except for being flipped (not rotated) up and down using a simple image processing program.</p>
+<p>If you rotate this book by 180 degrees, you will see that the mound in <a href="#fig-shading-shape" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> (a) changes into a crater, and conversely the crater in <a href="#fig-shading-shape" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> (b) changes into a mound. When we interpret these shapes, we assume that the illuminant is elevated. This assumption about the position of the illuminant guides our inference about the shape of objects in the image. The distinction between mound and crater in these images is mediated mainly by the shading differences. Hence, rotating the images changes the shading relationship and we reinterpret the shape. <span class="citation" data-cites="ramachandran1988-3dperception">Ramachandran et al. (<a href="references.html#ref-ramachandran1988-3dperception" role="doc-biblioref">1988</a>)</span> (see also <span class="citation" data-cites="knill-kersten1991">Knill and Kersten (<a href="references.html#ref-knill-kersten1991" role="doc-biblioref">1991</a>)</span>) has demonstrated this phenomenon in a number of different ways. He argues further that the brain simplifies the interpretation of images by assuming the illumination consists of a single light source.</p>
+</section>
+<section id="shapes" class="level3">
+<h3 class="anchored" data-anchor-id="shapes">Shapes</h3>
+<div id="fig-fraser-spiral" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fraser-spiral-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/fraser.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fraser-spiral-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.6: The Fraser spiral. The figure consists of a set of concentric circles, not a spiral at all. Yet, because of the local pattern within the circles, we perceive the overall pattern as if it were a single spiral.
+</figcaption>
+</figure>
+</div>
+<p>The Fraser <em>spiral</em> is named after the <em>perceived</em> form in <a href="#fig-fraser-spiral" class="quarto-xref">Figure&nbsp;<span>11.6</span></a>. In fact, there is no spiral in the figure at all; the apparent spiral is really a set of concentric circles. (To persuade yourself of this, take your finger and carefully trace one of the patterns that you believe to be part of the spiral.) The light dark structure of the patterns within each circle suggest an inward spiral. But this curvature is not present in the global shape. Visual inferencing mechanisms fail to notice that the local features do not join properly into a single global spiral. This image, like the many famous drawings by <span class="citation" data-cites="escher-graphic1967">Escher (<a href="references.html#ref-escher-graphic1967" role="doc-biblioref">1967</a>)</span>, show that the visual mechanisms for interpreting objects in images can yield globally inconsistent solutions.</p>
+<div id="fig-subjective-contours" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-subjective-contours-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/kanizsa-1024x807.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-subjective-contours-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.7: Subjective contours. These subjective contours are inferred from occlusion and transparency cues in the images. (a,b,c) A triangle is suggested by occlusion, a rectangle is suggested by transparency, and a curved object is suggested by occlusion. (After: <span class="citation" data-cites="kanizsa-graphic1979">Kanizsa (<a href="references.html#ref-kanizsa-graphic1979" role="doc-biblioref">1979</a>)</span>) (d) Stereo pairs of subjective contours. By diverging your eyes beyond the page, the image pair on the right (left) will fuse and you will see the subjective contours of a triangle in front (behind) of the circles. The subjective contour is somewhat more vivid when the depth cue is added. If you converge your eyes to fuse, the depth relationships will reverse. (After: <span class="citation" data-cites="he-nakayama1994b-percievedsurface">He and Nakayama (<a href="references.html#ref-he-nakayama1994b-percievedsurface" role="doc-biblioref">1994</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>The objects you see in <a href="#fig-subjective-contours" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> are visual inferences derived by integrating cues concerning occlusion and transparency. <a href="#fig-subjective-contours" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> (a) show an image of a white triangle occluding three disks. We see the triangle even though no edges are present in the image to support the hypothesis that the triangle is present. Compare this figure with <a href="#fig-edge-illusion" class="quarto-xref">Figure&nbsp;<span>11.4</span></a>. There, boundary information influenced the judgment of brightness. Here, occlusion information influences the judgment of a boundary and brightness. <a href="#fig-subjective-contours" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> (a) shows that visual inferences accept the occlusion information as highly informative, even though there is missing edge and brightness information.</p>
+<p>The transparency cues in <a href="#fig-subjective-contours" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> (b) are enough to infer the presence of a rectangle. <a href="#fig-subjective-contours" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> (c) shows that occlusion information can be used to infer rather complicated curved shapes, not just straight edges.</p>
+<p><a href="#fig-subjective-contours" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> (d) contains stereo pairs of the subjective contour in panel (a). When the depth cue is added, the subjective contour becomes somewhat more compelling (<span class="citation" data-cites="he-nakayama1994b-percievedsurface">He and Nakayama (<a href="references.html#ref-he-nakayama1994b-percievedsurface" role="doc-biblioref">1994</a>)</span>). Fusing a stereo pair takes some practice. Try placing a piece of paper perpendicular to the page and between the two images you wish to fuse. Put your noise against the edge of the paper so that each eye sees only one of the patterns. If you then relax, and look through the page, the two images will fuse into a single depthful image. If you see both dots on the two figures, you will know that you have merged the two images, not just suppressed one of them. If you fuse the pair on the right, the triangle will appear to be in a plane floating above the page. The pair on the left shows the subjective triangle behind the page<sup>*</sup>.</p>
+<blockquote class="blockquote">
+<p><small><sup>* </sup>If you fuse these stereo pairs by converging, rather than by diverging, your eyes, the depth relationships reverse.</small></p>
+</blockquote>
+<div id="fig-occlusion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-occlusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/occlusion.png" class="img-fluid figure-img" width="508">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-occlusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.8: Occlusion and object recognition. The presence of a clearly visible occluding surface helps us to integrate otherwise fragmentary image components. (a) When the line segments are seen without an occlusion cue, they appear as a set of uncorrelated two-dimensional patterns. By overlaying occluding boundaries, the pattern is seen as part of an object, namely a three-dimensional cube (After: <span class="citation" data-cites="kanizsa-graphic1979">Kanizsa (<a href="references.html#ref-kanizsa-graphic1979" role="doc-biblioref">1979</a>)</span>). (b) When the pattern on the left is seen on its own, it appears as a jumble of unconnected curves and lines. By placing an occluding object over the white spaces, it is much easier to see that the occluded pattern is a collection of “B’s.” (After: <span class="citation" data-cites="bregman1981">Bregman (<a href="references.html#ref-bregman1981" role="doc-biblioref">1981</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>Normally, we think of occlusion as removing information and thereby making it harder to detect an object. However, the two examples <a href="#fig-occlusion" class="quarto-xref">Figure&nbsp;<span>11.8</span></a> show the presence of an occluding object can help us explain image information and see an object that might otherwise be difficult to discern. The pattern on the left of <a href="#fig-occlusion" class="quarto-xref">Figure&nbsp;<span>11.8</span></a> (a) appears to be a set of two-dimensional drawings. When the gaps between the drawings are filled in by an occluding object, however, we can integrate the different drawings into a single three-dimensional shape of a cube. The only difference between the two drawings in panel (a) is that the white gaps separating the sections on the left have been filled in by the dark bars.</p>
+<p>The patterns on the left of <a href="#fig-occlusion" class="quarto-xref">Figure&nbsp;<span>11.8</span></a> (b) are drawn as if they were separate parts. Precisely the same patterns are present on the right, but this time they are separated by dark bars that suggest an occluding object. Again, it is much easier to recognize the pattern as a collection of B’s when the occlusion is made visually explicit. Occlusion is a very important clue for visual inferences having to do with objects.</p>
+</section>
+<section id="integrating-cues" class="level3">
+<h3 class="anchored" data-anchor-id="integrating-cues">Integrating cues</h3>
+<div id="fig-face-recognition" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-face-recognition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/head.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-face-recognition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.9: Face recognition illusion. (a) A face. (b) An edited version of the face in (a). Can you integrate the features when the face is inverted and predict the expression that will appear when you rotate the book? (After: <span class="citation" data-cites="thompson1980-illusion">Thompson (<a href="references.html#ref-thompson1980-illusion" role="doc-biblioref">1980</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>Much of object perception requires us to integrate image information for image features that are separated in space or in time. In some cases, when we integrate separate visual features into an object, we rely on certain implicit assumptions about the object. An interesting example that reveals our implicit assumptions can be revealed by the images in <a href="#fig-face-recognition" class="quarto-xref">Figure&nbsp;<span>11.9</span></a>. The image in (a) shows a face in its normal upright pose. The image in (b) shows the same face with several of the features, namely the eyes and mouth, edited. In this form, it is recognizable as the same face, and it seems clear that there is something amiss with the individual features. But, we cannot infer what the expression on the face will be when the inverted face is rotated into the upright position (<span class="citation" data-cites="thompson1980-illusion">Thompson (<a href="references.html#ref-thompson1980-illusion" role="doc-biblioref">1980</a>)</span>). You will be surprised at the appearance of the face in (b) when you rotate the book and see the face in its upright pose.</p>
+<p>This may be an illusion that has to do with faces. The clinical syndrome of <em>prosopagnosia</em>, the inability to recognize familiar faces, is further evidence that our brain has specialized circuitry for integrating the components of an image when we recognize and interpret faces. It seems more likely to me, however, that this illusion has to do with the integration of spatially segregated features. When we see a familiar object made up of many separate features in an unlikely pose, it is very difficult to judge the object’s structure (<span class="citation" data-cites="kanizsa-graphic1979">Kanizsa (<a href="references.html#ref-kanizsa-graphic1979" role="doc-biblioref">1979</a>)</span>).</p>
+</section>
+<section id="geometric-illusions" class="level3">
+<h3 class="anchored" data-anchor-id="geometric-illusions">Geometric Illusions</h3>
+<p><span class="citation" data-cites="gregory1966-eyeandbrain">Gregory (<a href="references.html#ref-gregory1966-eyeandbrain" role="doc-biblioref">1966</a>)</span> suggested that the simple and unassuming Muller-Lyer illusion, shown in <a href="#fig-muller-lyer-illusion" class="quarto-xref">Figure&nbsp;<span>11.10</span></a> (a), results from basic perceptual assumptions we make when we perceive depth. The two vertical lines shown in the illusion have the same length, but the line segment on the right appears longer. Gregory argues that the lines appear of different length because we cannot escape interpreting even such trivial images as three-dimensional objects. As the image in <a href="#fig-muller-lyer-illusion" class="quarto-xref">Figure&nbsp;<span>11.10</span></a> (b) illustrates, in the natural environment the edges that define a near corner are similar to the lines on the left of <a href="#fig-muller-lyer-illusion" class="quarto-xref">Figure&nbsp;<span>11.10</span></a> (a). The edges that define a far corner are similar to the lines on the right. Gregory explains the illusion as a consequence of our relentless interpretation of images as arising from a three-dimensional world. Lines that sweep out equal retinal angle, but that are at different depths, must have different physical size. Gregory suggests that even the impoverished stimulus in the Muller-Lyer illusion invokes the visual systems inferences of objects and depth. The improper application of a good principle causes the equal line segments to appear different.</p>
+<div id="fig-muller-lyer-illusion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-muller-lyer-illusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/mullerLyer.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-muller-lyer-illusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.10: The Muller-Lyer illusion. (a) The classic Muller-Lyer illusion is shown. The line with the arrows pointed outward appears longer to most people, but the line lengths are the same. (b) The left and right parts of the image show two views of a corner of a building. From the outside, when the corner is relatively close to the viewer, the edges between the corner and the ceiling are oriented like closed arrows. From the inside, when the corner is relatively far from the viewer, the edges are oriented like open arrows. (c) A three-dimensional analogue of the Muller-Lyer is shown. The separations between the middle dot and the dots on either side are the same. In this rendering of the illusion, the open and closed arrow shapes are not a cue for depth. Yet, the Muller-Lyer illusion is quite powerful (Source for panel c: <span class="citation" data-cites="delucia-hochberg1991">DeLucia and Hochberg (<a href="references.html#ref-delucia-hochberg1991" role="doc-biblioref">1991</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>Gregory’s hypothesis is important because it reminds us that the basic function of visual inferences is to see objects in three-dimensions. The interpretation of visual illusions, however, is never straightforward. To test Gregory’s suggestion, <span class="citation" data-cites="delucia-hochberg1991">DeLucia and Hochberg (<a href="references.html#ref-delucia-hochberg1991" role="doc-biblioref">1991</a>)</span> created the version of the Muller-Lyer shown <a href="#fig-muller-lyer-illusion" class="quarto-xref">Figure&nbsp;<span>11.10</span></a> (c). In the two separations between the three dots are equal. Yet, just as in the Muller-Lyer the separation between the two dots attached by the closed arrow form appears smaller than the separation between the dots connected by the open arrow form. In this schematic three-dimensional image, there is little chance that the separation between the dots has to do with different depths. Gregory’s hypothesis and this counter-example are a wonderful exchange that illustrates how qualitative hypotheses concerning the mechanisms of visual illusions can be tested and become part of the scientific study of vision.</p>
+</section>
+</section>
+<section id="summary" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">11.4</span> Summary</h2>
+<p>Throughout this chapter, we have seen the importance of integrating separate visual inferences into a single explanation of the contents of a scene. Patients who cannot integrate visual information may identify color or a shape, but they feel that they cannot see because they cannot integrate the separate inferences into a sensible interpretation of the objects and surfaces in the scene. Many of the illusions we have reviewed show us that to see as a whole, we we must resolve conflicting information. We do not see a two-dimensional shape properly because we insist on interpreting the data as a three-dimensional shape. We do not see the physical intensity properly because we insist on interpreting a shadow or an edge.</p>
+<p>I have chosen the illusions here to emphasize several important principles that the visual system uses to combine different visual inferences. We integrate shape and depth cues assuming that we perceive objects in a three-dimensional world; we use shadows, occlusions and edges, to interpret the properties of objects; we build up global interpretations from many local properties; yet, we also use familiar poses of objects and typical locations of illuminations help us to interpret ambiguous images.</p>
+<p>The rules governing our sight reflect the physics of the world we see. These rules describe the interactions of objects at a physical scale within the domain of the psychologist and engineer, a human scale. This is not the physics of the sub-atomic or the physics of the galactic, but it is the physics of the world in which we live and interact. By studying the rules of this human-centered physics of perceived objects, we learn how we might see. By making neural and behavioral measurements of our brain and our perceptions, we learn how we do see.</p>
+
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-adelson1993-brightness" class="csl-entry" role="listitem">
+Adelson EH (1993) Perceptual organization and the judgment of brightness. Science 262:2042–2044
+</div>
+<div id="ref-boring1964-sizeconstancy" class="csl-entry" role="listitem">
+Boring EG (1964) Size-constancy in a picture. Am J Psychol 77:494–498
+</div>
+<div id="ref-bregman1981" class="csl-entry" role="listitem">
+Bregman AS (1981) Asking the <span>“what for”</span> question in auditory perception. In: Kubovy M, Pomerantz JR (eds) Perceptual organization. Lawrence Erlbaum, NJ, pp 99–118
+</div>
+<div id="ref-burr1987-illusion" class="csl-entry" role="listitem">
+Burr D (1987) Implications of the craik-<span>O</span>’brien illusion for brightness perception. Vision Res 27:1903–1913
+</div>
+<div id="ref-cornsweet1970-visual-perception" class="csl-entry" role="listitem">
+Cornsweet TN (1970) Visual perception. Academic Press, San Diego, CA
+</div>
+<div id="ref-craik1966" class="csl-entry" role="listitem">
+Craik KJ (1966) The nature of psychology. Cambridge University Press
+</div>
+<div id="ref-delucia-hochberg1991" class="csl-entry" role="listitem">
+DeLucia PR, Hochberg J (1991) Geometrical illusions in solid objects under ordinary viewing conditions. Percept Psychophys 50:547–554
+</div>
+<div id="ref-escher-graphic1967" class="csl-entry" role="listitem">
+Escher MC (1967) The graphic work of m. C. escher. Oldbourne, London
+</div>
+<div id="ref-gregory1966-eyeandbrain" class="csl-entry" role="listitem">
+Gregory R (1966) Eye and brain: The psychology of seeing. McGraw-Hill
+</div>
+<div id="ref-gregory1974-conceptsandmechanismsbook" class="csl-entry" role="listitem">
+Gregory R (1974) Concepts and mechanisms of perception. Charles Scribner’s Sons, New York, NY
+</div>
+<div id="ref-gregory-wallace1963-miraclecure" class="csl-entry" role="listitem">
+Gregory RL, Wallace JG (1963) Recovery from early blindness. Experimental psychology society monograph 2:65–129
+</div>
+<div id="ref-he-nakayama1994b-percievedsurface" class="csl-entry" role="listitem">
+He ZJ, Nakayama K (1994) Perceived surface shape not features determines correspondence strength in apparent motion. Vision Res 34:2125–2135
+</div>
+<div id="ref-kanizsa-graphic1979" class="csl-entry" role="listitem">
+Kanizsa G (1979) Organization in vision. Praeger, NY
+</div>
+<div id="ref-knill-kersten1991" class="csl-entry" role="listitem">
+Knill DC, Kersten D (1991) Apparent surface curvature affects lightness perception. Nature 351:228–230
+</div>
+<div id="ref-obrien1958" class="csl-entry" role="listitem">
+O’Brien V (1958) Contour perception, illusion and reality. J Opt Soc Am 48:112
+</div>
+<div id="ref-ramachandran1988-3dperception" class="csl-entry" role="listitem">
+Ramachandran VS, Cobb SVG, Rogers-Ramachandran D (1988) Perception of 3-<span>D</span> structure from motion: The role of velocity gradients and segmentation boundaries. Percept Psychophys 44:390–393
+</div>
+<div id="ref-rittenhouse1786" class="csl-entry" role="listitem">
+Rittenhouse D (1786) Explanation of an optical deception. Trans Am Philos Soc
+</div>
+<div id="ref-sacks1993" class="csl-entry" role="listitem">
+Sacks O (1993) To see and not see. The New Yorker 59–72
+</div>
+<div id="ref-vonsenden1960-spaceandsight" class="csl-entry" role="listitem">
+Senden M von (1960) Space and sight: The perception of space and shape in the congenitally blind before and after operation. Free Press of Glencoe
+</div>
+<div id="ref-shepard1990-mingsightsbook" class="csl-entry" role="listitem">
+Shepard RN (1990) Mind sights: Original visual illusions, ambiguities, and other anomalies, with a commentary on the play of mind in perception and art. W H Freeman &amp; Co
+</div>
+<div id="ref-thompson1980-illusion" class="csl-entry" role="listitem">
+Thompson P (1980) Margaret thatcher: A new illusion. Perception 9:483–484
+</div>
+<div id="ref-valvo1971-visualrehab" class="csl-entry" role="listitem">
+Valvo A (1971) Sight restoration after long-term blindness : The problems and behavior patterns of visual rehabilitation. American Foundation for the Blind
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chapter-10-motion-and-depth.html" class="pagination-link" aria-label="Motion and Depth">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Motion and Depth</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

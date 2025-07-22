@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Brian Wandell">
+<meta name="dcterms.date" content="1995-10-26">
+
+<title>Foundations of Vision (1995)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./part-1-image-encoding.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">How to study vision</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Foundations of Vision (1995)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">How to study vision</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Encoding</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-1-image-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Encoding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-2-image-formation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Image Formation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-3-the-photoreceptor-mosaic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Photoreceptor Mosaic</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-4-wavelength-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wavelength Encoding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Representation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-2-image-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Representation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-5-the-retinal-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Retina</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-6-the-cortical-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cortical Representation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-7-pattern-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pattern Vision</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-8-multiresolution-image-representations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiresolution Representations</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Interpretation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-3-image-interpretation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Interepretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-9-color.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Color</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-10-motion-and-depth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Motion and Depth</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11-seeing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seeing</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful numbers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./online-teaching-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Online Teaching Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#how-to-study-vision" id="toc-how-to-study-vision" class="nav-link active" data-scroll-target="#how-to-study-vision">How to study vision</a>
+  <ul class="collapse">
+  <li><a href="#encoding" id="toc-encoding" class="nav-link" data-scroll-target="#encoding">Encoding</a></li>
+  <li><a href="#representation" id="toc-representation" class="nav-link" data-scroll-target="#representation">Representation</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#the-range-of-material-in-this-book" id="toc-the-range-of-material-in-this-book" class="nav-link" data-scroll-target="#the-range-of-material-in-this-book">The range of material in this book</a>
+  <ul class="collapse">
+  <li><a href="#theory" id="toc-theory" class="nav-link" data-scroll-target="#theory">Theory</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  </ul></li>
+  <li><a href="#a-guide-to-the-principles-of-vision" id="toc-a-guide-to-the-principles-of-vision" class="nav-link" data-scroll-target="#a-guide-to-the-principles-of-vision">A Guide to the Principles of Vision</a>
+  <ul class="collapse">
+  <li><a href="#the-inescapable-components-of-image-encoding" id="toc-the-inescapable-components-of-image-encoding" class="nav-link" data-scroll-target="#the-inescapable-components-of-image-encoding">The Inescapable Components of Image Encoding</a></li>
+  <li><a href="#adaptation-and-flexibility" id="toc-adaptation-and-flexibility" class="nav-link" data-scroll-target="#adaptation-and-flexibility">Adaptation and Flexibility</a></li>
+  <li><a href="#image-representation-visual-streams" id="toc-image-representation-visual-streams" class="nav-link" data-scroll-target="#image-representation-visual-streams">Image representation: Visual Streams</a></li>
+  <li><a href="#image-interpretation-statistical-inferences" id="toc-image-interpretation-statistical-inferences" class="nav-link" data-scroll-target="#image-interpretation-statistical-inferences">Image interpretation: Statistical Inferences</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Foundations of Vision (1995)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Brian Wandell </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 26, 1995</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- ![](front-isetbio-notext.png){fig-align="center" width="80%"} -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="1995/bookCover/ScannedCover.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<section id="how-to-study-vision" class="level1">
+<h1>How to study vision</h1>
+<p>While working to bring this book together, I was inspired and overwhelmed by the breadth and vibrancy of vision science. Vision scientists solve problems across the fields of biology, psychology, and engineering. Our field takes on problems ranging from the nature of consciousness to the hurry-up-and-ship-it applications needed to keep a company afloat. In selecting from the huge amount of material available, I decided to write this book for the student who wishes to know <em>how</em> to study vision. The pages are filled with measurements and facts; but, my goal in writing this book is to explain to the student how we learned these facts, not the facts themselves. To organize the material presented, I have divided the book into three sections. My division reflects three of the basic problems of vision: encoding, representation, and interpretation.</p>
+<section id="encoding" class="level2">
+<h2 class="anchored" data-anchor-id="encoding">Encoding</h2>
+<p>Part One describes how the retinal image is encoded by the visual pathways. The material in this section is particularly important for three reasons. First, how the visual system encodes light has implications for everything else the visual pathways do. Distortions that are introduced into the signal by poor optics, sparse and uneven spatial sampling of the image, or meager wavelength encoding become part of the signal that must be represented and interpreted by the central visual pathways. We can’t understand the central nervous system without understanding the quality of information encoded within the eye.</p>
+<p>Second, the properties of the visual encoding have implications for the design of instruments that display visual information. The quality of the representation of pattern and color in display media must be structured to satisfy, but not exceed, the limits of the human visual system. For example, the industry of color imaging, including visual displays, film, and color printing, relies on the fact that human color vision uses three types of cone photopigments to encode light. As a result of this sparse representation of wavelength, color reproductions need not represent the wavelength composition of the original in order to provide a satisfactory appearance match. This is but one example of many in which the initial encoding of the image in the human eye defines practical limits whose properties determine the character of imaging devices.</p>
+<p>Third, the methods and standards of proof that are used to understand image encoding set an important example concerning the standards of explanation we aim to achieve at all levels of vision science. The questions of methods and standards of proof are very important an an interdisciplinary field like vision science, which draws on expertise from many different areas. The first section of this book contains several examples that combine physical calculations, biological experiments, and behavioral studies. By examining how these fields come together when we measure the quality of the retinal image formed by the optics of the eye, and again when we establish that human color vision is trichromatic, we see how these diverse fields can forge strong links that define important aspects of visual function. We can learn from these examples as we move on to other problems in vision science.</p>
+</section>
+<section id="representation" class="level2">
+<h2 class="anchored" data-anchor-id="representation">Representation</h2>
+<p>Part Two of this volume reviews how the encoded image is represented by the neural response within the peripheral visual pathways. Our understanding of the neural representation is based on work in several different disciplines. This section begins with a review of the anatomical and electrophysiological measurements of the image representation within the retina and primary visual cortex. These measurements characterize the neural hardware of the visual representation and demonstrate that there are several distinct categories of neurons called <em>visual streams</em>. The neurons in these visual streams respond to light stimulation in differnt ways, and their signals are communicated to different destinations.</p>
+<p>The second half of this section reviews psychological and computational studies of image representation. The behavioral studies of image representation involve the simplest performances, such as detection, discrimination and simple recognition. These experiments have led to various proposals about how pattern and color information is represented within the retina and early cortical areas. The computational studies of image representation cover fundamental issues in efficient image coding and other image operations.</p>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<p>Perception is an interpretation of the retinal image, not a description. The third section of this book contains examples of how we interpret the retinal image to assign perceptual properties such as color, motion, and shape to objects.</p>
+<p>Information in the retinal image may be interpreted in many different ways. Because we begin with ambiguous information, we cannot make deducations from the retinal image, only inferences. When we create algorithms to interpret image data -say, to infer the color, motion, and shape of objects- we confront the same challenges as the visual pathways. The success of the visual system in intpreting image data represents a remarkable achievement.</p>
+<p>By studying computations designed to infer object properties, we have learned that the visual system succeeds in interpreting images because of statistical regularities present in the visual environment and hence in the retinal image. These regularities permit the visual system to use the fragmentary information present in the retinal image to draw accurate inferences about the physical cause of the image. For example, when we make inferences from the retinal image, the knowledge that we live in a three-dimensional world is essential to the correct interpretation of the image. Often, we are made aware of the existence of these powerful interpretations and their assumptions when they are in error, that is, when we discover a visual illusion.</p>
+</section>
+<section id="the-range-of-material-in-this-book" class="level2">
+<h2 class="anchored" data-anchor-id="the-range-of-material-in-this-book">The range of material in this book</h2>
+<p>The material I have chosen to include in this book comes from three sources: theory, data, and fruitful applications that are grounded in theoretical and empirical vision science. Portions of this book are written with the expectation that the reader has had some experience with linear algebra and calculus. In most sections of the book, however, I have tried to provide the reader with the basic ideas without using mathematical symbols or formal arguments.</p>
+<section id="theory" class="level3">
+<h3 class="anchored" data-anchor-id="theory">Theory</h3>
+<p>Certain theoretical and empirical methods appear repeatedly within vision science. The most important theoretical method, which appears across all areas of vision science, is linear systems theory. Whether characterizing optics, neurophysiology, color vision, spatial vision, image compression, or pattern analysis, linear systems play an important role. There is little possibility of understanding the current foundations of vision science without understanding linear systems. I introduce the principles of linear systems in the first chapter and I refer to them throughout the book.</p>
+<p>Linear methods are not a theory of vision; linear systems methods consist of a set of experiments that one should use to analyze a system. If the system’s performance satisfies certain experimental properties, such as the principle of superposition, then we can use linear methods to characterize the system completely. Even if the system turns out to be nonlinear, it is useful to begin studying the system using summation experiments to obtain some insights as to the nature of the nonlinearities.</p>
+<p>A linear characterization of a system is rarely a satisfactory scientific account of the system. There are usually many theoretical questions that require further explanation before the scientist is done. This will be evident in the first section on image encoding. Optical image formation, photoreceptor sampling and color matching are all fundamentally linear and thus we can characterize the performance of these system components. Even when this work is done, we still must explain the measurements in terms of the purpose of these elements and how their properties serve the goals of visual perception.</p>
+<p>In part, the emphasis on linear systems methods is my choice; in part, this emphasis is inevitable because of a second choice I made in selecting the material. I have tried to include important problems that vision science has solved, or that I think are close to being solved. At present linear methods are much better understood than nonlinear methods. Consequently, we understand those problems which yield to linear analysis much better than we understand nonlinear problems.</p>
+<p>A linear characterization of a system is rarely a complete cientific account of the system. There are usually many theoretical questions that require further explanation before the scientist is done. This will be evident in the first section on image encoding. Optical image formation, photoreceptor sampling, and color matching are all fundamentally linear, and thus we can characterize the performance of these system components. However, even when this work is done, we still must expolain the measurements in terms of the purpose of these elements and how their properties serve the goals of visual perception.</p>
+<p>While linear analyses are central, there are some significant examples of successful nonlinear analyses. The first example is the analysis of the relationship between color matching and the cone photocurrent treatment in Chapter 4. This system consists of an initial linear encoding followed by a fixed non-linearity. These types of nonlinear systems can also be treated very thoroughly. The review of pattern sensitivity, in Chapter 7, also includes models that begin with linear encodings followed by a nonlinear stage. In the appendix to Chapter 7 I treat the profoundly nonlinear act of classification. Applications of Bayesian classification to interpret image data is likely to be a very important area in the future.</p>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>The field of vision draws on experimental results from many separate disciplines, each with its own standards and methods. The tools of anatomy, electrophysiology, behavior, and computation are so different that no one can be an expert in all of these disciplines. To be a good vision scientist, however, one must appreciate the standards and methods of each discipline. The psychologist must understand whether an anatomical measurement is sufficiently thorough to serve as a good standard for comparison in a behavioral experiment; the computational theorist must understand the generality of a result from electrophysiology.</p>
+<p>I have included empirical studies from all of the disciplines of vision. I have tried to describe these results, and their theoretical implications, in enough detail so that the advanced student can learn something about the standards of each of the fields. By placing these results together in a single volume I hope to explain what is special about the interdisciplinary field of vision.</p>
+</section>
+<section id="applications" class="level3">
+<h3 class="anchored" data-anchor-id="applications">Applications</h3>
+<p>As I selected problems to review, I did not distinguish strongly between those that are called basic from those that are called applied. I share Edwin Land’s frustration with this distinction. After a theoretical lecture on color appearance, Land, who was both a brilliant inventor and entrepreneur, was asked to explain what applied problem his work would solve and he replied quickly that the work had a wonderful application. He then paused while the audience leaned forward to decide whether to invest in Polaroid stock. If the theory is right, Land whispered confidentially, we’ll finally understand what we are doing.</p>
+<p>Vision science finds applications in at least three important areas that I will draw on throughout the book. The first area is medicine. If we are to help the blind, we must understand how the visual portion of the brain functions, including the anatomy and functional properties of nerve cells. Equally important, we must understand how information is represented within the brain results in behavior. The results of behavioral experiments can answer questions about the organization of information within the visual pathways that are inaccessible to the anatomist or the electrophysiologist. Together, these results can guide the development of medical diagnostic tools and prosthetic devices. Tom Cornsweet’s beautiful book, Visual Perception, was a guide to most of my generation as we first learned about the systematic analysis of the visual pathways, ranging from the visual pathways to behavior. In this book I hope to explain to the new student why so many of us found Cornsweet’s presentation exhilirating and to build on Cornsweet’s review.</p>
+<p>A second area of application is the design of computer algorithms capable of analyzing information in an image. Typical applications range from part inspections in a factory to the identification of a tumor in a medical image. David Marr’s book, Vision, stimulated the interest of many young scientists in this area. He presented a bold overview that related biological concepts and computer algorithms of visual processing. The contrast between the broad scope of Marr’s imagination and the elegant, meticulous discussions by Cornsweet captures something of the creative tension that can arise when different disciplines contribute to a broad scientific endeavor.</p>
+<p>The third area of application is the design of visual display devices to communicate information to the human visual system. When two electronic components communicate, the components must be designed to accommodate a set of communication protocols. In the case of communication between an electronic display medium, (e.g.&nbsp;a television display) and the human visual system, the designer can only re-design one of the two components. To communicate information efficiently between the electronic system and the human visual system, we must build displays that are matched to human capabilities. A remarkable harmony between vision science and applications technology has been achieved in some areas, such as color science. I hope that this book will contribute to the further coordination of our basic understanding of vision and the design of useful and efficient visual displays.</p>
+</section>
+</section>
+<section id="a-guide-to-the-principles-of-vision" class="level2">
+<h2 class="anchored" data-anchor-id="a-guide-to-the-principles-of-vision">A Guide to the Principles of Vision</h2>
+<p>Much of vision science is predicated on the principle that the components of the visual system that limit or govern performance in various tasks can be quite different. In some experiments performance is limited by the lens, while in other experiments performance is limited by a computation in performed in visual cortex. Different visual tasks may be limited by completely distinct components of the visual pathways. Hence, a static diagram of the visual pathways, in which zero-crossings are inexorably followed by a primal sketch, and so forth, with all the components play the same role across tasks, does not capture the flexibility and adaptability of the visual pathways.</p>
+<p>There are, however, several general principles that I found useful as I wrote and organized this volume. Some of these principles are embedded in the organization of the book, repeated in the introductions to the three sections, and repeated within the chapters themselves. This is the time, however, to introduce you to the principles, briefly, in one place.</p>
+<section id="the-inescapable-components-of-image-encoding" class="level3">
+<h3 class="anchored" data-anchor-id="the-inescapable-components-of-image-encoding">The Inescapable Components of Image Encoding</h3>
+<p>The properties of image encoding, such as the blurring by the lens, receptor sampling, and trichromacy, shape the information available to the rest of the nervous system. The first third of the book is devoted to describing these aspects of vision. The properties of image formation set the stage for what the rest of the nervous system must confront.</p>
+<p>The limits of image encoding set limits on the image information available to the visual pathways. As we shall see, the image encoding is a very partial description of the light incident at the eye: There is only a narrow region of high visual acuity in the fovea; the dynamic range of the sensors is very small; the representation of wavelength is very coarse. You would never buy a camera with such poor optics and coarse spatial sampling. Yet, the visual algorithms can interpret the properties of objects from this poor encoding.</p>
+<p>Whether you wish to study the eye, or study algorithms embedded in the central nervous system, you will not go wrong by studying image encoding and thinking further about its implications for vision.</p>
+</section>
+<section id="adaptation-and-flexibility" class="level3">
+<h3 class="anchored" data-anchor-id="adaptation-and-flexibility">Adaptation and Flexibility</h3>
+<p>The visual pathways compensate for the poor quality of the image encoding by their flexibility. Nearly all of the peripheral elements of the visual pathways adapt in response to the viewing conditions. The lens accomodates, the strength of the retinal signal varies as the mean illumination level varies, the eye moves to bring the high visual acuity portion of the retina into a favorable viewing position. The flexible responses of the visual system overcome the mediocre image encoding.</p>
+<p>The visual system’s adjustments, or adaptations, to the environment are fundamental to its design. We see adaptation throughout the visual representation, not just in the peripheral components. Because adaptation is so widespread, it is impossible to characterize the visual system as a static device. The ability to adapt in response to a changing environment is a fundamental design principle of the visual pathways, beginning at the earliest stages. Such adaptation is also an important property of central brain representations.</p>
+</section>
+<section id="image-representation-visual-streams" class="level3">
+<h3 class="anchored" data-anchor-id="image-representation-visual-streams">Image representation: Visual Streams</h3>
+<p>As we review the visual representation of the image, we will find that the neural pathways are organized into several distinct pathways. These pathways, sometimes called visual streams, can be identified based on anatomical studies. Some cells have different shapes from others; some cells send their outputs this way and others send their outputs that way.</p>
+<p>Many of the most important discoveries about vision concern the the identification of visual streams. Many of the important contemporary challenges in vision concern explanations of the functional significance of these streams. Segregation of visual information into these visual streams begins with the photoreceptors (rods and cones). Clarifications concerning the visual streams within the optic nerve have revolutionized our understanding of the visual representation. Understanding the organization of visual information with respect to these visual streams is one of most hotly debated topics in modern visual neuroscience. Identifying new visual streams and understanding their function is an important challenge to vision scientists.</p>
+</section>
+<section id="image-interpretation-statistical-inferences" class="level3">
+<h3 class="anchored" data-anchor-id="image-interpretation-statistical-inferences">Image interpretation: Statistical Inferences</h3>
+<p>To me, vision science is about how we see things. The interpretations of the image, or as Helmholtz called them, the unconscious inferences, are the purpose of vision. I study vision in order to understand the methods of interpreting images to objects and their properties.</p>
+<p>Since the retinal image is often ambiguous, the visual system’s success in interpreting images must be because it makes good assumptions about the likely properties of objects in the world. Not all configurations of objects are equally likely; we exist in a three-dimensional world. Not all surface reflectance functions are equally likely; there are regularities in the wavelength properties of surfaces and illuminants. Not all types of motion are equally likely; hard objects cannot pass through one another. The unequal probabilities of different interpretations make it possible to make informed guesses about the color, motion, position and shape of objects. The probabilities of different events are sufficiently skewed so that the visual system succeeds at interpreting the image data. Understanding these regularities, and understanding how to use them to interpret the retinal image, is central to vision science.</p>
+<p>My devotion to image encoding and representation, the first two parts of this volume, flows from my conviction that we will not understand visual interpretations of the image without understanding encoding and representation. The encoding and representation define the environment in which image interpretation takes place. The encoding and representation must be structured to permit image interpretation to succeed. As you look through each section of this volume, you will find ideas about image interpretation. The material in this book will seem unified to you if you continue to ask how image encoding and the image representation serve the ultimate goal of image interpretation.</p>
+
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./part-1-image-encoding.html" class="pagination-link" aria-label="Introduction to Image Encoding">
+        <span class="nav-page-text">Introduction to Image Encoding</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

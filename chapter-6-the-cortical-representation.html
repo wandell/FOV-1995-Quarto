@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6&nbsp; Cortical Representation – Foundations of Vision (1995)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chapter-7-pattern-sensitivity.html" rel="next">
+<link href="./chapter-5-the-retinal-representation.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-2-image-representation.html">Image Representation</a></li><li class="breadcrumb-item"><a href="./chapter-6-the-cortical-representation.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cortical Representation</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Foundations of Vision (1995)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">How to study vision</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Encoding</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-1-image-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Encoding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-2-image-formation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Image Formation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-3-the-photoreceptor-mosaic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Photoreceptor Mosaic</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-4-wavelength-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wavelength Encoding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Representation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-2-image-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Representation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-5-the-retinal-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Retina</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-6-the-cortical-representation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cortical Representation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-7-pattern-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pattern Vision</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-8-multiresolution-image-representations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiresolution Representations</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Interpretation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-3-image-interpretation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Interepretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-9-color.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Color</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-10-motion-and-depth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Motion and Depth</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11-seeing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seeing</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful numbers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./online-teaching-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Online Teaching Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#cortical-representation-overview" id="toc-cortical-representation-overview" class="nav-link active" data-scroll-target="#cortical-representation-overview"><span class="header-section-number">6.1</span> Cortical representation overview</a></li>
+  <li><a href="#sec-visual-cortex" id="toc-sec-visual-cortex" class="nav-link" data-scroll-target="#sec-visual-cortex"><span class="header-section-number">6.2</span> Visual cortex</a></li>
+  <li><a href="#the-architecture-of-primary-visual-cortex" id="toc-the-architecture-of-primary-visual-cortex" class="nav-link" data-scroll-target="#the-architecture-of-primary-visual-cortex"><span class="header-section-number">6.3</span> The Architecture of Primary Visual Cortex</a>
+  <ul class="collapse">
+  <li><a href="#the-layers-of-area-v1" id="toc-the-layers-of-area-v1" class="nav-link" data-scroll-target="#the-layers-of-area-v1">The layers of area V1</a></li>
+  <li><a href="#the-pathway-to-area-v1" id="toc-the-pathway-to-area-v1" class="nav-link" data-scroll-target="#the-pathway-to-area-v1">The pathway to area V1</a></li>
+  <li><a href="#electrical-stimulation-of-human-area-v1" id="toc-electrical-stimulation-of-human-area-v1" class="nav-link" data-scroll-target="#electrical-stimulation-of-human-area-v1">Electrical stimulation of Human Area V1</a></li>
+  </ul></li>
+  <li><a href="#receptive-fields-in-primary-visual-cortex" id="toc-receptive-fields-in-primary-visual-cortex" class="nav-link" data-scroll-target="#receptive-fields-in-primary-visual-cortex"><span class="header-section-number">6.4</span> Receptive Fields in Primary Visual Cortex</a>
+  <ul class="collapse">
+  <li><a href="#orientation-selectivity" id="toc-orientation-selectivity" class="nav-link" data-scroll-target="#orientation-selectivity">Orientation selectivity</a></li>
+  <li><a href="#direction-selectivity" id="toc-direction-selectivity" class="nav-link" data-scroll-target="#direction-selectivity">Direction selectivity</a></li>
+  <li><a href="#contrast-sensitivity-of-cortical-cells" id="toc-contrast-sensitivity-of-cortical-cells" class="nav-link" data-scroll-target="#contrast-sensitivity-of-cortical-cells">Contrast Sensitivity of Cortical Cells</a></li>
+  <li><a href="#contrast-normalization" id="toc-contrast-normalization" class="nav-link" data-scroll-target="#contrast-normalization">Contrast Normalization</a></li>
+  <li><a href="#binocular-receptive-fields" id="toc-binocular-receptive-fields" class="nav-link" data-scroll-target="#binocular-receptive-fields">Binocular Receptive Fields</a></li>
+  </ul></li>
+  <li><a href="#visual-streams-in-the-cortex" id="toc-visual-streams-in-the-cortex" class="nav-link" data-scroll-target="#visual-streams-in-the-cortex"><span class="header-section-number">6.5</span> Visual Streams in the Cortex</a>
+  <ul class="collapse">
+  <li><a href="#the-fate-of-the-parvocellular-and-magnocellular-pathways" id="toc-the-fate-of-the-parvocellular-and-magnocellular-pathways" class="nav-link" data-scroll-target="#the-fate-of-the-parvocellular-and-magnocellular-pathways">The fate of the parvocellular and magnocellular pathways</a></li>
+  <li><a href="#the-function-of-the-visual-areas" id="toc-the-function-of-the-visual-areas" class="nav-link" data-scroll-target="#the-function-of-the-visual-areas">The function of the visual areas</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-2-image-representation.html">Image Representation</a></li><li class="breadcrumb-item"><a href="./chapter-6-the-cortical-representation.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cortical Representation</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-cortical-representation" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cortical Representation</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Computational Modeling of Responses in Human Visual Cortex Encyclopedia article from 2015 is good for this chapter.  Both figures and the summary text. -->
+<section id="cortical-representation-overview" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="cortical-representation-overview"><span class="header-section-number">6.1</span> Cortical representation overview</h2>
+<p>In this chapter we will review the representation of information in visual cortex. There have been many advances in our understanding of visual cortex over the last twenty-five years. Even today, our view of visual cortex is changing rapidly; new results that change our overall view sometimes seem to arrive weekly. In the beginning of this chapter, I will review what is commonly accepted concerning visual cortex. Towards the end, I will introduce some of the broader claims that have been made about the relationship between visual cortex and perception. We will take up the issue of connecting cortex, computation, and seeing again in the later chapters.</p>
+</section>
+<section id="sec-visual-cortex" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-visual-cortex"><span class="header-section-number">6.2</span> Visual cortex</h2>
+<div id="fig-brain" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-brain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/brain.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: The cortex is shown in lateral view. Based on its overall shape, anatomists divide the human brain into four regions called the occipital, temporal, parietal and frontal lobes. Based on its internal connections, the cortex can be further divided into many anatomically distinct areas. Visual input to the brain arrives in primary visual cortex, area V1, which is located in the occipital lobe.
+</figcaption>
+</figure>
+</div>
+<p>A lateral view of the brain is sketched in <a href="#fig-brain" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>. The human cortex is a 2.5mm (range: 1-4.5mm) thick sheet of neurons with a surface area of 1400 square centimeters. Rather than lining the skull, as the retina lines the eye, the visual cortex is like a crumpled sheet stuffed into the skull. Each location where the folded cortex forms a ridge visible from the exterior is called a <em>gyrus</em>, while each shallow furrow that separates a pair of gyri is called a <em>sulcus</em>. The pattern of sulci and gyri differ considerably across species: the human brain contains more sulci than other primate brains. There are also significant differences between human brains, although the broad outlines of the sulcal and gyral patterns are usually present and recognizable across different people. The gyri and sulci are convenient landmarks, but it is not established that they have a functional significance.</p>
+<p>The most visible sulci serve as markers to partition the human brain into four <em>lobes</em>. The lobes are called <em>frontal, parietal, temporal</em> and <em>occipital</em> to describe their relative positions (see <a href="#fig-brain" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>). Each lobe contains many distinct brain <em>areas</em>, that is contiguous groups of cortical neurons that appear to function in an interrelated manner. A cortical area is identified in several ways, though perhaps the most significant is by its anatomical connections with other parts of the brain. Each brain area makes a distinctive pattern of anatomical connections with other brain areas. The inputs arriving to one area come from only a few other places in the brain, and the outputs emerging from that area are sent to a specific set of destination areas.</p>
+<p>In the primate, the great part of the visual signal from the retina and the lateral geniculate nucleus arrives at a single area within the occipital lobe of the cortex called, or <em>primary visual cortex</em>. This is a large cortical area, comprising roughly 1.5 x 10<sup>8</sup> neurons, many more than the 10<sup>6</sup> neurons in the lateral geniculate nucleus. Area V1 can be identified by a prominent striation made up of a dense collection of myelinated axons within one of the layers of visual cortex. The striation is coextensive with area V1 and appears as a white band to the naked eye. Because area V1 was defined by the presence of this striation, it is sometimes called <em>striate cortex</em>. The stripe is also called the <em>Stria of Gennari</em>. Because of its prominence, important anatomical location and large size (18 square centimeters), area V1 has been the subject of intense study. We will begin this chapter with a review of the anatomical and electrophysiological features of area V1.</p>
+<p>In addition to area V1, more than twenty cortical areas have been discovered that receive a strong visual input. The anatomy, electrophysiology and computational purpose of these areas are now under active study and will be an important topic for study for many years to come. We will review some of the preliminary experiments that have been performed in these visual areas at the end of this chapter. In later chapters concerning motion and color, we will return to consider the functional role of these visual areas as well (<span class="citation" data-cites="zeki1978">Zeki (<a href="references.html#ref-zeki1978" role="doc-biblioref">1978</a>)</span>, <span class="citation" data-cites="zeki1990">Zeki (<a href="references.html#ref-zeki1990" role="doc-biblioref">1990</a>)</span>; <span class="citation" data-cites="felleman1991-hierarchy">Felleman and Van Essen (<a href="references.html#ref-felleman1991-hierarchy" role="doc-biblioref">1991</a>)</span>).</p>
+<p>Most of what we know about cortical visual areas comes from experimental studies of cat and monkey. There are significant differences in the anatomy and functional properties of the cortices of different species. These differences can be demonstrated in simple experimental manipulations. For example, <span class="citation" data-cites="sprague1977-viscortex">Sprague et al. (<a href="references.html#ref-sprague1977-viscortex" role="doc-biblioref">1977</a>)</span> have shown that removal of the cat primary visual cortex does not blind the cat: the animal jumps, runs, and appears normal to the casual observer. <span class="citation" data-cites="humphrey1974">Humphrey (<a href="references.html#ref-humphrey1974" role="doc-biblioref">1974</a>)</span> has studied the behavior of a monkey whose area V1 was removed. Initially the lesion appeared to blind the monkey completely. Over time, however, the monkey recovered some visual function and was able to walk around objects, climb a tree, and even find and pick up small candy pellets in her play area. In human, the loss of area V1 is devastating to all visual function. Because of these differences, I describe measurements of the human brain whenever possible, and mainly I have restricted this review to primate.</p>
+</section>
+<section id="the-architecture-of-primary-visual-cortex" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="the-architecture-of-primary-visual-cortex"><span class="header-section-number">6.3</span> The Architecture of Primary Visual Cortex</h2>
+<p>There is a great deal of precision in the interconnections of cortical visual areas. The specific pattern of connections received by area V1 from the two retinae via the lateral geniculate nucleus results in certain regularities of the architecture of primary visual cortex. We review the anatomical structure of area V1 first. Then, we review how the pattern of connections from the two retinae imposes an overall organization on the visual information represented in cortical area V1.</p>
+<section id="the-layers-of-area-v1" class="level3">
+<h3 class="anchored" data-anchor-id="the-layers-of-area-v1">The layers of area V1</h3>
+<div id="fig-cortex-layers" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cortex-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2023/09/cortexLayers.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cortex-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.2: Area V1 is a layered structure. (a) A stained cross-section of the visual cortex in macaque shows the individual layers. Each layer has different proportions of cell bodies, dendrites and axons and may be distinguished by the density of the staining and other properties. The light areas are blood vessels. (Source: J. Lund, personal communication). (b) The organization of the neural inputs and outputs to area V1 are shown. The parvocellular and magnocellular inputs make connections in layer 4C. The intercalated neurons make connections in the superficial layers. The outputs are sent to other cortical areas, back to the lateral geniculate nucleus and other subcortical nuclei.
+</figcaption>
+</figure>
+</div>
+<p>Like cortex in general, area V1 is a layered structure. <a href="#fig-cortex-layers" class="quarto-xref">Figure&nbsp;<span>6.2</span></a> (a) shows a cross section of the visual cortex. Several major layers can be identified easily. Area V1 is segregated into six layers based on differences in the relative density of neurons, axons and synapses and interconnections to the rest of the brain. The superficial layer 1 has very few neurons but many axons, dendrites and synapses, which collectively are called <em>neuropil</em>. Layers 2 and 3 consists of a dense array of cell bodies and many local dendritic interconnections. These layers appear to receive a direct input from the intercalated layers of the lateral geniculate as well (<span class="citation" data-cites="fitzpatrick1983-laminarlgn">Fitzpatrick et al. (<a href="references.html#ref-fitzpatrick1983-laminarlgn" role="doc-biblioref">1983</a>)</span>; <span class="citation" data-cites="hendry1994-thirdchannel">Hendry and Yoshioka (<a href="references.html#ref-hendry1994-thirdchannel" role="doc-biblioref">1994</a>)</span>), and the outputs from layers 2 and 3 are sent to other cortical areas. Layers 2 and 3 are hard to distinguish based on simple histological stains of the cortex. Functionally, layers 1-3 are often grouped together and simply called the <em>superficial layers</em> of the cortex.</p>
+<p>Layer 4 has been subdivided into several parts as the interconnections with other brain areas and layers have become clarified. Layer 4C receives the primary input from the parvocellular and magnocellular layers of the lateral geniculate. The magnocellular neurons send their output to the upper half of this layer, which is called 4C<span class="math inline">\([\alpha]\)</span> while the parvocellular neurons make connections in the lower half, called 4C<span class="math inline">\([\beta]\)</span>. Layer 4B receives a large input from 4C<span class="math inline">\([\alpha]\)</span> and sends its output to other cortical areas. Layer 4B can be defined anatomically by the presence of the large Stria of Gennari, which is composed mainly of cortical axons.</p>
+<p>Layer 5 contains relatively few cell bodies compared to the surrounding layers. It sends a major output to the superior colliculus, a structure in the midbrain. Layer 6 is dense with cells and sends a large output back to the lateral geniculate nucleus (<span class="citation" data-cites="toyoma1969">Toyama et al. (<a href="references.html#ref-toyoma1969" role="doc-biblioref">1969</a>)</span>). As a general though not absolute rule, forward outputs to new cortical areas tend to come from the superficial layers and terminate in layer 4. The feedback projections tend to come from the deep layers and terminate in layers 1 and 6 (<span class="citation" data-cites="rockland1979">Rockland and Pandya (<a href="references.html#ref-rockland1979" role="doc-biblioref">1979</a>)</span>; <span class="citation" data-cites="felleman1991-hierarchy">Felleman and Van Essen (<a href="references.html#ref-felleman1991-hierarchy" role="doc-biblioref">1991</a>)</span>).</p>
+<p>The wiring diagram in <a href="#fig-cortex-layers" class="quarto-xref">Figure&nbsp;<span>6.2</span></a> (b) shows that the signals to and from area V1 are complex and highly specific. One must suppose that the interconnections within area V1 are specific, too. Roughly twenty-five percent of the neurons in all layers are inhibitory interneurons, and their interconnections must be governed by the presence of biochemical markers that identify which neurons should connect and how. Anatomical classification of the cell types within the visual cortex, and identification of the local circuitry, will provide us with many more clues about the functional significance of this area.</p>
+<!-- Source for 25 percent figure is from Movshon -->
+</section>
+<section id="the-pathway-to-area-v1" class="level3">
+<h3 class="anchored" data-anchor-id="the-pathway-to-area-v1">The pathway to area V1</h3>
+<p>The structure of the anatomical pathways leading from the two retinae to the cortex defines many of the fundamental properties of area V1. Among the most significant properties is that area V1 in each hemisphere has only a restricted field of view. Area V1 in the left (right) hemisphere only receives visual input concerning the right (left) half of the visual field.</p>
+<p>We can see how this arises by considering how retinal signals make their way to area V1. The optic tract fibers from the two retinae come together at the <em>optic chiasm</em>, as shown in <a href="#fig-cortex-input" class="quarto-xref">Figure&nbsp;<span>6.3</span></a>. There the fibers are sorted into two new groups that each connect to only one side of the brain. Axons from ganglion cells whose receptive fields are located in the <em>left visual field</em> send their outputs towards the lateral geniculate nucleus on the right side of the brain, while axons of ganglion cells with receptive fields in the right visual field communicate their output to the left side of the brain. Consequently, each lateral geniculate nucleus receives a retinal signal derived from both eyes, but only one half of the visual field.</p>
+<div id="fig-cortex-input" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cortex-input-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/cortexInput.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cortex-input-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.3: The signals from the two retinae are communicated to area V1 via the lateral geniculate nucleus (LGN). Points in the right visual field are imaged on the temporal side of the left eye and the nasal side of the right eye. Axons from ganglion cells in these retinal regions make connections with separate layers in the left lateral geniculate nucleus, which are also segregated by eye of origin. Neurons in the magnocellular and parvocellular layers of the lateral geniculate send their outputs to cortical layers 4C<span class="math inline">\(\alpha\)</span> and 4C<span class="math inline">\(\beta\)</span>, respectively. The signals from each eye are segregated into different bands within area V1. Signals from these bands converge on individual neurons in the superficial layers of the cortex.
+</figcaption>
+</figure>
+</div>
+<p>The signals reaching the cortex from the retina respect three other basic organizational principles. The pattern of interconnections are organized with respect to (a) the eye of origin, (b) the class of ganglion cell, and (c) the spatial position of the ganglion cell within the retina. <a href="#fig-cortex-input" class="quarto-xref">Figure&nbsp;<span>6.3</span></a> illustrates the pattern of connections schematically, starting at the retinae and continuing to area V1.</p>
+<section id="eye-of-origin" class="level4">
+<h4 class="anchored" data-anchor-id="eye-of-origin">Eye of origin</h4>
+<p>Within the lateral geniculate nucleus information about the eye of origin is preserved since fibers from each eye make connections in different layers of the lateral geniculate nucleus. The parvocellular and magnocellular layers, which are numbered as 1-6, receive input from the retina on the [same,opposite,opposite,same,opposite,same] side of head, respectively. The connections of these layers for the left lateral geniculate nucleus are illustrated in <a href="#fig-cortex-input" class="quarto-xref">Figure&nbsp;<span>6.3</span></a>. Why this particular pattern of ocular connections exists is a mystery. The eye-of-origin for the intercalated layers, which fall between the parvocellular and magnocellular layers, has not yet been demonstrated.</p>
+<p>The signals from the two eyes remain segregated as they arrive at the input layers of area V1. One can observe this segregation by measuring the electrophysiological responses of the units in layer 4C. As the recording electrode travels within layer 4C, there is an abrupt shift as to which eye drives the unit. In layer 4C The shift from one eye to the other takes place over a distance of less than 50 <span class="math inline">\(\\mu m\)</span>. Above and below layer 4C the signals from the two eyes converge onto single neurons, although there is still a tendency for individual neurons to receive inputs predominantly from one eye or another and this pattern is aligned with the input pattern. The transition between eye of origin is less abrupt in the superficial layers, perhaps extending over 100 <span class="math inline">\(\\mu m\)</span>. The relative segregation of information across the columns with respect to the eye of origin is called <em>ocular dominance columns</em> (<span class="citation" data-cites="hubel1977-functionalarchitecture">Hubel and Wiesel (<a href="references.html#ref-hubel1977-functionalarchitecture" role="doc-biblioref">1977</a>)</span>; <span class="citation" data-cites="bishop1984">Bishop (<a href="references.html#ref-bishop1984" role="doc-biblioref">1984</a>)</span>). %Review article by bishop</p>
+<div id="fig-cortex-OD" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-caption-location="margin">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cortex-OD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/ocularDominance-updated.png" class="img-fluid figure-img" style="width:90.0%" data-fig-caption-location="margin">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cortex-OD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.4: The ocular dominance columns in area V1 can be visualized using a radioactive marker, tritiated proline. When the marker is injected into one eye it is transported via the lateral geniculate nucleus to the cortex. The radioactive uptake is revealed in this dark field photograph. The light bands in this tangential section show the places where the radioactive marker was located and thus reveal the ocular dominance columns. (Source: <span class="citation" data-cites="hubel1978-anatomy">Hubel et al. (<a href="references.html#ref-hubel1978-anatomy" role="doc-biblioref">1978</a>)</span>)
+</figcaption>
+</figure>
+</div>
+<p>In addition to evidence from electrophysiological measurements, one also can use anatomical methods to visualize the ocular dominance columns and demonstrate their existence. After injection into one eye, the the tritiated amino acid proline will be transported from the retina to the cortex across the synaptic connections. By sectioning the visual cortex tangentially through at layer 4C, and exposing the section to a photographic emulsion, we can develop a pattern of light and dark stripes that correspond to the presence and absence of the tritiated proline. <a href="#fig-cortex-OD" class="quarto-xref">Figure&nbsp;<span>6.4</span></a> shows a pattern of light bands that mark regions receiving input from the injected eye; the intervening dark areas receive input from the opposite eye. In the monkey these bands each span approximately 400 <span class="math inline">\(\mu m\)</span>, though in the human they span approximately one millimeter (<span class="citation" data-cites="hubel1978-anatomy">Hubel et al. (<a href="references.html#ref-hubel1978-anatomy" role="doc-biblioref">1978</a>)</span>; <span class="citation" data-cites="horton1991-quadraticdefects">Horton and Hoyt (<a href="references.html#ref-horton1991-quadraticdefects" role="doc-biblioref">1991a</a>)</span>).</p>
+<p>In the superficial layers of area V1 many neurons respond to stimuli from both eyes; in the normal monkey eighty percent of the neurons in the superificial layers of area V1 are binocularly driven. The development of the interconnections necessary to drive the binocular neurons depends upon experience during maturation. <span class="citation" data-cites="hubel1965-binocular">Hubel and Wiesel (<a href="references.html#ref-hubel1965-binocular" role="doc-biblioref">1965</a>)</span> showed that artifically closing one eye or cutting an ocular muscle strongly affects the development of neurons in area V1. Specifically, the binocular neurons fail to develop. Behaviorally, if one eye is kept closed for a critical period during development, the animal will remain blind in this eye for the rest of its life. This is quite different from the result of closing an adult eye for a few months; this has no significant effect (<span class="citation" data-cites="hubelwiesellevay1977">Hubel et al. (<a href="references.html#ref-hubelwiesellevay1977" role="doc-biblioref">1977</a>)</span>; <span class="citation" data-cites="shatz1978-occulardom">Shatz and Stryker (<a href="references.html#ref-shatz1978-occulardom" role="doc-biblioref">1978</a>)</span>; <span class="citation" data-cites="mitchell1988">Mitchell (<a href="references.html#ref-mitchell1988" role="doc-biblioref">1988</a>)</span>; <span class="citation" data-cites="movshonvansluyters1981">Movshon and Van Sluyters (<a href="references.html#ref-movshonvansluyters1981" role="doc-biblioref">1981</a>)</span>). In the cat, normal development of ocular dominance columns, and presumably the binocular interconnections as well, depends upon neural activity originating in the two retina (<span class="citation" data-cites="stryker1986-blockade">Stryker and Harris (<a href="references.html#ref-stryker1986-blockade" role="doc-biblioref">1986</a>)</span>).</p>
+</section>
+<section id="ganglion-cell-classification" class="level4">
+<h4 class="anchored" data-anchor-id="ganglion-cell-classification">Ganglion cell classification</h4>
+<p>Information from different classes of retinal ganglion cells remains segregated along the path to the cortex. Neurons in the magnocellular layers receive fibers from the parasol cells; neurons in the parvocellular layers receive fibers from the midget ganglion cells. It is uncertain precisely which retinal ganglion cells project to the intercalated layers. The segregation of signals continues to the input of area V1. Within layer 4C, the upper half (4C<span class="math inline">\(\alpha\)</span>) receives the axons from the magnocellular layers while the lower half (4C<span class="math inline">\(\beta\)</span>) receives the parvocellular input. The neurons in the intercalated layers send their output to the superficial layers 2 and 3.</p>
+</section>
+<section id="retinotopic-organization" class="level4">
+<h4 class="anchored" data-anchor-id="retinotopic-organization">Retinotopic organization</h4>
+<p>The spatial position of the ganglion cell within the retina is preserved by the spatial organization of the neurons within the lateral geniculate nucleus layers. The back of the nucleus contains neurons whose receptive fields are near the fovea. As we measure towards the front of the nucleus, the receptive field locations become increasingly peripheral. This spatial layout is called <em>retinotopic</em> organization because the topological organization of the receptive fields in the lateral geniculate parallels the organization in the retina.</p>
+<p>The signals in area V1 are also retinotopically arranged. From electrophysiology in monkeys, one can measure the location of receptive fields with an electrode that penetrates tangentially through layer 4C, traversing through the ocular dominance columns. The receptive field centers of neurons along this path are located systematically from the fovea to the periphery. This trend is interrupted locally by small, abrupt jumps at the ocular dominance borders. Within the first ocular dominance column the receptive field center positions change smoothly; as one passes into the next ocular dominance region there is an abrupt shift of the receptive field positions equal to about half of the space spanned by receptive fields in the first column. <span class="citation" data-cites="hubel1977-functionalarchitecture">Hubel and Wiesel (<a href="references.html#ref-hubel1977-functionalarchitecture" role="doc-biblioref">1977</a>)</span> describe this organization and refer to it as “two steps forward and one step back.”</p>
+<p>In the last fifteen years, it has become possible to estimate spatially localized activity in the human brain. Beginning with <em>positron emission tomography</em> (<em>PET</em>) studies, and more recently by using <em>functional magnetic resonance imaging</em> (<em>fMRI</em>), we can measure activity in volumes of the cortex as small as 10 cubic millimeters, containing a few hundred thousand neurons.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div id="fig-calcarine" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-calcarine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/calcarine.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-calcarine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.5: Human area V1 is located mainly in the calcarine sulcus, and in some individuals it may extend onto the occipital pole. (a) Seen in sagittal view, the calcarine is a long sulcus that extends roughly 4 cm. The visual eccentricities of the receptive fields of neurons at different locations in the calcarine are shown. (b) In the coronal plane the calcarine sulcus appears as an indentation of the medial wall of the brain. At a given distance along the calcarine, the receptive fields of neurons fall along a semi-circle within the visual field. Each hemisphere represents one half of the visual field. Neurons with receptive fields on the upper, middle, and lower sections of a semi-circle of constant eccentricity are found on the lower, middle and upper portions of the calcarine, respectively.
+</figcaption>
+</figure>
+</div>
+<p>Human area V1 is located within the <em>calcarine</em> sulcus in the occipital lobe. The calcarine sulcus in my brain, and its retinotopic organization, is shown in <a href="#fig-calcarine" class="quarto-xref">Figure&nbsp;<span>6.5</span></a>. Neurons with receptive fields in the central visual field are located in the posterior calcarine sulcus, while neurons with receptive fields in the periphery are located in the anterior portions of the sulcus. At a given distance along the sulcus, the receptive fields are located along a semi-circle in the visual field. Neurons with receptive fields on the upper, middle, and lower sections of the semi-circle, are found on the lower, middle and upper portions of the calcarine, respectively. (<span class="citation" data-cites="holmes1918-lesions">Holmes (<a href="references.html#ref-holmes1918-lesions" role="doc-biblioref">1918</a>)</span>, <span class="citation" data-cites="holmes1945-orgviscortex">Holmes (<a href="references.html#ref-holmes1945-orgviscortex" role="doc-biblioref">1945</a>)</span>; <span class="citation" data-cites="horton1991-representationvisualfield">Horton and Hoyt (<a href="references.html#ref-horton1991-representationvisualfield" role="doc-biblioref">1991b</a>)</span>; <span class="citation" data-cites="inouye1909">Inouye (<a href="references.html#ref-inouye1909" role="doc-biblioref">1909</a>)</span>)</p>
+<div id="fig-retinotopy" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-retinotopy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/retinotopy1.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-retinotopy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.6: Receptive field locations of neurons in human calcarine sulcus can be measured by functional magnetic resonance imaging. (a) The observer viewed a series of concentric expanding annuli presented on a gray background. Each annulus contained a high contrast flickering radial checkerboard pattern. As an annulus expanded beyond the edge of the display, a new annulus emerged in the center creating a periodic image sequence. The sequence was repeated four times in a single experiment. (b) An image within the plane of the calcarine sulcus. The dark lines indicate points identified as following the left calcarine sulcus. (c) The fMRI temporal signal at different points within the calcarine sulcus. The fMRI signal follows the timecourse of the stimulus; the phase of the signal is delayed as we measure from the posterior to the anterior calcarine sulcus.
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="engel1994-fmri">Engel et al. (<a href="references.html#ref-engel1994-fmri" role="doc-biblioref">1994</a>)</span> measured the human retinotopic organization from fovea to periphery by using the stimulus shown in <a href="#fig-retinotopy" class="quarto-xref">Figure&nbsp;<span>6.6</span></a> (a). The stimulus consisted of a series of slowly expanding rings; each ring was a collection of flickering squares. The ring began as a small spot located at the fixation mark, and then it grew until it traveled beyond the edge of the visual field. As a ring faded from view, it was replaced by a new ring starting at the center. Because of the retinotopic organization of the calcarine, each ring causes a traveling wave of neural activity beginning in the posterior calcarine and traveling in the anterior direction.</p>
+<p>We can detect the traveling wave of activation by measuring the fMRI signal at different points along the calcarine sulcus. <a href="#fig-retinotopy" class="quarto-xref">Figure&nbsp;<span>6.6</span></a> (b) is an image of the brain within the plane of the calcarine sulcus. Positions within the calcarine sulcus are highlighted in black. The fMRI signal at each point within the sulcus, plotted as a function of time, is shown in the mesh plot in <a href="#fig-retinotopy" class="quarto-xref">Figure&nbsp;<span>6.6</span></a> (c). Notice that the amplitude of the fMRI signal covaries with the stimulus; the fMRI signal waxes and wanes four times through the four periods of the expanding annulus. The temporal phase of the fMRI signal varies systematically from the posterior to anterior portions of the sulcus: Activity in the posterior portion of the sulcus is advanced in time compared to activity in the anterior portion. This traveling wave occurs because the stimulus creates activity in the posterior part of the sulcus first, and then later in the anterior part of the sulcus.</p>
+<div id="fig-cortmag" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cortmag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/cortMag.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cortmag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.7: Several methods have been used to estimate the receptive field location of neurons in the calcarine sulcus. The filled symbols show measurements from two observers using the fMRI method (<span class="citation" data-cites="engel1994-fmri">Engel et al. (<a href="references.html#ref-engel1994-fmri" role="doc-biblioref">1994</a>)</span>). The squares are from a microstimulation study on a blind volunteer (<span class="citation" data-cites="dobelle1979-mapelectrialstim">Dobelle et al. (<a href="references.html#ref-dobelle1979-mapelectrialstim" role="doc-biblioref">1979</a>)</span>). The diamonds are measurements averaged from 5 observers using PET (<span class="citation" data-cites="fox1984-pet">Fox and Raichle (<a href="references.html#ref-fox1984-pet" role="doc-biblioref">1984</a>)</span>). The dashed curve is an estimate based on studying the locations of scotoma in stroke patients and single-cell data from non-human primates (<span class="citation" data-cites="horton1991-representationvisualfield">Horton and Hoyt (<a href="references.html#ref-horton1991-representationvisualfield" role="doc-biblioref">1991b</a>)</span>). (Source: <span class="citation" data-cites="engel1994-fmri">Engel et al. (<a href="references.html#ref-engel1994-fmri" role="doc-biblioref">1994</a>)</span>)
+</figcaption>
+</figure>
+</div>
+<p>In addition to fMRI, there are several other estimates of the mapping from visual field eccentricity to location in the calcarine sulcus. These estimates are compared in <a href="#fig-cortmag" class="quarto-xref">Figure&nbsp;<span>6.7</span></a>. The fMRI measurements from two observers are shown as the filled circles. Estimates from direct electrical stimulation of the cortex are shown as gray squares (<span class="citation" data-cites="dobelle1979-mapelectrialstim">Dobelle et al. (<a href="references.html#ref-dobelle1979-mapelectrialstim" role="doc-biblioref">1979</a>)</span>). In these experiments the volunteer observer’s brain was stimulated and he indicated the location of the perceived visual stimulation within the visual field (see also <span class="citation" data-cites="brindley1968-sensation">Brindley and Lewin (<a href="references.html#ref-brindley1968-sensation" role="doc-biblioref">1968</a>)</span>). The three gray diamonds are show measurements using PET. These data represent the average of five different observers, normalized for differences in brain size. The dashed line shows an estimate by <span class="citation" data-cites="horton1991-representationvisualfield">Horton and Hoyt (<a href="references.html#ref-horton1991-representationvisualfield" role="doc-biblioref">1991b</a>)</span> by studying the positions of scotoma in observers with localized brain lesions and extrapolating from monkey. These estimates are in good agreement, and they all show that considerably more cortical area is allocated to the foveal representation than to the peripheral representation.</p>
+<p>The allocation of more cortical area to the foveal than the peripheral representation seems a natural consequence of the fact that more photoreceptors and retinal ganglion cells represent the fovea than the periphery. <span class="citation" data-cites="wassle1990">Wässle et al. (<a href="references.html#ref-wassle1990" role="doc-biblioref">1990</a>)</span> (see also <span class="citation" data-cites="schein1988-anatomyfovea">Schein (<a href="references.html#ref-schein1988-anatomyfovea" role="doc-biblioref">1988</a>)</span>) suggested that the expanded foveal representation can be explained by assuming that every ganglion cell is allocated an equal amount of cortical area. More recently, <span class="citation" data-cites="azzopardi1993-preffovea">Azzopardi and Cowey (<a href="references.html#ref-azzopardi1993-preffovea" role="doc-biblioref">1993</a>)</span> suggest that there is a further expansion of the foveal representation, and that foveal ganglion cells are allocated three to six times more cortical area than peripheral ganglion cells.</p>
+</section>
+</section>
+<section id="electrical-stimulation-of-human-area-v1" class="level3">
+<h3 class="anchored" data-anchor-id="electrical-stimulation-of-human-area-v1">Electrical stimulation of Human Area V1</h3>
+<p>Direct electrical stimulation of the visual cortex causes the sensation of vision. When a visual impression is generated by non-photic stimulation, say by pressing on the eyeball or by electrical stimulation, the resulting perception is called a <em>visual phosphene</em>. In order to develop visual prostheses for individuals with incurable retinal diseases, several research groups have studied the visual properties of phosphenes created by electrical stimulation of the visual cortex (<span class="citation" data-cites="brindley1968-sensation">Brindley and Lewin (<a href="references.html#ref-brindley1968-sensation" role="doc-biblioref">1968</a>)</span>; <span class="citation" data-cites="dobelle1979-mapelectrialstim">Dobelle et al. (<a href="references.html#ref-dobelle1979-mapelectrialstim" role="doc-biblioref">1979</a>)</span>; <span class="citation" data-cites="bak1990-intracortialmicrostimulation">Bak et al. (<a href="references.html#ref-bak1990-intracortialmicrostimulation" role="doc-biblioref">1990</a>)</span>).</p>
+<p><span class="citation" data-cites="brindley1968-sensation">Brindley and Lewin (<a href="references.html#ref-brindley1968-sensation" role="doc-biblioref">1968</a>)</span> describe experiments with a human volunteer who was diabetic and suffered from bi-lateral glaucoma, a right retinal detachment, and was effectively blind. When she suffered a stroke, she required an operation that would expose her visual cortex. With the patient’s consent, Brindley and Lewin built and implanted a stimulator that could deliver current to the surface of her brain, near the patient’s primary visual cortex. They asked her to describe the appearance of the electrical stimulation following stimulation by the different electrodes, at various positions within her primary visual cortex. She reported that electrical stimulation caused her to perceive a phosphene that appeared to be a point of light or a blob in space. Her description of the visual impression caused by most of the electrodes was “like a grain of rice at arm’s length.” Occasionally one electrode might cause a slightly longer impression, “like half a matchstick at arm’s length.”</p>
+<p>As might be expected from the retinotopic organization of the visual cortex, the position of the phosphenes varied with the position of the stimulating electrodes. The observer told the experimenters where she perceived the phosphenes to be using a simple procedure. She grasped a knob with her right hand and imagined she was fixating on that hand. She then pointed to the location of the phosphenes relative to the fixation point using her left hand.</p>
+<div id="fig-brindley-lewin" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-brindley-lewin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/brindleyLewin.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-brindley-lewin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.8: Electrical stimulation of human area V1 using chronically implanted microelectrodes reveals the retinotopic organization of human cortex. The symbols are plotted at the electrode positions on the medial wall of the brain. The shading of the symbol indicates the visual eccentricity of the phosphene created by electrode stimulation. A dot within the symbol means that the phosphene was perceived in the upper visual field. The dashed curve shows the inferred position of the calcarine sulcus (Source: <span class="citation" data-cites="brindley1968-sensation">Brindley and Lewin (<a href="references.html#ref-brindley1968-sensation" role="doc-biblioref">1968</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-brindley-lewin" class="quarto-xref">Figure&nbsp;<span>6.8</span></a> shows the positions of the electrodes and the corresponding phosphenes. The pattern of results follows the expectations from the retinotopic organization of the calcarine sulcus. Stimulation by electrodes near the back of the brain created phosphenes in the central five degrees; stimulation by forward electrodes created phosphenes in more eccentric portions. More cortical area is devoted to the central than peripheral regions of vision.</p>
+<p>Brindley and Lewin tested the effects of superposition by stimulating with separate electrodes and then stimulating with both electrodes at once. When electrodes were far apart, the visual phosphene generated by stimulating both electrodes at once could be predicted from the phosphenes generated by stimulating individually. Superposition also held for some closely spaced electrodes, but not all. The test of superposition is particularly important for practical development of a prosthetic device. To build up complex visual patterns from stimulation of V1, it is necessary to use multiple electrodes. If linearity holds, then we can measure the appearance from single electrode stimulations and predict the appearance to multiple stimulations. That superposition held approximately suggests that it may be possible to predict the appearance of the multiple electrode stimulation from measurements using individual electrodes. Without superposition, we have no logical basis for creating a an image from the intensity at a set of single points.</p>
+<p>There have been a few recent reports of stimulation of the human visual cortex. For example, <span class="citation" data-cites="bak1990-intracortialmicrostimulation">Bak et al. (<a href="references.html#ref-bak1990-intracortialmicrostimulation" role="doc-biblioref">1990</a>)</span> stimulated using very fine microelectrodes (<span class="math inline">\(37.5~\mu\text{m}\)</span>) inserted within the cortex during to stimulate visual percepts. They experimented on patients who were having epileptic foci removed. These patients were under local anaesthesia and could report on their visual sensations. Bak et al.&nbsp;observed that when the stimulation was embedded within the visual cortex, visual sensations could be obtained with quite low current levels. Brindley and Lewin used about <span class="math inline">\(2~\text{mA}\)</span> of current, but Bak et al.&nbsp;found thresholds about 100 times lower, near <span class="math inline">\(20~\mu\text{A}\)</span>. The appearance of the visual phosphene was steady in these patients, and some of them appeared colored. Time was quite limited in these studies and only a few experimental manipulations were possible. But, they report that when the microelectrodes were separated by more than <span class="math inline">\(0.7~\text{mm}\)</span>, the two phosphenes could be seen as distinct, while separations of <span class="math inline">\(0.3~\text{mm}\)</span> were seen as a single spot. For one subject, nearly all of the phosphenes were reported to be strongly colored, unlike the phosphenes reported by Brindley and Lewin’s patient. While the subjects were stimulated, they could also perceive light stimuli. The phosphenes were visible against the backdrop of the normal visual field.</p>
+</section>
+</section>
+<section id="receptive-fields-in-primary-visual-cortex" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="receptive-fields-in-primary-visual-cortex"><span class="header-section-number">6.4</span> Receptive Fields in Primary Visual Cortex</h2>
+<p>The receptive fields of neurons in area V1 are qualitatively different from those in the lateral geniculate nucleus. For example, lateral geniculate neurons have circularly symmetric receptive fields, but most V1 receptive fields do not. Unlike lateral geniculate neurons, some neurons in area V1 respond well to stimuli moving in one direction but fail to respond to stimuli moving in the opposite direction. Some area V1 neurons are binocular, responding to stimuli from both eyes. These new receptive field properties must be related to the visual computations performed within the cortex such as the analysis of form and texture, the perception of motion, and the estimation of stereo depth. We might expect that these new receptive field properties have a functional role in these visual computations.</p>
+<p>Much of what we know about cortical receptive fields comes from Hubel and Wiesel’s measurements during their 25 year collaboration. Others had accomplished the difficult feat of recording from cortical neurons first; but the initial experiments used diffuse illumination, say turning on the room lights, as a source of stimulation. As we have seen, pattern contrast is an important variable in the retinal neural representation; consequently, cortical cells respond poorly to diffuse illumination (<span class="citation" data-cites="vonbaumgarten1952">von Baumgarten and Jung (<a href="references.html#ref-vonbaumgarten1952" role="doc-biblioref">1952</a>)</span>). Hubel and Wiesel made rapid progress in elucidating the responses of cortical neurons by using stimuli of great relevance to vision and by being extremely insightful. Hubel and Wiesel’s papers chart a remarkable series of advances in our understanding of the visual cortex. Their studies have defined the major ways in which area V1 receptive fields differ from lateral geniculate nucleus receptive fields. Their qualitative methods for studying the cortex continue to dominate experimental physiology (<span class="citation" data-cites="hubel1959-singleneurons">Hubel and Wiesel (<a href="references.html#ref-hubel1959-singleneurons" role="doc-biblioref">1959</a>)</span>, <span class="citation" data-cites="hubel1962-catviscortex">Hubel and Wiesel (<a href="references.html#ref-hubel1962-catviscortex" role="doc-biblioref">1962</a>)</span>, <span class="citation" data-cites="hubel1968-receptivefields">Hubel and Wiesel (<a href="references.html#ref-hubel1968-receptivefields" role="doc-biblioref">1968</a>)</span>, <span class="citation" data-cites="hubel1977-functionalarchitecture">Hubel and Wiesel (<a href="references.html#ref-hubel1977-functionalarchitecture" role="doc-biblioref">1977</a>)</span>; <span class="citation" data-cites="hubel1982-explore">Hubel (<a href="references.html#ref-hubel1982-explore" role="doc-biblioref">1982</a>)</span>).</p>
+<p>Hubel and Wiesel recorded the activity of cortical neurons while displaying patterned stimuli, mainly line segments and spots, on a screen that was imaged through the animal’s cornea and lens onto the retina. As the microelectrode penetrated the visual cortex, they presented line segments whose width and length could be adjusted. First, they varied the position of the stimulus on the screen, searching for the neuron’s receptive field. Once the receptive field position was established, they measured the response of the neuron to a lines, bars and spots presented individually.</p>
+<p>One important goal of their work was to classify the cortical neurons based on their responses to the small collection of stimuli. They sought classifications that represented the neurons’ receptive field properties and that also helped to clarify the neurons’ function in seeing. Classification of the receptive field types was an important theme when we considered the responses of retinal ganglion cells as well. It is of great current interest to try to understand whether the classifications of cortical neurons and retinal neurons can be brought together to form a clear picture of this entire section of the visual pathways.</p>
+<p>A second important aspect of characterizing cortical neurons is to measure the transformation from pattern contrast stimulus to firing activity. We used linear systems methods to design experiments and create quantitative models of this transformation for retinal ganglion cells. Linearity is an important idea when applied to cortical receptive fields, too. The most important application of linearity is Hubel and Wiesel’s classification of cortical neurons into two categories, called <em>simple</em> and <em>complex</em>. This classification is based, in large part, on an informal test of linearity (<span class="citation" data-cites="skottun1991-classify">Skottun et al. (<a href="references.html#ref-skottun1991-classify" role="doc-biblioref">1991</a>)</span>). As Hubel writes, “For the most part, we can predict the responses of simple cells to complicated shapes from their responses to small-spot stimuli (<span class="citation" data-cites="hubel1988-eyebrainvisionbook">Hubel (<a href="references.html#ref-hubel1988-eyebrainvisionbook" role="doc-biblioref">1988</a>)</span>, p.&nbsp;72).” Complex cells, on the other hand, do not satisfy superposition. The response obtained by sweeping a line across the cell’s receptive field can not be predicted accurately from the responses to individual flashes of a line.</p>
+<section id="orientation-selectivity" class="level3">
+<h3 class="anchored" data-anchor-id="orientation-selectivity">Orientation selectivity</h3>
+<p>Since simple cells are approximately linear, we can measure their receptive fields using the methods described in <a href="chapter-5-the-retinal-representation.html" class="quarto-xref"><span>Chapter 5</span></a>. Simple cell receptive fields consist of adjacent excitatory and inhibitory areas, as illustrated in <a href="#fig-orient-selective" class="quarto-xref">Figure&nbsp;<span>6.9</span></a>. Simple cells have <em>oriented</em> receptive fields and hence they respond to stimuli in some orientations better than others. This receptive field property is called <em>orientation selectivity</em>. The orientation of the stimulus the evokes the most powerful response is called the cell’s <em>preferred orientation</em>.</p>
+<p>Orientation selectivity of cortical neurons is a new receptive field property. Lateral geniculate neurons and retinal neurons have circularly symmetric receptive fields and they respond almost equally well to all stimulus orientations. Orientation selective neurons are found throughout layers 2 and 3, though they are relatively rare in the primary inputs within layer 4C.</p>
+<div id="fig-orient-selective" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-orient-selective-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/orientedRF.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-orient-selective-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.9: Orientation selective receptive fields can be created by summing the responses of neurons with non-oriented, circularly symmetric receptive fields. The receptive fields of three hypothetical neurons are shown. Each hypothetical receptive field has an adjacent excitatory and inhibitory region. (a) and (c) illustrate that the degree of orientation selectivity can vary depending on the number of neurons combined along the main axis.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-orient-selective" class="quarto-xref">Figure&nbsp;<span>6.9</span></a> shows several orientation selective linear receptive fields and how these might be constructed from the outputs of lateral geniculate neurons. The simple cell receptive fields consist of adjacent excitatory and inhibitory regions that are longer in one direction than the other. The main axis of the receptive fields defines the preferred orientation; stimuli oriented along the main axis of these receptive fields are more effective at exciting or inhibiting the cell than stimuli in other orientations. The figure shows the excitatory regions as resulting from the combined output of neurons with excitatory centers and the inhibitory regions resulting from the combined output of neurons with inhibitory centers<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>By comparing the three panels in <a href="#fig-orient-selective" class="quarto-xref">Figure&nbsp;<span>6.9</span></a> you will see that receptive fields sharing a common preferred orientation can differ in a number of other ways. Panels (a) and (b) show two receptive fields with the same preferred orientation but different spatial arrangements of the excitatory and inhibitory regions. Panels (a) and (c) show two receptive fields with the same preferred orientation and arrangement of excitatory and inhibitory regions, but differing in the overall length of the receptive field. The neuron with the longer receptive field will respond well to a narrower range of stimulus orientations than the neuron with the shorter receptive field.</p>
+<p>Complex cells also show orientation selectivity. Complex cells are nonlinear, so to explain the behavior of complex cells, including orientation selectivity, will require more complex models than the simple sums of neural outputs used in <a href="#fig-orient-selective" class="quarto-xref">Figure&nbsp;<span>6.9</span></a>.</p>
+<p>The preferred orientation of neurons varies in an orderly way that depends on the neuron’s position within the cortical sheet. <a href="#fig-orientation" class="quarto-xref">Figure&nbsp;<span>6.10</span></a> shows the preferred orientation of a collection of neurons measured during a single, long, tangential penetration through the cortex. In any small region of layers 2 and 3, the preferred orientation is similar. As the electrode passes tangentially through the cortical sheet, the preferred orientation changes systematically, varying through all angles. <a href="#fig-orientation" class="quarto-xref">Figure&nbsp;<span>6.10</span></a> (a) shows an extensive set of measurements of preferred orientation made during a single tangential penetration (<span class="citation" data-cites="hubel1977-functionalarchitecture">Hubel and Wiesel (<a href="references.html#ref-hubel1977-functionalarchitecture" role="doc-biblioref">1977</a>)</span>). The change in preferred orientation is very systematic as the electrode passes tangentially through the cortex. Upon later review, <span class="citation" data-cites="hubel-livingstone1987-singleneurons">Hubel and Livingstone (<a href="references.html#ref-hubel-livingstone1987-singleneurons" role="doc-biblioref">1987</a>)</span> noted that during these measurements there were certain intervals during which the receptive field orientation was ambiguous. <a href="#fig-orientation" class="quarto-xref">Figure&nbsp;<span>6.10</span></a> (b) shows a second penetration in which regions with no preferred receptive field orientation are identified. As we shall see, Hubel and Livingstone also report that the regions lacking orientation selecitivity coincide with locations in layers 2 and 3 cortex where an enzyme called <em>cytochrome oxidase</em> is present in high density. However, there is some debate whether these measurements represent true differences in the receptive fields of individual neurons, or whether they represent differents in the distribution of activity in local collections of neurons (<span class="citation" data-cites="okeefe1993">O’Keefe et al. (<a href="references.html#ref-okeefe1993" role="doc-biblioref">1993</a>)</span>; <span class="citation" data-cites="leventhal1993-formcolor">Leventhal et al. (<a href="references.html#ref-leventhal1993-formcolor" role="doc-biblioref">1993</a>)</span>).</p>
+<div id="fig-orientation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-orientation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/orientation.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-orientation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.10: The preferred orientation of neurons in area V1 measured during a single tangential penetration. The horizontal axis shows the distance along the tangential penetration and the vertical axis shows the orientation of the receptive field.
+</figcaption>
+</figure>
+</div>
+<p>The alternative interpretation is based on measurements of the spatial organization of cortical regions with common orientation preference. <span class="citation" data-cites="obermayer1993">Obermayer and Blasdel (<a href="references.html#ref-obermayer1993" role="doc-biblioref">1993</a>)</span> measured regions with a common orientation preference using a high resolution optical imaging method. In this method, a voltage sensitive dye is applied to cortex. Local neural activity causes reflectance changes in the dye, and these can be visualized by reflecting light from the exposed cortex. By stimulating with visual signals in different orientations and measuring the changes in reflectance, <span class="citation" data-cites="obermayer1993">Obermayer and Blasdel (<a href="references.html#ref-obermayer1993" role="doc-biblioref">1993</a>)</span> visualized regions with common orientation preference; by stimulating with images in originating in different eyes, they could identify ocular dominance columns (see also <span class="citation" data-cites="hubel1977-functionalarchitecture">Hubel and Wiesel (<a href="references.html#ref-hubel1977-functionalarchitecture" role="doc-biblioref">1977</a>)</span>).</p>
+<div id="fig-iso-orientation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-iso-orientation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/isoOrientation1.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-iso-orientation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.11: Regions with common orientation preference are shown as the gray lines in this contour plot. The dark lines show the boundaries of ocular dominance columns. At the edges of the ocular dominance columns, regions with common orientation are arranged in parallel lines that are nearly perpendicular to the ocular dominance columns. These lines converge to singular points located near the center of the ocular dominance columns. (Source: <span class="citation" data-cites="obermayer1993">Obermayer and Blasdel (<a href="references.html#ref-obermayer1993" role="doc-biblioref">1993</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-iso-orientation" class="quarto-xref">Figure&nbsp;<span>6.11</span></a> represents the <span class="citation" data-cites="obermayer1993">Obermayer and Blasdel (<a href="references.html#ref-obermayer1993" role="doc-biblioref">1993</a>)</span> measurements as a contour plot. Regions with common orientation preference are shown as gray iso-orientation lines, and the boundaries of the ocular dominance columns are shown as dark lines. The figure shows that the variation in preferred orientation is synchronized with the variation in ocular dominance. A full range of preferred orientations takes place within about 1 mm of the cortex, about equal to one ocular dominance column. Near the edges of the ocular dominance columns, the iso-orientation lines are arranged in linear, parallel strips extending roughly 0.5 – 1 mm. These linear strips are oriented nearly perpendicular to the edge of the ocular dominance edge. In the middle of the ocular dominance columns, the iso-orientation lines converge toward single points called <em>singularities</em>. In these regions, neurons with receptive fields with different preferred orientations are brought close to one another, and they may also be the position of the high density of cytochrome oxidase (<span class="citation" data-cites="blasdel1992">Blasdel (<a href="references.html#ref-blasdel1992" role="doc-biblioref">1992</a>)</span>). These regions will have high metabolic activity since, for any stimulus orientation some of the neurons in the region will be active. This is an alternative explanation of the colocation of regions of high density cytochrome oxidase and regions of reduced orientation selectivity of the neural response.</p>
+<p>There are a number of broad questions that remain unanswered about the orientation selectivity in the visual cortex. First, we might ask how are the receptive field properties of cortical neurons constructed from the cortical inputs? <a href="#fig-orient-selective" class="quarto-xref">Figure&nbsp;<span>6.9</span></a> shows that we can explain orientation selectivity theoretically since combining signals from center-surround neurons with adjacent receptive field locations results in an oriented receptive field. But, there is no empirical counterpart to this theoretcal explanation. Second, the regularity of the iso-orientation contours shows that the orientation preferences of neurons is created in an highly regular and organized pattern. What are the rules for making the interconnections that lead to this spatial organization of orientation selectivity? What functional role to they have in perceptual processing? Is this spatial organization essential for neural computations, or is it merely a convenient wiring diagram for an area whose output is communicated to other processing modules?</p>
+</section>
+<section id="direction-selectivity" class="level3">
+<h3 class="anchored" data-anchor-id="direction-selectivity">Direction selectivity</h3>
+<p><span class="citation" data-cites="hubel1968-receptivefields">Hubel and Wiesel (<a href="references.html#ref-hubel1968-receptivefields" role="doc-biblioref">1968</a>)</span> also found a second specialization that emerges in the receptive fields of V1 neurons. Certain cortical neurons in the monkey respond well when a stimulus moves in one direction and poorly or not at all when the same stimulus is moved in the opposite direction. This feature is called <em>direction selectivity</em>. <a href="#fig-dir-selective" class="quarto-xref">Figure&nbsp;<span>6.12</span></a> shows the response of a neuron in monkey area V1 to a line first moving in one direction and then in the opposite direction. Notice that the cell shows orientation selectivity, it only responds well to the line in one orientation. In addition, the cell shows direction selectivity. When the line moves up and to the right the cell responds well but when the same line moves down and to the left the cell responds poorly. Because of the low spontaneous response rate of this neuron, which is characteristic of many cortical neurons, we cannot tell from these measurements whether the neuron simply fails to respond or if it is actively inhibited by the stimulus moving in the wrong direction.</p>
+<div id="fig-dir-selective" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dir-selective-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/dir.selective.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dir-selective-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.12: Direction selectivity of a cortical neuron’s response. The firing pattern in response to movement in opposite directions, indicated by the arrows, are shown. The left hand portion of each panel shows the receptive field location, the orientation of the line stimulus, and the two motion directions. The action potentials shown on the right are the neuron’s response to motion in each of the two opposite directions. The neuron’s response depends upon the direction of motion and the orientation of the line (From <span class="citation" data-cites="hubel1968-receptivefields">Hubel and Wiesel (<a href="references.html#ref-hubel1968-receptivefields" role="doc-biblioref">1968</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>The direction selective neurons are found mainly in certain layers of the cortex and are quite rare or absent from others. The main layers containing direction selective neurons are 4A, 4B, 4C<span class="math inline">\(\alpha\)</span> and layer 6 (<span class="citation" data-cites="hawkenparkerlund1988">Hawken et al. (<a href="references.html#ref-hawkenparkerlund1988" role="doc-biblioref">1988</a>)</span>). These layers receive the main input from the magnocellular pathway and send their outputs to selected brain areas. Hence, these neurons may be part of a visual stream that is specialized to carry information about motion.</p>
+<p>Direction selectivity of the receptive field response may arise from neural connections that are analogous to the connections used underlying orientation selectivity. A cell with a direction selective receptive field can be built by sending the outputs of neurons with spatially displaced receptive fields onto a single cortical neuron and introducing temporal delays into the path of some of the input neurons. The temporal delays of the signal are a displacement of the signal in time. As we will review in more detail in <a href="chapter-10-motion-and-depth.html" class="quarto-xref"><span>Chapter 10</span></a>, the result of a combined spatial and temporal displacement is to create a cortical neuron that responds better to stimuli moving in one direction, when the delay reinforces the signal, than to stimuli moving in the opposite direction, when the delay works against the two signals. This scheme for connecting neurons is plausible; but like the mechanisms of orientation selectivity, the precise neural wiring used to achieve direction selectivity have not been demonstrated in primate cortical neurons.</p>
+</section>
+<section id="contrast-sensitivity-of-cortical-cells" class="level3">
+<h3 class="anchored" data-anchor-id="contrast-sensitivity-of-cortical-cells">Contrast Sensitivity of Cortical Cells</h3>
+<p>Perhaps the most straightforward way to classify simple and complex cells is based on their responses to contrast-reversing sinusoidal patterns. Examples of the response of a simple and a complex cell to a contrast-reversing pattern are shown in <a href="#fig-simple-complex" class="quarto-xref">Figure&nbsp;<span>6.13</span></a>.</p>
+<p>Recall from <a href="chapter-5-the-retinal-representation.html" class="quarto-xref"><span>Chapter 5</span></a> that contrast-reversing patterns are periodic in both space and time. The stimulus used to create the neural responses shown in <a href="#fig-simple-complex" class="quarto-xref">Figure&nbsp;<span>6.13</span></a> had a temporal period of 0.5 seconds. <a href="#fig-simple-complex" class="quarto-xref">Figure&nbsp;<span>6.13</span></a> (a) shows the firing rate of a simple cell averaged over many repetitions of the contrast reversing stimulus. Were the simple cell perfectly linear, the variation in firing rate would be sinusoidal and one period of the response would equal one period of the stimulus. This sinusoidal variation is impossible, however, because the spontaneous discharge rate of the neuron is close to zero; hence, the firing rate cannot fall below the spontaneous rate. The response shown in the figure is typical of cortical simple cells because many have a low spontaneous discharge rate. When a signal follows only the positive part of the sinusoid, and has a zero response to the negative part, it is called <em>half-wave rectified</em>. The response of many simple cells shows this half-wave rectification.</p>
+<p><a href="#fig-simple-complex" class="quarto-xref">Figure&nbsp;<span>6.13</span></a> (b) shows the average response of a complex cell during one period of the stimulus. Unlike the simple cell, the complex cell response does not vary at the same frequency as the input stimulus; the cell’s response is elevated during both phases of the flickering contrast. This response pattern is called <em>full-wave</em> rectification, and the temporal response varies at twice the temporal frequency of the stimulus. This nonlinear <em>frequency doubling</em> is typical of complex cells. These cells make up a large proportion of the neurons in area V1.</p>
+<div id="fig-simple-complex" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-simple-complex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/simpleComplex.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simple-complex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.13: The timecourse of response of cortical cells to a contrast-reversing spatial frequency pattern at a period of 0.5 seconds. (a) The response of a simple cell is a half-wave rectified sinusoid. (b) The response of the complex cell is full-wave rectified. Consequently, the temporal response is at twice the frequency of the stimulus. (Source: <span class="citation" data-cites="devalois1982">De Valois et al. (<a href="references.html#ref-devalois1982" role="doc-biblioref">1982</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="devalois1982">De Valois et al. (<a href="references.html#ref-devalois1982" role="doc-biblioref">1982</a>)</span> measured the spatial contrast sensitivity functions of cortical neurons. <a href="#fig-cortical-tuning" class="quarto-xref">Figure&nbsp;<span>6.14</span></a> shows a sample of these measurements, for both simple and complex cortical neurons. The contrast sensitivity functions of these neurons are narrower than those of retinal ganglion cells. Moreover, even though these measurements were made from neurons close to one another in the cortex, there is considerable heterogeneity in the most effective spatial frequency of the stimulus. This variation in spatial tuning is not true of retinal neurons from a single class. This may be due to a new specialization in the cortex, or it may be that we have not yet identified the classes of cortical neurons properly. In either case, the different peak spatial frequencies of the contrast sensitivity functions raises the question of how the signals from retinal neurons within a small patch are recombined to form cortical neurons with such varied spatial receptive field properties.</p>
+<div id="fig-cortical-tuning" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cortical-tuning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/cortical.tuning.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cortical-tuning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.14: Spatial frequency selectivity of six neurons cells in area V1 of the monkey. These responses were recorded at nearby locations within the cortex, yet the neurons have different spatial frequency selectivity. (Source: <span class="citation" data-cites="devalois1982">De Valois et al. (<a href="references.html#ref-devalois1982" role="doc-biblioref">1982</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="movshon1978a-simple">Movshon et al. (<a href="references.html#ref-movshon1978a-simple" role="doc-biblioref">1978a</a>)</span>, <span class="citation" data-cites="movshon1978b-complex">Movshon et al. (<a href="references.html#ref-movshon1978b-complex" role="doc-biblioref">1978b</a>)</span>, and <span class="citation" data-cites="tolhurst1987-simple">Tolhurst and Dean (<a href="references.html#ref-tolhurst1987-simple" role="doc-biblioref">1987</a>)</span> tested the linearity of cat simple cells. Taking into account the low spontaneous rate and the resulting half-wave rectification, they found that they could predict quantitatively a range of simple simple cell responses from measurements of the contrast sensitivity function. The predictions work well for stimuli with moderate to weak contrast, that is stimuli that evoke a response that is less than half of the maximum response rate of the neuron. There have not been extensive tests of linear receptive fields in the monkey cortex, but contrast sensitivity curves are probably adequate to predict monkey simple cell responses, too.</p>
+<p><a href="#fig-cortical-tuning" class="quarto-xref">Figure&nbsp;<span>6.14</span></a> also includes contrast sensitivity functions of nonlinear complex neurons. Recall from our discussion in earlier chapters that when a system is nonlinear, its response to sinusoidal patterns is not a fundamental measurement of the neuron’s performance: we cannot use it to predict the response to other stimuli. For these nonlinear neurons, the contrast sensitivity function defines the response of the cell to an interesting collection of stimuli. And, these measurements may help us understand the nature of the nonlinearity. But, the contrast response function of a nonlinear system is not a complete quantitative measurement of the cell’s receptive field.</p>
+</section>
+<section id="contrast-normalization" class="level3">
+<h3 class="anchored" data-anchor-id="contrast-normalization">Contrast Normalization</h3>
+<p>Taking into account the low spontaneous firing rate, simple cells are approximately linear for moderate contrast stimuli. As one expands the stimulus range, however, several important response properties of cortical simple cells are nonlinear. One deviation from linearity, called <em>contrast normalization</em>, can be demonstrated by measuring the contrast-response function (cf. <a href="chapter-4-wavelength-encoding.html#fig-phot-homogeneity" class="quarto-xref">Figure&nbsp;<span>4.19</span></a>).</p>
+<p><a href="#fig-contnormdata" class="quarto-xref">Figure&nbsp;<span>6.15</span></a> shows the contrast response function of a neuron in area V1 to four different sinusoidal grating patterns. The stimulus contrast and neuronal responses are plotted on logarithmic axes. The rightward displacements of the curves indicate that the neuron is differentially sensitive to the spatial patterns used as test stimuli. This shift is what we expect from a simple linear system followed by a static nonlinearity (see the discussion in <a href="chapter-4-wavelength-encoding.html" class="quarto-xref"><span>Chapter 4</span></a> near <a href="chapter-4-wavelength-encoding.html#fig-phot-homogeneity" class="quarto-xref">Figure&nbsp;<span>4.19</span></a>).</p>
+<p>The entire set of data is not consistent with such a model, however, because the response saturation level depends on the spatial frequency of the stimulus. Were the nonlinearity static, then the response saturation level would be the same no matter which stimulus we used. Since the saturation level is stimulus-dependent, it cannot be based on the neuron’s intrinsic properties. Rather, it must be mediated through an active process (<span class="citation" data-cites="albrecht1991-motion">Albrecht and Geisler (<a href="references.html#ref-albrecht1991-motion" role="doc-biblioref">1991</a>)</span>; <span class="citation" data-cites="heeger1992-normalization">Heeger (<a href="references.html#ref-heeger1992-normalization" role="doc-biblioref">1992</a>)</span>). This process is called <em>contrast normalization</em>.</p>
+<div id="fig-contnormdata" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-contnormdata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/contNormData.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-contnormdata-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.15: Contrast response functions of a neuron in area V1. Each curve shows the responses measured using a different spatial frequency gratings. The spatial frequencies of the stimuli are shown at the right. The neuron’s sensitivity and maximum response depend on the stimulus spatial frequency (Source: <span class="citation" data-cites="albrecht-hamilton1982">Albrecht and Hamilton (<a href="references.html#ref-albrecht-hamilton1982" role="doc-biblioref">1982</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="heeger1992-normalization">Heeger (<a href="references.html#ref-heeger1992-normalization" role="doc-biblioref">1992</a>)</span> has described a model of this process (see <a href="#fig-contnormmodel" class="quarto-xref">Figure&nbsp;<span>6.16</span></a>). The model assumes that the neuron’s response is initiated by a linear process. This linear signal is divided by a second signal whose value depends on the pooled activity of the population of cortical neurons. This is a nonlinear term. It is not a static nonlinearity because the divisive term depends on the contrast of the stimulus.</p>
+<p>This model explains the data in <a href="#fig-contnormdata" class="quarto-xref">Figure&nbsp;<span>6.15</span></a> as follows. First, the sensitivity of the neuron varies with the spatial frequency of the stimulus because the initial linear receptive field will respond better to some stimuli than others. This causes the response to be displaced along the horizontal axis in the log-log plot. Second, the response saturation level depends on the ratio of the neuron’s intrinsic sensitivity to the stimulus and the neural population’s sensitivity to the stimulus. This saturation level is set by the normalization process. If the neuron is relatively insensitive to the stimulus compared to the population as a whole, then the peak response of the neuron will be suppressed by the divisive signal. Finally, the overall shape of the response function is determined by the nature of the static nonlinearity that follows.</p>
+<div id="fig-contnormmodel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-contnormmodel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/contNormModel.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-contnormmodel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.16: A model of contrast normalization is shown. According to this model, each neuron’s response is derived from an initial linear encoding of the stimulus. The linear response is divided by a factor that depends on the activity of the neural population. Finally, the entire signal is modified by a static nonlinearity (Source: <span class="citation" data-cites="heeger1992-normalization">Heeger (<a href="references.html#ref-heeger1992-normalization" role="doc-biblioref">1992</a>)</span>, <span class="citation" data-cites="heeger1994-primaryvisualcortex">Heeger (<a href="references.html#ref-heeger1994-primaryvisualcortex" role="doc-biblioref">1994</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>What purpose does the contrast-response nonlinearity serve? From the data in <a href="#fig-contnormdata" class="quarto-xref">Figure&nbsp;<span>6.15</span></a>, notice that the response ratio remains approximately constant at all stimulus contrast levels. Without the contrast normalization process, the neuron’s response would saturate at the same level, independent of the stimulus. In this case, the response ratios at different contrast levels would vary. For example, at high contrast levels all of the neurons would be saturated and their signals would be nondiscriminative with respect to the input signal. The normalization process adjusts saturation level so that it depends on the neuron’s sensitivity; in this way the ratio of the neuronal responses remain constant across a wide range of contrast levels.</p>
+</section>
+<section id="binocular-receptive-fields" class="level3">
+<h3 class="anchored" data-anchor-id="binocular-receptive-fields">Binocular Receptive Fields</h3>
+<p>At the input layers of the visual cortex, signals from the two eyes are spatially segregated. Within the superficial layers, however, many neurons respond to light presented to either eye. These neurons have <em>binocular</em> receptive fields. Cortical area V1 is the first point in the visual pathways where individual neurons receive binocular input. One might guess that these binocular neurons may play a role in our perception of stereo depth. What binocular information is present that neurons might use to deduce depth?</p>
+<div id="fig-disparities" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-disparities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/disparities.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-disparities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.17: Retinal disparity and the horopter are explained. (a) The fovea and three pairs of points at corresponding retinal locations are shown. (b) When the eyes are fixated at a point F, rays originating at corresponding points on the two retinae and passing through the lens center intersect on the horopter (dashed curve). The images of points located farther (c) or closer (d) than the horopter do not fall at corresponding retinal locations.
+</figcaption>
+</figure>
+</div>
+<p>First, consider the two retinae as illustrated in <a href="#fig-disparities" class="quarto-xref">Figure&nbsp;<span>6.17</span></a> (a). We can label points on the two retina with respect to their distance from the fovea. We say that a pair of points on the two retinae fall at corresponding locations if they are displaced from the fovea by the same amount. Otherwise, the two points fall at non-corresponding positions.</p>
+<p>Now, suppose that the two eyes are positioned so that a point F casts an image on the two foveae. By definition, then, the images of the point F fall on corresponding retinal locations. By tracing a ray from the corresponding retinal positions back into space, we can find the points in space whose images are cast on corresponding retinal positions (<a href="#fig-disparities" class="quarto-xref">Figure&nbsp;<span>6.17</span></a> (b)). These points sweeps out an arc about the viewer that is called the <em>horopter</em>.</p>
+<p>The image of a point closer or further than the horopter will fall on non-corresponding retinal positions. The difference between the image locations and the corresponding locations is called the <em>retinal disparity</em>. Because the main separation between the two eyes is horizontal, the retinal disparities are mainly in the horizontal direction as well. The horopter is the set of points whose images have zero retinal disparity.</p>
+<p><a href="#fig-disparities" class="quarto-xref">Figure&nbsp;<span>6.17</span></a> (c,d) show two examples in which image points fall on noncorresponding retinal points. <a href="#fig-disparities" class="quarto-xref">Figure&nbsp;<span>6.17</span></a> (c) shows an example when both images fall on the nasal side of the foveae, and <a href="#fig-disparities" class="quarto-xref">Figure&nbsp;<span>6.17</span></a> (d) shows an example when both images fall on the temporal side of the fovea. These panels show that the size and nature of the horizontal retinal disparity varies with the distance from the visual horopter. Hence, the horizontal retinal disparity is a binocular clue for estimating the distance to an image point<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>Do binocular neurons represent stereo depth information by measuring horizontal disparity? There are two types of experimental measurements we can make to answer this question. First, we can measure the receptive fields of individual binocular neurons. If retinal disparity is used to estimate depth, then the receptive fields of the binocular neurons should show some selectivity for horizontal disparity. Second, we can look at the properties of the population of binocular neurons. While no single neuron alone can code depth information, the population of binocular neurons should include enough information to permit the population to estimate image depth.</p>
+<p>A complete characterization of binocular receptive fields requires many measurements. First, one would like to measure the spatial receptive fields of the neuron when stimulated by each eye alone. These are called the <em>monocular</em> receptive fields of the binocular neuron. Then, we should characterize how the binocular neuron responds to simultaneous stimulation of the two eyes. In practice there have been very few complete measurements of binocular neurons’ receptive fields. The vast majority of investigations have been limited to localization of the monocular receptive field centers that are then used to derive the retinal disparities between the monocular field centers.</p>
+<p>Given the variability inherent in biological systems, the two monocular receptive fields will not be in perfect register. We would like to decide whether the observed horizontal disparities are purposeful, or whether they are due to unavoidable random variation. To answer this question several groups have measured both the horizontal and the vertical disparities of binocular neurons in the cat cortex (<span class="citation" data-cites="barlow1967-depthdiscrim">Barlow et al. (<a href="references.html#ref-barlow1967-depthdiscrim" role="doc-biblioref">1967</a>)</span>; <span class="citation" data-cites="joshua1970-binocular">Joshua and Bishop (<a href="references.html#ref-joshua1970-binocular" role="doc-biblioref">1970</a>)</span>; <span class="citation" data-cites="vonderheydt1978">von der Heydt et al. (<a href="references.html#ref-vonderheydt1978" role="doc-biblioref">1978</a>)</span>). The histograms in <a href="#fig-neural-disparity" class="quarto-xref">Figure&nbsp;<span>6.18</span></a> (a) show the initial measurements from <span class="citation" data-cites="barlow1967-depthdiscrim">Barlow et al. (<a href="references.html#ref-barlow1967-depthdiscrim" role="doc-biblioref">1967</a>)</span>. They observed more variability in the horizontal disparity than vertical disparity, and they concluded that the horizontal variation was purposeful and used for processing depth.</p>
+<div id="fig-neural-disparity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-neural-disparity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/neuralDisparity1.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-neural-disparity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.18: The horizontal and vertical disparities of binocular neurons in the cat visual cortex are shown. (a) Histograms of the horizontal and vertical disparities of binocular neurons in cat cortex (Source: <span class="citation" data-cites="barlow1967-depthdiscrim">Barlow et al. (<a href="references.html#ref-barlow1967-depthdiscrim" role="doc-biblioref">1967</a>)</span>). (b) A scatter diagram of the vertical and horizontal disparities of cells in cat cortex with receptive fields located within 4 degrees of the cat’s best region of visual acuity. (Source: <span class="citation" data-cites="bishop1973-stereopsis">Bishop (<a href="references.html#ref-bishop1973-stereopsis" role="doc-biblioref">1973</a>)</span>)
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="joshua1970-binocular">Joshua and Bishop (<a href="references.html#ref-joshua1970-binocular" role="doc-biblioref">1970</a>)</span> and <span class="citation" data-cites="vonderheydt1978">von der Heydt et al. (<a href="references.html#ref-vonderheydt1978" role="doc-biblioref">1978</a>)</span> saw no difference in the range of disparities in the horizontal and vertical directions. A scatter plot of the retinal disparities observed by <span class="citation" data-cites="joshua1970-binocular">Joshua and Bishop (<a href="references.html#ref-joshua1970-binocular" role="doc-biblioref">1970</a>)</span> is shown in <a href="#fig-neural-disparity" class="quarto-xref">Figure&nbsp;<span>6.18</span></a> (b). While these data do not show any systematic difference between the horizontal and vertical disparity distributions, these authors do not dispute Barlow et al.’s hypothesis that variations in the horizontal disparity are used for stereo depth detection<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>For the moment, let’s accept the premise that the variation in horizontal disparity of these binocular neurons is a neural basis for stereo depth. How might we design the binocular response properties of these neurons to estimate depth?</p>
+<p>One possibility is to create a collection of neurons that each responds to only a single disparity. One might estimate the local disparity by identifying the neuron with the largest response. An alternative possibility, suggested by <span class="citation" data-cites="richards1971">Richards (<a href="references.html#ref-richards1971" role="doc-biblioref">1971</a>)</span>, is that one might measure disparity by creating a few <em>pools</em> of neurons with coarse disparity tuning. One pool might consist of neurons that respond when an object feature is beyond the horopter, and a second pool consists of neurons that respond when the feature is in front of it. The third pool might respond only when the feature is close to the horopter. To estimate depth, one would compare the relative responses in the three neural pools.</p>
+<p>Some support for Richards’ hypothesis comes from measurements of individual neurons in areas V1 and the adjacent area V2 of a monkey brain. <span class="citation" data-cites="poggiofischer1977">Poggio and Fischer (<a href="references.html#ref-poggiofischer1977" role="doc-biblioref">1977</a>)</span> (see also <span class="citation" data-cites="ferster1981-area1718">Ferster (<a href="references.html#ref-ferster1981-area1718" role="doc-biblioref">1981</a>)</span>) measured how well individual neurons respond to stimuli with different amounts of disparity. They used experimental stimuli consisting of bar patterns whose width and velocity were set to generate a strong response from the individual neuron. The experimenters varied the retinal disparity between the two bars presented to the two eyes. They plotted the binocular neuron’s response to the moving bars as a function of their retinal disparity. The curves in <a href="#fig-binoc-disparity" class="quarto-xref">Figure&nbsp;<span>6.19</span></a>, plotting response as a function of retinal disparity, are called <em>disparity tuning</em> curves.</p>
+<div id="fig-binoc-disparity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-binoc-disparity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/binoc1.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-binoc-disparity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.19: Disparity tuning curves of binocular neurons in areas V1 and V2 in monkey. Each panel plots the response of a different neuron to moving bar patterns. The independent variable is the retinal disparity of the stimulus. (a) and (b) show the responses of neurons that respond best to stimuli with near zero disparity, that is near the horopter. Responses of a neuron that responds best to stimuli with positive disparity (c) and a neuron with negative disparity (d) are also shown. The curves represent data measured using binocular stimulation. (Source: <span class="citation" data-cites="poggiotalbot1981">Poggio and Talbot (<a href="references.html#ref-poggiotalbot1981" role="doc-biblioref">1981</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><span class="citation" data-cites="poggiotalbot1981">Poggio and Talbot (<a href="references.html#ref-poggiotalbot1981" role="doc-biblioref">1981</a>)</span> found that the disparity tuning curves could be grouped into a small number of categories. Typical tuning curves from each of these categories are are illustrated in the separate panels of <a href="#fig-binoc-disparity" class="quarto-xref">Figure&nbsp;<span>6.19</span></a>. The two neurons illustrated in the left panels respond to disparities near the fixation plane; for these neurons stimuli near the horopter stimulate or inhibit the cell. The two panels on the right illustrate neurons with opponent tuning. One neuron is excited by a bar whose disparity places the object beyond the horopter and the neuron is inhibited by bars in front of the horopter. The second neuron shows approximately the complementary excitation pattern. The neuron is excited by objects nearer than the horopter and inhibited by objects further. Poggio and his colleagues view their measurements in monkey as support for Richards’ hypothesis that binocular depth is coded based on the response of neurons organized in disparity pools (see also <span class="citation" data-cites="ferster1981-area1718">Ferster (<a href="references.html#ref-ferster1981-area1718" role="doc-biblioref">1981</a>)</span>).</p>
+<div id="fig-ohzawa" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ohzawa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/ohzawa.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ohzawa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.20: Monocular spatial receptive fields of two binocular neurons in cat cortex. (a) and (b) show examples of left (L) and right (R) monocular receptive fields whose centers are displaced horizontally and thus have non-zero retinal disparity. In addition to the disparity, the left and right monocular spatial receptive fields differ. (Source: <span class="citation" data-cites="freemanohzawa1990-binocular">Freeman and Ohzawa (<a href="references.html#ref-freemanohzawa1990-binocular" role="doc-biblioref">1990</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>We have been paying attention mainly to the retinal disparity of the binocular neurons. But, disparity tuning is only one measure of the receptive field properties of these neurons. In addition, the receptive fields must have spatial, temporal and chromatic selectivities. To fully understand the responses of these neurons we must make some progress in measuring all of these properties.</p>
+<p>To obtain a more complete description of binocular neurons, <span class="citation" data-cites="freemanohzawa1990-binocular">Freeman and Ohzawa (<a href="references.html#ref-freemanohzawa1990-binocular" role="doc-biblioref">1990</a>)</span> and <span class="citation" data-cites="deangelis1991-depth">DeAngelis et al. (<a href="references.html#ref-deangelis1991-depth" role="doc-biblioref">1991</a>)</span> studied the monocular spatial receptive fields of cat binocular neurons. They found that the spatial receptive fields measured in the two eyes can be quite different. <a href="#fig-ohzawa" class="quarto-xref">Figure&nbsp;<span>6.20</span></a> shows an example of the differences they observed between the spatial monocular receptive fields. The left eye spatial receptive field and the right eye monocular field are displaced relative to one another. If we only concern ourselves with disparity, we will report that this cell’s receptive field has significant horizontal disparity. But, notice that the spatial receptive fields are different from one another. The spatial receptive field in the left eye is a mirror-reversal of the field in the right eye.</p>
+<p>Freeman and Ohzawa suggest that these different receptive spatial monocular receptive fields are important to the way in which stereo depth is estimated by the nervous system. They hypothesize that stereo depth depends on having neurons with different monocular spatial receptive fields. Perhaps most important, however, their measurements reminds us that to understand the biological computation of stereopsis, we must study more than just the center position of the monocular receptive fields.</p>
+</section>
+</section>
+<section id="visual-streams-in-the-cortex" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="visual-streams-in-the-cortex"><span class="header-section-number">6.5</span> Visual Streams in the Cortex</h2>
+<p>We have reviewed two major principles that characterize the flow of information from retina to cortex. First, visual information is organized into separate visual streams. These streams begin in the retina and continue along separate neural pathways into the brain. Second, the receptive field properties of neurons become progressively more sophisticated. Receptive fields of cortical neurons show selective responses to stimulus properties that are more complex than retinal neurons. The new receptive field properties are clues about the specialization of the computations performed within the visual cortex.</p>
+<p>As we study visual processing within the cortex we should expect to see both of these principles extended. First, we should expect to find new visual streams that play a role in the cortical computations. Some new visual streams will arise in visual cortex, and some, like the rod pathway in the retina, will have served their purpose and merge with other streams. Second, as we explore the cortex we should expect to find neurons with new receptive field properties. We will need to characterize these receptive fields adequately in order to understand their computational role in vision.</p>
+<p>Our understanding of cortical visual areas is in an early and exciting phase of scientific study. In this section, we will review some of the basic organizational principles of the cortical areas. In particular, we will review how information from area V1 is distributed to other cortical areas and we will review the experimental and logical methods that relate activity within these cortical areas to what we see. We will review some of the more recent data and speculative theories in <a href="chapter-9-color.html" class="quarto-xref"><span>Chapter 9</span></a> and <a href="chapter-10-motion-and-depth.html" class="quarto-xref"><span>Chapter 10</span></a>.</p>
+<section id="the-fate-of-the-parvocellular-and-magnocellular-pathways" class="level3">
+<h3 class="anchored" data-anchor-id="the-fate-of-the-parvocellular-and-magnocellular-pathways">The fate of the parvocellular and magnocellular pathways</h3>
+<p>The segregation of visual information into separate streams is an important organizing principle of neural representation. Two of the best understood streams are the magnocellular and parvocellular pathways whose axons terminate in layers 4C<span class="math inline">\(\alpha\)</span> and 4C<span class="math inline">\(\beta\)</span> within area V1. What happens to the signals from these pathways within the visual cortex?</p>
+<p>Along one branch, signals from the magnocellular pathway continue from area V1 directly to a distinct cortical area. The magnocellular pathway in layer 4C<span class="math inline">\(\alpha\)</span> makes a connection to neurons in layer 4B where there are many direction selective neurons. These neurons then send a strong projection to cortical area MT (medial temporal). It seems reasonable to suppose, then, that the information contained within the magnocellular stream is of particular relevance for the visual processing in area MT. As we saw in <a href="chapter-5-the-retinal-representation.html" class="quarto-xref"><span>Chapter 5</span></a>, the magnocellular pathway has particularly good information about the high temporal frequency components of the image. Earlier in this chapter we saw that neurons in layer 4B show strong direction selectivity, as do the neurons in area MT (<span class="citation" data-cites="zeki1974">Zeki (<a href="references.html#ref-zeki1974" role="doc-biblioref">1974</a>)</span>). Taken together, these observations have led to the hypothesis that area MT plays a role in motion perception. We will discuss this point more fully in <a href="chapter-10-motion-and-depth.html" class="quarto-xref"><span>Chapter 10</span></a>.</p>
+<p>While one branch of the magnocellular stream continues on an independent path, another branch of this stream converges with the parvocellular pathway in the superficial layers of area V1. <span class="citation" data-cites="malpeli1981">Malpeli et al. (<a href="references.html#ref-malpeli1981" role="doc-biblioref">1981</a>)</span> and <span class="citation" data-cites="nealey-maunsell1994">Nealey and Maunsell (<a href="references.html#ref-nealey-maunsell1994" role="doc-biblioref">1994</a>)</span> made physiological measurements demonstrating that signals from the parvocellular and magnocellular streams converge on individual neurons. In these experiments parvocellular or magnocellular signals were blocked either by application of a local anaesthetic (<span class="citation" data-cites="malpeli1981">Malpeli et al. (<a href="references.html#ref-malpeli1981" role="doc-biblioref">1981</a>)</span>; lidocaine hydrochloride) or GABA (<span class="citation" data-cites="nealey-maunsell1994">Nealey and Maunsell (<a href="references.html#ref-nealey-maunsell1994" role="doc-biblioref">1994</a>)</span>) to small regions of the lateral geniculate nucleus. Both studies report instances of neurons whose responses are influenced by both parvocellular and magnocellular blocking. Anatomical paths for this signal have also been identified. <span class="citation" data-cites="lachica1992">Lachica et al. (<a href="references.html#ref-lachica1992" role="doc-biblioref">1992</a>)</span> injected retrograde anatomical tracers into the superficial layers of visual cortex, that is tracers that are carried from the injection site towards the inputs to the injection site. They concluded that the magnocellular and parvocellular neurons contribute inputs into overlapping regions within the superficial layers of the visual cortex. Hence, these anatomical pathways could be the route for the physiological signals.</p>
+<p>Just as the rod pathways are segregated for a time, and then they merge with the cone pathways, so too signals from the magnocellular stream merge with parvocellular signals. The purpose of the peripheral segregation of the parvocellular and magnocellular signals, then, may be to communicate rapidly certain type of image information to area MT. After the signal has been efficiently communicated, the same information may be used by other cortical areas, in combination with information from the parvocellular pathways.</p>
+</section>
+<section id="the-function-of-the-visual-areas" class="level3">
+<h3 class="anchored" data-anchor-id="the-function-of-the-visual-areas">The function of the visual areas</h3>
+<p>Even when the computation performed in a visual area is not part of our conscious experience, we would still like to know what the area does. Over the last fifteen years, there have been a broad variety of hypotheses concerning the perceptual significance of the cortical areas. Mainly, we have seen a flurry of proposals suggesting that individual visual areas are responsible for the computation of specific perceptual features, such as color, stereo, and form and so forth.</p>
+<p>What is the logical and experimental basis for reasoning about the perceptual significance of visual areas? <span class="citation" data-cites="barlow1972-neurondoctrine">Barlow (<a href="references.html#ref-barlow1972-neurondoctrine" role="doc-biblioref">1972</a>)</span> has set forth one specific doctrine to relate neurons to perception, the <em>neuron doctrine</em>. This doctrine asserts that <em>a neuron’s receptive field describes the percept caused by excitation of the neuron.</em> You will see the idea expressed many times as you read through the primary literature and study how investigators interpret the perceptual significance of neural responses.</p>
+<p>Our understanding of the peripheral representation lends little support to the neuron doctrine. For example, the principle does not serve us well when analyzing color appearance. In that case, we know with some certainty that a large response from an <span class="math inline">\(R\)</span> photoreceptor does not imply that the observer will perceive red at the corresponding location in the visual field. Rather, the color appearance depends upon stimulation at many adjacent points of the retina. The conditions for a red percept include a pattern of peripheral neural responses, including more <span class="math inline">\(R\)</span> and less <span class="math inline">\(G\)</span>. Data from the periphery is generally more consistent with the notion of a distributed representation in which an experience depends on the response of a collection of neurons.</p>
+<p>Oddly, the failure of the neuron doctrine in the periphery, is often used to support the neuron doctrine. After all, the argument goes, the periphery is not the site of our conscious awareness. so failures of the doctrine in the periphery are to be expected. The neuron doctrine’s significance depends on the idea that there will be a special place, probably located in the cortex, where the receptive fields of a neuron predicts conscious experience when that neuron is active. This location in the brain should only exist at a point after the perceptual computations needed to see features we perceive — color, form, depth — have taken place.</p>
+<p>In the past, secondary texts sometimes used Hubel and Wiesel’s work in area V1 as a location where the neuron doctrine might hold. The receptive fields in area V1 seem like basic perceptual features; orientation, motion selectivity, binocularity, complex cells, all emerge for the first time in area V1 <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. Consequently, secondary texts often described the receptive fields in area V1 as a theory of vision, with the receptive fields defining salient perceptual features. The logical basis for this connection between V1 receptive fields and visual features is the neuron doctrine.</p>
+<p>By 1979 the significance of the other cortical areas had become undeniable (<span class="citation" data-cites="zeki1974">Zeki (<a href="references.html#ref-zeki1974" role="doc-biblioref">1974</a>)</span>, <span class="citation" data-cites="zeki1978">Zeki (<a href="references.html#ref-zeki1978" role="doc-biblioref">1978</a>)</span>; <span class="citation" data-cites="felleman1991-hierarchy">Felleman and Van Essen (<a href="references.html#ref-felleman1991-hierarchy" role="doc-biblioref">1991</a>)</span>; <span class="citation" data-cites="vanessen1992">Van Essen et al. (<a href="references.html#ref-vanessen1992" role="doc-biblioref">1992</a>)</span>). In reviewing the visual pathways, Hubel and Wiesel wrote</p>
+<blockquote class="blockquote">
+<p>The lateral geniculate cells in turn send their axons directly to the primary visual cortex. From there, after several synapses, the messages are sent to a number of further destinations: neighboring cortical areas and also several targets deep in the brain. One contingent even projects back to the lateral geniculate bodies; the function of this feedback path is not known. The main point for the moment is that the primary visual cortex is in no sense the end of the visual path. It is just one stage, probably an early one in terms of the degree of abstraction of the information it handles. (<span class="citation" data-cites="hubelwiesel1979-brainmech">Hubel and Wiesel (<a href="references.html#ref-hubelwiesel1979-brainmech" role="doc-biblioref">1979</a>)</span>).</p>
+</blockquote>
+<p>Acknowledging this point leads one to ask what is the function of these cortical areas. The answer to this question has relied, mainly, on the neuron doctrine. For example, when Zeki (<span class="citation" data-cites="zeki1980">Zeki (<a href="references.html#ref-zeki1980" role="doc-biblioref">1980</a>)</span>; <span class="citation" data-cites="zeki1983">Zeki (<a href="references.html#ref-zeki1983" role="doc-biblioref">1983</a>)</span>; <span class="citation" data-cites="zeki1993">Zeki (<a href="references.html#ref-zeki1993" role="doc-biblioref">1993</a>)</span>) found that color contrast was a particularly effective stimulus in area V4, he argued that this area is responsible for color perception. Since movement was particularly effective in stimulating neurons in area MT, that become the motion area (<span class="citation" data-cites="dubnerzeki1971">Dubner and Zeki (<a href="references.html#ref-dubnerzeki1971" role="doc-biblioref">1971</a>)</span>). The logic of the neuron doctrine permits one to interpret receptive field properties in terms of perceptual function.</p>
+<p>Among the most vigorous application of the neuron doctrine is contained in articles by Livingstone and Hubel (<span class="citation" data-cites="livingstonehubel1984a-anatomy">Livingstone and Hubel (<a href="references.html#ref-livingstonehubel1984a-anatomy" role="doc-biblioref">1984</a>)</span>, <span class="citation" data-cites="hubel-livingstone1987-singleneurons">Hubel and Livingstone (<a href="references.html#ref-hubel-livingstone1987-singleneurons" role="doc-biblioref">1987</a>)</span>, <span class="citation" data-cites="livingstonehubel1988">Livingstone and Hubel (<a href="references.html#ref-livingstonehubel1988" role="doc-biblioref">1988</a>)</span>). They supported Zeki’s basic view and added new hypotheses of their own. Their hypothesis, which continues to evolve, is summarized in the elaborate anatomical/perceptual diagram shown in <a href="#fig-specialization" class="quarto-xref">Figure&nbsp;<span>6.21</span></a>. In this diagram anatomical connections in visual cortex are labeled with perceptual tags, including color, motion, and form. The logical basis for associating perceptual tags with these anatomical streams is the neuron doctrine. Receptive fields of neurons in one stream were orientation selective, hence the stream was tagged with form perception. Neurons in a different stream were motion selective and hence the stream was tagged with motion perception.</p>
+<div id="fig-specialization" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-specialization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/specialization1.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-specialization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.21: Functional Specialization. An anatomical-perceptual model of the visual cortex. In this speculative model, visual streams within the cortex are identified with specific perceptual features. The anatomical streams are identified using anatomical markers; the perceptual properties are associated with the streams by applying the neuron doctrine (Source: <span class="citation" data-cites="livingstonehubel1988">Livingstone and Hubel (<a href="references.html#ref-livingstonehubel1988" role="doc-biblioref">1988</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>The perceptual-anatomical hypotheses proposed by Zeki and Livingstone and Hubel define a new view of cortex. On this view, the relationship between cortical neurons and perception should be made at the level of perceptual features. These investigators did not study the computation within the neural streams, but rather, like tailors labeling a suit, they summarized what they felt were the main features of the pathway (see <span class="citation" data-cites="hubel1977-functionalarchitecture">Hubel and Wiesel (<a href="references.html#ref-hubel1977-functionalarchitecture" role="doc-biblioref">1977</a>)</span> for a description of this approach).</p>
+<p>The use of the neuron doctrine to interpret brain function is very widespread, but there is very little evidence in direct support of the doctrine (<span class="citation" data-cites="martin1992">Martin (<a href="references.html#ref-martin1992" role="doc-biblioref">1992</a>)</span>). The main virtue of the hypothesis is the absence of an articulated alternative. The most frequently cited alternative is the proposal that perceptual experience is represented by the activity of many neurons, so that no individual neuron’s response corresponds to a conscious perceptual event. These types of models are often called <em>distributed</em> processing models; they are not widely used by neurophysiologists since they do not provide the specific guidance for interpreting experimental measurements from single neurons, the neurophysiologist’s stock-in-trade. The neuron doctrine, on the other hand, provides an immediate answer.</p>
+<p>In my own thinking about brain function, I am more inclined to wonder about the brain’s computational methods than the mapping between perceptual features and tentatively identified visual streams. I find it satisfying to learn that the magnocellular pathway contains the best representation of high temporal frequencies, but less satisfying to summarize the pathway as the motion pathway since this information may also be used in many other types of performance tasks. The questions I find fundamental concerning computation are how, not where. How are essential signal processing tasks, such as multiplication, addition and signal synchronization, carried out by the cortical circuitry? What means are used to store temporary results, and what means are used to represent the final results of computations? What decision mechanisms are used to route information from one place to another?</p>
+<p>My advice, then, as you read and think about brain function is this: Don’t be distracted by the neuron doctrine or its application. The doctrine is widely used because it is an easy tool to relate perception and brain function. But, the doctrine distracts us from the most important question about visual function: how do we <em>compute</em> perceptual features like color, stereo and form? Even if it turns out that a neuron’s receptive field is predictive of experience, the question we should be asking is how the neuron’s receptive field properties arise. Answering these computational questions will help us most in designing practical applications that range from sensory prostheses to robotics applications. We should view the specific structures within the visual pathways as a means of implementing these principles, rather than as having an intrinsic importance.</p>
+<p>Hubel and Wiesel once expressed something like this view. While reviewing their accomplishments in the study of area V1, they wrote:</p>
+<blockquote class="blockquote">
+<p>What happens beyond the primary visual area, and how is the information on orientation exploited at later stages? Is one to imagine ultimately finding a cell that responds specifically to some very particular item? (Usually one’s grandmother is selected as the particular item, for reasons that escape us.) Our answer is that we doubt there is such a cell, but we have no good alternative to offer. To speculate broadly on how the brain may work is fortunately not the only course open to investigators. To explore the brain is more fun and seems to be more profitable.</p>
+<p>There was a time, not so long ago, when one looked at the millions of neurons in the various layers of the cortex and wondered if anyone would ever have any idea of their function. Did they all work in parallel, like the cells of the liver or the kidney, achieving their objectives by pure bulk, or where they each doing something special? For the visual cortex the answer seems now to be known in broad outline: Particular stimuli turn neurons on or off; groups of neurons do indeed perform particular transformations. It seems reasonable to think that if the secrets of a few regions such as this one can be unlocked, other regions will also in time give up their secrets. [ibid., p.&nbsp;23].</p>
+</blockquote>
+<p>In the remaining chapters, we will see how other areas of vision science, based on behavioral and computational studies, might help us to unlock the secrets of vision.</p>
+
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-albrecht1991-motion" class="csl-entry" role="listitem">
+Albrecht DG, Geisler WS (1991) Motion sensitivity and the contrast-response function of simple cells in the visual cortex. Visual Neuroscience 7:531–546
+</div>
+<div id="ref-albrecht-hamilton1982" class="csl-entry" role="listitem">
+Albrecht DG, Hamilton DB (1982) Striate cortex of monkey and cat: Contrast response function. J Neurophysiol 48:217–237
+</div>
+<div id="ref-azzopardi1993-preffovea" class="csl-entry" role="listitem">
+Azzopardi P, Cowey A (1993) Preferential representation of the fovea in the primary visual cortex. Nature 361:719–721
+</div>
+<div id="ref-bak1990-intracortialmicrostimulation" class="csl-entry" role="listitem">
+Bak M, Girvin JP, Hambrecht FT, et al (1990) Visual sensations produced by intracortical microstimulation of the human occipital cortex. Medical &amp; Biological Engineering &amp; Computing 28:257–259
+</div>
+<div id="ref-barlow1972-neurondoctrine" class="csl-entry" role="listitem">
+Barlow HB (1972) Single units and sensation: A neuron doctrine for perceptual psychology? Perception 1:371–394
+</div>
+<div id="ref-barlow1967-depthdiscrim" class="csl-entry" role="listitem">
+Barlow HB, Blakemore C, Pettigrew JD (1967) The neural mechanisms of binocular depth discrimination. J Physiol 193:327–342
+</div>
+<div id="ref-bishop1973-stereopsis" class="csl-entry" role="listitem">
+Bishop PO (1973) Neurophysiology of binocular single vision and stereopsis. In: Jung R (ed) Handbook of sensory physiology: <span>Central</span> procession of visual information. Springer-Verlag, Germany, pp 255–304
+</div>
+<div id="ref-bishop1984" class="csl-entry" role="listitem">
+Bishop PO (1984) Processing of visual information within the retinostriate system. In: Darien-Smith I (ed) Hangbook of physiology: The nervous system. pp 257–316
+</div>
+<div id="ref-blasdel1992" class="csl-entry" role="listitem">
+Blasdel GG (1992) Differenital imaging of ocular dominance and orientation selectivity in monkey striate cortex. Journal of Neuroscience 12:3115–3138
+</div>
+<div id="ref-brindley1968-sensation" class="csl-entry" role="listitem">
+Brindley GS, Lewin WS (1968) The sensations produced by electrical stimulation of the visual cortex. 196:479–493
+</div>
+<div id="ref-devalois1982" class="csl-entry" role="listitem">
+De Valois RL, Albrecht DG, Thorell LG (1982) Spatial frequency selectivity of cells in the macaque visual cortex. J Opt Soc Am 67:779–784
+</div>
+<div id="ref-deangelis1991-depth" class="csl-entry" role="listitem">
+DeAngelis G, Ohzawa I, Freeman R (1991) Depth is encoded in the visual cortex by a specialized receptive field structure. Nature 352:156–159
+</div>
+<div id="ref-dobelle1979-mapelectrialstim" class="csl-entry" role="listitem">
+Dobelle WH, Turkel J, Henderson DC, Evans JR (1979) Mapping the representation of the visual field by electrical stimulation of human cortex. American Journal of Ophthalmology 88:727–735
+</div>
+<div id="ref-dubnerzeki1971" class="csl-entry" role="listitem">
+Dubner R, Zeki SM (1971) Response properties and receptive fields of cells in an anatomically defined region of the superior temporal sulcus in the monkey. Brain Res 35:528–532
+</div>
+<div id="ref-engel1994-fmri" class="csl-entry" role="listitem">
+Engel SA, Rumelhart DE, Wandell BA, et al (1994) <span class="nocase">fMRI</span> of human visual cortex. Nature 369:525
+</div>
+<div id="ref-felleman1991-hierarchy" class="csl-entry" role="listitem">
+Felleman DJ, Van Essen DC (1991) Distributed hierarchical processing in the primate cerebral cortex. Cerebral Cortex 1:1–47
+</div>
+<div id="ref-ferster1981-area1718" class="csl-entry" role="listitem">
+Ferster D (1981) A comparison of binocular depth mechanism in areas 17 and 18 of the cat visual cortex. Journal of Physiology 311:623–655
+</div>
+<div id="ref-fitzpatrick1983-laminarlgn" class="csl-entry" role="listitem">
+Fitzpatrick D, Itoh K, Diamond IT (1983) The laminar organization of the lateral geniculate body and the striate cortex in the squirrel monkey. J Neurosci 3:673–702
+</div>
+<div id="ref-fox1984-pet" class="csl-entry" role="listitem">
+Fox PT, Raichle ME (1984) Stimulus rate dependence of regional cerebral blood flow in human striate cortex, demonstrated by positron emission tomography. J Neurophysiol 51:1109–1120
+</div>
+<div id="ref-freemanohzawa1990-binocular" class="csl-entry" role="listitem">
+Freeman RD, Ohzawa I (1990) On the neurophysiological organization of binocular vision. Vision Res
+</div>
+<div id="ref-hawkenparkerlund1988" class="csl-entry" role="listitem">
+Hawken MJ, Parker AJ, Lund JS (1988) Laminar organization and contrast sensitivity of direction-selective cells in the striate cortex of the old world monkey. J Neurosci 10:3541–3548. <a href="https://doi.org/10.1523/JNEUROSCI.08-10-03541.1988">https://doi.org/10.1523/JNEUROSCI.08-10-03541.1988</a>
+</div>
+<div id="ref-heeger1992-normalization" class="csl-entry" role="listitem">
+Heeger DJ (1992) Normalization of cell responses in cat striate cortex. Visual Neuroscience 9:181–197
+</div>
+<div id="ref-heeger1994-primaryvisualcortex" class="csl-entry" role="listitem">
+Heeger DJ (1994) The representation of visual stimuli in primary visual cortex. Current Directions in Psychological Science 3:159–163
+</div>
+<div id="ref-hendry1994-thirdchannel" class="csl-entry" role="listitem">
+Hendry SH, Yoshioka T (1994) A neurochemically distinct third channel in the macaque dorsal lateral geniculate nucleus. Science 264:575–577
+</div>
+<div id="ref-holmes1918-lesions" class="csl-entry" role="listitem">
+Holmes G (1918) <span>DISTURBANCES OF VISION BY CEREBRAL LESIONS</span>. British Journal of Ophthalmology 2:353–384
+</div>
+<div id="ref-holmes1945-orgviscortex" class="csl-entry" role="listitem">
+Holmes G (1945) The organization of the visual cortex in man. Proc R Soc Lond Ser B 132:348–361
+</div>
+<div id="ref-horton1991-quadraticdefects" class="csl-entry" role="listitem">
+Horton JC, Hoyt WF (1991a) Quadrantic visual field defects. <span>A</span> hallmark of lesions in extrastriate (<span>V2</span>/<span>V3</span>) cortex. Brain : a journal of neurology 114 ( Pt 4):1703–1718
+</div>
+<div id="ref-horton1991-representationvisualfield" class="csl-entry" role="listitem">
+Horton JC, Hoyt WF (1991b) The representation of the visual field in human striate cortex. <span>A</span> revision of the classic <span>Holmes</span> map. Archives of Ophthalmology 109:816–824
+</div>
+<div id="ref-hubel1982-explore" class="csl-entry" role="listitem">
+Hubel DH (1982) Exploration of the primary visual cortex, 1955-1982. Nature 299:515–524
+</div>
+<div id="ref-hubel1988-eyebrainvisionbook" class="csl-entry" role="listitem">
+Hubel DH (1988) Eye, brain, and vision. W. H. Freeman; Company, New York
+</div>
+<div id="ref-hubel-livingstone1987-singleneurons" class="csl-entry" role="listitem">
+Hubel DH, Livingstone MS (1987) Segregation of form, color, and stereopsis in primate area 18. J Neurosci 7:3378–3415
+</div>
+<div id="ref-hubel1965-binocular" class="csl-entry" role="listitem">
+Hubel DH, Wiesel TN (1965) Binocular interaction in striate cortex of kittens reared with artificial squint. Journal of Neurophysiology 26:1041–1059
+</div>
+<div id="ref-hubel1959-singleneurons" class="csl-entry" role="listitem">
+Hubel DH, Wiesel TN (1959) Receptive fields of single neurons int he cat’s striate cortex. Journal of Neurophysiology 148:574–591
+</div>
+<div id="ref-hubel1962-catviscortex" class="csl-entry" role="listitem">
+Hubel DH, Wiesel TN (1962) Receptive fields, binocular interaction and functional architecture in the cat’s visual cortex. Journal of Neurophysiology 160:106–154
+</div>
+<div id="ref-hubel1968-receptivefields" class="csl-entry" role="listitem">
+Hubel DH, Wiesel TN (1968) Receptive fields and functional architecture of monkey striate cortex. 195:215–243
+</div>
+<div id="ref-hubel1977-functionalarchitecture" class="csl-entry" role="listitem">
+Hubel DH, Wiesel TN (1977) Ferrier lecture. <span>Functional</span> architecture of macaque monkey visual cortex. Proceedings of the Royal Society of London Series B: Biological Sciences 198:1–59
+</div>
+<div id="ref-hubelwiesel1979-brainmech" class="csl-entry" role="listitem">
+Hubel DH, Wiesel TN (1979) Brain mechanisms of vision. Scientific American 241:150–162
+</div>
+<div id="ref-hubelwiesellevay1977" class="csl-entry" role="listitem">
+Hubel DH, Wiesel TN, LeVay S (1977) Plasticity of ocular dominance columns in monkey striate cortex. Phil Trans R Soc Lond Series B 278:131–163
+</div>
+<div id="ref-hubel1978-anatomy" class="csl-entry" role="listitem">
+Hubel DH, Wiesel TN, Stryker MP (1978) Anatomical demonstration of orientation columns in macaque monkey. J Comp Neurol 177:361–380
+</div>
+<div id="ref-humphrey1974" class="csl-entry" role="listitem">
+Humphrey NK (1974) Vision in a monkey without striate cortex: <span>A</span> case study. Soc Neurosci Abstr 6:315
+</div>
+<div id="ref-inouye1909" class="csl-entry" role="listitem">
+Inouye T (1909) Die Sehstorungen bei Schussverletzungen der kortikalen Sehsphare
+</div>
+<div id="ref-joshua1970-binocular" class="csl-entry" role="listitem">
+Joshua DE, Bishop PO (1970) Binocular single vision and depth discrimination. Receptive field disparities for central and peripheral vision and binocular interaction on peripheral single units in cat striate cortex. Exp Brain Res 10:389–415
+</div>
+<div id="ref-kwong1992-mri" class="csl-entry" role="listitem">
+Kwong KK, Belliveau JW, Chesler DA, et al (1992) Dynamic magnetic resonance imaging of human brain activity during primary sensory stimulation. Proceedings of the National Academy of Sciences of the United States of America 89:5675–5679
+</div>
+<div id="ref-lachica1992" class="csl-entry" role="listitem">
+Lachica EA, Beck PD, Casagrande VA (1992) Parallel pathways in macaque monkey striate cortex: <span>Anatomically</span> defined columns in layer III. Proc Natl Acad Sci USA 89:3566–3570
+</div>
+<div id="ref-leventhal1993-formcolor" class="csl-entry" role="listitem">
+Leventhal AG, Thompson KG, Liu D, et al (1993) Form ans color are not segregated in monkey striate cortex. Inv Ophthalmol Vis Sci 34:4 (Abstract No. 233)
+</div>
+<div id="ref-livingstonehubel1984a-anatomy" class="csl-entry" role="listitem">
+Livingstone M, Hubel D (1984) Anatomy and physiology of a color system in the primate visual cortex. J Neurosci 4:309–356
+</div>
+<div id="ref-livingstonehubel1988" class="csl-entry" role="listitem">
+Livingstone M, Hubel D (1988) Segregation of form, color, movement, and depth: <span>Anatomy</span>, physiology, and perception. Science 240:740–749
+</div>
+<div id="ref-malpeli1981" class="csl-entry" role="listitem">
+Malpeli LT, Schiller PH, Colby CL (1981) Response properties of single cells in monkey striate cortex during reversible inactivation of individual lateral geniculare laminae. J Neurophysiol 46:1102–1119
+</div>
+<div id="ref-martin1992" class="csl-entry" role="listitem">
+Martin KAC (1992) Visual cortex parallel pathways converge. Curr Biol 2:555–557
+</div>
+<div id="ref-mitchell1988" class="csl-entry" role="listitem">
+Mitchell DE (1988) Animal models of human strabismic amblyopia: <span>Some</span> observations concerning the interpretation of the effects of surgically and optically induced strabismus in cats and monkeys. In: Shinkman PG (ed) Advances in neural and behavioral development. pp 209–269
+</div>
+<div id="ref-movshon1978a-simple" class="csl-entry" role="listitem">
+Movshon JA, Thompson ID, Tolhurst DJ (1978a) Spatial summation in the receptive fields of simple cells in the cat’s striate cortex. 283:53–77
+</div>
+<div id="ref-movshon1978b-complex" class="csl-entry" role="listitem">
+Movshon JA, Thompson ID, Tolhurst DJ (1978b) Receptive field organization of complex cells in the cat’s striate cortex. 283:79–99
+</div>
+<div id="ref-movshonvansluyters1981" class="csl-entry" role="listitem">
+Movshon JA, Van Sluyters R (1981) Visual neural development. Annual Review of Psychology 32:477–522
+</div>
+<div id="ref-nealey-maunsell1994" class="csl-entry" role="listitem">
+Nealey T, Maunsell JHR (1994) Magnocellular and parvocellular contributions to the responses of neurons in macaque striate cortex. J Neurosci 14:2069–2079
+</div>
+<div id="ref-okeefe1993" class="csl-entry" role="listitem">
+O’Keefe J, Levitt JB, Kiper DC, et al (1993) Functional organization of owl monkey LGN and visual cortex. Inv Ophthalmol Vis Sci 34:4 (Abstract No. 1021
+</div>
+<div id="ref-obermayer1993" class="csl-entry" role="listitem">
+Obermayer K, Blasdel GG (1993) Geometry of orientation and ocular dominance columns in monkey striate cortex. Journal of Neuroscience 13:4114–4129
+</div>
+<div id="ref-ogawa1992" class="csl-entry" role="listitem">
+Ogawa S, Tank DW, Menon RS, et al (1992) Intrinsic signal changes accompanying sensory stimulation: <span>Functional</span> brain mapping with magnetic resonance imaging. Proc natl Acad Sci USA 89:5951–5955
+</div>
+<div id="ref-poggiofischer1977" class="csl-entry" role="listitem">
+Poggio GF, Fischer B (1977) Binocular interaction and depth sensitivity in striate and prestriate cortex of behaving rhesus monkey. J Neurophysiol 40:1392–1405
+</div>
+<div id="ref-poggiotalbot1981" class="csl-entry" role="listitem">
+Poggio GF, Talbot WH (1981) Mechanisms of static and dynamic steropsis in foveal cortex of the rhesus monkey. J Physiol 315:469–492
+</div>
+<div id="ref-posner1994" class="csl-entry" role="listitem">
+Posner MI, Raichle ME (1994) Images of mind. W. H. Freeman &amp; Co, Scientific American Library, NY
+</div>
+<div id="ref-richards1971" class="csl-entry" role="listitem">
+Richards W (1971) Anomolous stereoscopic depth perception. J Opt Soc Am 61:410–414
+</div>
+<div id="ref-rockland1979" class="csl-entry" role="listitem">
+Rockland KS, Pandya DN (1979) Laminar origins and terminations of cortical connections of the occipital lobe in the rhesus monkey. Brain Research 179:3–20
+</div>
+<div id="ref-schein1988-anatomyfovea" class="csl-entry" role="listitem">
+Schein SJ (1988) Anatomy of macaque fovea and spatial densities of neurons in foveal representation. Journal of Comparative Neurology 269:479–505
+</div>
+<div id="ref-shatz1978-occulardom" class="csl-entry" role="listitem">
+Shatz CJ, Stryker MP (1978) Ocular dominance in layer IV of the cat’s visual cortex and the effects of monocular deprivation. J Physiol 281:267–283
+</div>
+<div id="ref-skottun1991-classify" class="csl-entry" role="listitem">
+Skottun BC, De Valois RL, Grosof DH, et al (1991) Classifying simple and complex cells on the basis of response modulation. Vision Res 31:1079–1086
+</div>
+<div id="ref-sprague1977-viscortex" class="csl-entry" role="listitem">
+Sprague JM, Levy J, DiBerardino A, Berlucchi G (1977) Visual cortical areas mediating form discrimination in the cat. J Comp Neurl 172:441–488
+</div>
+<div id="ref-stryker1986-blockade" class="csl-entry" role="listitem">
+Stryker M, Harris W (1986) Binocular impluse blockade prevents the formation of ocular dominance columns in cat visual cortex. J Neurosci 6:2117–2133
+</div>
+<div id="ref-tolhurst1987-simple" class="csl-entry" role="listitem">
+Tolhurst DJ, Dean AF (1987) Spatial summation by simple cells in the striate cortex of the cat. Exp Brain Res 66:607–620
+</div>
+<div id="ref-toyoma1969" class="csl-entry" role="listitem">
+Toyama K, Tokashiki S, Matsunami K (1969) Synaptic action of commissural impulses upon association efferent cells in cat visual cortex. Brain Research 14:518–520. <a href="https://doi.org/10.1016/0006-8993(69)90128-0">https://doi.org/10.1016/0006-8993(69)90128-0</a>
+</div>
+<div id="ref-vanessen1992" class="csl-entry" role="listitem">
+Van Essen DC, Anderson CH, Felleman DJ (1992) Information processing in the primate visual system: <span>An</span> integrated systems perspective. Science 255:419–423
+</div>
+<div id="ref-vonbaumgarten1952" class="csl-entry" role="listitem">
+von Baumgarten R, Jung R (1952) Microelectrode studies on the visual cortex. Rev Neurol 87:151–155
+</div>
+<div id="ref-vonderheydt1978" class="csl-entry" role="listitem">
+von der Heydt R, Adorjani C, Hanny P, Baumgartner G (1978) Disparity sensitivity and receptive field incongruity of units in the cat striate cortex. Exp Brain Res 31:523–545
+</div>
+<div id="ref-wassle1990" class="csl-entry" role="listitem">
+Wässle H, Grünert U, Röhrenbeck J, Boycott BB (1990) Retinal ganglion cell density and cortical magnification factor in the primate. Vision Research 30:1897–1911
+</div>
+<div id="ref-zeki1974" class="csl-entry" role="listitem">
+Zeki S (1974) Functional organisation of a visual area in the posterior bank of the superior temporal sulcus of the rhesus monkey. J Physiol 236:549–573
+</div>
+<div id="ref-zeki1978" class="csl-entry" role="listitem">
+Zeki S (1978) Uniformity and diversity of structure and function in rhesus monkey prestriate visual cortex. J Physiol 277:273–290
+</div>
+<div id="ref-zeki1990" class="csl-entry" role="listitem">
+Zeki S (1990) Parallelism and functional specialization in human visual cortex. Cold Spring Harbor Symposia on Quantitative Biology 55:651–661
+</div>
+<div id="ref-zeki1980" class="csl-entry" role="listitem">
+Zeki S (1980) The representawtion of colours in the cerebral cortex of the monkey. Nature 284:412–418
+</div>
+<div id="ref-zeki1983" class="csl-entry" role="listitem">
+Zeki S (1983) The distribution of wavelength and orientation selective cells in different areas of monkey visual cortex. Proc R Soc Lond Ser B 217:449–470
+</div>
+<div id="ref-zeki1993" class="csl-entry" role="listitem">
+Zeki S (1993) A vision of the brain: <span>The</span> visible world and the cortex. Blackwell Science, Philadelphia, PA
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Both of these methods are based on indirect measures of neural activation. With the PET method, an observer receives a low dose of radiation in his blood stream and neural activity is indicated by brain regions showing increased radioactivity. The fMRI signal detects differences in the local concentration of blood oxygen. Both the increased radioactivity and the change in local blood oxygenation are due to vascular responses to the neural activity (<span class="citation" data-cites="posner1994">Posner and Raichle (<a href="references.html#ref-posner1994" role="doc-biblioref">1994</a>)</span>; <span class="citation" data-cites="ogawa1992">Ogawa et al. (<a href="references.html#ref-ogawa1992" role="doc-biblioref">1992</a>)</span>; <span class="citation" data-cites="kwong1992-mri">Kwong et al. (<a href="references.html#ref-kwong1992-mri" role="doc-biblioref">1992</a>)</span>).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In principle, one might construct an oriented receptive field from the outputs of a single line of lateral geniculate neurons. But, recall that the receptive fields of lateral geniculate neurons have a weak opposing surround. The inhibitory and excitatory regions of the cortical neurons often are more nearly balanced in their effect. Hence, I have constructed these regions by combining the outputs from separate groups of neurons.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>You can demonstrate the relative shift in retinal positions to yourself as follows. Focus on a nearby object, say your finger placed in front of your nose. Then, alternately look through one eye and then the other. Although your finger remains in the fovea, the relative positions of points nearer or further than your finger will change as you look through each eye in turn.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>A frequently suggested alternative is that these disparity cues serve to converge the two eyes. Since the same cues are used to converge the eyes and estimate depth, this alternative hypothesis is virtually impossible to rule out.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>See Hubel’s Nobel lecture for a marvelous description of the paradigm prior to their work.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chapter-5-the-retinal-representation.html" class="pagination-link" aria-label="Retina">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Retina</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chapter-7-pattern-sensitivity.html" class="pagination-link" aria-label="Pattern Vision">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pattern Vision</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

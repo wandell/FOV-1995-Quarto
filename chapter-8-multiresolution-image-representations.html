@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>8&nbsp; Multiresolution Representations – Foundations of Vision (1995)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./part-3-image-interpretation.html" rel="next">
+<link href="./chapter-7-pattern-sensitivity.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-2-image-representation.html">Image Representation</a></li><li class="breadcrumb-item"><a href="./chapter-8-multiresolution-image-representations.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiresolution Representations</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Foundations of Vision (1995)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">How to study vision</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Encoding</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-1-image-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Encoding</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-2-image-formation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Image Formation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-3-the-photoreceptor-mosaic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Photoreceptor Mosaic</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-4-wavelength-encoding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Wavelength Encoding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Representation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-2-image-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Representation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-5-the-retinal-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Retina</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-6-the-cortical-representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cortical Representation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-7-pattern-sensitivity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pattern Vision</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-8-multiresolution-image-representations.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiresolution Representations</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Image Interpretation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-3-image-interpretation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Image Interepretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-9-color.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Color</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-10-motion-and-depth.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Motion and Depth</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11-seeing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seeing</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./numbers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful numbers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./online-teaching-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Online Teaching Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#multiresolution-overview" id="toc-multiresolution-overview" class="nav-link active" data-scroll-target="#multiresolution-overview"><span class="header-section-number">8.1</span> Multiresolution overview</a></li>
+  <li><a href="#sec-efficient" id="toc-sec-efficient" class="nav-link" data-scroll-target="#sec-efficient"><span class="header-section-number">8.2</span> Efficient Image Representations</a>
+  <ul class="collapse">
+  <li><a href="#intensity-redundancy-in-image-data" id="toc-intensity-redundancy-in-image-data" class="nav-link" data-scroll-target="#intensity-redundancy-in-image-data">Intensity Redundancy in Image Data</a></li>
+  <li><a href="#spatial-redundancy-in-image-data" id="toc-spatial-redundancy-in-image-data" class="nav-link" data-scroll-target="#spatial-redundancy-in-image-data">Spatial Redundancy in Image Data</a></li>
+  <li><a href="#decorrelating-transformations" id="toc-decorrelating-transformations" class="nav-link" data-scroll-target="#decorrelating-transformations">Decorrelating Transformations</a></li>
+  <li><a href="#sec-lossy-compression" id="toc-sec-lossy-compression" class="nav-link" data-scroll-target="#sec-lossy-compression">Lossy Compression</a></li>
+  <li><a href="#perceptually-decorrelated-features" id="toc-perceptually-decorrelated-features" class="nav-link" data-scroll-target="#perceptually-decorrelated-features">Perceptually Decorrelated Features</a></li>
+  </ul></li>
+  <li><a href="#sec-dct" id="toc-sec-dct" class="nav-link" data-scroll-target="#sec-dct"><span class="header-section-number">8.3</span> A Block Transformation: The JPEG-DCT</a></li>
+  <li><a href="#sec-pyramid" id="toc-sec-pyramid" class="nav-link" data-scroll-target="#sec-pyramid"><span class="header-section-number">8.4</span> Image Pyramids</a>
+  <ul class="collapse">
+  <li><a href="#the-pyramid-operations-general-theory" id="toc-the-pyramid-operations-general-theory" class="nav-link" data-scroll-target="#the-pyramid-operations-general-theory">The Pyramid Operations: General Theory</a></li>
+  <li><a href="#pyramids-an-example" id="toc-pyramids-an-example" class="nav-link" data-scroll-target="#pyramids-an-example">Pyramids: An Example</a></li>
+  <li><a href="#image-compression-using-the-error-pyramid" id="toc-image-compression-using-the-error-pyramid" class="nav-link" data-scroll-target="#image-compression-using-the-error-pyramid">Image Compression Using the Error Pyramid</a></li>
+  </ul></li>
+  <li><a href="#sec-qmfs" id="toc-sec-qmfs" class="nav-link" data-scroll-target="#sec-qmfs"><span class="header-section-number">8.5</span> QMFs and Orthogonal Wavelets</a></li>
+  <li><a href="#applications-of-multiresolution-representations" id="toc-applications-of-multiresolution-representations" class="nav-link" data-scroll-target="#applications-of-multiresolution-representations"><span class="header-section-number">8.6</span> Applications of multiresolution representations</a>
+  <ul class="collapse">
+  <li><a href="#image-blending" id="toc-image-blending" class="nav-link" data-scroll-target="#image-blending">Image Blending</a></li>
+  <li><a href="#progressive-image-transmission" id="toc-progressive-image-transmission" class="nav-link" data-scroll-target="#progressive-image-transmission">Progressive Image Transmission</a></li>
+  <li><a href="#threshold-and-recognition" id="toc-threshold-and-recognition" class="nav-link" data-scroll-target="#threshold-and-recognition">Threshold and Recognition</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./part-2-image-representation.html">Image Representation</a></li><li class="breadcrumb-item"><a href="./chapter-8-multiresolution-image-representations.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiresolution Representations</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-multiresolution" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Multiresolution Representations</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="multiresolution-overview" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="multiresolution-overview"><span class="header-section-number">8.1</span> Multiresolution overview</h2>
+<p>Our review of the organization of neural and behavioral data have led us to several specific hypotheses about how the visual system represents pattern information. Neural evidence suggests that visual information is segregated into a number of different visual streams that are specialized for different tasks. Behavioral evidence suggests that within the streams that are specialized for pattern sensitivity, information is further organized by local orientation and spatial scale and color. All of the evidence we have reviewed to this point suggest that image contrast, rather than image intensity, is the key variable represented by the visual pathways.</p>
+<p>We will spend this chapter mainly just thinking about how these and other organizational principles might be relevant to solving various visual tasks. In addition to the intrinsic and practical interest of solving visual problems, finding principled solutions for visual tasks can also be helpful in understanding and interpreting the organization of the human visual pathways.</p>
+<p>But, which tasks should we consider? There are many types of visual problems; only some of these have to do with tasks that are essential for human vision. One approach to thinking about visual algorithms, then, is to adopt a general approach to vision, sometimes called <em>computational vision</em>, in which we do not restrict our thinking to those problems that are important for human vision. Instead, we open our minds to visual algorithms that may have no biological counterpart.</p>
+<p>In this book, however, we will restrict our analysis to the subset of algorithms that is related to human vision. While this is not the broadest possible class, it is a very important one because there are many potential applications for visual algorithms that emulate human performance. For example, suppose a person who wants to search through a database of images to find images with “red vehicles.” To assist the person, the computer program must have some algorithmic representation related to human vision; after all, the words “red” and “vehicle” are defined by human perception. This is but one example from the set of computer vision algorithms that can serve to augment the human ability to manipulate, analyze, search and create images. These algorithms will be of tremendous importance over the next few decades.</p>
+<p>There is a second reason for paying special attention to visual problems related to human vision. Many investigators have argued that studying the visual pathways and visual behavior is an efficient method for discovering novel algorithms for computational vision. The idea is that by studying the specific properties of a successful visual system, we will be led to an understanding of the general design principles of computational vision. This process is analogous to the idea of <em>reverse-engineering</em> that is often used to improve instrument design in manufacturing. This view has been suggested by many authors, but <span class="citation" data-cites="marr1982">Marr (<a href="references.html#ref-marr1982" role="doc-biblioref">2010</a>)</span> has argued particularly forcefully that biology is a good source of ideas for engineering design. I have never been persuaded by this argument; it seems to me that reverse-engineering methods are most successful when one understands the fundamental principles and only wishes to improve the implementation. It is very difficult to analyze how a system works from the implementation unless one already has a set of general principles as a guide. I think engineering algorithms have done more for understanding the neuroscience than neuroscience has done for engineering algorithms.</p>
+<p>Whichever way the benefits flow, from neuroscience to engineering or the other way around, just the presence of a flow is a good reason for the vision scientist and imaging engineer to be familiar with biological, behavioral, and computational issues. In the remainder of this book, we will spend more time engaged in thinking about computational issues related to human vision. In this chapter I will describe ideas and algorithms related to multiresolution image representations. In the following chapters I will describe work on color appearance, motion and objects. Algorithms for all of these topics continue be an important part of vision science and engineering.</p>
+</section>
+<section id="sec-efficient" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-efficient"><span class="header-section-number">8.2</span> Efficient Image Representations</h2>
+<p>In this chapter we will consider several different multiresolution representations. Multiresolution representations have been used as part of a variety of visual algorithms ranging from image segmentation to stereo depth and motion (e.g., <span class="citation" data-cites="burt1988-smartsensing">Burt (<a href="references.html#ref-burt1988-smartsensing" role="doc-biblioref">1988</a>)</span>; <span class="citation" data-cites="vetterli1992-multires">Vetterli and Metin UZ (<a href="references.html#ref-vetterli1992-multires" role="doc-biblioref">1992</a>)</span>). To unify the introduction of these various representations, however, I will introduce them all by considering how they solve a single engineering problem: efficient storage of image image information.</p>
+<p>Efficient image representations are important for systems with finite resources, which is to say all systems. No matter how much computer memory or how many visual neurons we have, we can always perform better computations, transmit more information, or store higher quality images if we use efficient storage algorithms. If we fail to consider efficiency, then we waste resource that could improve performance.</p>
+<p>Image compression algorithms transform image data from one representation to a new one that requires less storage space. To evaluate the efficiency of a compression algorithm, we need some way to describe the amount of space required to store an image. The most common way to measure the amount of storage space necessary to encode an image is to count the total number of bytes used to represent the image<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Color images acquired from cameras or scanners, or color images that are about to be displayed on a monitor, are represented in terms of the intensities at a set of picture locations, called <em>pixels</em>. The color data are represented in three color bands, usually called the red, green and blue bands. We can compute the number of bytes data represented in a single image fairly easily. Suppose we have a modest size image of <span class="math inline">\(512\)</span> rows and <span class="math inline">\(512\)</span> columns, and that each color band represents intensity using one byte. The image representation within a single color band requires <span class="math inline">\(512 \times 512 \times 3\)</span> bytes of data, or approximately <span class="math inline">\(0.75\)</span> Megabytes of data. If we have an image comprising <span class="math inline">\(1024\)</span> rows and columns, we will require <span class="math inline">\(3.0\)</span> Megabytes to represent the image. In a movie clip, in which we update the image sixty times a second, the numbers grow at an alarming rate; one minute requires 10 Gigabytes of information, and one hour requires 600 Gigabytes.</p>
+<p>Notice that color image encoding already uses a significant amount of image compression that is made possible by the special characteristics of human vision. The physical signal consists of light with energy at many wavelengths, i.e., a complete spectral power distribution. The image data, however, does not encode the complete spectral power distribution of the displayed or acquired color signal. The data represent only three color bands, a very compressed representation of the image. The results of the color-matching experiment justifies the compression of information (see <a href="./chapter-4-wavelength-encoding/">Chapter 4</a>). This part of compression is so well understood, it is rarely mentioned explicitly in discussions of image compression.</p>
+<p>In addition to color trichromacy, two main factors permit us to compress images with little loss of quality. First, adjacent pixels in natural images tend to have similar intensity levels. We say that there is considerable <em>spatial redundancy</em> in these images. This redundancy is part of the signal, and it may be removed without any loss of information in order to obtain more efficient representations. Second, we know that human spatial resolution to certain spatial patterns is very poor (see <a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a> and <a href="chapter-7-pattern-sensitivity.html" class="quarto-xref"><span>Chapter 7</span></a>). People have very poor spatial resolution to short-wavelength light, and only limited spatial resolution for colored patterns in general. Representing this information in the stored image is unnecessary because the receiver, that is the visual system, cannot detect it. By eliminating this information, we improve the efficiency of the image representation.</p>
+<p>In this chapter we will consider efficient encoding algorithms of monochrome images, spending most of our time on issues of intensity and spatial redundancy. In the next <a href="chapter-9-color.html" class="quarto-xref"><span>Chapter 9</span></a>, which is devoted to color broadly, we will again touch on some of the issues of color image representation.</p>
+<section id="intensity-redundancy-in-image-data" class="level3">
+<h3 class="anchored" data-anchor-id="intensity-redundancy-in-image-data">Intensity Redundancy in Image Data</h3>
+<p>Suppose that we have an image we wish to encode efficiently, such as the image in <a href="#fig-pixel-hist" class="quarto-xref">Figure&nbsp;<span>8.1</span></a> (a). The camera I used to acquire this image codes up to <span class="math inline">\(256\)</span> different intensity levels (<span class="math inline">\(8\)</span> bits). You might imagine, therefore, that this is an <span class="math inline">\(8\)</span> bit image. To see why that is not the case, let’s look at the distribution of pixel levels in the image.</p>
+<div id="fig-pixel-hist" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pixel-hist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/01_distOfImgIntensities1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="563">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pixel-hist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.1: The distribution of image intensities is an important factor in obtaining an efficient image representation. (a) This image was acquired by a device capable of reproducing 256 gray-levels. But, the image data consists of only 16 different gray levels. (b) A histogram of the gray levels used to code the image shown in (a). Device properties limit the gray-level resolution; they do not enforce a resolution.
+</figcaption>
+</figure>
+</div>
+<p>In <a href="#fig-pixel-hist" class="quarto-xref">Figure&nbsp;<span>8.1</span></a> (b) I have plotted the number of points in the image at each of the 256 intensity levels the device can represent. This graph is called the image’s <em>intensity histogram</em>. The histogram shows that intensity level <span class="math inline">\(128\)</span> occurs quite frequently and only a few other levels occur at all.</p>
+<p>Although the device used to acquire this image could potentially represent <span class="math inline">\(256\)</span> different intensity levels, the image itself does not contain this many levels. We do not need to represent the data at the device resolution, but only at the intrinsic resolution of the image, which is considerably smaller. Since the image in <a href="#fig-pixel-hist" class="quarto-xref">Figure&nbsp;<span>8.1</span></a> (a) contains <span class="math inline">\(16\)</span> levels, not <span class="math inline">\(256\)</span>, we can represent it using <span class="math inline">\(4\)</span> bits per image point rather than the <span class="math inline">\(8\)</span> bit resolution the device can manage. This saves us a factor of two in storage space.</p>
+<p>The first savings in efficiency is easy to understand; we must not allocate storage space to intensity levels that do not occur in the image. We can refine this idea by taking advantage of the fact that the different intensity levels do not occur with equal frequency. Consider one method to take advantage of the fact that some intensity levels are more likely than others. Assign the one-bit sequence, <span class="math inline">\(1\)</span>, to code level <span class="math inline">\(128\)</span>. Encode the other levels using a five bit sequence that starts with a zero, say <span class="math inline">\(0xxxx\)</span>, where <span class="math inline">\(xxxx\)</span> is the original four bit code. For example, the level <span class="math inline">\(5\)</span> is coded by the five bit sequence <span class="math inline">\(00101\)</span>. We can unambiguously decode an input stream as follows. When the first bit is a one, then the current value is <span class="math inline">\(128\)</span>. When the first bit is a zero, read four more bits to define the intensity level at that pixel.</p>
+<p>In this image, the intensity level <span class="math inline">\(128\)</span> occupies sixty percent of the pixels. Our encoding scheme reduces the space devoted to coding these pixels from <span class="math inline">\(4\)</span> bits to <span class="math inline">\(1\)</span> bit, saving <span class="math inline">\(3\)</span> bits at <span class="math inline">\(60\)</span> percent of the locations. The encoding method costs us 1 bit of storage for 40 percent of the pixels. The average savings across the entire image is <span class="math inline">\(0.6 \times 3 - 0.4 \times 1 = 1.2\)</span> bits per pixel. Using these very simple rules, we have reduced our storage requirements to <span class="math inline">\(2.8\)</span> bits per pixel.</p>
+<p>The example I have provided here is very simple; many more elaborate and efficient algorithms exist for taking advantage of the redundancies in a data set. In general, the more we know about the input distribution the better we can do at designing efficient codes. A great deal of thought has been to the question of designing efficient coding strategies for single images and also for various classes of images such as business documents and natural images. I will not review them here, but you will find references to books on this topic in the bibliography.</p>
+</section>
+<section id="spatial-redundancy-in-image-data" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-redundancy-in-image-data">Spatial Redundancy in Image Data</h3>
+<p>Normally, intensity histograms of natural images are not as coarsely discretized as the example in <a href="#fig-pixel-hist" class="quarto-xref">Figure&nbsp;<span>8.1</span></a>. In natural images, intensity distributions range across many intensity levels and strategies that rely only on intensity redundancy do not save much storage space.</p>
+<div id="fig-barlow-noise" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-barlow-noise-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/02_expMeasureofSpatialRedundancy1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="425">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-barlow-noise-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.2: Experimental measurement of spatial redundancy in an image. The image shows Professor Horace Barlow; random noise is added to the picture. Subjects were asked to adjust the intensity of the noisy pixels to the level they thought must have been present in the original image. Subjects are very accurate at this task, using the information present in nearby pixels. This is an experimental demonstration that people can take advantage of the spatial redundancy in image data (Source: <span class="citation" data-cites="kersten1987">Kersten (<a href="references.html#ref-kersten1987" role="doc-biblioref">1987</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>But there are <em>spatial redundancies</em> in natural images, and we can use the same general encoding principles we have been discussing to take advantage of these redundancies as well. Specifically, certain spatial patterns of pixel intensities are much more likely than others. There are various formal and informal ways to convince oneself of the existence of these spatial redundancies. First, consider the image in <a href="#fig-barlow-noise" class="quarto-xref">Figure&nbsp;<span>8.2</span></a>. This figure contains a picture of Professor Horace Barlow, an eminent visual scientist. A few of the pixel intensities have been set randomly to a new intensity value. <span class="citation" data-cites="kersten1987">Kersten (<a href="references.html#ref-kersten1987" role="doc-biblioref">1987</a>)</span> has shown that naive observers are quite good at adjusting the intensity of these pixels back to their original intensity. With one percent of the pixels deleted, observers correct the pixel intensity to its original value nearly 80 percent of the time. Even with forty percent of the pixels deleted observers set the proper intensity level more than half the time.</p>
+<div id="fig-comp-red" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comp-red-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/03compMeasurementofspatial-1024x742.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="501">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comp-red-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.3: Computational measurement of spatial redundancies in a natural image. The natural image used for these computations is shown in the middle. (a) The image intensity histogram shows the distribution of image intensities. (b) A correlogram of the intensity at a pixel located at position (x,y) and the intensity of a pixel located at position (x,y+1). (c) A correlogram of the intensity at a pixel located at position (x,y) and the intensity difference between it and the adjacent pixel at (x,y+1). (d) A histogram of the intensity differences showing that they are concentrated near the zero level.
+</figcaption>
+</figure>
+</div>
+<p>Second, we can measure the spatial redundancy in natural images by comparing intensities at neighboring pixels. <a href="#fig-comp-red" class="quarto-xref">Figure&nbsp;<span>8.3</span></a> (a) shows the pixel intensities from the image shown in the center of the figure. Measured one at a time, the pixel intensities are distributed across many values and do not contain a great deal of redundancy. <a href="#fig-comp-red" class="quarto-xref">Figure&nbsp;<span>8.3</span></a> (b) shows an image <em>cross-correlogram</em> that measures the intensity of a pixel, <span class="math inline">\(p(x,y)\)</span>, on the horizontal axis and the intensity of its neighboring pixel, <span class="math inline">\(p(x,y+1)\)</span>, on the vertical axis. Because adjacent pixels tend to have the same intensity level, the points in the cross-correlogram cluster near the identity line. Because the intensity of one pixel tells us a great deal about the probable intensity level of an adjacent pixel, we know that the pixel intensity levels are redundant.</p>
+<p>We can improve the efficiency of the image representation by removing this spatial redundancy. One way of removing the redundancy is to transform the image representation. For example, instead of coding the intensities at the two pixels at adjacent locations independently, we can code one pixel level, <span class="math inline">\(p(x,y)\)</span> and the difference between the adjacent pixel values, <span class="math inline">\(p(x,y+1) - p(x,y)\)</span>. This pair of values preserves the image information since we can recover the original from <span class="math inline">\(p(x,y)\)</span> and <span class="math inline">\(p(x,y+1)-p(x,y)\)</span> by a simple subtraction.</p>
+<p>After transforming the data, the number of bits needed to code <span class="math inline">\(p(x,y)\)</span> is unchanged. But the difference, <span class="math inline">\(p(x,y+1)- p(x,y)\)</span>, can fall in a larger range, anywhere between <span class="math inline">\(255\)</span> and <span class="math inline">\(-255\)</span> so that we may need as many as <span class="math inline">\(9\)</span> bits to store this value. In principle, requiring an additional bit is worse, but in practice the difference between most adjacent pixels is quite small. This point is illustrated by the cross-correlogram of the transformed values shown in <a href="#fig-comp-red" class="quarto-xref">Figure&nbsp;<span>8.3</span></a> (c). The horizontal axis measures the pixel intensity <span class="math inline">\(p(x,y)\)</span>, and the vertical axis measures the difference value, <span class="math inline">\(p(x,y+1) - p(x,y)\)</span>. First, notice that most of the values of the intensity difference cluster near zero. Second, notice that there is virtually no correlation between the transformed values; knowing the value of <span class="math inline">\(p(x,y)\)</span> does not help us know the value of the difference.</p>
+<p>To build an efficient representation, we can use the same strategy I outlined in the previous section. We use a short code (say, 5 bits) to encode the small difference values that occur frequently. We use a longer code (say, 10 bits) to encode the rarely occurring large values. Because most of the pixel differences are small, the representation will more efficient.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</section>
+<section id="decorrelating-transformations" class="level3">
+<h3 class="anchored" data-anchor-id="decorrelating-transformations">Decorrelating Transformations</h3>
+<p>We can divide the image compression strategies I have discussed into two parts. First, we linearly transformed the image intensities to a new representation by a linear transformation. The linear transformation computes <span class="math inline">\(p(x,y)\)</span> and <span class="math inline">\(p(x,y)-p(x,y+1)\)</span> from <span class="math inline">\(p(x,y)\)</span> and <span class="math inline">\(p(x,y+1)\)</span>. The matrix form of this transformation is simply</p>
+<p><a name="id1630831666"></a></p>
+<p><span id="eq-pixel-decor"><span class="math display">\[
+    \left ( \begin{array}{c} p(x,y) \\ p(x,y+1) - p(x,y) \\ \end{array} \right ) =
+    \left ( \begin{array}{cc} 1 &amp; 0 \\ -1 &amp; 1 \\ \end{array} \right )
+    \left ( \begin{array}{c} p(x,y) \\ p(x,y+1) \\ \end{array} \right )
+\tag{8.1}\]</span></span></p>
+<p>We apply the linear transformation because the correlation of the transformed values is much smaller than the correlation in the original representation.</p>
+<p>Second, we find a more efficient representation of the transformed representation. Because we have removed the correlation, in natural images the variation of the transformed values will be smaller than the variation of the original pixel intensities. Hence we will be able to encode the transformed data more efficiently than the original data.</p>
+<p>From our example, we can identify a key property of the linear transformation that is essential for achieving efficient coding. The new transformation should convert the data to <em>decorrelated</em> values. Values are decorrelated when we gain no advantage in predicting one value from knowing the other. It should seem intuitive that decorrelation is important part of efficiency: if we can predict one value from the another, there is no reason to encode both. Generalizing this idea, if we can predict approximately predict one value from another, we can achieve some efficiencies in our representation. In our example we found that the value <span class="math inline">\(p(x,y)\)</span> is a good predictor of the value <span class="math inline">\(p(x,y+1)\)</span>. Hence, it is efficient to predict that <span class="math inline">\(p(x,y+1)\)</span> is equal to <span class="math inline">\(p(x,y)\)</span> and to encode only the error in our prediction. If we have a good predictor (i.e., high correlation) the prediction error will span a smaller range than the data value. Hence, the error can be encoded using fewer bits and we can save storage space.</p>
+<p>The transformation in <a href="#eq-pixel-decor" class="quarto-xref">Equation&nbsp;<span>8.1</span></a> does yield a pair of approximately decorrelated values. To make the example simple, I chose a simple linear transformation. We might ask how we might find a decorrelating linear transformation in general. When the set of images we will have to encode is known precisely, then the best linear transformation for lossless image compression can be found using a matrix decomposition called the <em>singular value decomposition</em>. The singular value decomposition defines a linear transformation from the data to a new representation with statistically independent values that are concentrated over smaller and smaller ranges. This representation is just what we seek for efficient image encoding. The singular value decomposition is at the heart of principal components analysis and goes by many other names including the Karhunen-Loeve transform and the Hoteling transform. The singular value decomposition may be the most important technique in linear algebra.</p>
+<p>In practice, however, the image population is not known precisely. Nor are the image statistics for the set of natural images are known precisely. As a result, the singular value decomposition has no ready application to image compression. As a practical matter, then, selecting a good initial linear transformation remains an engineering skill acquired by experience with algorithm design.</p>
+</section>
+<section id="sec-lossy-compression" class="level3">
+<h3 class="anchored" data-anchor-id="sec-lossy-compression">Lossy Compression</h3>
+<p>To this point, we have reviewed compression methods that transform the original data with no loss of information. Since we can recover the original image data perfectly from the compressed data, the methods are called <em>lossless</em> image compression. Ordinarily, we can achieve savings of a factor of two or three based on lossless compression methods, though this number is strongly image dependent.</p>
+<p>If we are willing to tolerate some difference between the original image and the stored copy, then we can develop schemes that save considerably more space. Transformations that lose information are called <em>lossy</em> image compression methods. Using only three sensor responses to represent color information is the most successful example of a perceptually lossless encoding. We can not recover the original wavelength representation from the encoded signal. Still, we use this lossy representation because we know from the color-matching experiment that when done perfectly there should be no difference between the perceived image and the original image <a href="chapter-4-wavelength-encoding.html" class="quarto-xref"><span>Chapter 4</span></a>.</p>
+<p>Lossy compression is inappropriate for many types of applications, such as storing bank records. But, some amount of image distortion is acceptable for many applications. It is possible to build lossy image compression algorithms for which the difference between the original and stored image is barely perceptible, and yet the savings in storage space can be as large as a factor of five or ten. Users often judge the efficiency to be worth the image distortion. In cases when the image distortion is not visible, some authors refer to the compression as <em>perceptually lossless</em>.</p>
+<p>As we reviewed in <a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a> and <a href="chapter-7-pattern-sensitivity.html" class="quarto-xref"><span>Chapter 7</span></a>, the human visual system is very sensitive to some patterns and wavelengths but far less sensitive to others. Perceptually lossless encoding methods are designed to account for these differences in human visual sensitivity. These schemes allocate more storage space to represent highly visible patterns and less storage space to represent poorly visible patterns (<span class="citation" data-cites="watson-ahumada1989">Watson and Ahumada (<a href="references.html#ref-watson-ahumada1989" role="doc-biblioref">1989</a>)</span>; <span class="citation" data-cites="watson1990-perceptual">Watson (<a href="references.html#ref-watson1990-perceptual" role="doc-biblioref">1990</a>)</span>).</p>
+<p>Perceptually lossless image encoding algorithms follow a logic that has much in common with the lossless encoding algorithms. First, the image data are transformed to a new set of values, using a linear transformation. The transformed values are intended to represent <em>perceptually decorrelated features</em>. Second, the algorithm allocates different amounts of precision to these transformed values. In this case, the precision allocated to each transformed value depends on the visual salience of the feature the value represents; hence, salient features are allocated more storage space than barely visible features. It is at this point in the process where lossy algorithms differ from lossless algorithms. Lossless algorithms allocate enough storage so that the transformed values are represented perfectly, yet due to the decorrelation they still achieve some savings. Lossy algorithms do not allocate enough storage to perfectly represent the initial information; the image cannot be reconstructed perfectly from the compressed representation. The lossy algorithm is designed, however, so that the lost information would not have been visible anyway. Thus, the new picture will require less storage and still look like the original image.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</section>
+<section id="perceptually-decorrelated-features" class="level3">
+<h3 class="anchored" data-anchor-id="perceptually-decorrelated-features">Perceptually Decorrelated Features</h3>
+<div id="fig-linear-trans" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-trans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/04_anoperationaldefinition.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="414">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-trans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.4: An operational definition of perceptual features. (a) Image compression usually begins with a linear transformation that maps image intensities into a set of transformed coefficients. (b) An operational definition of an image feature, associated with that linear transformation, is to find the image whose transformation results in a representation that is zero at all values except for one transformation coefficient.
+</figcaption>
+</figure>
+</div>
+<p>In my overview of perceptually lossless compression algorithms, I used — but did not define — the phrase “perceptually decorrelated features.” The notion of a “perceptual feature” is widely used in a very loose way to describe the image properties that are essential for object perception. There is no widely agreed on the specific image features that comprise the perceptual features. In the context of image compression, however, we can use a very useful operational definition for perceptual feature, defined in terms of the linear transformation used to decorrelate the image data. The idea is illustrated in the matrix tableau drawn in <a href="#fig-linear-trans" class="quarto-xref">Figure&nbsp;<span>8.4</span></a>.</p>
+<p>Suppose we represent the original image as a list of intensities, one intensity for each pixel in the image. We then apply a linear transformation to the image data, as shown in <a href="#fig-linear-trans" class="quarto-xref">Figure&nbsp;<span>8.4</span></a> (a), to yield a new vector of <em>transform coefficients</em>. This is the same procedure we applied in our simple example defined by <a href="#eq-pixel-decor" class="quarto-xref">Equation&nbsp;<span>8.1</span></a>.</p>
+<p>In the transformed representation, each value represents something about the contents of the input image. One way to represent the visual significance of each transformed value is to identify an input image that is represented by that transform coefficient alone. This idea is illustrated in <a href="#fig-linear-trans" class="quarto-xref">Figure&nbsp;<span>8.4</span></a> (b), in which a feature is defined as the input image that is represented by a set of transform coefficients that are zero everywhere except at one location. We call this image the <em>feature</em> represented by this transform coefficient. Using this operational definition, features are defined with respect to a particular linear transformation.</p>
+<p>Next, we must define what we mean by “perceptually decorrelated” image features. We can use the <span class="citation" data-cites="kersten1987">Kersten (<a href="references.html#ref-kersten1987" role="doc-biblioref">1987</a>)</span> experiment to provide an operational definition. In that experiment subjects adjusted the intensity of certain pixels to estimate the intensity level in the original image. Kersten found that observers inferred the intensity levels of individual pixels quite successfully and that observers perceived a great deal of correlation when comparing individual pixels. We can conclude that pixels are a poor choice to serve as decorrelated features.</p>
+<p>Now, suppose we perform a variant of Kersten’s experiment. Instead of randomly perturbing pixel values in the image, suppose that we perturb the values of the transform coefficients. And, suppose we ask subjects to adjust the transform coefficient levels to reproduce the original image. This experiment is the same as Kersten’s task except except we use the transform coefficients, rather than individual pixels, to control image features.</p>
+<p>We concluded that individual pixels do <em>not</em> represent perceptually decorrelated features because subjects performed very well. We will conclude that a set of transform coefficients represent decorrelated features only if subjects perform badly. When knowing all the transform coefficients but one does not help the subject set the level of an unknown coefficient, we will say the features represented by the transformation are perceptually independent. I am unaware of perceptual studies analogous to Kersten’s that test for the perceptual independence of image features; but, in principle, these experiments offer a means of evaluating the independence of features implicit in different compression algorithms.</p>
+<p>The important compression step in perceptually lossless algorithms occurs when we use different numbers of bits to represent the transform coefficients. To decide on the number of bits allocated to a transform coefficient, we consider the visual sensitivity of the image feature represented by that coefficient. Because visual sensitivity to some image features is very poor, we can use very few bits to represent these features with very little degradation in the image appearance. This permits us to achieve very compact representations of image data. By saving information at the level of image features, the perceptual distortion of the image can be quite small while the efficiencies are quite large.</p>
+<p>This compression strategy depends on the perceptual independence of the image features. If the features are not independent, then the distortions we introduce into one feature may have unwanted side effects on a second feature. If the observer is sensitive to the second feature, we will introduce unwanted distortions. Hence, discovering a set of image features that are perceptually independent is an important part of the design of a perceptually lossless image representation. If distortions of some features have unwanted effects on the appearance of other features, that is if the representation of a pair of features is perceptually correlated, then the linear transformation is not doing its job.</p>
+</section>
+</section>
+<section id="sec-dct" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="sec-dct"><span class="header-section-number">8.3</span> A Block Transformation: The JPEG-DCT</h2>
+<p>The Joint Photographic Experts Group (JPEG) committee of the International Standards Organization has defined an image compression algorithm based on a linear transformation called the <em>Discrete Cosine Transformation</em> (DCT). Because of the widespread acceptance of this standard, and the existence of hardware to implement the JPEG-DCT compression algorithm is likely to appear on your desk and in your home within the next few years. The JPEG-DCT compression algorithm has a multiresolution character and bears an imprint from work in visual perception<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<div id="fig-dct" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/05_perceptualFeaturesofDCT.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="437">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.5: The perceptual features of the DCT. The DCT features are products of harmonic functions, cos(2 f_1 j)cos(2 f_2 k), where j and k refer to position along the horizontal and vertical directions. These functions have both positive and negative values, and they are shown as contrast patterns varying about a constant gray background.
+</figcaption>
+</figure>
+</div>
+<p>The JPEG-DCT algorithm uses the DCT to transform the data into a set of perceptually independent features. The image features associated with the DCT are shown in <a href="#fig-dct" class="quarto-xref">Figure&nbsp;<span>8.5</span></a>. The image features are all products of cosinusoids at different spatial frequencies and two orientations. Hence, the independent features implicit in the DCT are loosely analogous to a collection of oriented spatial frequency channels. The features are not the same as the features used to model human vision since the DCT image features are comprised of high and low frequencies, while others contain signals with perpendicular orientations. Still, there is a rough similarity between these features and the oriented spatial frequency organization of models of human multiresolution representations; this is particularly so for the features pictured along the edges and along the diagonal in <a href="#fig-dct" class="quarto-xref">Figure&nbsp;<span>8.5</span></a>, where the image features are organized along lines of increasing spatial frequency and within a single orientation.</p>
+<div id="fig-jpeg-dct" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-jpeg-dct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/06_outlineofthejpeg1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="486">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jpeg-dct-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.6: An outline of the JPEG compression algorithm based on the DCT. The original image is divided into a set of nonoverlapping square blocks, usually 8x8 pixels. The image data are transformed using the DCT to a new set of coefficients. The transform coefficients are quantized using a simple multiply-round-divide operation. The quantized coefficients are zeroed by this operation, making the image well-suited for efficient lossless compression applied prior to storage or transmission. To reconstruct the image, the quantized coefficients are converted by the inverse DCT, yielding a new image that approximates the original. The error in the reconstruction, i.e., the difference between the original and the reconstruction, consists of mainly high frequency texture. The error is shown as an image on the right.
+</figcaption>
+</figure>
+</div>
+<p>The main steps of the JPEG-DCT algorithm are illustrated in <a href="#fig-jpeg-dct" class="quarto-xref">Figure&nbsp;<span>8.6</span></a>. First, the data in the original image are separated into blocks. The computational steps of the algorithm are applied separately to each block of image data, making the algorithm well-suited to parallel implementation. The image block size is usually <span class="math inline">\(8 \times 8\)</span> pixels, though it can be larger. Because the algorithm begins by subdividing the image into blocks, it is one of a group of algorithms called <em>block coding</em> algorithms.</p>
+<p>Next, the data in each image block are transformed using the linear DCT. The transform coefficients for the image block are shown as an image in <a href="#fig-jpeg-dct" class="quarto-xref">Figure&nbsp;<span>8.6</span></a> labeled “Transform coefficients.” In this image white means a large absolute value and black means a low absolute value. The coefficients are represented in the same order as the image features in <a href="#fig-dct" class="quarto-xref">Figure&nbsp;<span>8.5</span></a>; the low spatial frequencies coefficients are in the upper left of the image and the high spatial frequency coefficients are in the lower right.</p>
+<p>In the next step, the transform coefficients are quantized. This is one stage of the algorithm where compression is achieved. The quantization is implemented by multiplying each transform coefficient by a scale factor, rounding the result to the nearest integer, and then dividing the result by the scale factor. If the scale factor is small, then the rounding operation has a strong effect and the number of coefficient quantization levels is small. The scalar values for each coefficient are shown in the image marked “Quantization scale factor.” For this example, I chose large scalar values corresponding to the low spatial frequency terms (upper left) and small values for the high spatial frequency terms (lower right).</p>
+<p>The quantized coefficients are shown in the next image. Notice that many of the quantized values are zero (black). Because there are so many zero coefficients, the quantized coefficients are very suitable for lossless compression. JPEG-DCT algorithm includes a lossless compression algorithm applied to the quantized coefficients. This representation is used to store or transmit the image.</p>
+<p>To reconstruct an approximation of the original image, we only need to apply the inverse of the DCT to the quantized coefficients. This yields an approximation to the original image. Because of the quantization, the reconstruction will differ from the original somewhat. Since we have removed information mainly about the high spatial frequency components of the image, the difference between the original and the reconstruction is an image comprised of mainly fine texture. The difference image for this example is labeled “Error” in <a href="#fig-jpeg-dct" class="quarto-xref">Figure&nbsp;<span>8.6</span></a>.</p>
+<p>One of the most important limiting factors in compressing images arises from the separation of the original image into distinct blocks for independent processing. Pixels located at the edge of these blocks are reconstructed without any information concerning the intensity level of the pixels that are adjacent, in the next block. One of the most important visual artifacts of the reconstruction, then, is the appearance of distortions at the edges of these blocks, which are commonly called <em>block artifacts</em>. These artifacts are visible in the reconstructed image shown in <a href="#fig-jpeg-dct" class="quarto-xref">Figure&nbsp;<span>8.6</span></a>.</p>
+<p>There are two aspects of the JPEG-DCT algorithm that connect it with human vision. First the algorithm uses a roughly multiresolution representation of the image data. One way to see the multiresolution character of the algorithm is to imagine grouping together the coefficients obtained from the separate image blocks. Within each block, there are 64 DCT coefficients corresponding to the 64 image features. By collecting the corresponding transform coefficients from each block, we obtain a measure of the amount of each image feature within the image blocks. Implicitly, then, the DCT coefficients define sixty four images, each describing the contribution of the sixty four image features of the DCT. These implicit images are analogous to the collection of neural images that make up a multiresolution model of spatial vision (Chapter <a href="chapter-7-pattern-sensitivity.html" class="quarto-xref"><span>Chapter 7</span></a>)<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<p>Second, the JPEG-DCT algorithm relies on the assumption that quantization in the high spatial frequency coefficients does not alter the quality of the image features coded by low spatial frequency coefficients. If reduced resolution of the high spatial frequencies influences very visible features in the image, then the algorithm will fail. Hence, the assumption that the transform yields perceptually <em>independent</em> features is very important to the success of the algorithm.</p>
+<p>The independent features in the JPEG-DCT algorithm do not conform perfectly to the multiresolution organization in models of human spatial vision. High and low frequency components are mixed in some of the features, components at very different orientations are also combined in a single feature. These features are desirable for efficient computation and implementation. In the next section, we will consider multiresolution computations that reflect the character of human vision a bit more closely.</p>
+</section>
+<section id="sec-pyramid" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="sec-pyramid"><span class="header-section-number">8.4</span> Image Pyramids</h2>
+<p>Image pyramids are multiresolution image representations. Their format differs from the JPEG-DCT in several ways, perhaps the two most important being that (a) pyramid algorithms do not segment the image into blocks for processing, and (b) the pyramid multiresolution representation is more similar to the human visual representation than that of the JPEG-DCT. In fact, much of the interest in pyramid methods in image coding is born of the belief that the image pyramid structure is well-matched to the human visual encoding. This sentiment is described nicely in Pavlidis and Tanimoto’s paper, one of the first on the topic (<span class="citation" data-cites="tanimoto1975-hierarchical">Tanimoto and Pavlidis (<a href="references.html#ref-tanimoto1975-hierarchical" role="doc-biblioref">1975</a>)</span>).</p>
+<blockquote class="blockquote">
+<p>It is our contention that the key to efficient picture analysis lies in a system’s ability, first, to find the relevant parts of the picture quickly, and second, to ignore (not waste time with) irrelevant detail. The retina of the human eye is … structured so as to see a wide angle in a low-resolution (“high-level”) way using peripheral vision, while simultaneously allowing high-resolution, detailed perception by the fovea. <span class="citation" data-cites="tanimoto1975-hierarchical">(<a href="references.html#ref-tanimoto1975-hierarchical" role="doc-biblioref">Tanimoto and Pavlidis 1975, p. 104</a>)</span>.</p>
+</blockquote>
+<p>The linear transformations used by pyramid algorithms have image features comprising periodic patterns at a variety of spatial orientations, much like human multiresolution models. Because the coefficients in the image pyramid represent data that fall mainly in separate spatial frequency bands, it is possible to use different numbers of transform coefficients to represent the different spatial frequency bands. Image pyramids use a small number of transform coefficients to represent the low spatial frequency features and many coefficients to represent the high spatial frequency features. It is this feature, namely that decreasing number of coefficients are used to represent high to low spatial frequency features, that invokes the name pyramid.</p>
+<section id="the-pyramid-operations-general-theory" class="level3">
+<h3 class="anchored" data-anchor-id="the-pyramid-operations-general-theory">The Pyramid Operations: General Theory</h3>
+<p>Image pyramid construction relies on two fundamental operations that are approximately inverses of one another. The first operation blurs and samples the input. The second operation interpolates the blurred and sampled image to estimate the original. Both operations are linear. I will describe the pyramid operations on one-dimensional signals to simplify notation; none of the principles change when we apply these methods to two-dimensional images. At the end of this section, I will illustrate how to extend the one-dimensional analysis to two-dimensional images.</p>
+<div id="fig-pyr-op" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pyr-op-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/07_matrixtableaurepresentation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="440">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pyr-op-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.7: A matrix tableau representation of the one-dimensional pyramid operations. (a) The basic pyramid operation consists of blurring and then sampling the signal. The blurring operation is a convolution that can be represented by a square matrix whose rows are a convolution kernel. The sampling operation can be represented by a rectangular matrix, consisting of zeros and ones, that pulls out the sample values from the blurred result. (b) To create a series of images at decreasing resolution, we apply the blurring and sampling operation recursively.
+</figcaption>
+</figure>
+</div>
+<p>Suppose we begin with a one-dimensional input vector, <span class="math inline">\(g_0\)</span>, containing <span class="math inline">\(n\)</span> entries. The first basic pyramid operation consists of convolving the input with a smoothing kernel and then sampling the result. The blurring and sampling go together, intuitively, because the result of blurring is to create a smoother version of the original, containing fewer high frequency components. Since blurring removes high frequency information, according to the sampling theorem we can represent the blurred data using fewer samples than the are needed for the original. We do this by sampling the blurred image at every other value.</p>
+<p>As we have seen in <a href="chapter-3-the-photoreceptor-mosaic.html" class="quarto-xref"><span>Chapter 3</span></a> and <a href="chapter-7-pattern-sensitivity.html" class="quarto-xref"><span>Chapter 7</span></a> (see also the <strong>Appendix</strong>), both convolution and sampling are linear operations. Therefore, we can represent each by a matrix multiplication. We represent convolution by the matrix multiplication <span class="math inline">\(B_0 g_0\)</span>, where the rows of <span class="math inline">\(B_0\)</span> contain the convolution kernel. We represent sampling by a rectangular matrix, <span class="math inline">\(S_0\)</span>, whose entries are all zeroes and ones. The combined operation of blurring and sampling is summarized by the basic pyramid matrix <span class="math inline">\(P_0 = S_0 B_0\)</span>. Multiplication of the input by <span class="math inline">\(P_0\)</span> yields a reduced version of the original, <span class="math inline">\(g_1 = P_0 g_0\)</span>, containing only half as many entries; a matrix tableau representing the blurring and sampling operator, <span class="math inline">\(P_0\)</span>, is shown in <a href="#fig-pyr-op" class="quarto-xref">Figure&nbsp;<span>8.7</span></a> (a).</p>
+<p>To create the image pyramid, we repeat the convolution and sampling on each resulting image. The first operation creates a reduced image from the original, <span class="math inline">\(g_1\)</span>. To create the next level of the pyramid, we blur and sample <span class="math inline">\(g_1\)</span> to create <span class="math inline">\(g_2\)</span>; then, we blur and sample <span class="math inline">\(g_2\)</span> to create <span class="math inline">\(g_3\)</span>, and so forth. When the input is a one-dimensional signal, each successive level contains half as many sample values as the previous level. When the image is two-dimensional, sampling is applied to both the rows and the columns so that the next level of resolution contains only one-quarter as many sample values as the original. This repeated blurring and sampling is shown in matrix tableau in <a href="#fig-pyr-op" class="quarto-xref">Figure&nbsp;<span>8.7</span></a> (b).</p>
+<p>The second basic pyramid operation, interpolation, serves as an inverse to the blurring and sampling operation. Blurring and sampling transforms a vector with <span class="math inline">\(n\)</span> entries to a vector with only <span class="math inline">\(n/2\)</span> entries. While this operation does not have an exact inverse, still, we can use <span class="math inline">\(g_1\)</span> to make an informed guess about <span class="math inline">\(g_0\)</span>. If there is a lot of spatial redundancy in the input signals, our guess about the original image may not be too far off the mark. Interpolation is the process of making an informed guess about the original image from the reduced image. We interpolate by selecting a matrix, call it <span class="math inline">\(E_0\)</span>, to estimate the input. We choose the <em>interpolating</em> matrix <span class="math inline">\(E_0\)</span> so that in general <span class="math inline">\(E_0 g_1 \approx g_0\)</span>.</p>
+<p>We can now put together the two basic pyramid operations into a constructive sequence will use several times in this chapter. First, we transform the input by convolution and sampling, <span class="math inline">\(g_1 = P_0 g_0\)</span>. We then form our best guess about the original using the interpolation matrix, <span class="math inline">\(\hat{g}_{0} = E_0 g_{1} = E_0 P_0 g_{0}\)</span>. The estimate <span class="math inline">\(\hat{g}_{0}\)</span> has the same size as the original image. Finally, to preserve all of the information, we create one final image to save the error. The <em>error</em> is the difference between the true signal and the interpolated signal, <span class="math inline">\(e_{0} = g_0 - \hat{g}_{0}\)</span>. This completes construction of the first level of the pyramid.</p>
+<p>To complete the construction of all levels of the pyramid, we apply the same sequence of operations, but now beginning with first level of the pyramid, <span class="math inline">\(g_1\)</span>. We build a new convolution matrix, <span class="math inline">\(B_1\)</span>; we sample using the matrix, <span class="math inline">\(S_1\)</span>; we build <span class="math inline">\(g_2 = S_1 B_1 g_1\)</span>; we interpolate <span class="math inline">\(g_2\)</span> using a matrix <span class="math inline">\(E_1\)</span>; finally, we form the new error image <span class="math inline">\(g_1 - \hat{g}_{1}\)</span>, where <span class="math inline">\(\hat{g}_{1} = E_1 g_2\)</span>. To construct the entire pyramid we repeat the process, reducing the number of elements at each step. We stop when we decide that the reduced image, <span class="math inline">\(g_n\)</span>, is small enough so that no further blurring and sampling would be useful.</p>
+<p>The pyramid construction procedure defines three sequences of signals; the series of blurred and sampled signals whose size is continually being reduced, the interpolated signals, and the error signals. We can summarize their relationship to one another in a few simple equations. First, the reduced image at the <span class="math inline">\(i^{th}\)</span> level is created by applying the basic pyramid operation to the previous level. <span id="eq-pyramid-reduction1"><span class="math display">\[
+g_i = P_{i - 1} g_{i-1}
+\tag{8.2}\]</span></span></p>
+<p>The estimate of the image <span class="math inline">\(\hat{g}_{i}\)</span> is created from the lower resolution representation by the calculation</p>
+<p><a name="id2554509580"></a></p>
+<p><span id="eq-pyramid-reduction2"><span class="math display">\[
+\hat{g}_{i} = E_{i+1} g_{i+1}
+\tag{8.3}\]</span></span></p>
+<p>Finally, the difference between the original and the estimate is the error image,</p>
+<p><a name="id1061946577"></a> <span id="eq-error-image"><span class="math display">\[
+e_i = g_i - \hat{g}_{i} = g_i - E_i {P_i} g_i
+\tag{8.4}\]</span></span></p>
+<p>Two different sets of these signals preserve the information in the original. One sequence consists of the original input and the sequence of <em>reduced signals</em>, <span class="math inline">\(g_0\)</span>, <span class="math inline">\(g_1\)</span>, <span class="math inline">\(g_2\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(g_n\)</span>. This sequence provides a description of the original signal at lower and lower resolution. It contains all of the data in the original image trivially since the original image is part of the sequence. This image sequence is of interest when we display low resolution versions of the image.</p>
+<p>The second sequence consists of the <em>error signals</em>, <span class="math inline">\(e_0, e_1, \ldots, e_{n-1}, g_n\)</span> (note that <span class="math inline">\(g_n\)</span> is part of this sequence, too). Perhaps surprisingly, this sequence also contains all of the information in the original image. To prove this to yourself, notice that we can build the sequence of images, <span class="math inline">\(g_i\)</span>, from the error signals. The terms <span class="math inline">\(g_n\)</span> and <span class="math inline">\(e_{n-1}\)</span> are sufficient to permit us to construct <span class="math inline">\(g_{n-1}\)</span>; <span class="math inline">\(g_{n-1}\)</span> and <span class="math inline">\(e_{n-2}\)</span> can recover <span class="math inline">\(g_{n-2}\)</span>, and so forth. Ultimately, we use <span class="math inline">\(e_0\)</span> and <span class="math inline">\(g_1\)</span> to reconstruct the original, <span class="math inline">\(g_0\)</span>. This image sequence is of interest for image compression (<span class="citation" data-cites="mallat1989-wavelet">Mallat (<a href="references.html#ref-mallat1989-wavelet" role="doc-biblioref">1989</a>)</span>).</p>
+</section>
+<section id="pyramids-an-example" class="level3">
+<h3 class="anchored" data-anchor-id="pyramids-an-example">Pyramids: An Example</h3>
+<p><a href="#fig-pyramid-1d" class="quarto-xref">Figure&nbsp;<span>8.8</span></a> illustrates the process of constructing a pyramid. The specific calculations used to create this example were suggested by <span class="citation" data-cites="burtadelson1983a-pyramid">Burt and Adelson (<a href="references.html#ref-burtadelson1983a-pyramid" role="doc-biblioref">1983a</a>)</span>, who were perhaps the first to introduce the general notion of an image pyramid to image coding.</p>
+<p>The example in <a href="#fig-pyramid-1d" class="quarto-xref">Figure&nbsp;<span>8.8</span></a> begins with a one-dimensional squarewave input, <span class="math inline">\(g_0\)</span>. This signal is blurred using a Gaussian convolution kernel and then sampled at every other location; the reduced signal, <span class="math inline">\(g_1\)</span>, is shown below. This process is then repeated to form a sequence of reduced signals. When the convolution kernel is a Gaussian function, the sequence of reduced signals is called the <em>Gaussian pyramid</em>.</p>
+<p>To interpolate the reduced signal to a higher resolution, Burt and Adelson proposed the following ad hoc procedure. Place the data in <span class="math inline">\(g_1\)</span> into every other entry of a vector with the same number of entries as <span class="math inline">\(g_0\)</span>. The procedure is called <em>up-sampling</em>; it is equivalent to multiplying the vector <span class="math inline">\(g_i\)</span> by the transpose of the sampling matrix, <span class="math inline">\(S_0^t\)</span>. Then, convolve the up-sampled vector with (nearly) the same Gaussian that was used to reduce the image. The Gaussian used for interpolation differs from the Gaussian used to blur the signals only in that it is multiplied by a factor of <span class="math inline">\(2\)</span> to compensate for the fact that the up-sampled vector only has non-zero values at one out of every two locations. In this important example, then, the interpolation matrix is equal to two times the transpose of the convolution-sampling matrix,</p>
+<p><span class="math display">\[
+E_0 = 2 {B_0}^{t} {S_0}^{t} = 2 {P_0}^{t} .
+\]</span></p>
+<p>The interpolated signal, that is, the estimate of the higher resolution signal, is shown in the middle column of <a href="#fig-pyramid-1d" class="quarto-xref">Figure&nbsp;<span>8.8</span></a>.</p>
+<div id="fig-pyramid-1d" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pyramid-1d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="wp-content/uploads/2012/02/08_oneDimensionalPyramid.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="465">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pyramid-1d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.8: One-dimensional pyramid construction. The input signal (upper left) is convolved with a Gaussian kernel and the result is sampled. This creates a blurred copy of the signal at lower resolution. An estimate of the original is created by interpolating the low resolution signal, and the difference between the original and the estimate is saved in the error pyramid. The process is repeated, beginning with the blurred copy, thus creating series of copies of the original at decreasing resolution (on the left) and a series error images (on the right). The signal at the lowest resolution level is stored as the final element in the error pyramid.
+</figcaption>
+</figure>
+</div>
+<p>Next, we calculate the error signal, the difference between the estimate and the original. The error signals are shown on the right of <a href="#fig-pyramid-1d" class="quarto-xref">Figure&nbsp;<span>8.8</span></a>. The sequence of error signals forms the error pyramid. As I described above, we can reconstruct the original <span class="math inline">\(g_0\)</span> without error from the signals <span class="math inline">\(e_0\)</span> and <span class="math inline">\(g_1\)</span>. Burt and Adelson called the error signals created by the combination of Gaussian blurring and interpolation functions the <em>Laplacian pyramid</em>.</p>
+<div id="fig-pyramid-2d" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pyramid-2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/09_theGaussianAndLaplacian1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="451">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pyramid-2d-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.9: The Gaussian and Laplacian image pyramids. (a) The series of reduced images that form the Gaussian image pyramid begins with the original image, on the left. This image is blurred by a Gaussian convolution kernel and then sampled to form the image at a lower spatial resolution and size. (b) Each reduced image in the Gaussian pyramid can be used to estimate the image at a higher spatial resolution and size. The difference between the estimate the higher resolution image forms an error image, which in the case of Gaussian filtering is called the Laplacian pyramid. These error images can have positive or negative values, so I have shown them as contrast images in which gray represents zero error, while white and black represent positive and negative error respectively. (After <span class="citation" data-cites="burtadelson1983a-pyramid">Burt and Adelson (<a href="references.html#ref-burtadelson1983a-pyramid" role="doc-biblioref">1983a</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-pyramid-2d" class="quarto-xref">Figure&nbsp;<span>8.9</span></a> (a) shows the result of applying the pyramid process to a two-dimensional signal, in this case an image. The sequence of reduced images forming the Gaussian pyramid is shown on the top, with the original image on the left. These images were created by blurring the original and then representing the new data at one half the sampling rate for both the rows and the columns. Thus, in the two-dimensional case each reduced image contains only one-quarter the number of coefficients as its predecessor<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
+<p>The sequence of error images forming the Laplacian pyramid is shown in <a href="#fig-pyramid-2d" class="quarto-xref">Figure&nbsp;<span>8.9</span></a> (b). Because the interpolation routine uses a smooth Gaussian function to interpolate the lower resolution images, the large errors tend to occur near the edges in the image. And, because the images are mainly smooth (adjacent pixel intensities are correlated) most of the errors are small<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</p>
+</section>
+<section id="image-compression-using-the-error-pyramid" class="level3">
+<h3 class="anchored" data-anchor-id="image-compression-using-the-error-pyramid">Image Compression Using the Error Pyramid</h3>
+<p>From the point of view of image compression, the sequence of images in the Gaussian pyramid is not very interesting because that sequence contains the original. Rather than the use the entire sequence, we might as well just code the original. The sequence of images in the Laplacian pyramid, however, is interesting for two reasons.</p>
+<p>First, the information represented in the Laplacian pyramid varies systematically as we descend in resolution. At the highest levels, containing the most transform coefficients, the Laplacian pyramid represents the fine spatial detail in the image. At the lowest levels, containing the fewest transform coefficients, the Laplacian pyramid represents low spatial resolution information. Intuitively, this is so because the error image is the difference between the original, which contains all of the fine detail, and an estimate of the original based on a slightly blurred copy. The difference between the original and an estimate from a blurred copy represents image information in the resolution band between the two levels. Thus, the Laplacian pyramid is a multiresolution representation of the original image.</p>
+<p>Second, the values of the transform coefficients in the error images are distributed over a much smaller range than the pixel intensities in the original image. <a href="#fig-gaus-lap-pyr" class="quarto-xref">Figure&nbsp;<span>8.10</span></a> (a) shows intensity histograms of pixels in the first three elements of the Gaussian pyramid. These intensity histograms are broad and not well-suited to the compression methods we reviewed earlier in this chapter. <a href="#fig-gaus-lap-pyr" class="quarto-xref">Figure&nbsp;<span>8.10</span></a> (b) shows histograms of the pixel intensities in the Laplacian pyramid. The transform coefficients tend to cluster near zero and thus they can be represented very efficiently. The reduced range of transform coefficient values in the Laplacian pyramid arises because of the spatial correlation in natural images. The spatial correlation permits us to do fairly well in approximating images using smooth interpolation. When the approximations are close, the errors are small, and they can be coded efficiently.</p>
+<div id="fig-gaus-lap-pyr" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gaus-lap-pyr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/10_histogramsOfTheGaussian.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="520">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gaus-lap-pyr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.10: Histograms of the Gaussian and Laplacian pyramids. (a) The separate panels show the intensity histograms at each level of the Gaussian pyramid. The intensities are distributed across a wide range of values, making the intensities difficult to code efficiently. (b) The Laplacian pyramid coefficients are distributed over a modest range near zero and can be coded efficiently.
+</figcaption>
+</figure>
+</div>
+<p>There is one obvious problem with using the images in the Laplacian pyramid as an efficient image representation: there are more coefficients in the error pyramid than pixels in the original image. When building an error pyramid from two-dimensional images, for example, we sample every other row and every other column. This forms a sequence of error images equal to <span class="math inline">\(1\)</span>, <span class="math inline">\(1/4\)</span>, <span class="math inline">\(1/{16}\)</span> the size of the original; hence, the error pyramid contain 1.33 times as many coefficients as the original (see <a href="#fig-pyramid-2d" class="quarto-xref">Figure&nbsp;<span>8.9</span></a>). Because of the excess of coefficients, the error image representation is called <em>overcomplete</em>. If one is interested in image compression, overcomplete representations seem to be a step in the wrong direction.</p>
+<p><span class="citation" data-cites="burtadelson1983a-pyramid">Burt and Adelson (<a href="references.html#ref-burtadelson1983a-pyramid" role="doc-biblioref">1983a</a>)</span> point out, however, that there is an important fact pertaining to human vision that reduces the significance of the overcompleteness: The vast majority of the the transform coefficients represent information in the highest spatial frequency bands where people have poor visual resolution. Therefore, we can quantize these elements very severely without much loss in image quality. Quantization is the key step in image compression, so that having most of the transform coefficients represent information that can be heavily quantized is an advantage.</p>
+<p>The ability to quantize severely many of the transform coefficients with little perceptual loss, coupled with the reduced variance of the transform coefficients, make the Laplacian pyramid representation practical for image compression. Computing the pyramid can be more complex than the DCT, depending on the block size, but special purpose hardware has been created for doing the computation efficiently. The pyramid representation performs about as well or slightly better the JPEG computation based on the DCT. It is also applicable to other visual applications, as we will discuss later (<span class="citation" data-cites="burt1988-smartsensing">Burt (<a href="references.html#ref-burt1988-smartsensing" role="doc-biblioref">1988</a>)</span>).</p>
+</section>
+</section>
+<section id="sec-qmfs" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="sec-qmfs"><span class="header-section-number">8.5</span> QMFs and Orthogonal Wavelets</h2>
+<p>Pyramid representations using a Gaussian convolution kernel have many useful features; but, they also have several imperfections. By examining the problematic features of Gaussian and Laplacian pyramids, we will see the rationale for using a different convolution kernel, {\em quadrature mirror filters} (QMFs), in creating image pyramids. The first inelegant feature of the Gaussian and Laplacian pyramids is an inconsistency in the blurring and sampling operation. Suppose we had begun our analysis with the estimated image, <span class="math inline">\({{\hat{g}_{0}}}\)</span>, rather than <span class="math inline">\({{g_0}}\)</span>. From the pyramid construction point of view, the estimate should be equivalent to the original image. It seems reasonable to expect, therefore, that the reduced image derived from <span class="math inline">\({{\hat{g}_{0}}}\)</span> should be the same as the reduced image derived from <span class="math inline">\({{g_0}}\)</span>. We can express this condition as an equation,</p>
+<p><span id="eq-sec6"><span class="math display">\[
+g_1 = P_0 (2 {P_0}^t) g_1 = P_0 \hat{g}_{0}
+\tag{8.5}\]</span></span></p>
+<p><a href="#eq-sec6" class="quarto-xref">Equation&nbsp;<span>8.5</span></a> implies that the square matrix <span class="math inline">\({{P_0}( 2 {P_0}^t)}\)</span> must be the identity matrix. This implies that the columns of the matrix, <span class="math inline">\(P_0\)</span>, should be <em>orthogonal</em> to one another<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. This is not a property of the Gaussian and Laplacian pyramid.</p>
+<p>A second inelegant feature of the Gaussian and Laplacian pyramid is that the representation is overcomplete, i.e., there are more transform coefficients than there are pixels in the original image. The increase in the transform coefficients can be traced to the fact that we represent an image <span class="math inline">\(g_i\)</span> with <span class="math inline">\(N_i\)</span> pixels by a reduced signal and an error signal that contain more than <span class="math inline">\(N_i\)</span> coefficients. For example, we represent the information in the <span class="math inline">\(i^{th}\)</span> level of the pyramid using the reduced image <span class="math inline">\(g_{i+1}\)</span> and the error image <span class="math inline">\(e_i\)</span>.</p>
+<p><span id="eq-pyramid-reconstruction"><span class="math display">\[
+g_i = (2 {P_i}^t) g_{i+1} + e_i
+\tag{8.6}\]</span></span></p>
+<p>In the one-dimensional case, the error image, <span class="math inline">\(e_i\)</span>, contains <span class="math inline">\(N_{i}\)</span> transform coefficients. The reduced signal, <span class="math inline">\(g_{i+1}\)</span>, contains <span class="math inline">\({N_i} / 2\)</span> coefficients. To create an efficient representation, we must represent <span class="math inline">\(g_i\)</span> using <span class="math inline">\(N_i\)</span> transform coefficients, not <span class="math inline">\(1.5 N_i\)</span> coefficients as in the Gaussian pyramid.</p>
+<p>The error signal and the interpolated signal are intended to code different components of the original input; the interpolated vector <span class="math inline">\(\hat{g}_{i} = (2 {P_i}^t) g_{i+1}\)</span> codes a low resolution version of the original, and <span class="math inline">\(e_i\)</span> codes the higher frequency terms left out by the low resolution version. To improve the efficiency of the representation, we might require that the two terms code completely different types of information about the input. One way to interpret the phrase “completely different” is to require that the two vectors be orthogonal, that is,</p>
+<p><span id="eq-orthogonality"><span class="math display">\[
+0 = {e_i}^t \hat{g}_{i}
+\tag{8.7}\]</span></span></p>
+<p>If we require that <span class="math inline">\(\hat{g}_{i}\)</span> and <span class="math inline">\(e_i\)</span> to be orthogonal, we can obtain significant efficiencies in our representation. By definition, we know that the interpolated image <span class="math inline">\(\hat{g}_{i}\)</span> is the weighted sum of the columns of <span class="math inline">\({P_i}^t\)</span>. If we the error <span class="math inline">\(e_i\)</span> image is orthogonal to the interpolated image, then the error image must be the weighted sum of a set of column vectors that are all orthogonal to the columns of <span class="math inline">\({P_i}^t\)</span>. In the (one-dimensional) Gaussian pyramid construction, <span class="math inline">\({P_i}^t\)</span> has <span class="math inline">\(N_i / 2\)</span> columns. From basic linear algebra, we know that there are <span class="math inline">\((1 / 2) N_i\)</span> vectors perpendicular to the columns of <span class="math inline">\({P_i}^t\)</span>. Hence, if <span class="math inline">\(\hat{g}_{i}\)</span> is orthogonal to <span class="math inline">\(e_i\)</span>, we can describe both of these images using only <span class="math inline">\(N_i\)</span> transform coefficients, and the representation will no longer overcomplete.</p>
+<p>But, what conditions must be met to insure that <span class="math inline">\(e_i\)</span> and <span class="math inline">\(\hat{g}_{i}\)</span> are orthogonal? By substituting <a href="#eq-pyramid-reduction1" class="quarto-xref">Equation&nbsp;<span>8.2</span></a>, <a href="#eq-pyramid-reduction2" class="quarto-xref">Equation&nbsp;<span>8.3</span></a>, <a href="#eq-error-image" class="quarto-xref">Equation&nbsp;<span>8.4</span></a> into <a href="#eq-orthogonality" class="quarto-xref">Equation&nbsp;<span>8.7</span></a> we have</p>
+<p><span id="eq-8"><span class="math display">\[
+\begin{aligned}
+0 &amp;= {e_i}^t \hat{g}_{i} \\
+&amp;= ( g_i^t (2 {P_i}^t) P_i ) ( (2 {P_i}^t) P_i g_i - g_i) \\
+&amp;= [ g_i^t (2 {P_i}^t) ( P_i (2 {P_i}^t) ) P_i g_i ] - [ g_i^t (2 {P_i}^t) P_i g_i ] .
+\end{aligned}
+\tag{8.8}\]</span></span></p>
+<p>If the rows of <span class="math inline">\(P_i\)</span> are an orthogonal set, then by appropriate scaling we can arrange it so that <span class="math inline">\({P_i} (2 {P_i}^t)\)</span> is equal to the identity matrix. In that case, the final term in <a href="#eq-8" class="quarto-xref">Equation&nbsp;<span>8.8</span></a> simplifies and we have <span id="eq-9"><span class="math display">\[
+\hat{g}_{i} = [ {g_i}^t (2 {P_i}^t) P_i g_i ] - [ {g_i}^t (2 {P_i}^t) P_i g_i ] = 0
+\tag{8.9}\]</span></span></p>
+<p>thus guaranteeing that the error signal and the interpolated estimate will be orthogonal to one another. For the second time, then, we find that the orthogonality of the rows of the pyramid matrix is a useful property.</p>
+<p>We can summarize where we stand as follows. The basic pyramid operation has several desirable features. The rows within each level of the pyramid matrices are shifted copies of one another, simplifying the calculation to nearly a convolution; the pyramid operation represents information at different resolutions, paralleling human multiresolution representations; the rows of the pyramid matrices are localized in space, as are receptive fields, yet they are not sharply localized as the blocks used in the JPEG-DCT algorithm. Finally, from our criticisms of the error pyramid, we have added a new property we would like to have: The rows of each pyramid matrix should be an orthogonal set.</p>
+<p>We have accumulated an extensive set of properties we would like the pyramid matrices, <span class="math inline">\(P_i\)</span>, to satisfy. Now, one can have a wish list, but there is no guarantee that there exist any functions that satisfy all our requirements. The most difficult pair of constraints to satisfy is the combination of orthogonality and localization. For example, if we look at convolution operators alone, there are no convolutions that are simultaneously orthogonal and localized in space.</p>
+<p>Interestingly there exists a class of discrete-valued functions, called <em>quadrature mirror filters</em>, that satisfy all of the properties on our wish list (<span class="citation" data-cites="esteban1977">Esteban and Galand (<a href="references.html#ref-esteban1977" role="doc-biblioref">1977</a>)</span>; <span class="citation" data-cites="simoncelli1990">Simoncelli and Adelson (<a href="references.html#ref-simoncelli1990" role="doc-biblioref">1990</a>)</span>; <span class="citation" data-cites="vetterli1986-filterbanks">Vetterli (<a href="references.html#ref-vetterli1986-filterbanks" role="doc-biblioref">1986</a>)</span>). The quadrature mirror filter pair splits the input signal into two orthogonal components. One of the filters defines a convolution kernel that we use to blur the original image and obtain the reduced image. The second filter is orthogonal to the first and can be used to calculate an efficient representation of the error signal. Hence, the quadrature mirror filter pair splits the original signal into coefficients that define of the two orthogonal terms, <span class="math inline">\(\hat{g}_{i}\)</span> and <span class="math inline">\(e_i\)</span>; Each set of coefficients has only <span class="math inline">\(n/2\)</span> terms, so the new representation is an efficient pyramid representation. <a href="#fig-quad-mirror" class="quarto-xref">Figure&nbsp;<span>8.11</span></a> shows an example of a pair of quadrature mirror filters. The function shown in <a href="#fig-quad-mirror" class="quarto-xref">Figure&nbsp;<span>8.11</span></a> (a) is the convolution kernel that is used to create the reduced images, <span class="math inline">\(g_i\)</span>. The function in <a href="#fig-quad-mirror" class="quarto-xref">Figure&nbsp;<span>8.11</span></a> (b) is the convolution kernel needed to calculate the transform coefficients in the error pyramid directly. When the theory of these filters is developed for continuous, rather than discrete, functions the convolution kernels are called <em>orthogonal wavelets</em> (<span class="citation" data-cites="daubechies1990">Daubechies (<a href="references.html#ref-daubechies1990" role="doc-biblioref">1990</a>)</span>).</p>
+<div id="fig-quad-mirror" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quad-mirror-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/11_aQuadtratureMirror.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quad-mirror-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.11: A quadrature mirror filter pair. One can use these two functions as convolution kernels to construct a pyramid. Convolution with the kernel in (a) followed by sampling produces the transform coefficients in the set of reduced signals. Transformation by the kernel in (b) followed by sampling yields the transform coefficients of the error pyramid (Source: <span class="citation" data-cites="simoncelli1988">Simoncelli (<a href="references.html#ref-simoncelli1988" role="doc-biblioref">1988</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>The discovery of quadrature mirror filters and wavelets was a bit of a surprise. It is known that there are no nontrivial convolution kernels that are orthogonal; i.e., no convolution matrix, <span class="math inline">\(B_i\)</span>, satisfies the property that <span class="math inline">\(B_i B_i^t = I\)</span>. Hence it was surprising to discover that convolution kernels do exist for the pyramid operation, which relies so heavily on convolution, can satisfy <span class="math inline">\(P_i {P_i}^t = I\)</span>.</p>
+<p>The quadrature mirror filter and orthogonal wavelet representations have many fascinating properties and are an interesting area of mathematical study. They may have significant implications for compression because they remove the problem of having an overcomplete representation. But, it is not obvious that once quantization and correlation are accounted for that the savings in the number of coefficients will prove to be significant. For now, the design and evaluation of quadrature mirror filters remains an active area of research in pyramid coding of image data.</p>
+</section>
+<section id="applications-of-multiresolution-representations" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="applications-of-multiresolution-representations"><span class="header-section-number">8.6</span> Applications of multiresolution representations</h2>
+<p>The statistical properties of natural images make multiresolution representations efficient. Were efficiency a primary concern, the visual pathways might well have evolved to use the multiresolution format. But, there is no compelling reason to think that the human visual system, with hundreds of millions of cortical neurons available to code the outputs of tens of thousands of cone photoreceptors, was subject to very strong evolutionary pressure to achieve efficient image representations. Understanding the neural multiresolution representation may be helpful when we design image compression algorithms; but, it is unlikely that neural multiresolution representations arose to serve the goal of image compression alone.</p>
+<p>If multiresolution representations are present in the visual pathways, what other purpose might they serve? In this section, I will speculate about how multiresolution representations may be a helpful component of several visual algorithms. \comment{It is possible to create a multiresolution version of almost any algorithm, but there are few examples in which the multiresolution representation is essential.}</p>
+<section id="image-blending" class="level3">
+<h3 class="anchored" data-anchor-id="image-blending">Image Blending</h3>
+<p>Imagine blending refers to methods for smoothly connecting several adjacent or overlapping images of a scene into a larger photomosaic (<span class="citation" data-cites="milgram1975">Milgram (<a href="references.html#ref-milgram1975" role="doc-biblioref">1975</a>)</span>; <span class="citation" data-cites="carlbom1994-computerassisted">Carlbom et al. (<a href="references.html#ref-carlbom1994-computerassisted" role="doc-biblioref">1994</a>)</span>). There are several different reasons why we might study the problem of joining together several pieces of an image. For example, in practical imaging applications we may find that a camera’s field of view may be too small to capture the entire region of interest. In this case we would like to blend several overlapping pictures to form a complete image.</p>
+<p>The human visual system also needs to blend images. As we saw in the early chapters of this volume, spatial acuity is very uneven across the retina. Our best visual acuity is in the fovea, and primate visual systems rely heavily on eye-movements to obtain multiple images of the scene. To form a good high acuity representation of more than the central few degrees, we must gather images from a sequence of overlapping eye fixations. How can the overlapping images acquired through a series of eye movements be joined together into the single, high resolution representation that we perceive?</p>
+<p><span class="citation" data-cites="burtadelson1983b-mosaics">Burt and Adelson (<a href="references.html#ref-burtadelson1983b-mosaics" role="doc-biblioref">1983b</a>)</span> showed that multiresolution image representations offer a useful framework for blending images together. They describe some fun examples based on the pyramid representation.</p>
+<p>We can see some of the advantages of a multiresolution image blending by comparing the method with a single resolution blend. So, let’s begin by defining a simple method of joining the two pictures, based on a single resolution representation. Suppose we decide to join a picture on the left <span class="math inline">\(L(x,y)\)</span> and a picture on the right <span class="math inline">\(R(x,y)\)</span>. We will blend the images by mixing their intensity values near the border where the join. A formal rule for to blend the image data must specify how to combine the data from the two images. We do this using a blending function, call it <span class="math inline">\(b(x,y)\)</span>, whose values vary between <span class="math inline">\(0\)</span> and <span class="math inline">\(1.0\)</span>. To construct our single-resolution blending algorithm we form a mixture image from the weighted average</p>
+<p><span id="eq-blend-single-res"><span class="math display">\[
+M(x,y) = b(x,y) L(x,y) + ( 1 - b(x,y)) R(x,y) .
+\tag{8.10}\]</span></span></p>
+<p>Consider the performance of this type of single resolution blend on an a pair of simulated astronomical images in <a href="#fig-astro-res" class="quarto-xref">Figure&nbsp;<span>8.12</span></a>. Each of these images contain <span class="math inline">\(512\)</span> rows and columns. The two images were built to simulate the appearance of a starry sky. The images contain three distortions to illustrate some of the advantages of multiresolution methods for blending images.</p>
+<p>First, the images contain two kinds of objects (stars and clouds) whose spatial structure places them in rather different spatial frequency bands. Second, the images have different mean levels (the image on the top right being dimmer than the one on the top left). Third, the images are slightly shifted in the vertical direction as if there was some small jitter in the camera position at the time of acquiring the pictures.</p>
+<div id="fig-astro-res" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-astro-res-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/12_comparisonOfSingleRes.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-astro-res-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.12: A comparison of single-resolution and multiresolution image blending methods. The images in (a) and (b) have a slightly different mean and are translated vertically. Abutting the right and left halves of the images is shown in (c). Spatial averaging over a small distance across the image boundary is shown in (d). Spatial averaging over a large distance across the image boundary is shown in (e). The multiresolution blend from Burt and Adelson is shown in (f). (Source: <span class="citation" data-cites="burtadelson1983b-mosaics">Burt and Adelson (<a href="references.html#ref-burtadelson1983b-mosaics" role="doc-biblioref">1983b</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>Because the images are divided along a vertical line, we need to concern ourselves only with the variation with <span class="math inline">\(x\)</span> and join the images the same way across each row.</p>
+<p>The most trivial, and rather ineffective, way of joining the two images is shown in panel (c). In this case the two images are simply divided in half and joined at the dividing line. Simply abutting the two images is equivalent to choosing a function <span class="math inline">\(s(x,y)\)</span> equal to</p>
+<p><span id="eq-blend-step"><span class="math display">\[
+b(x,y) = \left \{ \begin{array}{ll}
+1 &amp; \text{if } x &lt; m \\
+0 &amp; \text{otherwise}
+\end{array} \right.
+\tag{8.11}\]</span></span></p>
+<p>where <span class="math inline">\(m\)</span> is the midpoint of the image, <span class="math inline">\(256\)</span> in this case. This smoothing function leads to a strong artifact at the midpoint because of the difference in mean gray level.</p>
+<p>We might use a less drastic blending function for <span class="math inline">\(b(x,y)\)</span>. For example, we might choose as function that varied as a linear ramp over some central width of the image.</p>
+<p><a name="id3260796847"></a></p>
+<p><span class="ql-right-eqno"> (13) </span><span class="ql-left-eqno"> </span> <span id="eq-blend-ramp"><span class="math display">\[
+b(x,y) = \left \{ \begin{array}{ll}
+1 &amp; \text{if } x &lt; m - w \\
+1 - \frac{x - m - w }{2w} &amp; \text{if } m - w \leq x \leq m + w \\
+0 &amp; \text{otherwise}
+\end{array} \right \}.
+\tag{8.12}\]</span></span></p>
+<p>Using a ramp to join the images blurs the image at the edge, as illustrated in panels (d) and (e) of <a href="#fig-astro-res" class="quarto-xref">Figure&nbsp;<span>8.12</span></a>. In panel (d) the width parameter of the linear ramp, <span class="math inline">\(w\)</span>, is fairly small. When the width is small the edge artifact remains visible. As the width is broadened, the edge artifact is removed (panel (e)) and elements from both images contribute to the image in the central region. At this point the vertical shift between the two images becomes apparent. If you look carefully in the central region, you will see double stars shifted vertically one above the other. Image details that are much smaller than the width of the ramp appear in the blended image and they appear at their shifted locations. The stars are small compared to the width of the linear ramp, so the blended image contains the an artifact due to the shift in the image details.</p>
+<p>Multiresolution representations provide a natural, way for combining the two images that avoid some of these artifacts. We can state the multiresolution blending method as an algorithm.</p>
+<ol type="1">
+<li>Form the pyramid of error images for <span class="math inline">\(L\)</span> and <span class="math inline">\(R\)</span>.</li>
+<li>Within each level of the pyramid, average the error images with a blend function <span class="math inline">\(b(x,y)\)</span>. A simple ramp function, as in <a href="#eq-blend-ramp" class="quarto-xref">Equation&nbsp;<span>8.12</span></a> with <span class="math inline">\(w = 1\)</span>, will do as the blend function.</li>
+<li>Compute the new image by reconstructing the image from the blended pyramid of error images.</li>
+</ol>
+<p>The image in panel (f) of <a href="#fig-astro-res" class="quarto-xref">Figure&nbsp;<span>8.12</span></a> contains the results of applying the multiresolution blend to the images. The multiresolution algorithm avoids the previous artifacts because by averaging the two error pyramids, two images combine over different spatial regions in each of the resolution bands. Data from the low resolution level is combined over a wide spatial region of the image, while data from the high resolution levels are combined over a narrow spatial region of the image.</p>
+<p>By combining low frequency information over large spatial regions, we remove the edge artifact. By combining high frequency information over narrow spatial regions, we reduce the artifactual doubling of the star images to a much narrower spatial region.</p>
+<p><span class="citation" data-cites="burtadelson1983b-mosaics">Burt and Adelson (<a href="references.html#ref-burtadelson1983b-mosaics" role="doc-biblioref">1983b</a>)</span> also describe a method of blending images with different shapes. <a href="#fig-blend-res" class="quarto-xref">Figure&nbsp;<span>8.13</span></a> illustrates one of their amusing images. They combined the woman’s eye taken from panel (a) and the hand, taken from panel (b) into a single image shown in panel (d). The method for combining images with different shapes is quite similar to the algorithm I described above. Again, we begin by forming the error images <span class="math inline">\(e_i\)</span> for each of the two images. For the complex region, however, we must a method to define a blend function <span class="math inline">\(s_i (x,y)\)</span>, appropriate for combining the data at each resolution of the pyramid over these different shapes. Burt and Adelson have a nifty solution to this problem. Build an overlay image that defines the location where second image is to be placed over the first, as in panel (c) of <a href="#fig-blend-res" class="quarto-xref">Figure&nbsp;<span>8.13</span></a>. Build the sequence of pyramid of reduced images, <span class="math inline">\(g_i\)</span>, corresponding to the overlay image. Use the elements of the image sequence <span class="math inline">\(g_i\)</span> to define the blend functions for combining the images at resolution <span class="math inline">\(e_i\)</span>.</p>
+<div id="fig-blend-res" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-blend-res-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/13_imageBlendingOfRegions.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-blend-res-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.13: Image blending of regions with arbitrary shape. To create a multiresolution blend of the images of the eye and hand, we must define a blending function for each level of the pyramid. The blending function can be created by building the Gaussian pyramid representation of the region where the image of the eye will be inserted. The different levels of the Gaussian pyramid can be used as the blending functions to combine the error pyramids of the two images (Source: <span class="citation" data-cites="burtadelson1983b-mosaics">Burt and Adelson (<a href="references.html#ref-burtadelson1983b-mosaics" role="doc-biblioref">1983b</a>)</span>).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="progressive-image-transmission" class="level3">
+<h3 class="anchored" data-anchor-id="progressive-image-transmission">Progressive Image Transmission</h3>
+<p>For many devices, transmitting an image from its stored representation to the viewer can take a noticeable amount of time. And, in some of these cases, transmission delays may hamper our ability to perform the task. Suppose we are scanning through a database for suitable pictures to use in a drawing, or we are checking a directory to find the name of the person who recently waved hello. We may have to look through many pictures before finding a suitable one. If there is a considerable delay before we see each picture, the tasks become onerous; people just won’t do them.</p>
+<p>Multiresolution image representations are natural candidates to improve the rate of image transmission and display. The reconstruction of an image from its multi-resolution image proceeds through several stages. The representation stores the error images <span class="math inline">\(e_i\)</span> and the lowest reduced image <span class="math inline">\(g_n\)</span>. We reconstruct the original by computing a set of reduced images, <span class="math inline">\(g_i\)</span>. These reduced images are rough approximations of the original, at reduced resolution. They are represented by fewer bits than the original image, so they can be transmitted and displayed much more quickly. We can make these low resolution images available for the observer to see during the reconstruction process. If the observer is convinced that this image is not worth any more time, then he or she can abort the reconstruction and go on to the next image. This offers the observer a way to save considerable time.</p>
+<p>We can expand on this use of multiresolution representations by allowing the observer to request a low resolution reconstruction, say at level <span class="math inline">\(g_i\)</span>, rather than a full representation at level <span class="math inline">\(g_0\)</span>. The observer can choose a few of the low resolutions for viewing at high resolution. Multiresolution representations are efficient because there is little wasted computation. The pyramid reconstruction method permits us to use the work invested in reconstructing the low resolution image as we to reconstruct the original at full resolution.</p>
+<p>Th engineering issues that arise in progressive image transmission may be relevant to the internal workings of the human visual system. When we call up an image from memory, or sort through a list of recalled images, we may wish to image low resolution images rather than reconstruct each image in great detail. If the images are stored using a multi-resolution format, our ability to search efficiently through our memory for images may be enhanced.</p>
+</section>
+<section id="threshold-and-recognition" class="level3">
+<h3 class="anchored" data-anchor-id="threshold-and-recognition">Threshold and Recognition</h3>
+<p>Image compression methods link <em>visual sensitivity</em> measurements to an engineering application. This makes sense because threshold sensitivity plays a role in image compression; perceptually lossless compression methods, by definition, tolerate threshold level differences between the reconstructed image and the original.</p>
+<p>For the applications apart from compression, however, sensitivity is not the key psychological measure. Since low resolution images do not look the same as the high resolution images, sensitivity to differences is not the key behavioral measure. To understand when progressive image transmissions methods work well, or which low resolution version is the best approximation to a high resolution version of an image, we need to be informed about which multiresolution representations permit people to {\em recognize} quickly or {\em search} for an item in a large collection of low resolution images quickly. Just as the design of multiresolution image compression methods requires knowing visual sensitivity to different spatial frequency bands, so too multiresolution methods for progressive image transmission requires knowing how important different resolution bands will be for expressing the information in an image.</p>
+<p>As we study these applications, we will learn about new properties of human vision. To emphasize some of the interesting properties that can arise, I will end this section by reviewing a perceptual study by <span class="citation" data-cites="bruner-potter1964">Bruner and Potter (<a href="references.html#ref-bruner-potter1964" role="doc-biblioref">1964</a>)</span>. This study illustrates some of the counter-intuitive properties we may discover as we move from threshold to recognition studies.</p>
+<p><span class="citation" data-cites="bruner-potter1964">Bruner and Potter (<a href="references.html#ref-bruner-potter1964" role="doc-biblioref">1964</a>)</span> studied subjects ability to recognize common objects from low resolution images. Their subjects were shown objects using slides projected onto a screen. In 1964 low resolution images were created much more quickly and easily than today; rather than requiring expensive computers and digital framebuffers low resolution images were created by blurring the focus knob on the projector.</p>
+<p>Bruner and Potter compared subjects’ ability to recognize images in a few ways. I want to abstract from their results two key observations<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>.</p>
+<p><a href="#fig-bruner-potter" class="quarto-xref">Figure&nbsp;<span>8.14</span></a> illustrates three different measurement conditions. Observers in one group saw the image develop from very blurry to only fairly blurry over a two minute period. At the end of this period the subjects were asked to identify the object in the image. They were correct on about a quarter of the images. Observers in a second group only began viewing the image after after 87 seconds. They first saw the image at a somewhat higher resolution, but then they could watch the image develop for only about a half minute. The difference between the second group and the first group, therefore, was whether they saw the image in a very blurry state, during the first 90 seconds. The second group of observers performed substantially better, recognizing the object <code>r 44</code> percent of the time rather than <code>r 25</code> percent. Surprisingly, the initial 90 seconds of viewing the image come into focus made the recognition task more difficult. A third group was also run. This group only saw the image come into focus during the last 13 seconds. The third group did not see the first 107 seconds as the image came into focus. This group also recognized the images correctly about <code>r 43</code> percent of the time.</p>
+<div id="fig-bruner-potter" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bruner-potter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./wp-content/uploads/2012/02/14_theExperimentalViewingConditions.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bruner-potter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.14: The experimental viewing conditions used by Bruner and Potter in their recognition experiment. One group saw the picture come into slowly and continuously over a period of 122 seconds. A second group saw nothing for 87 seconds and then watched the remainder of the image come into focus. The final group only saw the image 109 seconds. Surprisingly, the group that watched the image come into focus for the full 122 seconds had the lowest recognition rate (Source: <span class="citation" data-cites="bruner-potter1964">Bruner and Potter (<a href="references.html#ref-bruner-potter1964" role="doc-biblioref">1964</a>)</span>).
+</figcaption>
+</figure>
+</div>
+<p>Seeing these images come into focus slowly made it harder for the observers to recognize the image contents. Observers who saw the images come into focus over a long period of time formulated hypotheses as to the image contents. These hypotheses were often wrong and ultimately interfered with their recognition judgments.</p>
+<p>Bruner and Potter illustrated the same phenomenon a different way. They showed one group of observers the image sequence coming into focus and a second group the same image sequence going out of focus. These are the same set of images, shown for the same amount of time. The difference between the stimuli is the time-reversal. Subjects who saw the images come into focus recognized the object correctly <span class="math inline">\(44\%\)</span> of the time. Subjects who saw the image going out of focus recognized the object correctly <span class="math inline">\(76\%\)</span> of the time. Seeing a low resolution version of an image can interfere with our subsequent ability to recognize the contents of an image.</p>
+<p>Now, don’t draw too strong a conclusion from this study about the problems progressive image enhancement will create. There are a number of features of this particular experiment which make the data quite unlike applications we might plan for progressive image transmission. Most importantly, in this study subjects never saw very clear images. At the best focus, only half of the subjects recognized the pictures at all. Also, the durations over which the images developed were quite slow, lasting minutes. These conditions are sufficiently unlike most planned applications of progressive image transmission that we cannot be certain the results will apply. I mention the result here to emphasize that even after the algorithms are in place, human testing will remain an important element of the system design.</p>
+
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-bruner-potter1964" class="csl-entry" role="listitem">
+Bruner JS, Potter MC (1964) Interference in visual recognition. Science 144:424–425
+</div>
+<div id="ref-burt1988-smartsensing" class="csl-entry" role="listitem">
+Burt PJ (1988) Smart sensing within a pyramid vision machine. Proc IEEE Inst Electr Electron Eng 76:1006–1015
+</div>
+<div id="ref-burtadelson1983b-mosaics" class="csl-entry" role="listitem">
+Burt PJ, Adelson EH (1983b) A multiresolution spline with application to image mosaics. ACM Trans Graph 2:217–236
+</div>
+<div id="ref-burtadelson1983a-pyramid" class="csl-entry" role="listitem">
+Burt PJ, Adelson EH (1983a) The laplacian pyramid as a compact image code. Inst Electrical Electronics Engrs Trans on Communications 31:532–540
+</div>
+<div id="ref-carlbom1994-computerassisted" class="csl-entry" role="listitem">
+Carlbom I, Terzopoulos D, Harris KM (1994) Computer-assisted registration, segmentation, and <span>3D</span> reconstruction from images of neuronal tissue sections. IEEE Trans Med Imaging 13:351–362
+</div>
+<div id="ref-daubechies1990" class="csl-entry" role="listitem">
+Daubechies I (1990) The wavelet transform, time-frequency localization and signal analysis. IEEE Transactions on Information Theory 36:961–1005. <a href="https://doi.org/10.1109/18.57199">https://doi.org/10.1109/18.57199</a>
+</div>
+<div id="ref-esteban1977" class="csl-entry" role="listitem">
+Esteban D, Galand C (1977) <a href="https://doi.org/10.1109/ICASSP.1977.1170341">Application of quadrature mirror filters to split band voice coding schemes</a>. In: ICASSP ’77. IEEE international conference on acoustics, speech, and signal processing. pp 191–195
+</div>
+<div id="ref-kersten1987" class="csl-entry" role="listitem">
+Kersten D (1987) Predictability and redundancy of natural images. J Opt Soc Am A 4:2395–2400
+</div>
+<div id="ref-mallat1989-wavelet" class="csl-entry" role="listitem">
+Mallat SG (1989) A theory for multiresolution signal decomposition: <span class="nocase">the</span> wavelet representation. IEEE Trans Pattern Anal Mach Intell 11:674–693
+</div>
+<div id="ref-marr1982" class="csl-entry" role="listitem">
+Marr D (2010) <a href="https://play.google.com/store/books/details?id=D8XxCwAAQBAJ">Vision: A computational investigation into the human representation and processing of visual information</a>. MIT Press
+</div>
+<div id="ref-milgram1975" class="csl-entry" role="listitem">
+Milgram DL (1975) Computer methods for creating photomosaics. IEEE Transactions on Computers C-24:1113–1119. <a href="https://doi.org/10.1109/T-C.1975.224142">https://doi.org/10.1109/T-C.1975.224142</a>
+</div>
+<div id="ref-simoncelli1988" class="csl-entry" role="listitem">
+Simoncelli EP (1988) Orthogonal sub-band image transforms. M.S. thesis, <span>Dpt. Elect. Eng. and Comp. Sci.</span>, Massachusetts Institute of Technology,
+</div>
+<div id="ref-simoncelli1990" class="csl-entry" role="listitem">
+Simoncelli EP, Adelson EH (1990) Non-separable extensions of quadrature mirror filters to multiple dimensions. Proceedings of the IEEE 78:652–664. <a href="https://doi.org/10.1109/5.54805">https://doi.org/10.1109/5.54805</a>
+</div>
+<div id="ref-tanimoto1975-hierarchical" class="csl-entry" role="listitem">
+Tanimoto S, Pavlidis T (1975) <a href="http://dx.doi.org/10.1016/s0146-664x(75)80003-7">A hierarchical data structure for picture processing</a>. Comput Graph Image Process 4:104–119
+</div>
+<div id="ref-vetterli1986-filterbanks" class="csl-entry" role="listitem">
+Vetterli M (1986) Filter banks allowing perfect reconstruction. Signal Processing 10:219–244
+</div>
+<div id="ref-vetterli1992-multires" class="csl-entry" role="listitem">
+Vetterli M, Metin UZ K (1992) Multiresolution coding techniques for digital television: <span>A</span> review. Multidimens Syst Signal Process 3:161–187
+</div>
+<div id="ref-watson1990-perceptual" class="csl-entry" role="listitem">
+Watson AB (1990) Perceptual-components architecture for digital video. J Opt Soc Am A 7:1943–1954
+</div>
+<div id="ref-watson-ahumada1989" class="csl-entry" role="listitem">
+Watson AB, Ahumada AJ Jr (1989) <a href="http://dx.doi.org/10.1109/10.16453">A hexagonal orthogonal-oriented pyramid as a model of image representation in visual cortex</a>. IEEE Trans Biomed Eng 36:97–106
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>A bit is a single <strong>b</strong>inary dig<strong>it</strong>, that is, 0 or 1. A byte is 8 bits and represents 256 levels (<span class="math inline">\(2^8\)</span>). A megabyte is <span class="math inline">\(10^6\)</span> bytes, while a gigabyte is <span class="math inline">\(10^9\)</span> bytes.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>We could improve even this coding strategy in many different ways. For example, after the first pair of pixels we never need to encode an absolute pixel level, we can always encode only differences between adjacent pixels. This is called Differential Pulse Code Modulation, or <em>DPCM</em>. Or, we could consider the pair of pixels as a vector, calculate the frequency distribution of all possible vectors, and build an efficient code for sending communicating the values of these vectors. This is called Vector Quantization, or <em>VQ</em>. All of these methods trade on the fact that natural images are more likely to contain some spatial patterns than others.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>In practice, lossy and lossless compression are concatenated to compress image data. First a lossy compression algorithm is applied, followed by a lossless algorithm.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>The DCT is similar to the Fourier Series computation reviewed in Chapters <a href="chapter-2-image-formation.html" class="quarto-xref"><span>Chapter 2</span></a> and the <strong>Appendix</strong>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>There is something that may strike you as odd when you think about the JPEG representation in this way. Notice that each block contributes the same number of coefficients to represent low frequency information as high frequency information. Yet, from the Nyquist sampling theorem (see Chapter <a href="chapter-3-the-photoreceptor-mosaic.html" class="quarto-xref"><span>Chapter 3</span></a>), we know that we can represent the low frequency information using many fewer samples than are needed to represent the high frequency information. Why isn’t this differential sampling rate is not part of the JPEG representation? The reason is in part due to the block coding, and in part due to the properties of the image features.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Therefore, in the estimation phase we multiply the interpolation matrix by a factor of 4, not 2, i.e., <span class="math inline">\(E_0 = 4 {P_0}^t\)</span>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>In order to display the error images, which have negative coefficients, the image intensities are scaled so that black is a negative value, medium gray is zero, and white is positive.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Orthogonality is defined in <a href="chapter-7-pattern-sensitivity.html" class="quarto-xref"><span>Chapter 7</span></a> and the Appendix. Two vectors are orthogonal when <span class="math inline">\(a^t b = 0\)</span>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>There are a number of important methodological features of the study I will not repeat here, and I encourage the reader to return to the primary sources to understand more about the design of these experiments.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./chapter-7-pattern-sensitivity.html" class="pagination-link" aria-label="Pattern Vision">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Pattern Vision</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./part-3-image-interpretation.html" class="pagination-link" aria-label="Introduction to Image Interepretation">
+        <span class="nav-page-text">Introduction to Image Interepretation</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
