@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: _site
 
 book:
   title: "Foundations of Vision (1995)"
@@ -35,6 +36,12 @@ book:
 
 bibliography: paperpile.bib
 
+website:
+  title: "Foundations of Vision (1995)"
+  site-url: https://wandell.github.io/FOV-1995/
+  repo-url: https://github.com/wandell/FOV-1995
+  repo-actions: [edit, issue]
+
 crossref:
   chapters: true
   fig-prefix: "Figure"
@@ -61,16 +68,10 @@ format:
     number-sections: true
     number-depth: 2
     fig-caption: true
-    csl:  styles/styles/springer-basic-author-date.csl
+    csl:  styles/springer-basic-author-date.csl
     math:
       number-equations: true
 
-
-# ASK someone skilled about this.  They don't work in the color chapter and elsewhere.
-# It would be nice to have macros working for math.
-latex-macros:
-  match: "\\mathbf{m}"
-  matchi: "\\mathbf{m}_{#1}"
 
 
 
