@@ -1,5 +1,6 @@
 # Multiresolution Representations {#sec-multiresolution}
 
+## Multiresolution overview
 Our review of the organization of neural and behavioral data have led us to several specific hypotheses about how the visual system represents pattern information. Neural evidence suggests that visual information is segregated into a number of different visual streams that are specialized for different tasks. Behavioral evidence suggests that within the streams that are specialized for pattern sensitivity, information is further organized by local orientation and spatial scale and color. All of the evidence we have reviewed to this point suggest that image contrast, rather than image intensity, is the key variable represented by the visual pathways.
 
 We will spend this chapter mainly just thinking about how these and other organizational principles might be relevant to solving various visual tasks. In addition to the intrinsic and practical interest of solving visual problems, finding principled solutions for visual tasks can also be helpful in understanding and interpreting the organization of the human visual pathways.
