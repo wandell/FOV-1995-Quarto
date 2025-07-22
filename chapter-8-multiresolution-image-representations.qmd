@@ -279,7 +279,6 @@ If we require that $\hat{g}_{i}$ and $e_i$ to be orthogonal, we can obtain signi
 
 But, what conditions must be met to insure that $e_i$ and $\hat{g}_{i}$ are orthogonal? By substituting @eq-pyramid-reduction1, @eq-pyramid-reduction2, @eq-error-image into @eq-orthogonality we have
 
-<a name="id3778804003"></a>
 $$
 \begin{align}
 0 = {e_i}^t \hat{g}_{i} 

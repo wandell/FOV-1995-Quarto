@@ -115,7 +115,8 @@ $$ {#eq-sinusoid-output}
 
 where
 
-$$\begin{align}
+$$
+\begin{align}
 a & = \sum_{k=<N>} \hat{l}_{k} \cos(\frac{2 \pi f k}{N})  \\
 b & = \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f k}{N})
 \end{align}
