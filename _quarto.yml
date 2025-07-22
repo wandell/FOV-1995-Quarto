@@ -68,6 +68,7 @@ format:
     number-sections: true
     number-depth: 2
     fig-caption: true
+    keep-tex: true
     csl:  styles/springer-basic-author-date.csl
     math:
       number-equations: true

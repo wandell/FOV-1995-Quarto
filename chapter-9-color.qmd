@@ -187,11 +187,11 @@ Efficiency is useful; but, if efficiency were our only objective we could find m
 Suppose we have a device with three color sensors, whose spectral responsivities are, say, $r_i(\lambda),\ i = 1 \ldots 3$. The three sensor responses will be
 
 $$
-\begin{eqnarray*}
+\begin{aligned}
 r_1 & = & \sum_\lambda R_1(\lambda)\, e(\lambda) \\
 r_2 & = & \sum_\lambda R_2(\lambda)\, e(\lambda) \\
 r_3 & = & \sum_\lambda R_3(\lambda)\, e(\lambda)
-\end{eqnarray*}
+\end{aligned}
 $$ {#eq-sensor-responses}
 
 We can group these three linear equations into a single matrix equation
@@ -280,11 +280,11 @@ Before returning to experimental measurements of color appearance, let’s perfo
 First, let’s write down the general expression that shows how the surface and illuminant functions combine to yield the cone absorption rates. The three equations for the three cone types, $L$, $M$, and $S$, are
 
 $$
-\begin{align}
+\begin{aligned}
 r_{1} & = \sum_{\lambda} R_{1}(\lambda) E(\lambda) S(\lambda)  \\
 r_{2} & = \sum_{\lambda} R_{2}(\lambda) E(\lambda) S(\lambda)  \\
 r_{3} & = \sum_{\lambda} R_{3}(\lambda) E(\lambda) S(\lambda) .
-\end{align}
+\end{aligned}
 $$ {#eq-cone-absorptions}
 
 Next, we replace the illuminant and surface functions in @eq-cone-absorptions with their linear model approximations. This yields a new relationship between the coefficients of the surface reflectance linear model, $\mathbf{\sigma}$, and the three-dimensional vector of cone absorptions, $\mathbf{r}$,
@@ -330,10 +330,10 @@ Imagine, now the following way in which the visual system might compensate for i
 The cone absorptions from a single surface under the two illuminants can be written as
 
 $$
-\begin{align}
+\begin{aligned}
 \mathbf{r} & \approx \mathbf{\Lambda}_{e} \mathbf{\sigma}, \text{and} \\
 \mathbf{r}^\prime & \approx \mathbf{\Lambda}_{e'} \mathbf{\sigma} .
-\end{align}
+\end{aligned}
 $$ 
 
 By inverting the lighting matrices and recombining terms, we find that the cone absorptions under the two illuminants should be related linearly as,

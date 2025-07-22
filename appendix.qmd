@@ -101,10 +101,10 @@ $$ {#eq-sin-angle-sum}
 Substitute @eq-sin-angle-sum into @eq-convolution-shift, remembering that $\sin (-k) = - \sin (k)$ and $\cos (-k) = \cos (k)$.
 
 $$
-\begin{align}
+\end{aligned}
 \hat{r}_{i} & = \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f i}{N}) \cos(\frac{2 \pi f k}{N}) + \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f k}{N}) \cos(\frac{2 \pi f i}{N})  \\
 & = \sin(\frac{2 \pi f i}{N}) \sum_{k=<N>} \hat{l}_{k} \cos(\frac{2 \pi f k}{N}) - \cos(\frac{2 \pi f i}{N}) \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f k}{N})
-\end{align}
+\end{aligned}
 $$ {#eq-sinusoid-response}
 
 We can simplify this expression to the form
@@ -116,10 +116,10 @@ $$ {#eq-sinusoid-output}
 where
 
 $$
-\begin{align}
+\end{aligned}
 a & = \sum_{k=<N>} \hat{l}_{k} \cos(\frac{2 \pi f k}{N})  \\
 b & = \sum_{k=<N>} \hat{l}_{k} \sin(\frac{2 \pi f k}{N})
-\end{align}
+\end{aligned}
 $$ {#eq-sinusoid-coeffs}
 
 We have shown that when the input to the system is a sinusoidal function at frequency $f$, the output of the system is the weighted sum of a sinusoid and a cosinusoid, both at frequency $f$. This is equivalent to showing that when the input is a sinusoid at frequency $f$, the output will be a scaled and shifted copy of the input, $s_f \sin (\frac{\pi f i}{N} + \phi_f )$ (see @eq-sinusoid-expansion). As we shall see below, it is easy to generalize this result to all harmonic functions.
@@ -180,11 +180,11 @@ Second, the columns of the matrices $\mathbf{C}$ and $\mathbf{S}$ are perpendicu
 We can use these two observations to derive @eq-dfs-coefficients as follows. Express the fact that $\mathbf{H}$ and $\frac{1}{N} \mathbf{H}^{T}$ are inverses as follows:
 
 $$
-\begin{align}
+\end{aligned}
 {{\bf I}_{N \times N}} & = \mathbf{H} \left(\frac{1}{N} \mathbf{H}^T \right) \\ 
 & = \frac{1}{N} (\mathbf{C} + \mathbf{S}) (\mathbf{C} + \mathbf{S})^T \\
 & = \frac{1}{N} (\mathbf{C} \mathbf{C}^T + \mathbf{S} \mathbf{S}^T)
-\end{align}
+\end{aligned}
 $$ {#eq-dfs-inverse-proof}
 
 where ${\mathbf{I}_{N \times N}}$ is the identity matrix. Then, multiply both sides of @eq-dfs-inverse-proof by $\mathbf{p}$,

@@ -280,11 +280,11 @@ If we require that $\hat{g}_{i}$ and $e_i$ to be orthogonal, we can obtain signi
 But, what conditions must be met to insure that $e_i$ and $\hat{g}_{i}$ are orthogonal? By substituting @eq-pyramid-reduction1, @eq-pyramid-reduction2, @eq-error-image into @eq-orthogonality we have
 
 $$
-\begin{align}
-0 = {e_i}^t \hat{g}_{i} 
+\begin{aligned}
+0 &= {e_i}^t \hat{g}_{i} \\
 &= ( g_i^t (2 {P_i}^t) P_i ) ( (2 {P_i}^t) P_i g_i - g_i) \\
 &= [ g_i^t (2 {P_i}^t) ( P_i (2 {P_i}^t) ) P_i g_i ] - [ g_i^t (2 {P_i}^t) P_i g_i ] .
-\end{align}
+\end{aligned}
 $$ {#eq-8}
 
 If the rows of $P_i$ are an orthogonal set, then by appropriate scaling we can arrange it so that ${P_i} (2 {P_i}^t)$ is equal to the identity matrix. In that case, the final term in @eq-8 simplifies and we have
